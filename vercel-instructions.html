@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stratronix.ai Vercel 部署指南</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #000; }
+        h2 { color: #333; margin-top: 30px; }
+        .step { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .code { background: #000; color: #0f0; padding: 10px; font-family: monospace; }
+        .note { background: #fff3cd; border-left: 4px solid #ffc107; padding: 10px; margin: 10px 0; }
+        .success { background: #d4edda; border-left: 4px solid #28a745; padding: 10px; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Stratronix.ai Vercel 部署指南</h1>
+    
+    <div class="note">
+        <strong>部署状态：</strong> 等待 DNS 传播，可以提前部署 Vercel
+    </div>
+    
+    <h2>📋 部署信息</h2>
+    <ul>
+        <li><strong>域名：</strong> stratronix.ai</li>
+        <li><strong>临时地址：</strong> https://stratronix-xxx.vercel.app</li>
+        <li><strong>最终地址：</strong> https://stratronix.ai</li>
+        <li><strong>部署时间：</strong> 5-10分钟</li>
+    </ul>
+    
+    <h2>🎯 部署步骤</h2>
+    
+    <div class="step">
+        <h3>步骤1：访问 Vercel</h3>
+        <p>打开浏览器，访问：<a href="https://vercel.com" target="_blank">https://vercel.com</a></p>
+    </div>
+    
+    <div class="step">
+        <h3>步骤2：登录账号</h3>
+        <p>使用以下方式登录：</p>
+        <ul>
+            <li>GitHub 账号（推荐）</li>
+            <li>GitLab 账号</li>
+            <li>电子邮件注册</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>步骤3：创建新项目</h3>
+        <p>点击 "New Project" 按钮</p>
+    </div>
+    
+    <div class="step">
+        <h3>步骤4：上传网站文件</h3>
+        <p>将 <code>stratronix.com-website</code> 文件夹拖到上传区域</p>
+        <div class="code">
+            # 或者使用命令行<br>
+            npm install -g vercel<br>
+            cd stratronix.com-website<br>
+            vercel --prod
+        </div>
+    </div>
+    
+    <div class="step">
+        <h3>步骤5：配置设置</h3>
+        <ul>
+            <li><strong>Framework：</strong> 选择 "Static"</li>
+            <li><strong>Build Command：</strong> （留空）</li>
+            <li><strong>Output Directory：</strong> （留空）</li>
+            <li>点击 "Deploy"</li>
+        </ul>
+    </div>
+    
+    <div class="step">
+        <h3>步骤6：获得临时地址</h3>
+        <p>部署完成后获得：<code>https://stratronix-xxx.vercel.app</code></p>
+        <p>测试访问确保网站正常显示</p>
+    </div>
+    
+    <div class="step">
+        <h3>步骤7：添加自定义域名</h3>
+        <p>在 Vercel 项目设置中：</p>
+        <ol>
+            <li>点击 "Settings" → "Domains"</li>
+            <li>添加域名：<code>stratronix.ai</code></li>
+            <li>添加域名：<code>www.stratronix.ai</code></li>
+            <li>等待验证</li>
+        </ol>
+    </div>
+    
+    <h2>🌐 DNS 配置</h2>
+    
+    <div class="note">
+        <strong>注意：</strong> 已经在 Cloudflare 配置 DNS，等待传播
+    </div>
+    
+    <div class="code">
+        # Cloudflare DNS 配置<br>
+        CNAME: www → cname.vercel-dns.com<br>
+        A: @ → 76.76.21.21
+    </div>
+    
+    <h2>🔧 技术规格</h2>
+    <ul>
+        <li><strong>托管平台：</strong> Vercel（免费）</li>
+        <li><strong>SSL 证书：</strong> Let's Encrypt（自动）</li>
+        <li><strong>CDN：</strong> 全球网络</li>
+        <li><strong>可用性：</strong> 99.9%</li>
+        <li><strong>备份：</strong> 自动 Git 备份</li>
+    </ul>
+    
+    <h2>📊 测试验证</h2>
+    
+    <div class="step">
+        <h3>测试1：DNS 解析</h3>
+        <div class="code">
+            nslookup stratronix.ai<br>
+            nslookup www.stratronix.ai
+        </div>
+    </div>
+    
+    <div class="step">
+        <h3>测试2：网站访问</h3>
+        <div class="code">
+            curl -I https://stratronix.ai<br>
+            curl -I https://www.stratronix.ai
+        </div>
+    </div>
+    
+    <div class="step">
+        <h3>测试3：SSL 证书</h3>
+        <p>检查浏览器地址栏的锁图标</p>
+    </div>
+    
+    <div class="success">
+        <h3>✅ 部署完成！</h3>
+        <p>网站地址：<a href="https://stratronix.ai" target="_blank">https://stratronix.ai</a></p>
+        <p>后台管理：<a href="https://stratronix.ai/admin/" target="_blank">https://stratronix.ai/admin/</a></p>
+    </div>
+    
+    <h2>📞 技术支持</h2>
+    <p>遇到问题？</p>
+    <ul>
+        <li>Vercel 文档：<a href="https://vercel.com/docs" target="_blank">https://vercel.com/docs</a></li>
+        <li>Cloudflare 文档：<a href="https://developers.cloudflare.com" target="_blank">https://developers.cloudflare.com</a></li>
+        <li>实时技术支持：在此对话中联系</li>
+    </ul>
+    
+    <div class="note">
+        <strong>最后更新：</strong> 2026-04-08 16:00<br>
+        <strong>部署状态：</strong> 进行中
+    </div>
+</body>
+</html>

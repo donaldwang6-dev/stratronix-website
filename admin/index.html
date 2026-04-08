@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Stratronix / 鼎图</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .admin-container {
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .admin-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .admin-header {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .admin-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .admin-logo .english {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        
+        .admin-logo .chinese {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        .admin-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .admin-subtitle {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+        
+        .admin-form {
+            padding: 40px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+        
+        .password-container {
+            position: relative;
+        }
+        
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #666;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(26, 115, 232, 0.3);
+        }
+        
+        .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .forgot-password {
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        
+        .admin-footer {
+            padding: 20px 40px;
+            background: #f8f9fa;
+            text-align: center;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        .footer-text {
+            color: #666;
+            font-size: 0.85rem;
+        }
+        
+        .back-to-site {
+            display: inline-block;
+            margin-top: 15px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .back-to-site:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            background: #fee;
+            color: #c00;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 0.9rem;
+        }
+        
+        .success-message {
+            background: #efe;
+            color: #090;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 480px) {
+            .admin-header {
+                padding: 30px 20px;
+            }
+            
+            .admin-form {
+                padding: 30px 20px;
+            }
+            
+            .admin-logo .english,
+            .admin-logo .chinese {
+                font-size: 1.5rem;
+            }
+            
+            .admin-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-container">
+        <div class="admin-card">
+            <div class="admin-header">
+                <div class="admin-logo">
+                    <span class="english">STRATRONIX</span>
+                    <span>/</span>
+                    <span class="chinese">鼎图</span>
+                </div>
+                <h1 class="admin-title">Admin Panel</h1>
+                <p class="admin-subtitle">Website Management System</p>
+            </div>
+            
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-circle"></i> Invalid username or password
+            </div>
+            
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Login successful! Redirecting...
+            </div>
+            
+            <form class="admin-form" id="loginForm">
+                <div class="form-group">
+                    <label for="username" class="form-label">
+                        <i class="fas fa-user"></i> Username
+                    </label>
+                    <input type="text" id="username" class="form-control" placeholder="Enter admin username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password" class="form-label">
+                        <i class="fas fa-lock"></i> Password
+                    </label>
+                    <div class="password-container">
+                        <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login to Dashboard
+                </button>
+            </form>
+            
+            <div class="admin-footer">
+                <p class="footer-text">
+                    <i class="fas fa-shield-alt"></i> Secure Admin Access
+                </p>
+                <a href="../index.html" class="back-to-site">
+                    <i class="fas fa-arrow-left"></i> Back to Main Website
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const loginForm = document.getElementById('loginForm');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            const togglePassword = document.getElementById('togglePassword');
+            const passwordInput = document.getElementById('password');
+            
+            // 切换密码显示/隐藏
+            togglePassword.addEventListener('click', function() {
+                const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                passwordInput.setAttribute('type', type);
+                this.innerHTML = type === 'password' ? '<i class="fas fa-eye"></i>' : '<i class="fas fa-eye-slash"></i>';
+            });
+            
+            // 表单提交
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+                
+                // 隐藏所有消息
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+                
+                // 简单验证（实际应用中应该使用后端验证）
+                if (username === 'admin' && password === 'stratronix2024') {
+                    // 登录成功
+                    successMessage.style.display = 'block';
+                    errorMessage.style.display = 'none';
+                    
+                    // 保存记住我选项
+                    const rememberMe = document.getElementById('rememberMe').checked;
+                    if (rememberMe) {
+                        localStorage.setItem('adminRemembered', 'true');
+                    }
+                    
+                    // 模拟重定向到仪表板
+                    setTimeout(function() {
+                        window.location.href = 'dashboard.html';
+                    }, 1500);
+                } else {
+                    // 登录失败
+                    errorMessage.style.display = 'block';
+                    successMessage.style.display = 'none';
+                    
+                    // 清空密码字段
+                    passwordInput.value = '';
+                    passwordInput.focus();
+                }
+            });
+            
+            // 检查是否有记住的登录信息
+            if (localStorage.getItem('adminRemembered') === 'true') {
+                document.getElementById('rememberMe').checked = true;
+            }
+            
+            // 回车键提交表单
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' && (e.target.id === 'username' || e.target.id === 'password')) {
+                    loginForm.dispatchEvent(new Event('submit'));
+                }
+            });
+            
+            // 输入时隐藏错误消息
+            const inputs = document.querySelectorAll('.form-control');
+            inputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    errorMessage.style.display = 'none';
+                });
+            });
+            
+            // 自动聚焦到用户名输入框
+            document.getElementById('username').focus();
+        });
+    </script>
+</body>
+</html>
