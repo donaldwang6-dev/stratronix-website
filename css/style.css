@@ -1763,15 +1763,16 @@ a:hover {
 }
 
 .strategy-icon-compact {
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--primary-color);
     margin-bottom: var(--space-md);
 }
 
 .strategy-card-compact h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: var(--space-sm);
     color: #202124 !important;
+    font-weight: 600;
 }
 
 .strategy-card-compact p {
@@ -1779,7 +1780,6 @@ a:hover {
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: var(--space-md);
-    opacity: 0.9;
 }
 
 .strategy-features {
@@ -1793,13 +1793,13 @@ a:hover {
     gap: var(--space-sm);
     margin-bottom: var(--space-xs);
     color: #5f6368 !important;
-    font-size: 0.85rem;
-    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.5;
 }
 
 .strategy-feature i {
     color: var(--success-color);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* 响应式设计 */
