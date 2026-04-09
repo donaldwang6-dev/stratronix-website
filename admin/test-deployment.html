@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Deployment Test - Stratronix</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Deployment Test Page</h1>
+    
+    <div id="status">
+        <p>Testing file deployment status...</p>
+    </div>
+    
+    <div id="files">
+        <h3>File Status:</h3>
+        <ul>
+            <li><a href="dashboard-simple.html">dashboard-simple.html</a> - Should work</li>
+            <li><a href="dashboard-enhanced.html">dashboard-enhanced.html</a> - May be 404</li>
+            <li><a href="products.html">products.html</a> - May be 404</li>
+            <li><a href="test-deployment.html">test-deployment.html</a> - This file</li>
+        </ul>
+    </div>
+    
+    <script>
+        console.log('Deployment test page loaded');
+        
+        // 测试文件访问
+        const files = [
+            'dashboard-simple.html',
+            'dashboard-enhanced.html', 
+            'products.html',
+            'index.html'
+        ];
+        
+        files.forEach(file => {
+            fetch(file)
+                .then(response => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `${file}: <span class="${response.ok ? 'success' : 'error'}">${response.ok ? '✅ OK' : '❌ ' + response.status}</span>`;
+                    document.getElementById('files').appendChild(li);
+                })
+                .catch(error => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `${file}: <span class="error">❌ Error</span>`;
+                    document.getElementById('files').appendChild(li);
+                });
+        });
+    </script>
+</body>
+</html>
