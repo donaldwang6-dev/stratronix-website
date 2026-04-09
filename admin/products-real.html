@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Management - Stratronix Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #0d47a1;
+            --secondary: #34a853;
+            --warning: #fbbc05;
+            --danger: #ea4335;
+            --light: #f8f9fa;
+            --dark: #202124;
+            --gray: #5f6368;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #f5f7fa;
+            color: var(--dark);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 16px;
+        }
+        
+        .nav {
+            background: var(--light);
+            padding: 15px 30px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links a {
+            margin: 0 10px;
+            color: var(--dark);
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(0,0,0,0.05);
+        }
+        
+        .nav-links a.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--primary-dark);
+        }
+        
+        .btn-secondary {
+            background: var(--light);
+            color: var(--dark);
+            border: 1px solid #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+        
+        .btn-success {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #2e7d32;
+        }
+        
+        .btn-danger {
+            background: var(--danger);
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c62828;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            margin-bottom: 20px;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* 产品表格 */
+        .products-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        
+        .products-table th {
+            background: var(--light);
+            padding: 15px;
+            text-align: left;
+            font-weight: 500;
+            color: var(--gray);
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .products-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .products-table tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .product-image {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .status-active {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .status-inactive {
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+        
+        /* 表单样式 */
+        .form-container {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            display: none;
+        }
+        
+        .form-container.active {
+            display: block;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-group.required label::after {
+            content: " *";
+            color: var(--danger);
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 16px;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+        
+        /* 图片上传 */
+        .image-upload {
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .image-upload:hover {
+            border-color: var(--primary);
+            background: rgba(26, 115, 232, 0.05);
+        }
+        
+        .image-upload i {
+            font-size: 48px;
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+        
+        .image-preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 20px auto;
+            display: none;
+        }
+        
+        .image-preview img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        /* 消息提示 */
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .message.info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-boxes"></i> Product Management System</h1>
+            <p>Real product management with data persistence and image upload</p>
+        </div>
+        
+        <div class="nav">
+            <div class="nav-links">
+                <a href="dashboard-enhanced.html" class="btn-secondary"><i class="fas fa-arrow-left"></i> Back to Dashboard</a>
+                <a href="#" class="active"><i class="fas fa-box"></i> Products</a>
+                <a href="#"><i class="fas fa-chart-bar"></i> Analytics</a>
+                <a href="#"><i class="fas fa-cog"></i> Settings</a>
+            </div>
+            <button class="btn btn-primary" id="addProductBtn">
+                <i class="fas fa-plus"></i> Add New Product
+            </button>
+        </div>
+        
+        <div class="content">
+            <!-- 消息提示 -->
+            <div class="message" id="message"></div>
+            
+            <!-- 产品列表 -->
+            <div class="section">
+                <h2><i class="fas fa-list"></i> Product List</h2>
+                <div class="table-responsive">
+                    <table class="products-table" id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsBody">
+                            <!-- 产品数据将通过JavaScript动态加载 -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="noProducts" style="text-align: center; padding: 40px; color: var(--gray); display: none;">
+                    <i class="fas fa-box-open" style="font-size: 48px; margin-bottom: 15px;"></i>
+                    <h3>No Products Found</h3>
+                    <p>Click "Add New Product" to add your first product.</p>
+                </div>
+            </div>
+            
+            <!-- 添加/编辑产品表单 -->
+            <div class="form-container" id="productForm">
+                <h2 id="formTitle"><i class="fas fa-plus-circle"></i> Add New Product</h2>
+                
+                <form id="productFormElement">
+                    <input type="hidden" id="productId">
+                    
+                    <div class="form-grid">
+                        <div class="form-group required">
+                            <label for="name">Product Name</label>
+                            <input type="text" id="name" placeholder="Enter product name" required>
+                        </div>
+                        
+                        <div class="form-group required">
+                            <label for="category">Category</label>
+                            <select id="category" required>
+                                <option value="">Select category</option>
+                                <option value="photography">Photography</option>
+                                <option value="audio">Audio</option>
+                                <option value="video">Video</option>
+                                <option value="lighting">Lighting</option>
+                                <option value="accessories">Accessories</option>
+                                <option value="software">Software</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group required">
+                            <label for="price">Price ($)</label>
+                            <input type="number" id="price" placeholder="0.00" step="0.01" min="0" required>
+                        </div>
+                        
+                        <div class="form-group required">
+                            <label for="stock">Stock Quantity</label>
+                            <input type="number" id="stock" placeholder="0" min="0" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Enter detailed product description..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="specifications">Specifications (JSON format)</label>
+                        <textarea id="specifications" placeholder='{"resolution": "4K", "weight": "1.2kg", "battery": "8 hours"}'></textarea>
+                        <small style="color: var(--gray);">Enter specifications in JSON format for structured data</small>
+                    </div>
+                    
+                    <!-- 图片上传 -->
+                    <div class="form-group">
+                        <label for="imageUpload">Product Image</label>
+                        <div class="image-upload" id="imageUploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <h3>Click to upload product image</h3>
+                            <p>PNG, JPG, GIF up to 5MB</p>
+                            <input type="file" id="imageFile" accept="image/*" style="display: none;">
+                            <div class="image-preview" id="imagePreview">
+                                <img id="previewImage" src="" alt="Preview">
+                            </div>
+                        </div>
+                        <input type="hidden" id="imageData">
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                        <button type="submit" class="btn btn-success" id="saveBtn">
+                            <i class="fas fa-save"></i> Save Product
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- 系统信息 -->
+            <div class="section">
+                <h2><i class="fas fa-info-circle"></i> System Information</h2>
+                <div style="background: var(--light); padding: 20px; border-radius: 10px;">
+                    <p><strong>Data Storage:</strong> LocalStorage (browser-based, persists across sessions)</p>
+                    <p><strong>Image Storage:</strong> Base64 encoded in LocalStorage</p>
+                    <p><strong>Backup:</strong> Data can be exported/imported as JSON</p>
+                    <p><strong>Products Count:</strong> <span id="productsCount">0</span> products</p>
+                    <div style="margin-top: 15px;">
+                        <button class="btn btn-secondary" id="exportBtn">
+                            <i class="fas fa-download"></i> Export Data
+                        </button>
+                        <button class="btn btn-secondary" id="importBtn">
+                            <i class="fas fa-upload"></i> Import Data
+                        </button>
+                        <button class="btn btn-danger" id="clearBtn">
+                            <i class="fas fa-trash"></i> Clear All Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 产品管理核心JavaScript -->
+    <script>
+        // 产品管理系统
+        class ProductManager {
+            constructor() {
+                this.storageKey = 'stratronix_products';
+                this.products = this.loadProducts();
+                this.currentProductId = null;
+                this.init();
+            }
+            
+            // 初始化
+            init() {
+                this.renderProducts();
+                this.setupEventListeners();
+                this.updateProductsCount();
+                this.showMessage('Product management system loaded', 'info');
+            }
+            
+            // 加载产品数据
+            loadProducts() {
+                try {
+                    const data = localStorage.getItem(this.storageKey);
+                    return data ? JSON.parse(data) : [];
+                } catch (error) {
+                    console.error('Error loading products:', error);
+                    return [];
+                }
+            }
+            
+            // 保存产品数据
+            saveProducts() {
+                try {
+                    localStorage.setItem(this.storageKey, JSON.stringify(this.products));
+                    this.updateProductsCount();
+                    return true;
+                } catch (error) {
+                    console.error('Error saving products:', error);
+                    return false;
+                }
+            }
+            
+            // 渲染产品列表
+            renderProducts() {
+                const tbody = document.getElementById('productsBody');
+                const noProducts = document.getElementById('noProducts');
+                
+                if (this.products.length === 0) {
+                    tbody.innerHTML = '';
+                    noProducts.style.display = 'block';
+                    return;
+                }
+                
+                noProducts.style.display = 'none';
+                
+                let html = '';
+                this.products.forEach(product => {
+                    const statusClass = product.stock > 0 ? 'status-active' : 'status-inactive';
+                    const statusText = product.stock > 0 ? 'In Stock' : 'Out of Stock';
+                    
+                    html += `
+                        <tr data-id="${product.id}">
+                            <td><img src="${product.imageData || 'https://via.placeholder.com/60'}" class="product-image" alt="${product.name}"></td>
+                            <td><strong>${product.name}</strong></td>
+                            <td>${product.category}</td>
+                            <td>$${parseFloat(product.price).toFixed(2)}</td>
+                            <td>${product.stock}</td>
+                            <td class="${statusClass}">${statusText}</td>
+                            <td class="actions">
+                                <button class="btn btn-secondary btn-small edit-btn" data-id="${product.id}">
+                                    <i class="fas fa-edit"></i> Edit
+                                </button>
+                                <button class="btn btn-danger btn-small delete-btn" data-id="${product.id}">
+                                    <i class="fas fa-trash"></i> Delete
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                });
+                
+                tbody.innerHTML = html;
+                
+                // 重新绑定事件
+                this.bindTableEvents();
+            }
+            
+            // 绑定表格事件
+            bindTableEvents() {
+                document.querySelectorAll('.edit-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const productId = e.target.closest('button').getAttribute('data-id');
+                        this.editProduct(productId);
+                    });
+                });
+                
+                document.querySelectorAll('.delete-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const productId = e.target.closest('button').getAttribute('data-id');
+                        this.deleteProduct(productId);
+                    });
+                });
+            }
+            
+            // 添加产品
+            addProduct(productData) {
+                const newProduct = {
+                    id: Date.now().toString(),
+                    ...productData,
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString()
+                };
+                
+                this.products.push(newProduct);
+                if (this.saveProducts()) {
+                    this.renderProducts();
+                    this.showMessage('Product added successfully', 'success');
+                    return true;
+                }
+                return false;
+            }
+            
+            // 编辑产品
+            editProduct(productId) {
+                const product = this.products.find(p => p.id === productId);
+                if (!product) {
+                    this.showMessage('Product not found', 'error');
+                    return;
+                }
+                
+                this.currentProductId = productId;
+                
+                // 填充表单
+                document.getElementById('productId').value = product.id;
+                document.getElementById('name').value = product.name || '';
+                document.getElementById('category').value = product.category || '';
+                document.getElementById('price').value = product.price || '';
+                document.getElementById('stock').value = product.stock || '';
+                document.getElementById('description').value = product.description || '';
+                document.getElementById('specifications').value = product.specifications || '';
+                
+                if (product.imageData) {
+                    document.getElementById('previewImage').src = product.imageData;
+                    document.getElementById('imagePreview').style.display = 'block';
+                    document.getElementById('imageData').value = product.imageData;
+                }
+                
+                document.getElementById('formTitle').innerHTML = '<i class="fas fa-edit"></i> Edit Product';
+                document.getElementById('productForm').classList.add('active');
+                document.getElementById('addProductBtn').style.display = 'none';
+            }
+            
+            // 删除产品
+            deleteProduct(productId) {
+                if (!confirm('Are you sure you want to delete this product?')) {
+                    return false;
+                }
+                
+                const index = this.products.findIndex(p => p.id === productId);
+                if (index !== -1) {
+                    this.products.splice(index, 1);
+                    if (this.saveProducts()) {
+                        this.renderProducts();
+                        this.showMessage('Product deleted successfully', 'success');
+                        return true;
+                    }
+                }
+                return false;
+            }
+            
+            // 更新产品
+            updateProduct(productData) {
+                const index = this.products.findIndex(p => p.id === this.currentProductId);
+                if (index !== -1) {
+                    this.products[index] = {
+                        ...this.products[index],
+                        ...productData,
+                        updatedAt: new Date().toISOString()
+                    };
+                    
+                    if (this.saveProducts()) {
+                        this.renderProducts();
+                        this.showMessage('Product updated successfully', 'success');
+                        return true;
+                    }
+                }
+                return false;
+            }
+            
+            // 显示消息
+            showMessage(text, type = 'info') {
+                const messageEl = document.getElementById('message');
+                messageEl.textContent = text;
+                messageEl.className = `message ${type}`;
+                messageEl.style.display = 'block';
+                
+                setTimeout(() => {
+                    messageEl.style.display = 'none';
+                }, 5000);
+            }
+            
+            // 更新产品计数
+            updateProductsCount() {
+                document.getElementById('productsCount').textContent = this.products.length;
+            }
+            
+            // 设置事件监听器
+            setupEventListeners() {
+                // 添加产品按钮
+                document.getElementById('addProductBtn').addEventListener('click', () => {
+                    this.resetForm();
+                    document.getElementById('productForm').classList.add('active');
+                    document.getElementById('addProductBtn').style.display = 'none';
+                });
+                
+                // 取消按钮
+                document.getElementById('cancelBtn').addEventListener('click', () => {
+                    document.getElementById('productForm').classList.remove('active');
+                    document.getElementById('addProductBtn').style.display = 'inline-flex';
+                    this.resetForm();
+                });
+                
+                // 表单提交
+                document.getElementById('productFormElement').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const productData = {
+                        name: document.getElementById('name').value.trim(),
+                        category: document.getElementById('category').value,
+                        price: parseFloat(document.getElementById('price').value) || 0,
+                        stock: parseInt(document.getElementById('stock').value) || 0,
+                        description: document.getElementById('description').value.trim(),
+                        specifications: document.getElementById('specifications').value.trim(),
+                        imageData: document.getElementById('imageData').value
+                    };
+                    
+                    if (!productData.name || !productData.category || productData.price <= 0) {
+                        this.showMessage('Please fill in all required fields', 'error');
+                        return;
+                    }
+                    
+                    let success = false;
+                    if (this.currentProductId) {
+                        success = this.updateProduct(productData);
+                    } else {
+                        success = this.addProduct(productData);
+                    }
+                    
+                    if (success) {
+                        document.getElementById('productForm').classList.remove('active');
+                        document.getElementById('addProductBtn').style.display = 'inline-flex';
+                        this.resetForm();
+                    }
+                });
+                
+                // 图片上传
+                const imageUploadArea = document.getElementById('imageUploadArea');
+                const imageFileInput = document.getElementById('imageFile');
+                
+                imageUploadArea.addEventListener('click', () => {
+                    imageFileInput.click();
+                });
+                
+                imageFileInput.addEventListener('change', (e) => {
+                    const file = e.target.files[0];
+                    if (!file) return;
+                    
+                    if (!file.type.startsWith('image/')) {
+                        this.showMessage('Please select an image file', 'error');
+                        return;
+                    }
+                    
+                    if (file.size > 5 * 1024 * 1024) {
+                        this.showMessage('Image size should be less than 5MB', 'error');
+                        return;
+                    }
+                    
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                        const base64Data = event.target.result;
+                        document.getElementById('previewImage').src = base64Data;
+                        document.getElementById('imagePreview').style.display = 'block';
+                        document.getElementById('imageData').value = base64Data;
+                        this.showMessage('Image uploaded successfully', 'success');
+                    };
+                    reader.readAsDataURL(file);
+                });
+                
+                // 数据导出
+                document.getElementById('exportBtn').addEventListener('click', () => {
+                    const dataStr = JSON.stringify(this.products, null, 2);
+                    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+                    
+                    const exportFileDefaultName = `products-${new Date().toISOString().split('T')[0]}.json`;
+                    
+                    const linkElement = document.createElement('a');
+                    linkElement.setAttribute('href', dataUri);
+                    linkElement.setAttribute('download', exportFileDefaultName);
+                    linkElement.click();
+                    
+                    this.showMessage('Data exported successfully', 'success');
+                });
+                
+                // 数据导入
+                document.getElementById('importBtn').addEventListener('click', () => {
+                    const input = document.createElement('input');
+                    input.type = 'file';
+                    input.accept = '.json';
+                    
+                    input.addEventListener('change', (e) => {
+                        const file = e.target.files[0];
+                        if (!file) return;
+                        
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                            try {
+                                const importedData = JSON.parse(event.target.result);
+                                if (Array.isArray(importedData)) {
+                                    importedData.forEach(product => {
+                                        if (!this.products.some(p => p.id === product.id)) {
+                                            this.products.push(product);
+                                        }
+                                    });
+                                    
+                                    if (this.saveProducts()) {
+                                        this.renderProducts();
+                                        this.showMessage(`Imported ${importedData.length} products`, 'success');
+                                    }
+                                }
+                            } catch (error) {
+                                this.showMessage('Error parsing JSON file', 'error');
+                            }
+                        };
+                        reader.readAsText(file);
+                    });
+                    
+                    input.click();
+                });
+                
+                // 清空数据
+                document.getElementById('clearBtn').addEventListener('click', () => {
+                    if (confirm('Clear all product data?')) {
+                        this.products = [];
+                        if (this.saveProducts()) {
+                            this.renderProducts();
+                            this.showMessage('All data cleared', 'success');
+                        }
+                    }
+                });
+            }
+            
+            // 重置表单
+            resetForm() {
+                document.getElementById('productFormElement').reset();
+                document.getElementById('productId').value = '';
+                document.getElementById('imagePreview').style.display = 'none';
+                document.getElementById('previewImage').src = '';
+                document.getElementById('imageData').value = '';
+                document.getElementById('formTitle').innerHTML = '<i class="fas fa-plus-circle"></i> Add New Product';
+                this.currentProductId = null;
+            }
+        }
+    </script>
+    
+    <!-- 引入产品管理核心JavaScript -->
+    <script src="products-real.js"></script>
+</body>
+</html>
