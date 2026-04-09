@@ -1365,7 +1365,7 @@ a:hover {
     font-size: 1.4rem;
     font-weight: 700;
     margin-bottom: var(--space-md);
-    color: white;
+    color: white !important;
     position: relative;
     padding-bottom: var(--space-sm);
 }
@@ -1387,7 +1387,7 @@ a:hover {
 }
 
 .simple-card .card-description {
-    color: var(--text-light);
+    color: white !important;
     line-height: 1.6;
     font-size: 0.95rem;
     margin-top: var(--space-md);
@@ -1701,14 +1701,15 @@ a:hover {
 .strategy-card-compact h3 {
     font-size: 1.2rem;
     margin-bottom: var(--space-sm);
-    color: white;
+    color: white !important;
 }
 
 .strategy-card-compact p {
-    color: var(--text-light);
+    color: white !important;
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: var(--space-md);
+    opacity: 0.9;
 }
 
 .strategy-features {
@@ -1721,8 +1722,9 @@ a:hover {
     align-items: center;
     gap: var(--space-sm);
     margin-bottom: var(--space-xs);
-    color: var(--text-light);
+    color: white !important;
     font-size: 0.85rem;
+    opacity: 0.8;
 }
 
 .strategy-feature i {
@@ -1813,7 +1815,11 @@ a:hover {
 
 /* 确保文字可见性 */
 .simple-card .card-title,
-.simple-card .card-description,
+.simple-card .card-title,
+.simple-card .card-description {
+    color: white !important;
+}
+
 .strategy-card-compact h3,
 .strategy-card-compact p,
 .vision-card-compact h3,
@@ -1823,7 +1829,7 @@ a:hover {
 
 .strategy-card-compact p,
 .vision-card-compact p {
-    color: var(--text-light) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* 增强文字对比度 */
