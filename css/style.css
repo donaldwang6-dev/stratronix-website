@@ -1058,9 +1058,9 @@ a:hover {
 }
 
 .card-subtitle {
-    color: #5f6368 !important;
+    color: #202124 !important;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-bottom: var(--space-md);
