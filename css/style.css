@@ -766,14 +766,15 @@ a:hover {
 }
 
 .footer-links a {
-    color: #000000; /* 改为黑色 */
+    color: var(--text-light); /* 改为白色，保持和原来一致 */
     font-weight: 500; /* 适当加粗 */
     text-decoration: none;
     transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
-    color: var(--text-light);
+    color: #ffffff; /* 悬停时纯白色，稍微变亮 */
+    opacity: 0.9;
 }
 
 .social-links {
