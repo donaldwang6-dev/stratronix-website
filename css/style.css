@@ -76,6 +76,41 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* 页面加载动画 */
+.page-load {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 交错动画延迟 */
+.hero {
+    animation-delay: 0.1s;
+}
+
+.values-section {
+    animation-delay: 0.3s;
+}
+
+.features-section {
+    animation-delay: 0.5s;
+}
+
+.cta-section {
+    animation-delay: 0.7s;
+}
+
 /* 中文字体设置 */
 body[lang="zh"] {
     font-family: var(--font-chinese);
@@ -355,31 +390,51 @@ a:hover {
 .circle {
     position: absolute;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    opacity: 0.1;
-    animation: pulse 3s infinite ease-in-out;
+    background: linear-gradient(135deg, 
+        rgba(26, 115, 232, 0.8),
+        rgba(52, 168, 83, 0.6),
+        rgba(26, 115, 232, 0.4)
+    );
+    opacity: 0;
+    animation: pulseWave 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    filter: blur(10px);
 }
 
 .circle-1 {
     width: 100%;
     height: 100%;
     animation-delay: 0s;
+    background: linear-gradient(135deg, 
+        rgba(26, 115, 232, 0.6),
+        rgba(52, 168, 83, 0.4),
+        rgba(26, 115, 232, 0.2)
+    );
 }
 
 .circle-2 {
-    width: 70%;
-    height: 70%;
-    top: 15%;
-    left: 15%;
-    animation-delay: 0.5s;
+    width: 75%;
+    height: 75%;
+    top: 12.5%;
+    left: 12.5%;
+    animation-delay: 1s;
+    background: linear-gradient(135deg, 
+        rgba(52, 168, 83, 0.5),
+        rgba(26, 115, 232, 0.3),
+        rgba(52, 168, 83, 0.1)
+    );
 }
 
 .circle-3 {
-    width: 40%;
-    height: 40%;
-    top: 30%;
-    left: 30%;
-    animation-delay: 1s;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    animation-delay: 2s;
+    background: linear-gradient(135deg, 
+        rgba(26, 115, 232, 0.4),
+        rgba(52, 168, 83, 0.2),
+        rgba(26, 115, 232, 0.1)
+    );
 }
 
 .tech-icon {
@@ -484,14 +539,57 @@ a:hover {
     left: 100%;
 }
 
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 0.1;
+@keyframes pulseWave {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+        filter: blur(15px);
+    }
+    20% {
+        opacity: 0.3;
+        filter: blur(10px);
     }
     50% {
+        transform: scale(1.1);
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+    80% {
+        opacity: 0.3;
+        filter: blur(10px);
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+        filter: blur(15px);
+    }
+}
+
+/* 添加新的圆形层增强效果 */
+.circle-glow {
+    position: absolute;
+    border-radius: 50%;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(
+        circle at center,
+        rgba(26, 115, 232, 0.1) 0%,
+        rgba(26, 115, 232, 0.05) 30%,
+        transparent 70%
+    );
+    animation: glowPulse 6s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+    0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.95);
+    }
+    50% {
+        opacity: 0.6;
         transform: scale(1.05);
-        opacity: 0.15;
     }
 }
 
