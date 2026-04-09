@@ -313,7 +313,7 @@ a:hover {
 }
 
 .nav-link {
-    color: #000000; /* 改为黑色 */
+    color: var(--text-light); /* 改为白色，保持和原来一致 */
     text-decoration: none;
     font-weight: 600; /* 加粗 */
     font-size: 1.1rem; /* 放大字体 */
