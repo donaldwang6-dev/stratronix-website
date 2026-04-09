@@ -275,9 +275,10 @@ a:hover {
 }
 
 .nav-link {
-    color: var(--accent-color); /* 改为红色，和OpenClaw颜色一致 */
+    color: #000000; /* 改为黑色 */
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600; /* 加粗 */
+    font-size: 1.1rem; /* 放大字体 */
     padding: var(--space-sm) 0;
     position: relative;
     transition: color var(--transition-fast);
@@ -285,8 +286,8 @@ a:hover {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--accent-color); /* 改为红色，和OpenClaw颜色一致 */
-    opacity: 0.8;
+    color: #333333; /* 悬停时深灰色 */
+    opacity: 0.9;
 }
 
 .nav-link.active::after {
@@ -676,7 +677,8 @@ a:hover {
 }
 
 .footer-links a {
-    color: var(--accent-color); /* 改为红色，和OpenClaw颜色一致 */
+    color: #000000; /* 改为黑色 */
+    font-weight: 500; /* 适当加粗 */
     text-decoration: none;
     transition: color var(--transition-fast);
 }
