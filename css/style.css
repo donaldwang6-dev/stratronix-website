@@ -1849,4 +1849,81 @@ a:hover {
 .strategy-card-compact:hover,
 .vision-card-compact:hover {
     background: rgba(255, 255, 255, 0.08) !important;
+}/* ===== 紧急文字可见性修复 ===== */
+
+/* CORE VALUE部分 - 最高优先级修复 */
+section.core-values-simple .simple-card .card-title,
+section.core-values-simple .simple-card .card-description {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 确保卡片背景有足够对比度 */
+section.core-values-simple .simple-card {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+section.core-values-simple .simple-card:hover {
+    background: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Category Strategy部分 - 最高优先级修复 */
+section.about-section .strategy-card-compact h3,
+section.about-section .strategy-card-compact p,
+section.about-section .strategy-feature {
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 策略卡片背景增强 */
+section.about-section .strategy-card-compact {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+section.about-section .strategy-card-compact:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 特征文字特殊处理 */
+section.about-section .strategy-feature {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 500 !important;
+}
+
+/* 确保所有文字在暗色背景下可见的通用规则 */
+.simple-card *,
+.strategy-card-compact *,
+.vision-card-compact * {
+    color: inherit !important;
+}
+
+/* 强制文字颜色继承 */
+.simple-card,
+.strategy-card-compact,
+.vision-card-compact {
+    color: #ffffff !important;
+}
+
+/* 响应式调整 - 确保移动端也可见 */
+@media (max-width: 768px) {
+    section.core-values-simple .simple-card .card-title,
+    section.core-values-simple .simple-card .card-description,
+    section.about-section .strategy-card-compact h3,
+    section.about-section .strategy-card-compact p {
+        font-size: 95% !important;
+        line-height: 1.5 !important;
+    }
+}
+
+/* 打印样式 - 确保打印时文字可见 */
+@media print {
+    .simple-card .card-title,
+    .simple-card .card-description,
+    .strategy-card-compact h3,
+    .strategy-card-compact p {
+        color: #000000 !important;
+        text-shadow: none !important;
+    }
 }
