@@ -473,7 +473,277 @@
             console.log('Keyboard shortcuts:');
             console.log('Ctrl+L - Logout');
             console.log('Ctrl+H - Homepage');
+            
+            // 初始化产品管理功能
+            initProductManagement();
         });
+        
+        // 产品管理功能
+        function initProductManagement() {
+            console.log('Initializing product management...');
+            
+            // 创建产品管理区域
+            const productSection = document.createElement('div');
+            productSection.id = 'productManagementSection';
+            productSection.style.cssText = 'margin-top: 40px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);';
+            
+            productSection.innerHTML = `
+                <h2 style="color: #1a73e8; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-boxes"></i> Product Management
+                </h2>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <p style="color: #5f6368;">Manage your products directly from the admin dashboard</p>
+                    <button id="addProductBtn" style="background: #1a73e8; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500;">
+                        <i class="fas fa-plus"></i> Add New Product
+                    </button>
+                </div>
+                
+                <div id="productFormContainer" style="display: none; background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #202124; margin-bottom: 15px;">Add/Edit Product</h3>
+                    <form id="productForm">
+                        <input type="hidden" id="productId">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Product Name *</label>
+                                <input type="text" id="productName" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Category *</label>
+                                <select id="productCategory" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                                    <option value="">Select Category</option>
+                                    <option value="photography">Photography</option>
+                                    <option value="audio">Audio</option>
+                                    <option value="video">Video</option>
+                                    <option value="lighting">Lighting</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Price ($) *</label>
+                                <input type="number" id="productPrice" step="0.01" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Stock *</label>
+                                <input type="number" id="productStock" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Description</label>
+                            <textarea id="productDescription" rows="3" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;"></textarea>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                            <button type="button" id="cancelProductBtn" style="background: #f8f9fa; color: #202124; padding: 10px 20px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;">Cancel</button>
+                            <button type="submit" style="background: #34a853; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500;">Save Product</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="productsTableContainer">
+                    <table id="productsTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Name</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Category</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Price</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Stock</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <tr>
+                                <td colspan="5" style="padding: 30px; text-align: center; color: #666;">No products yet. Click "Add New Product" to add your first product.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="productMessage" style="display: none; padding: 15px; border-radius: 5px; margin: 15px 0;"></div>
+            `;
+            
+            // 添加到页面
+            const mainContent = document.querySelector('.dashboard-main');
+            if (mainContent) {
+                mainContent.appendChild(productSection);
+                
+                // 初始化产品管理
+                setupProductManagement();
+            }
+        }
+        
+        function setupProductManagement() {
+            const STORAGE_KEY = 'stratronix_dashboard_products';
+            let editingProductId = null;
+            
+            // 加载产品
+            function loadProducts() {
+                try {
+                    const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    const tbody = document.getElementById('productsTableBody');
+                    
+                    if (products.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="5" style="padding: 30px; text-align: center; color: #666;">No products yet. Click "Add New Product" to add your first product.</td></tr>';
+                        return;
+                    }
+                    
+                    let html = '';
+                    products.forEach(product => {
+                        const status = product.stock > 0 ? 'In Stock' : 'Out of Stock';
+                        const statusColor = product.stock > 0 ? '#34a853' : '#ea4335';
+                        
+                        html += `
+                            <tr data-id="${product.id}">
+                                <td style="padding: 15px; border-top: 1px solid #eee;"><strong>${product.name}</strong></td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;">${product.category}</td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;">$${product.price.toFixed(2)}</td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;"><span style="color: ${statusColor}">${product.stock} (${status})</span></td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;">
+                                    <button onclick="editProduct('${product.id}')" style="background: #fbbc05; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; margin-right: 5px;">Edit</button>
+                                    <button onclick="deleteProduct('${product.id}')" style="background: #ea4335; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;">Delete</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    
+                    tbody.innerHTML = html;
+                } catch (error) {
+                    console.error('Error loading products:', error);
+                    showProductMessage('Error loading products', 'error');
+                }
+            }
+            
+            // 显示消息
+            function showProductMessage(text, type = 'success') {
+                const el = document.getElementById('productMessage');
+                el.textContent = text;
+                el.style.background = type === 'success' ? '#d4edda' : '#f8d7da';
+                el.style.color = type === 'success' ? '#155724' : '#721c24';
+                el.style.border = type === 'success' ? '1px solid #c3e6cb' : '1px solid #f5c6cb';
+                el.style.display = 'block';
+                
+                setTimeout(() => {
+                    el.style.display = 'none';
+                }, 3000);
+            }
+            
+            // 显示表单
+            document.getElementById('addProductBtn').addEventListener('click', function() {
+                document.getElementById('productFormContainer').style.display = 'block';
+                this.style.display = 'none';
+                document.getElementById('productName').focus();
+            });
+            
+            // 取消表单
+            document.getElementById('cancelProductBtn').addEventListener('click', function() {
+                document.getElementById('productFormContainer').style.display = 'none';
+                document.getElementById('addProductBtn').style.display = 'block';
+                document.getElementById('productForm').reset();
+                document.getElementById('productId').value = '';
+                editingProductId = null;
+            });
+            
+            // 保存产品
+            document.getElementById('productForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                try {
+                    const product = {
+                        id: editingProductId || Date.now().toString(),
+                        name: document.getElementById('productName').value.trim(),
+                        category: document.getElementById('productCategory').value,
+                        price: parseFloat(document.getElementById('productPrice').value) || 0,
+                        stock: parseInt(document.getElementById('productStock').value) || 0,
+                        description: document.getElementById('productDescription').value.trim(),
+                        createdAt: editingProductId ? undefined : new Date().toISOString(),
+                        updatedAt: new Date().toISOString()
+                    };
+                    
+                    // 验证
+                    if (!product.name || !product.category || product.price <= 0) {
+                        showProductMessage('Please fill in all required fields correctly', 'error');
+                        return;
+                    }
+                    
+                    let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    
+                    if (editingProductId) {
+                        // 更新现有产品
+                        const index = products.findIndex(p => p.id === editingProductId);
+                        if (index !== -1) {
+                            products[index] = { ...products[index], ...product };
+                            showProductMessage('Product updated successfully');
+                        }
+                    } else {
+                        // 添加新产品
+                        products.push(product);
+                        showProductMessage('Product added successfully');
+                    }
+                    
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+                    loadProducts();
+                    
+                    // 重置表单
+                    document.getElementById('productFormContainer').style.display = 'none';
+                    document.getElementById('addProductBtn').style.display = 'block';
+                    document.getElementById('productForm').reset();
+                    document.getElementById('productId').value = '';
+                    editingProductId = null;
+                } catch (error) {
+                    console.error('Error saving product:', error);
+                    showProductMessage('Error saving product', 'error');
+                }
+            });
+            
+            // 编辑产品
+            window.editProduct = function(productId) {
+                try {
+                    const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    const product = products.find(p => p.id === productId);
+                    
+                    if (!product) {
+                        showProductMessage('Product not found', 'error');
+                        return;
+                    }
+                    
+                    editingProductId = productId;
+                    
+                    document.getElementById('productId').value = product.id;
+                    document.getElementById('productName').value = product.name;
+                    document.getElementById('productCategory').value = product.category;
+                    document.getElementById('productPrice').value = product.price;
+                    document.getElementById('productStock').value = product.stock;
+                    document.getElementById('productDescription').value = product.description || '';
+                    
+                    document.getElementById('productFormContainer').style.display = 'block';
+                    document.getElementById('addProductBtn').style.display = 'none';
+                    document.getElementById('productName').focus();
+                } catch (error) {
+                    console.error('Error editing product:', error);
+                    showProductMessage('Error editing product', 'error');
+                }
+            };
+            
+            // 删除产品
+            window.deleteProduct = function(productId) {
+                if (!confirm('Are you sure you want to delete this product?')) {
+                    return;
+                }
+                
+                try {
+                    let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    products = products.filter(p => p.id !== productId);
+                    
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+                    loadProducts();
+                    showProductMessage('Product deleted successfully');
+                } catch (error) {
+                    console.error('Error deleting product:', error);
+                    showProductMessage('Error deleting product', 'error');
+                }
+            };
+            
+            // 初始加载
+            loadProducts();
+        }
     </script>
 </body>
 </html>
