@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratronix - Final Updated Home Page</title>
+    <!-- 复制所有CSS样式 -->
+    <style>
+        /* 复制所有style.css内容 */
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --text-tertiary: #999;
+            --bg-primary: rgba(255, 255, 255, 0.05);
+            --bg-secondary: #f8f9fa;
+            --bg-light: #f5f7fa;
+            --border-color: #e0e0e0;
+            --border-light: #f0f0f0;
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.2);
+            --shadow-xxl: 0 30px 80px rgba(0, 0, 0, 0.25);
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 32px;
+            --space-xl: 48px;
+            --space-xxl: 64px;
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background: linear-gradient(135deg, #0a0a2a 0%, #1a1a3a 100%);
+            min-height: 100vh;
+        }
+        
+        /* 导航栏样式 */
+        .navbar {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(26, 115, 232, 0.1);
+            padding: var(--space-md) 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo-english {
+            color: var(--primary-color);
+        }
+        
+        .logo-divider {
+            color: var(--secondary-color);
+        }
+        
+        .logo-chinese {
+            color: white;
+            font-family: 'Noto Sans SC', sans-serif;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: var(--space-xxl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: var(--space-md);
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 800px;
+            margin: 0 auto var(--space-xl);
+            line-height: 1.6;
+        }
+        
+        /* Featured Performance Section */
+        .products-preview {
+            padding: var(--space-xxl) 0;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            text-align: center;
+            margin-bottom: var(--space-xl);
+            font-weight: 700;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-xl);
+            margin-top: var(--space-xl);
+        }
+        
+        .card {
+            background: var(--bg-primary);
+            border-radius: var(--radius-lg);
+            padding: var(--space-xl);
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 115, 232, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--secondary-color);
+        }
+        
+        .card.featured {
+            border: 2px solid var(--secondary-color);
+            background: rgba(52, 168, 83, 0.05);
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+        
+        .product-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            background: rgba(26, 115, 232, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .featured .product-icon {
+            color: var(--secondary-color);
+            background: rgba(52, 168, 83, 0.1);
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            color: white;
+            margin: 0;
+        }
+        
+        .card-subtitle {
+            color: var(--secondary-color);
+            margin: var(--space-xs) 0 0 0;
+            font-size: 1rem;
+        }
+        
+        .card p {
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+            flex-grow: 1;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: var(--space-xxl) 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(26, 115, 232, 0.1), rgba(52, 168, 83, 0.1));
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: var(--space-md);
+        }
+        
+        .cta-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto var(--space-xl);
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.3);
+            padding: var(--space-xxl) 0 var(--space-xl);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .footer-section h3 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-bottom: var(--space-md);
+        }
+        
+        .footer-section p, .footer-section li {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            padding: var(--space-xs) 0;
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        
+        .social-link {
+            color: white;
+            font-size: 1.5rem;
+            transition: all var(--transition-fast);
+        }
+        
+        .social-link:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-normal);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-lg {
+            padding: 16px 32px;
+            font-size: 1.1rem;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: var(--space-md);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* A100 Image */
+        .tech-icon {
+            position: relative;
+            margin: var(--space-xl) auto;
+            width: 250px;
+            height: 250px;
+        }
+        
+        .a100-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: var(--shadow-xl);
+            background: transparent;
+            border: 3px solid rgba(26, 115, 232, 0.3);
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+        
+        .a100-image:hover {
+            transform: scale(1.1);
+            box-shadow: var(--shadow-xxl);
+            border-color: var(--secondary-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .card-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-english">STRATRONIX</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-chinese">鼎图</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Think Big, Compute Small</h1>
+            <p class="hero-subtitle">Pioneering the Private AI-Agent Appliance (PAA) revolution. We build autonomous AI infrastructure that empowers personal, business, and industrial intelligence at scale.</p>
+            
+            <div class="tech-icon">
+                <img src="https://i.imgur.com/w2mkcMd.jpg" alt="A100 Private AI-Agent Appliance" class="a100-image">
+            </div>
+            
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-rocket"></i> Explore Products
+                </a>
+                <a href="https://wa.me/8613632968417" target="_blank" class="btn btn-secondary btn-lg">
+                    <i class="fab fa-whatsapp"></i> Consult Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Performance -->
+    <section class="products-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Performance</h2>
+            <div class="grid-3">
+                <!-- Featured Card: OpenClaw Pre-installed -->
+                <div class="card featured">
+                    <div class="card-header">
+                        <div class="product-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <div>
+                            <h3 class="card-title">OpenClaw Pre-installed</h3>
+                            <div class="card-subtitle">Enterprise-Grade Reliability</div>
+                        </div>
+                    </div>
+                    <p>Pre‑installed OpenClaw ensures enterprise‑grade reliability, no compatibility issues, and immediate productivity for your small‑scale high‑performance computing.</p>
+                    <a href="products.html#openclaw" class="btn btn-primary">Learn More</a>
+                </div>
+                
+                <!-- Card 2: Private AI Assistant -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="product-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h3 class="card-title">Private AI Assistant</h3>
+                            <div class="card-subtitle">Secure AI Solution</div>
+                        </div>
+                    </div>
+                    <p>Intelligent AI assistant platform that enhances workplace efficiency and customer experience through natural language processing and automation.</p>
+                    <a href="products.html#ai-assistant" class="btn btn-secondary">Learn More</a>
+                </div>
+                
+                <!-- Card 3: Private Cloud Platform -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="product-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div>
+                            <h3 class="card-title">Private Cloud Platform</h3>
+                            <div class="card-subtitle">Secure Cloud Infrastructure</div>
+                        </div>
+                    </div>
+                    <p>Comprehensive cloud computing solutions including IaaS, PaaS, and SaaS services with enterprise-grade security and scalability.</p>
+                    <a href="products.html#cloud-platform" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Start Your PAA Transformation Journey</h2>
+            <p class="cta-subtitle">Join the revolution of autonomous AI infrastructure. Contact us today to discuss how Stratronix PAA solutions can transform your business.</p>
+            <div class="hero-buttons">
+                <a href="contact.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-calendar-check"></i> Request Demo
+                </a>
+                <a href="https://wa.me/8613632968417" target="_blank" class="btn btn-secondary btn-lg">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Stratronix</h3>
+                    <p>Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/113783977/admin/dashboard/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> A18,6F, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</li>
+                        <li><i class="fas fa-phone"></i> 86-13632968417</li>
+                        <li><i class="fas fa-envelope"></i> info@stratronix.ai</li>
+                        <li><i class="fab fa-whatsapp"></i> WhatsApp: 86-13632968417</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Home</a></li>
+                        <li><a href="about.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">About</a></li>
+                        <li><a href="products.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Products</a></li>
+                        <li><a href="news.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">News</a></li>
+                        <li><a href="contact.html" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: var(--space-xl); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+                <p style="color: rgba(255, 255, 255, 0.6);">
+                    &copy; 2026 Stratronix Technology. All rights reserved. | Private AI-Agent Appliance (PAA) Category Creator
+                </p>
+                <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.9rem; margin-top: var(--space-sm);">
+                    This is the final updated version with all changes applied.
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 简单的页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+                card.classList.add('page-load');
+            });
+        });
+    </script>
+</body>
+</html>
