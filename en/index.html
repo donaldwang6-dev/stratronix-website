@@ -68,33 +68,92 @@
         </div>
     </section>
 
-    <!-- Core Values -->
-    <section class="values-section page-load">
+    <!-- Core Values - Dynamic Cards -->
+    <section class="core-values-dynamic page-load">
         <div class="container">
             <h2 class="section-title">Our Core Values</h2>
-            <div class="values-grid">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-lightbulb"></i>
+            <p class="section-subtitle">Driving excellence through innovation, reliability, and customer focus</p>
+            
+            <div class="dynamic-cards-grid">
+                <!-- Innovation Card -->
+                <div class="dynamic-card innovation-card">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon-bg"></div>
+                        <i class="fas fa-lightbulb card-icon"></i>
                     </div>
-                    <h3>Innovation Driven</h3>
-                    <p>Continuously researching and developing breakthrough technologies to drive industry advancement.</p>
+                    <h3 class="card-title">Innovation Driven</h3>
+                    <p class="card-description">Continuously researching and developing breakthrough technologies to drive industry advancement.</p>
+                    
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>R&D Investment</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technology Breakthroughs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Industry Leadership</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-glow"></div>
                 </div>
                 
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <!-- Reliability Card -->
+                <div class="dynamic-card reliability-card">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon-bg"></div>
+                        <i class="fas fa-shield-alt card-icon"></i>
                     </div>
-                    <h3>Reliable & Stable</h3>
-                    <p>Ensuring product quality and system stability through rigorous testing and continuous optimization.</p>
+                    <h3 class="card-title">Reliable & Stable</h3>
+                    <p class="card-description">Ensuring product quality and system stability through rigorous testing and continuous optimization.</p>
+                    
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>99.99% Uptime</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quality Assurance</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Continuous Optimization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-glow"></div>
                 </div>
                 
-                <div class="value-item">
-                    <div class="value-icon">
-                        <i class="fas fa-users"></i>
+                <!-- Customer Card -->
+                <div class="dynamic-card customer-card">
+                    <div class="card-icon-wrapper">
+                        <div class="card-icon-bg"></div>
+                        <i class="fas fa-users card-icon"></i>
                     </div>
-                    <h3>Customer First</h3>
-                    <p>Centered on customer needs, providing personalized solutions and professional support.</p>
+                    <h3 class="card-title">Customer First</h3>
+                    <p class="card-description">Centered on customer needs, providing personalized solutions and professional support.</p>
+                    
+                    <div class="card-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Personalized Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Professional Guidance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-glow"></div>
                 </div>
             </div>
         </div>
@@ -384,5 +443,6 @@
             }
         }
     </style>
+    <script src="js/core-values-animation.js"></script>
 </body>
 </html>

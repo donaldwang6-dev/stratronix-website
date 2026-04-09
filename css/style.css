@@ -649,6 +649,245 @@ a:hover {
     box-shadow: var(--shadow-lg);
 }
 
+/* ===== CORE VALUES DYNAMIC CARDS ===== */
+.core-values-dynamic {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, rgba(10, 10, 40, 0.8) 0%, rgba(20, 20, 60, 0.9) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.core-values-dynamic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+}
+
+.core-values-dynamic .section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-2xl);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dynamic-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dynamic-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-xl);
+    padding: var(--space-2xl);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.dynamic-card:hover {
+    transform: translateY(-10px) scale(1.02) rotateX(2deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    border-color: rgba(26, 115, 232, 0.3);
+}
+
+.dynamic-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dynamic-card:hover::before {
+    opacity: 1;
+}
+
+.card-icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto var(--space-lg);
+}
+
+.card-icon-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: pulse 3s infinite alternate;
+}
+
+.card-icon {
+    position: relative;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.dynamic-card:hover .card-icon {
+    transform: scale(1.2) rotate(5deg);
+    color: var(--secondary-color);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-md);
+    color: white;
+    position: relative;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.dynamic-card:hover .card-title::after {
+    width: 60px;
+}
+
+.card-description {
+    text-align: center;
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: var(--space-xl);
+    font-size: 0.95rem;
+}
+
+.card-features {
+    margin-top: var(--space-lg);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+    color: white;
+    transform: translateX(5px);
+}
+
+.feature-item i {
+    color: var(--success-color);
+    font-size: 0.8rem;
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(26, 115, 232, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.dynamic-card:hover .card-glow {
+    opacity: 1;
+}
+
+/* 卡片特定颜色 */
+.innovation-card {
+    border-color: rgba(66, 133, 244, 0.2);
+}
+
+.innovation-card:hover {
+    border-color: rgba(66, 133, 244, 0.4);
+}
+
+.reliability-card {
+    border-color: rgba(52, 168, 83, 0.2);
+}
+
+.reliability-card:hover {
+    border-color: rgba(52, 168, 83, 0.4);
+}
+
+.customer-card {
+    border-color: rgba(251, 188, 5, 0.2);
+}
+
+.customer-card:hover {
+    border-color: rgba(251, 188, 5, 0.4);
+}
+
+/* 动画效果 */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.2;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .dynamic-cards-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-lg);
+    }
+    
+    .dynamic-card {
+        padding: var(--space-xl);
+    }
+    
+    .dynamic-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
 .card-header {
     margin-bottom: var(--space-lg);
 }
