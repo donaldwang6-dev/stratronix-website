@@ -313,7 +313,7 @@ a:hover {
 }
 
 .nav-link {
-    color: var(--text-light); /* 改为白色，保持和原来一致 */
+    color: var(--text-secondary); /* 改为偏灰色，确保在透明底色上可见 */
     text-decoration: none;
     font-weight: 600; /* 加粗 */
     font-size: 1.1rem; /* 放大字体 */
@@ -324,7 +324,7 @@ a:hover {
 
 .nav-link:hover,
 .nav-link.active {
-    color: #333333; /* 悬停时深灰色 */
+    color: var(--text-primary); /* 悬停时使用主文字颜色（深灰色） */
     opacity: 0.9;
 }
 
