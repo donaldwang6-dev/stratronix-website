@@ -1311,7 +1311,80 @@ a:hover {
     a {
         text-decoration: underline;
     }
-}/* ===== SIMPLIFIED CORE VALUES CARDS ===== */
+}
+
+/* ===== CORE VALUES ENHANCED (Matching Featured Performance) ===== */
+.core-values-enhanced {
+    padding: var(--space-4xl) 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.core-values-enhanced .card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.core-values-enhanced .card:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(26, 115, 232, 0.3);
+    transform: translateY(-8px);
+}
+
+.core-values-enhanced .value-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(26, 115, 232, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.core-values-enhanced .card-title {
+    color: #202124 !important;
+    font-size: 1.4rem;
+    margin-bottom: var(--space-xs);
+}
+
+.core-values-enhanced .card-subtitle {
+    color: #5f6368 !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.core-values-enhanced .card p {
+    color: #5f6368 !important;
+    line-height: 1.6;
+    flex-grow: 1;
+    margin-bottom: var(--space-lg);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .core-values-enhanced .card {
+        padding: var(--space-lg);
+    }
+    
+    .core-values-enhanced .value-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+/* ===== SIMPLIFIED CORE VALUES CARDS ===== */
 .core-values-simple {
     padding: var(--space-3xl) 0;
     background: transparent;
