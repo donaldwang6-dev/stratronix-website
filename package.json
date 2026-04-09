@@ -9,7 +9,5 @@
   "keywords": ["stratronix", "鼎图", "website", "bilingual"],
   "author": "Stratronix Team",
   "license": "MIT",
-  "engines": {
-    "node": ">=18"
-  }
+
 }
