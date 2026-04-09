@@ -1684,7 +1684,7 @@ a:hover {
 .vision-card-compact h3 {
     font-size: 1.3rem;
     margin-bottom: var(--space-md);
-    color: white;
+    color: #202124 !important;
     display: flex;
     align-items: center;
     gap: var(--space-sm);
@@ -1730,11 +1730,11 @@ a:hover {
 .step-content-compact h4 {
     font-size: 1rem;
     margin-bottom: 3px;
-    color: white;
+    color: #202124 !important;
 }
 
 .step-content-compact p {
-    color: var(--text-light);
+    color: #5f6368 !important;
     font-size: 0.85rem;
     line-height: 1.5;
 }
@@ -1891,10 +1891,13 @@ a:hover {
 }
 
 .strategy-card-compact h3,
+.vision-card-compact h3 {
+    color: #202124 !important;
+}
+
 .strategy-card-compact p,
-.vision-card-compact h3,
 .vision-card-compact p {
-    color: white !important;
+    color: #5f6368 !important;
 }
 
 .strategy-card-compact p,
