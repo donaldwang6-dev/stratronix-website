@@ -1444,4 +1444,403 @@ a:hover {
     .simple-card:hover {
         transform: translateY(-5px);
     }
+}/* ===== COMPACT ABOUT PAGE STYLES ===== */
+.compact-mission {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.mission-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+    color: white;
+}
+
+.mission-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.mission-content-compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+}
+
+.mission-text-compact {
+    padding-right: var(--space-xl);
+}
+
+.mission-lead-compact {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: var(--space-xl);
+    line-height: 1.7;
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary-color);
+}
+
+.mission-grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.mission-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.mission-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(5px);
+    border-color: rgba(26, 115, 232, 0.2);
+}
+
+.mission-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mission-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.mission-detail h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.mission-detail p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.mission-image-compact {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.a100-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.image-container:hover .a100-image {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: var(--space-lg);
+    color: white;
+}
+
+.image-overlay h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.image-overlay p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* 紧凑的Vision部分 */
+.compact-vision {
+    margin-top: var(--space-3xl);
+}
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.vision-card-compact {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.vision-card-compact:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.vision-card-compact h3 {
+    font-size: 1.3rem;
+    margin-bottom: var(--space-md);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.vision-card-compact h3 i {
+    color: var(--primary-color);
+}
+
+.vision-steps-compact {
+    margin-top: var(--space-lg);
+}
+
+.vision-step-compact {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vision-step-compact:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.step-number-compact {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.step-content-compact h4 {
+    font-size: 1rem;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.step-content-compact p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* 紧凑的Category Strategy */
+.strategy-cards-compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+}
+
+.strategy-card-compact {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.strategy-card-compact:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.strategy-icon-compact {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-md);
+}
+
+.strategy-card-compact h3 {
+    font-size: 1.2rem;
+    margin-bottom: var(--space-sm);
+    color: white;
+}
+
+.strategy-card-compact p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: var(--space-md);
+}
+
+.strategy-features {
+    text-align: left;
+    margin-top: var(--space-md);
+}
+
+.strategy-feature {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+.strategy-feature i {
+    color: var(--success-color);
+    font-size: 0.8rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+    .mission-content-compact {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+    
+    .mission-text-compact {
+        padding-right: 0;
+    }
+    
+    .vision-grid,
+    .strategy-cards-compact {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .mission-header h2 {
+        font-size: 2rem;
+    }
+    
+    .mission-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .mission-lead-compact {
+        font-size: 1.1rem;
+    }
+    
+    .vision-grid,
+    .strategy-cards-compact {
+        grid-template-columns: 1fr;
+    }
+    
+    .mission-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .mission-icon {
+        margin: 0 auto;
+    }
+}/* 哲学引用样式 */
+.philosophy-quote {
+    position: relative;
+    padding: var(--space-lg);
+    margin: var(--space-lg) 0;
+    background: rgba(26, 115, 232, 0.05);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--primary-color);
+}
+
+.philosophy-quote p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    font-style: italic;
+}
+
+.philosophy-quote .fa-quote-left {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    color: var(--primary-color);
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+.philosophy-quote .fa-quote-right {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    color: var(--primary-color);
+    opacity: 0.5;
+    font-size: 1.2rem;
+}
+
+/* 确保文字可见性 */
+.simple-card .card-title,
+.simple-card .card-description,
+.strategy-card-compact h3,
+.strategy-card-compact p,
+.vision-card-compact h3,
+.vision-card-compact p {
+    color: white !important;
+}
+
+.strategy-card-compact p,
+.vision-card-compact p {
+    color: var(--text-light) !important;
+}
+
+/* 增强文字对比度 */
+.simple-card {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.simple-card:hover {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.strategy-card-compact,
+.vision-card-compact {
+    background: rgba(255, 255, 255, 0.05) !important;
+}
+
+.strategy-card-compact:hover,
+.vision-card-compact:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
 }
