@@ -639,6 +639,95 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
 }
 
+/* Use Cases Section */
+.use-cases-section {
+    padding: var(--space-3xl) 0;
+    background-color: var(--bg-light);
+}
+
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-xl);
+}
+
+.use-case-card {
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(26, 115, 232, 0.1);
+    height: 100%;
+}
+
+.use-case-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--secondary-color);
+}
+
+.use-case-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--space-lg);
+    background: rgba(26, 115, 232, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.use-case-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+    font-weight: 600;
+}
+
+.use-case-description {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: var(--space-lg);
+}
+
+.use-case-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.use-case-features li {
+    padding: var(--space-xs) 0;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.use-case-features li i {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .use-cases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .use-case-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+}
+}
+
 .grid-4 {
     grid-template-columns: repeat(4, 1fr);
 }
