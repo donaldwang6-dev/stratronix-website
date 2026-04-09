@@ -1771,11 +1771,11 @@ a:hover {
 .strategy-card-compact h3 {
     font-size: 1.2rem;
     margin-bottom: var(--space-sm);
-    color: white !important;
+    color: #202124 !important;
 }
 
 .strategy-card-compact p {
-    color: white !important;
+    color: #5f6368 !important;
     font-size: 0.9rem;
     line-height: 1.5;
     margin-bottom: var(--space-md);
@@ -1792,7 +1792,7 @@ a:hover {
     align-items: center;
     gap: var(--space-sm);
     margin-bottom: var(--space-xs);
-    color: white !important;
+    color: #5f6368 !important;
     font-size: 0.85rem;
     opacity: 0.8;
 }
