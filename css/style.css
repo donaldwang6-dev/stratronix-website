@@ -1858,7 +1858,7 @@ a:hover {
 .philosophy-quote p {
     font-size: 1.2rem;
     font-weight: 500;
-    color: var(--primary-color);
+    color: #202124 !important;
     line-height: 1.6;
     text-align: center;
     margin: 0;
@@ -1900,10 +1900,7 @@ a:hover {
     color: #5f6368 !important;
 }
 
-.strategy-card-compact p,
-.vision-card-compact p {
-    color: rgba(255, 255, 255, 0.9) !important;
-}
+
 
 /* 增强文字对比度 */
 .simple-card {
