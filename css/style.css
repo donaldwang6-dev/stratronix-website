@@ -770,12 +770,13 @@ a:hover {
     transform: translateX(-50%);
     width: 40px;
     height: 2px;
-    background: var(--primary-color);
+    background: transparent;
     transition: width 0.3s ease;
 }
 
 .dynamic-card:hover .card-title::after {
     width: 60px;
+    background: transparent;
 }
 
 .card-description {
@@ -1448,12 +1449,13 @@ a:hover {
     transform: translateX(-50%);
     width: 40px;
     height: 2px;
-    background: var(--primary-color);
+    background: transparent;
     transition: width 0.3s ease;
 }
 
 .simple-card:hover .card-title::after {
     width: 60px;
+    background: transparent;
 }
 
 .simple-card .card-description {
