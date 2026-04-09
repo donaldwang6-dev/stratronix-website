@@ -450,21 +450,21 @@ a:hover {
 }
 
 .a100-image {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     object-fit: contain;
-    border-radius: 25px;
+    border-radius: 15px;
     box-shadow: 
-        0 15px 35px rgba(0, 0, 0, 0.2),
-        0 0 0 1px rgba(26, 115, 232, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    padding: 20px;
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(26, 115, 232, 0.15);
+    background: transparent;
+    padding: 0;
     margin-bottom: 20px;
-    border: 4px solid var(--primary-color);
+    border: 3px solid rgba(26, 115, 232, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
 }
 
 .a100-image::before {
@@ -484,12 +484,12 @@ a:hover {
 }
 
 .a100-image:hover {
-    transform: scale(1.08) rotate(2deg);
+    transform: scale(1.1);
     box-shadow: 
-        0 25px 50px rgba(0, 0, 0, 0.3),
-        0 0 0 2px rgba(26, 115, 232, 0.2),
-        inset 0 2px 0 rgba(255, 255, 255, 0.9);
+        0 30px 60px rgba(0, 0, 0, 0.35),
+        0 0 0 2px rgba(52, 168, 83, 0.4);
     border-color: var(--secondary-color);
+    backdrop-filter: blur(15px);
 }
 
 @keyframes shine {
