@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratronix - Simple Website</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        
+        .header {
+            background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        
+        .nav-links a {
+            margin-left: 20px;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .nav-links a:hover {
+            color: #1a73e8;
+        }
+        
+        .admin-btn {
+            background: #1a73e8;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        .section {
+            padding: 60px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #1a73e8;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: #1a73e8;
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-category {
+            color: #1a73e8;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            color: #34a853;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .product-stock {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .in-stock {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .out-of-stock {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .content-section h2 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+        }
+        
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="nav">
+        <a href="#" class="logo">Stratronix</a>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="simple-admin.html" class="admin-btn">Admin Panel</a>
+        </div>
+    </nav>
+    
+    <!-- 首页头部 -->
+    <header class="header" id="home">
+        <div class="container">
+            <h1 id="homeTitle">Welcome to Stratronix</h1>
+            <p id="homeSubtitle">Professional Photography & Audio Equipment</p>
+            <p id="homeDescription">High-quality equipment for professionals and enthusiasts. Experience the difference with Stratronix.</p>
+            <a href="#products" class="btn">View Products</a>
+        </div>
+    </header>
+    
+    <!-- 产品展示 -->
+    <section class="section" id="products">
+        <div class="container">
+            <h2 class="section-title">Our Products</h2>
+            <p class="section-subtitle">Browse our collection of professional equipment</p>
+            
+            <div id="productsContainer" class="products-grid">
+                <!-- 产品将动态加载 -->
+                <div class="empty-state">
+                    <h3>No products available yet</h3>
+                    <p>Products will appear here once added in the admin panel</p>
+                    <a href="simple-admin.html" class="btn">Go to Admin Panel</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 关于我们 -->
+    <section class="section" id="about" style="background: #f8f9fa;">
+        <div class="content-section">
+            <h2 id="aboutTitle">About Stratronix</h2>
+            <p id="aboutContent">We provide professional photography, audio, and video equipment for creators worldwide.</p>
+        </div>
+    </section>
+    
+    <!-- 页脚 -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <h2>Stratronix</h2>
+            <p>Professional equipment for creative professionals</p>
+            <p style="margin-top: 20px; color: #666;">
+                <a href="simple-admin.html" style="color: #1a73e8; text-decoration: none;">Admin Panel</a> | 
+                All content managed through simple admin interface
+            </p>
+            <p style="margin-top: 10px; color: #999;">&copy; 2026 Stratronix. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 数据存储键
+        const STORAGE_KEY = 'stratronix_data';
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Simple website loaded');
+            loadAllData();
+            
+            // 定期检查更新
+            setInterval(loadAllData, 2000);
+            
+            // 平滑滚动
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+        
+        // 加载所有数据
+        function loadAllData() {
+            loadProducts();
+            loadContent();
+        }
+        
+        // 加载产品
+        function loadProducts() {
+            const data = getData();
+            const container = document.getElementById('productsContainer');
+            
+            if (!data.products || data.products.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No products available yet</h3>
+                        <p>Products will appear here once added in the admin panel</p>
+                        <a href="simple-admin.html" class="btn">Go to Admin Panel</a>
+                    </div>
+                `;
+                return;
+            }
+            
+            let html = '';
+            data.products.forEach(product => {
+                const status = product.stock > 0 ? 'In Stock' : 'Out of Stock';
+                const statusClass = product.stock > 0 ? 'in-stock' : 'out-of-stock';
+                const categoryNames = {
+                    photography: 'Photography',
+                    audio: 'Audio',
+                    video: 'Video',
+                    lighting: 'Lighting'
+                };
+                
+                html += `
+                    <div class="product-card">
+                        <div class="product-image">
+                            ${getProductIcon(product.category)}
+                        </div>
+                        <div class="product-info">
+                            <div class="product-category">${categoryNames[product.category] || product.category}</div>
+                            <h3 class="product-name">${product.name}</h3>
+                            <div class="product-price">$${product.price.toFixed(2)}</div>
+                            <div class="product-stock ${statusClass}">${status}</div>
+                            ${product.description ? `<p style="margin-top: 10px; color: #666;">${product.description}</p>` : ''}
+                            <a href="#" class="btn" style="display: block; text-align: center; margin-top: 15px;">View Details</a>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = html;
+        }
+        
+        // 加载内容
+        function loadContent() {
+            const data = getData();
+            
+            if (data.content) {
+                if (data.content.home) {
+                    document.getElementById('homeTitle').textContent = data.content.home.title || 'Welcome to Stratronix';
+                    document.getElementById('homeSubtitle').textContent = data.content.home.subtitle || 'Professional Photography & Audio Equipment';
+                    document.getElementById('homeDescription').textContent = data.content.home.description || 'High-quality equipment for professionals and enthusiasts. Experience the difference with Stratronix.';
+                }
+                
+                if (data.content.about) {
+                    document.getElementById('aboutTitle').textContent = data.content.about.title || 'About Stratronix';
+                    document.getElementById('aboutContent').textContent = data.content.about.content || 'We provide professional photography, audio, and video equipment for creators worldwide.';
+                }
+            }
+        }
+        
+        // 获取数据
+        function getData() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : {
+                    products: [],
+                    content: {
+                        home: {
+                            title: 'Welcome to Stratronix',
+                            subtitle: 'Professional Photography & Audio Equipment',
+                            description: 'High-quality equipment for professionals and enthusiasts. Experience the difference with Stratronix.'
+                        },
+                        about: {
+                            title: 'About Stratronix',
+                            content: 'We provide professional photography, audio, and video equipment for creators worldwide.'
+                        }
+                    }
+                };
+            } catch (error) {
+                console.error('Error loading data:', error);
+                return { products: [], content: {} };
+            }
+        }
+        
+        // 获取产品图标
+        function getProductIcon(category) {
+            const icons = {
+                photography: '📷',
+                audio: '🎤',
+                video: '🎥',
+                lighting: '💡'
+            };
+            return icons[category] || '📦';
+        }
+        
+        // 监听LocalStorage变化
+        window.addEventListener('storage', function(e) {
+            if (e.key === STORAGE_KEY) {
+                console.log('Data updated from another tab');
+                loadAllData();
+            }
+        });
+    </script>
+</body>
+</html>
