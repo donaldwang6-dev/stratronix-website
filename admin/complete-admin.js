@@ -2,11 +2,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Complete Admin System loaded');
     
-    // 数据存储键
+    // 数据存储键 - 使用共享键名，让网站可以访问
     const STORAGE_KEYS = {
-        PRODUCTS: 'stratronix_complete_products',
-        CONTENT: 'stratronix_complete_content',
-        USER: 'stratronix_complete_user'
+        PRODUCTS: 'stratronix_products',           // 共享键名，网站可以访问
+        CONTENT: 'stratronix_content',             // 共享键名
+        USER: 'stratronix_admin_user'              // 仅后台使用
     };
     
     // 当前状态
