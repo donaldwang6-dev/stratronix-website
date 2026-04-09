@@ -320,7 +320,9 @@
                 successMessage.style.display = 'none';
                 
                 // 简单验证（实际应用中应该使用后端验证）
+                console.log('Login attempt:', username, password);
                 if (username === 'admin' && password === 'stratronix2024') {
+                    console.log('Login successful, redirecting to dashboard...');
                     // 登录成功
                     successMessage.style.display = 'block';
                     errorMessage.style.display = 'none';
@@ -331,10 +333,8 @@
                         localStorage.setItem('adminRemembered', 'true');
                     }
                     
-                    // 模拟重定向到仪表板
-                    setTimeout(function() {
-                        window.location.href = 'dashboard.html';
-                    }, 1500);
+                    // 立即重定向到仪表板
+                    window.location.href = 'dashboard.html';
                 } else {
                     // 登录失败
                     errorMessage.style.display = 'block';
