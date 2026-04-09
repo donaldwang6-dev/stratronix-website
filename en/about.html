@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Stratronix - The PAA Category Creator</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* About页面特有样式 */
+        .about-hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #1a73e8 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .about-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .about-hero .chinese-title {
+            font-size: 2.5rem;
+            font-family: 'Noto Sans SC', sans-serif;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+        
+        .about-hero p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* 内容区块 */
+        .about-section {
+            padding: 80px 0;
+        }
+        
+        .about-section:nth-child(even) {
+            background: var(--bg-secondary);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* 愿景卡片 */
+        .vision-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .vision-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .vision-card h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .vision-card h3 i {
+            color: var(--secondary-color);
+        }
+        
+        .vision-card p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        
+        /* 时间线/对比 */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: 40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: 40px;
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            right: -50px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            left: -50px;
+        }
+        
+        .timeline-content h4 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .timeline-content li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .timeline-content li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+        
+        /* 品牌解释 */
+        .brand-explanation {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .brand-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+        }
+        
+        .brand-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .brand-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .brand-item h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* 战略部分 */
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .strategy-item {
+            text-align: center;
+            padding: 30px;
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .strategy-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .about-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .about-hero .chinese-title {
+                font-size: 1.8rem;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+            }
+            
+            .timeline-content {
+                margin-left: 70px !important;
+                margin-right: 0 !important;
+            }
+            
+            .timeline-content::before {
+                left: -50px !important;
+                right: auto !important;
+            }
+        }
+        
+        /* 图片占位符 */
+        .image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--bg-light), var(--bg-secondary));
+            border-radius: var(--radius-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            font-size: 1.2rem;
+            margin: 30px 0;
+            border: 2px dashed var(--border-color);
+        }
+        
+        .image-placeholder i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body lang="en">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-english">STRATRONIX</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-chinese">鼎图</span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="language-switcher">
+                <a href="../zh/about.html" class="lang-btn">
+                    <i class="fas fa-language"></i> 中文
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="about-hero-content">
+            <h1>About Stratronix</h1>
+            <div class="chinese-title">关于鼎图</div>
+            <p>Creating the Private AI-Agent Appliance (PAA) category — building the foundational infrastructure for the AI Agent economy.</p>
+        </div>
+    </section>
+
+    <!-- 公司介绍 -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission</h2>
+                <p>Defining the future of autonomous AI infrastructure</p>
+            </div>
+            
+            <div class="vision-card">
+                <h3><i class="fas fa-bullseye"></i> Category Creation</h3>
+                <p>Stratronix is creating a new global category: <strong>Private AI-Agent Appliance (PAA)</strong> — a hardware + software integrated system that enables autonomous AI agents to operate continuously, privately, and efficiently.</p>
+                
+                <div class="image-placeholder">
+                    <i class="fas fa-image"></i>
+                    <div>PAA Product Image Placeholder</div>
+                    <div style="font-size: 0.9rem; margin-top: 10px;">(Add your A100 PAA product image here)</div>
+                </div>
+                
+                <p>We believe AI is transitioning from <strong>Model Era (AI 1.0)</strong> to <strong>Agent Era (AI 2.0)</strong>. In this new paradigm, intelligent agents—not models—become the fundamental unit of productivity.</p>
+                <p>Our A100 device, powered by agent frameworks such as OpenClaw-based intelligent systems, represents the first step toward building an AI-native infrastructure layer for humanity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 愿景与战略 -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Vision & Strategy</h2>
+                <p>Building from the ground up</p>
+            </div>
+            
+            <div class="vision-card">
+                <h3><i class="fas fa-chess-board"></i> Long-term Vision</h3>
+                <p>Stratronix is built on a long-term vision:</p>
+                <p style="font-size: 1.3rem; font-weight: 500; color: var(--primary-color); margin: 20px 0;">
+                    Build a foundation → establish stronghold → expand systematically → dominate the core.
+                </p>
+            </div>
+            
+            <div class="vision-card">
+                <h3><i class="fas fa-layer-group"></i> The Stratum Philosophy</h3>
+                <p>The name <strong>Stratronix</strong> derives from <strong>"Stratum"</strong> (layered structure) — representing our belief:</p>
+                <p style="font-size: 1.3rem; font-weight: 500; color: var(--primary-color); margin: 20px 0;">
+                    All intelligent systems must be built from foundational layers upward.
+                </p>
+                <p>We aim to become the infrastructure layer of the AI Agent economy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 行业转变 -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Industry Shift: AI 2.0 (Agent Era)</h2>
+                <p>From passive models to active agents</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>AI 1.0 - Model Era</h4>
+                        <ul>
+                            <li>Chat-based AI (LLMs)</li>
+                            <li>Passive interaction</li>
+                            <li>Human-driven</li>
+                            <li>Single-task focused</li>
+                            <li>Cloud-dependent</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>AI 2.0 - Agent Era (Our Focus)</h4>
+                        <ul>
+                            <li>Autonomous AI Agents</li>
+                            <li>Task execution</li>
+                            <li>Continuous operation</li>
+                            <li>System-level intelligence</li>
+                            <li>Edge computing capable</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Agents Will Become</h4>
+                        <ul>
+                            <li>Digital employees</li>
+                            <li>Operational systems</li>
+                            <li>Decision engines</li>
+                            <li>Productivity multipliers</li>
+                            <li>Business infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAA战略 -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Category Strategy: PAA</h2>
+                <p>We are not just building a product — we are defining a category</p>
+            </div>
+            
+            <div class="strategy-grid">
+                <div class="strategy-item">
+                    <div class="strategy-number">1</div>
+                    <h3>Standardize</h3>
+                    <p>Establish "PAA" as the global standard term for Private AI-Agent Appliances</p>
+                </div>
+                
+                <div class="strategy-item">
+                    <div class="strategy-number">2</div>
+                    <h3>Associate</h3>
+                    <p>Position Stratronix as the category leader and reference implementation</p>
+                </div>
+                
+                <div class="strategy-item">
+                    <div class="strategy-number">3</div>
+                    <h3>Educate</h3>
+                    <p>Create market awareness and educate stakeholders about the PAA paradigm</p>
+                </div>
+                
+                <div class="strategy-item">
+                    <div class="strategy-number">4</div>
+                    <h3>Ecosystem</h3>
+                    <p>Build developer tools, partnerships, and ecosystem around PAA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌解释 -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Brand Identity</h2>
+                <p>The meaning behind our name</p>
+            </div>
+                </div>
+                
+                <div class="brand-item">
+                    <div class="brand-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>鼎图 (Dǐng Tú)</h3>
+                    <p><strong>鼎</strong> = Ancient ritual vessel, symbolizing stability and authority</p>
+                    <p><strong>图</strong> = Map, blueprint, plan</p>
+                    <p><strong>Meaning</strong>: Creating the blueprint for stable AI infrastructure</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Stratronix / 鼎图</h3>
+                    <p>Building the AI Agent Infrastructure Layer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> info@stratronix.ai</p>
+                    <p><i class="fas fa-globe"></i> www.stratronix.ai</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stratronix Technology. All rights reserved. | Private AI-Agent Appliance (PAA) Category Creator</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航菜单切换
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // 关闭菜单当点击链接时
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+        
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.about-section');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+                section.classList.add('page-load');
+            });
+        });
+    </script>
+</body>
+</html>
