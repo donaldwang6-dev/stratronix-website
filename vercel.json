@@ -1,11 +1,27 @@
 {
-  "version": 2,
-  "name": "stratronix-website",
-  "public": true,
   "rewrites": [
     {
+      "source": "/googlelQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw.html",
+      "destination": "/googlelQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw.html"
+    },
+    {
       "source": "/(.*)",
-      "destination": "/$1"
+      "destination": "/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/googlelQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw.html",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/html; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
     }
   ]
 }
