@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google验证代码 - 直接添加到网站首页</title>
+    <style>
+        body { font-family: Arial; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .code { background: #f5f5f5; padding: 20px; border-radius: 5px; font-family: monospace; }
+        .instructions { margin: 20px 0; padding: 20px; background: #e8f0fe; }
+    </style>
+</head>
+<body>
+    <h1>Google验证代码 - HTML标签方法</h1>
+    
+    <div class="instructions">
+        <h2>使用方法：</h2>
+        <ol>
+            <li>复制下面的代码</li>
+            <li>打开网站首页的HTML文件（通常是index.html）</li>
+            <li>找到&lt;head&gt;标签</li>
+            <li>将代码粘贴到&lt;head&gt;标签内</li>
+            <li>保存并上传文件</li>
+            <li>回到Google Search Console点击验证</li>
+        </ol>
+    </div>
+    
+    <div class="code">
+        &lt;meta name="google-site-verification" content="lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw" /&gt;
+    </div>
+    
+    <h3>实际代码（复制这个）：</h3>
+    <div class="code">
+        <meta name="google-site-verification" content="lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw" />
+    </div>
+    
+    <div class="instructions">
+        <h2>如果还是不行，尝试以下方法：</h2>
+        <h3>方法A：使用DNS记录验证（最简单）</h3>
+        <p>在Google Search Console选择"网域提供商"验证方法，然后添加DNS TXT记录。</p>
+        
+        <h3>方法B：使用Google Analytics验证</h3>
+        <p>如果你有Google Analytics，可以用它来验证。</p>
+        
+        <h3>方法C：使用Google Tag Manager验证</h3>
+        <p>如果你有Google Tag Manager，也可以用这个验证。</p>
+    </div>
+    
+    <p><strong>建议：</strong>如果HTML文件验证失败，切换到DNS记录验证，这是最可靠的方法。</p>
+</body>
+</html>

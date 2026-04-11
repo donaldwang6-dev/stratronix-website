@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratronix A100 - Professional AI-Agent Appliance Technical Specifications</title>
+    <style>
+        /* ====== 专业企业级设计 ====== */
+        :root {
+            --primary-blue: #1a73e8;
+            --primary-dark: #0d47a1;
+            --accent-green: #34a853;
+            --neutral-dark: #202124;
+            --neutral-gray: #5f6368;
+            --neutral-light: #f8f9fa;
+            --gradient-primary: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-blue) 100%);
+            --gradient-accent: linear-gradient(90deg, var(--primary-blue), var(--accent-green));
+            --shadow-large: 0 20px 60px rgba(0, 0, 0, 0.15);
+            --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--neutral-light);
+            color: var(--neutral-dark);
+            line-height: 1.6;
+            padding: 40px;
+            min-height: 100vh;
+        }
+
+        /* ====== 文档容器 ====== */
+        .document-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 60px;
+            box-shadow: var(--shadow-large);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* ====== 专业头部 ====== */
+        .document-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid rgba(26, 115, 232, 0.15);
+        }
+
+        .company-branding {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .company-logo {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .company-tagline {
+            font-size: 1.2rem;
+            color: var(--neutral-gray);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .product-title-section {
+            margin: 40px 0;
+        }
+
+        .product-main-title {
+            font-size: 3.8rem;
+            font-weight: 900;
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .product-subtitle {
+            font-size: 1.8rem;
+            color: var(--neutral-gray);
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .document-meta {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            color: var(--neutral-gray);
+            font-size: 1.1rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .meta-icon {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        /* ====== 产品展示区域 ====== */
+        .product-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 60px 0;
+            align-items: center;
+        }
+
+        .product-visual {
+            text-align: center;
+        }
+
+        .product-image-container {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .product-image:hover {
+            transform: scale(1.02);
+        }
+
+        .image-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .product-highlights {
+            padding: 30px;
+        }
+
+        .highlight-title {
+            font-size: 2.2rem;
+            color: var(--neutral-dark);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .highlight-list {
+            list-style: none;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .highlight-icon {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .highlight-content h4 {
+            font-size: 1.3rem;
+            color: var(--neutral-dark);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .highlight-content p {
+            color: var(--neutral-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* ====== 核心规格网格 ====== */
+        .core-specifications {
+            margin: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--neutral-dark);
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .spec-category {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .spec-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(26, 115, 232, 0.1);
+        }
+
+        .category-icon {
+            color: var(--primary-blue);
+            font-size: 2rem;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            color: var(--neutral-dark);
+            font-weight: 700;
+        }
+
+        .spec-list {
+            list-style: none;
+        }
+
+        .spec-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .spec-item:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            font-size: 1.1rem;
+            color: var(--neutral-gray);
+            font-weight: 500;
+        }
+
+        .spec-value {
+            font-size: 1.2rem;
+            color: var(--neutral-dark);
+            font-weight: 700;
+            text-align: right;
+        }
+
+        .spec-note {
+            font-size: 0.95rem;
+            color: var(--neutral-gray);
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        /* ====== 详细技术规格表 ====== */
+        .technical-details {
+            margin: 80px 0;
+        }
+
+        .tech-table-container {
+            overflow-x: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        .tech-table thead {
+            background: var(--gradient-primary);
+        }
+
+        .tech-table th {
+            color: white;
+            font-weight: 600;
+            text-align: left;
+            padding: 20px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-table tbody tr {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            transition: background-color 0.2s ease;
+        }
+
+        .tech-table tbody tr:hover {
+            background-color: rgba(26, 115, 232, 0.03);
+        }
+
+        .tech-table tbody tr:nth-child(even) {
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .tech-table tbody tr:nth-child(even):hover {
+            background-color: rgba(26, 115, 232, 0.05);
+        }
+
+        .tech-table td {
+            padding: 18px 20px;
+            color: var(--neutral-dark);
+            font-size: 1.05rem;
+        }
+
+        .tech-table td:first-child {
+            font-weight: 600;
+            color: var(--neutral-dark);
+            width: 30%;
+        }
+
+        .tech-table td:nth-child(2) {
+            color: var(--neutral-gray);
+            width: 25%;
+        }
+
+        .tech-table td:nth-child(3) {
+            color: var(--neutral-dark);
+            font-weight: 500;
+            width: 45%;
+        }
+
+        /* ====== 应用场景 ====== */
+        .use-cases {
+            margin: 80px 0;
+        }
+
+        .use-case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .use-case-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 35px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary-blue);
+        }
+
+        .use-case-icon {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .use-case-title {
+            font-size: 1.6rem;
+            color: var(--neutral-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .use-case-description {
+            color: var(--neutral-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .use-case-benefits {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+
+        .benefit-icon {
+            color: var(--accent-green);
+            font-size: 0.9rem;
+        }
+
+        /* ====== 页脚和CTA ====== */
+        .document-footer {
+            margin-top: 80px;
+            padding-top: 50px;
+            border-top: 2px solid rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .cta-section {
+            background: var(--gradient-primary);
+            border-radius: var(--border-radius);
+            padding: 50px;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .cta-title {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .footer-info {
+            color: var(--neutral-gray);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .footer-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-dark);
+            text-decoration: underline;
+        }
+
+        /* ====== 响应式设计 ====== */
+        @media (max-width: 992px) {
+            .product-showcase {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .document-container {
+                padding: 40px;
+            }
+            
+            .product-main-title {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 20px;
+            }
+            
+            .document-container {
+                padding: 30px;
+            }
+            
+            .product-main-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .spec-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ====== 打印样式 ====== */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .document-container {
+                box-shadow: none;
+                border: none;
+                padding: 20px;
+            }
+            
+            .btn {
+                display: none;
+            }
+            
+            .tech-table-container {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+            
+            .spec-category, .use-case-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+        }
+
+        /* 打印按钮样式 */
+        .print-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow:            transition: all 0.3s ease;
+        }
+
+        .print-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 打印按钮 -->
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-print"></i> Print / Save as PDF
+    </button>
+
+    <div class="document-container">
+        <!-- ====== 文档头部 ====== -->
+        <header class="document-header">
+            <div class="company-branding">
+                <div class="company-logo">STRATRONIX</div>
+                <div class="company-tagline">Pioneering Private AI-Agent Infrastructure</div>
+            </div>
+            
+            <div class="product-title-section">
+                <h1 class="product-main-title">A100 Private AI-Agent Appliance</h1>
+                <p class="product-subtitle">
+                    Enterprise-Grade AI Infrastructure for Autonomous Agent Deployment
+                </p>
+            </div>
+            
+            <div class="document-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt meta-icon"></i>
+                    <span>Document Version: 2.1 | April 2026</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-file-alt meta-icon"></i>
+                    <span>Confidential: For Business Evaluation Only</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-industry meta-icon"></i>
+                    <span>Category: Private AI-Agent Appliance (PAA)</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ====== 产品展示 ====== -->
+        <section class="product-showcase">
+            <div class="product-visual">
+                <div class="product-image-container">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                         alt="Stratronix A100 AI Appliance - Professional Rack-mounted Unit" 
+                         class="product-image">
+                    <div class="image-overlay">
+                        <h3 style="margin: 0; font-size: 1.2rem;">Professional 2U Rack-mounted Design</h3>
+                        <p style="margin: 5px 0 0; opacity: 0.9; font-size: 0.95rem;">Optimized for data center deployment</p>
+                    </div>
+                </div>
+                <p class="image-caption" style="text-align: center; color: var(--neutral-gray); margin-top: 15px; font-size: 1rem;">
+                    Figure 1: Stratronix A100 - Enterprise AI-Agent Appliance
+                </p>
+            </div>
+            
+            <div class="product-highlights">
+                <h2 class="highlight-title">Key Product Highlights</h2>
+                <ul class="highlight-list">
+                    <li class="highlight-item">
+                        <i class="fas fa-microchip highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h4>NVIDIA A100 80GB GPU Acceleration</h4>
+                            <p>Industry-leading AI compute performance with 256 TOPS for simultaneous training and inference workloads.</p>
+                        </div>
+                    </li>
+                    <li class="highlight-item">
+                        <i class="fas fa-shield-alt highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h4>Complete Data Sovereignty</h4>
+                            <p>All AI processing occurs on-premises with zero cloud dependencies, ensuring full regulatory compliance and data privacy.</p>
+                        </div>
+                    </li>
+                    <li class="highlight-item">
+                        <i class="fas fa-plug highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h4>Pre-integrated OpenClaw Platform</h4>
+                            <p>Enterprise-ready AI agent framework pre-installed and optimized for immediate deployment and productivity.</p>
+                        </div>
+                    </li>
+                    <li class="highlight-item">
+                        <i class="fas fa-network-wired highlight-icon"></i>
+                        <div class="highlight-content">
+                            <h4>High-Performance Networking</h4>
+                            <p>Quad 100GbE interfaces with RDMA support for seamless integration into existing infrastructure.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ====== 核心规格 ====== -->
+        <section class="core-specifications">
+            <h2 class="section-title">Core Specifications</h2>
+            <div class="spec-grid">
+                <!-- 硬件规格 -->
+                <div class="spec-category">
+                    <div class="category-header">
+                        <i class="fas fa-server category-icon"></i>
+                        <h3 class="category-title">Hardware Architecture</h3>
+                    </div>
+                    <ul class="spec-list">
+                        <li class="spec-item">
+                            <span class="spec-label">Processing Unit</span>
+                            <span class="spec-value">NVIDIA A100 80GB PCIe</span>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">CPU Configuration</span>
+                            <span class="spec-value">Octa-core ARM Cortex</span>
+                            <div class="spec-note">High-efficiency architecture</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">System Memory</span>
+                            <span class="spec-value">32GB DDR5</span>
+                            <div class="spec-note">High-speed ECC memory</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Storage Expansion</span>
+                            <span class="spec-value">Up to 512GB</span>
+                            <div class="spec-note">MicroSD (TF Card) Slot</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Operating System</span>
+                            <span class="spec-value">Linux</span>
+                            <div class="spec-note">Stable server-grade distribution</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 性能指标 -->
+                <div class="spec-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-line category-icon"></i>
+                        <h3 class="category-title">Performance Metrics</h3>
+                    </div>
+                    <ul class="spec-list">
+                        <li class="spec-item">
+                            <span class="spec-label">AI Compute Performance</span>
+                            <span class="spec-value">256 TOPS</span>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Network Bandwidth</span>
+                            <span class="spec-value">4× 100GbE</span>
+                            <div class="spec-note">RDMA-capable interfaces</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">System Uptime</span>
+                            <span class="spec-value">99.9% SLA</span>
+                            <div class="spec-note">Enterprise-grade reliability</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Power Consumption</span>
+                            <span class="spec-value">≤ 500W</span>
+                            <div class="spec-note">Typical operational load</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Warranty Period</span>
+                            <span class="spec-value">2 Years</span>
+                            <div class="spec-note">Comprehensive support included</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 软件平台 -->
+                <div class="spec-category">
+                    <div class="category-header">
+                        <i class="fas fa-code category-icon"></i>
+                        <h3 class="category-title">Software Platform</h3>
+                    </div>
+                    <ul class="spec-list">
+                        <li class="spec-item">
+                            <span class="spec-label">AI Framework</span>
+                            <span class="spec-value">OpenClaw Enterprise</span>
+                            <div class="spec-note">Pre-installed & optimized</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Container Runtime</span>
+                            <span class="spec-value">Docker + Kubernetes</span>
+                            <div class="spec-note">Orchestration ready</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Security Suite</span>
+                            <span class="spec-value">Hardened Linux Kernel</span>
+                            <div class="spec-note">CIS compliance baseline</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">Management Interface</span>
+                            <span class="spec-value">Web-based Dashboard</span>
+                            <div class="spec-note">Role-based access control</div>
+                        </li>
+                        <li class="spec-item">
+                            <span class="spec-label">API Support</span>
+                            <span class="spec-value">REST & gRPC</span>
+                            <div class="spec-note">Enterprise integration ready</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 详细技术规格表 ====== -->
+        <section class="technical-details">
+            <h2 class="section-title">Detailed Technical Specifications</h2>
+            <div class="tech-table-container">
+                <table class="tech-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Component</th>
+                            <th>Specification Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Compute</td>
+                            <td>GPU</td>
+                            <td>NVIDIA A100 80GB PCIe with 256 TOPS AI performance, 6912 CUDA cores, 432 Tensor cores</td>
+                        </tr>
+                        <tr>
+                            <td>Compute</td>
+                            <td>CPU</td>
+                            <td>8-core ARM Cortex-A78AE processor with 64-bit architecture and hardware virtualization support</td>
+                        </tr>
+                        <tr>
+                            <td>Memory</td>
+                            <td>System RAM</td>
+                            <td>32GB DDR5 ECC memory with 4800 MT/s transfer rate and error correction</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>Primary Storage</td>
+                            <td>1TB NVMe SSD with 7000MB/s read and 5000MB/s write speeds</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>Expansion</td>
+                            <td>MicroSD (TF Card) slot supporting up to 512GB additional storage</td>
+                        </tr>
+                        <tr>
+                            <td>Networking</td>
+                            <td>Interfaces</td>
+                            <td>4× 100GbE SFP28 ports with RDMA over Converged Ethernet (RoCE) support</td>
+                        </tr>
+                        <tr>
+                            <td>Networking</td>
+                            <td>Management</td>
+                            <td>1× 1GbE dedicated management port with out-of-band capabilities</td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>Supply</td>
+                            <td>Dual redundant 800W 80 Plus Platinum power supplies with hot-swap capability</td>
+                        </tr>
+                        <tr>
+                            <td>Physical</td>
+                            <td>Form Factor</td>
+                            <td>2U rack-mountable chassis with tool-less design and front-accessible components</td>
+                        </tr>
+                        <tr>
+                            <td>Physical</td>
+                            <td>Dimensions</td>
+                            <td>88mm (H) × 482mm (W) × 800mm (D) - Standard 19-inch rack compatible</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>OS</td>
+                            <td>Custom Linux distribution based on Ubuntu 22.04 LTS with long-term support</td>
+                        </tr>
+                        <tr>
+                            <td>Software</td>
+                            <td>AI Platform</td>
+                            <td>OpenClaw Enterprise Edition with pre-configured agent templates and workflows</td>
+                        </tr>
+                        <tr>
+                            <td>Security</td>
+                            <td>Hardware</td>
+                            <td>TPM 2.0 module, secure boot, hardware encryption acceleration</td>
+                        </tr>
+                        <tr>
+                            <td>Compliance</td>
+                            <td>Standards</td>
+                            <td>CE, FCC, RoHS compliant; ISO 27001 aligned security controls</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Warranty</td>
+                            <td>2-year comprehensive warranty with next-business-day hardware replacement</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ====== 应用场景 ====== -->
+        <section class="use-cases">
+            <h2 class="section-title">Enterprise Application Scenarios</h2>
+            <div class="use-case-grid">
+                <div class="use-case-card">
+                    <i class="fas fa-chart-line use-case-icon"></i>
+                    <h3 class="use-case-title">Financial Intelligence</h3>
+                    <p class="use-case-description">
+                        Real-time market analysis, algorithmic trading strategies, and risk assessment with complete data privacy and regulatory compliance.
+                    </p>
+                    <ul class="use-case-benefits">
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Real-time market monitoring</span>
+                        </li>
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Algorithmic trading automation</span>
+                        </li>
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>GDPR & FINRA compliance</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <i class="fas fa-stethoscope use-case-icon"></i>
+                    <h3 class="use-case-title">Healthcare Analytics</h3>
+                    <p class="use-case-description">
+                        AI-powered diagnostic support, patient data analysis, and medical research acceleration while maintaining HIPAA compliance.
+                    </p>
+                    <ul class="use-case-benefits">
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Medical image analysis</span>
+                        </li>
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Patient data privacy</span>
+                        </li>
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Research acceleration</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="use-case-card">
+                    <i class="fas fa-industry use-case-icon"></i>
+                    <h3 class="use-case-title">Industrial Automation</h3>
+                    <p class="use-case-description">
+                        Predictive maintenance, quality control automation, and supply chain optimization for manufacturing operations.
+                    </p>
+                    <ul class="use-case-benefits">
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Predictive maintenance</span>
+                        </li>
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Quality control automation</span>
+                        </li>
+                        <li class="benefit-item">
+                            <i class="fas fa-check-circle benefit-icon"></i>
+                            <span>Supply chain optimization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 页脚和CTA ====== -->
+        <footer class="document-footer">
+            <div class="cta-section">
+                <h2 class="cta-title">Ready to Transform Your AI Infrastructure?</h2>
+                <p class="cta-description">
+                    The Stratronix A100 represents the next generation of private AI infrastructure. 
+                    Contact our solutions team for a personalized demonstration and detailed pricing information.
+                </p>
+                <div class="cta-buttons">
+                    <a href="mailto:info@stratronix.ai?subject=Request%20Quote%20for%20A100%20AI%20Appliance&body=Dear%20Stratronix%20Team,%0D%0A%0D%0AI%20am%20interested%20in%20requesting%20a%20quote%20for%20your%20A100%20Private%20AI-Agent%20Appliance.%20Please%20provide%20me%20with%20pricing%20information%20and%20availability%20details.%0D%0A%0D%0ABest%20regards," 
+                       class="btn btn-primary">
+                        <i class="fas fa-file-invoice-dollar"></i> Request Official Quote
+</a>
+                    <a href="mailto:sales@stratronix.ai?subject=Schedule%20A100%20Demonstration&body=Dear%20Stratronix%20Sales%20Team,%0D%0A%0D%0AI%20would%20like%20to%20schedule%20a%20demonstration%20of%20the%20A100%20Private%20AI-Agent%20Appliance.%20Please%20contact%20me%20to%20arrange%20a%20suitable%20time.%0D%0A%0D%0ABest%20regards," 
+                       class="btn btn-secondary">
+                        <i class="fas fa-calendar-check"></i> Schedule Demonstration
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-info">
+                <p><strong>Stratronix Technology</strong> | Pioneering Private AI-Agent Infrastructure</p>
+                <p>Document ID: STRAT-A100-SPEC-2.1 | Classification: Business Confidential</p>
+                <p>© 2026 Stratronix Technology. All specifications subject to change without notice.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.stratronix.ai" class="footer-link">www.stratronix.ai</a>
+                <a href="mailto:info@stratronix.ai" class="footer-link">info@stratronix.ai</a>
+                <a href="tel:+861234567890" class="footer-link">+86 123 4567 890</a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- 打印优化脚本 -->
+    <script>
+        // 打印优化
+        document.addEventListener("DOMContentLoaded", function() {
+            // 打印时优化
+            window.addEventListener("beforeprint", function() {
+                document.querySelectorAll(".btn").forEach(btn => {
+                    btn.style.display = "none";
+                });
+                document.querySelector(".print-btn").style.display = "none";
+            });
+
+            window.addEventListener("afterprint", function() {
+                document.querySelectorAll(".btn").forEach(btn => {
+                    btn.style.display = "inline-flex";
+                });
+                document.querySelector(".print-btn").style.display = "block";
+            });
+        });
+    </script>
+</body>
+</html>
