@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.stratronix.ai"
+        }
+      ],
+      "destination": "https://stratronix.ai/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/googlelQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw.html",
