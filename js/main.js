@@ -388,6 +388,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 防止默认链接行为（我们将用JavaScript处理）
                 e.preventDefault();
                 
+                // 如果已经是目标语言，不执行切换
+                const buttonLang = this.getAttribute('data-lang');
+                const currentPath = window.location.pathname;
+                
+                if ((buttonLang === 'en' && currentPath.includes('/en/')) || 
+                    (buttonLang === 'zh' && currentPath.includes('/zh/'))) {
+                    console.log('Already on target language page');
+                    return;
+                }
+                
                 // 获取当前页面路径
                 const currentPath = window.location.pathname;
                 
