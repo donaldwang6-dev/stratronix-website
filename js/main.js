@@ -377,7 +377,92 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ====================
-    // 13. 设备检测
+    // 13. 语言切换功能
+    // ====================
+    function initLanguageSwitcher() {
+        // 获取所有语言切换按钮
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        langButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                // 防止默认链接行为（我们将用JavaScript处理）
+                e.preventDefault();
+                
+                // 获取当前页面路径
+                const currentPath = window.location.pathname;
+                
+                // 确定目标语言（使用data-lang属性）
+                let targetLang = this.getAttribute('data-lang') || 'en'; // 默认英语
+                
+                // 如果没有data-lang属性，回退到文本检测
+                if (!targetLang) {
+                    const buttonText = this.textContent.trim();
+                    if (buttonText.includes('中文') || buttonText === '中文') {
+                        targetLang = 'zh';
+                    } else if (buttonText.includes('English') || buttonText === 'English') {
+                        targetLang = 'en';
+                    }
+                }
+                
+                // 获取当前文件名
+                let currentFile = 'index.html';
+                if (currentPath.includes('/en/')) {
+                    currentFile = currentPath.split('/en/')[1] || 'index.html';
+                } else if (currentPath.includes('/zh/')) {
+                    currentFile = currentPath.split('/zh/')[1] || 'index.html';
+                } else {
+                    // 如果在根目录
+                    currentFile = currentPath.substring(1) || 'index.html';
+                }
+                
+                // 构建目标URL
+                let targetUrl = '';
+                if (targetLang === 'zh') {
+                    targetUrl = `/zh/${currentFile}`;
+                } else {
+                    targetUrl = `/en/${currentFile}`;
+                }
+                
+                // 跳转到目标页面
+                console.log(`Switching language to ${targetLang}, navigating to: ${targetUrl}`);
+                window.location.href = targetUrl;
+            });
+        });
+        
+        // 更新活动按钮状态
+        updateActiveLanguageButton();
+    }
+    
+    function updateActiveLanguageButton() {
+        const currentPath = window.location.pathname;
+        const langButtons = document.querySelectorAll('.lang-btn');
+        
+        // 移除所有active类
+        langButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+        
+        // 根据当前URL添加active类
+        langButtons.forEach(button => {
+            const buttonLang = button.getAttribute('data-lang');
+            
+            if (!buttonLang) return;
+            
+            if (currentPath.includes('/zh/') && buttonLang === 'zh') {
+                button.classList.add('active');
+            } else if (currentPath.includes('/en/') && buttonLang === 'en') {
+                button.classList.add('active');
+            } else if (!currentPath.includes('/zh/') && !currentPath.includes('/en/')) {
+                // 根目录，默认英语
+                if (buttonLang === 'en') {
+                    button.classList.add('active');
+                }
+            }
+        });
+    }
+    
+    // ====================
+    // 14. 设备检测
     // ====================
     function detectDevice() {
         const userAgent = navigator.userAgent;
@@ -396,7 +481,12 @@ document.addEventListener('DOMContentLoaded', function() {
     detectDevice();
     
     // ====================
-    // 14. 初始化完成
+    // 15. 初始化语言切换
+    // ====================
+    initLanguageSwitcher();
+    
+    // ====================
+    // 16. 初始化完成
     // ====================
     console.log('Stratronix / 鼎图 website initialized successfully');
 });
