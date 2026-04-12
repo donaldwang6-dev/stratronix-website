@@ -566,8 +566,8 @@
                                     <i class="fas fa-rocket"></i>
                                 </div>
                                 <div class="mission-detail">
-                                    <h4>加速转型</h4>
-                                    <p>快速将传统工作流程升级为AI驱动的自动化</p>
+                                    <h4>Accelerate Transformation</h4>
+                                    <p>Rapidly upgrade traditional workflows to AI-powered automation</p>
                                 </div>
                             </div>
                             
@@ -576,8 +576,8 @@
                                     <i class="fas fa-chart-line"></i>
                                 </div>
                                 <div class="mission-detail">
-                                    <h4>提升效率</h4>
-                                    <p>显著提高所有业务流程的运营效率</p>
+                                    <h4>Boost Efficiency</h4>
+                                    <p>Significantly improve operational efficiency across all business processes</p>
                                 </div>
                             </div>
                             
@@ -586,8 +586,8 @@
                                     <i class="fas fa-users"></i>
                                 </div>
                                 <div class="mission-detail">
-                                    <h4>赋能团队</h4>
-                                    <p>通过智能辅助使个人和团队能够取得更多成就</p>
+                                    <h4>Empower Teams</h4>
+                                    <p>Enable individuals and teams to achieve more with intelligent assistance</p>
                                 </div>
                             </div>
                         </div>
@@ -612,19 +612,19 @@
         <div class="container">
             <div class="section-header">
                 <h2>我们的愿景</h2>
-                <p>从基础开始构建</p>
+                <p>Building from the ground up</p>
             </div>
             
             <div class="vision-grid">
                 <div class="vision-card-compact">
-                    <h3 style="color: #202124 !important;"><i class="fas fa-chess-board"></i> 长期愿景</h3>
-                    <p style="color: #5f6368 !important;">Stratronix建立在长期愿景之上：提供高质量的AI智能体设备</p>
+                    <h3 style="color: #202124 !important;"><i class="fas fa-chess-board"></i> Long-term Vision</h3>
+                    <p style="color: #5f6368 !important;">Stratronix建立在长期愿景之上：</p>
                     
                     <div class="vision-steps-compact">
                         <div class="vision-step-compact">
                             <div class="step-number-compact">1</div>
                             <div class="step-content-compact">
-                                <h4>构建PAA基础</h4>
+                                <h4>Build a PAA foundation</h4>
                                 <p>为AI代理建立基础基础设施层</p>
                             </div>
                         </div>
@@ -632,7 +632,7 @@
                         <div class="vision-step-compact">
                             <div class="step-number-compact">2</div>
                             <div class="step-content-compact">
-                                <h4>建立市场主导地位</h4>
+                                <h4>Establish stronghold</h4>
                                 <p>在PAA类别中确保市场领导地位</p>
                             </div>
                         </div>
@@ -640,7 +640,7 @@
                         <div class="vision-step-compact">
                             <div class="step-number-compact">3</div>
                             <div class="step-content-compact">
-                                <h4>系统化扩展</h4>
+                                <h4>Expand systematically</h4>
                                 <p>有条不紊地扩展到相邻市场和应用程序</p>
                             </div>
                         </div>
@@ -648,7 +648,7 @@
                         <div class="vision-step-compact">
                             <div class="step-number-compact">4</div>
                             <div class="step-content-compact">
-                                <h4>利用世界底层生产力</h4>
+                                <h4>Leverage the productivity from the bottom layer of the world</h4>
                                 <p>利用基础AI基础设施推动全球生产力</p>
                             </div>
                         </div>
@@ -657,7 +657,7 @@
                 
                 <div class="vision-card-compact">
                     <h3 style="color: #202124 !important;"><i class="fas fa-layer-group"></i> 提供优质的智能体设备</h3>
-                    <p style="color: #5f6368 !important;">名称<strong>Stratronix</strong>源自<strong>"Stratum"</strong>（分层结构）——代表我们的信念：</p>
+                    <p style="color: #5f6368 !important;">The name <strong>Stratronix</strong> derives from <strong>"Stratum"</strong> (layered structure) — representing our belief:</p>
                     <div class="philosophy-quote">
                         <i class="fas fa-quote-left"></i>
                         <p>所有智能系统都必须从基础层向上构建。</p>

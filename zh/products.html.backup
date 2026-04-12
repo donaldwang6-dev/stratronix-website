@@ -346,7 +346,7 @@
                 <li><a href="about.html" class="nav-link">关于</a></li>
                 <li><a href="products.html" class="nav-link active">产品</a></li>
                 <li><a href="news.html" class="nav-link">新闻</a></li>
-                <li><a href="contact.html" class="nav-link">联系我们</a></li>
+                <li><a href="contact.html" class="nav-link">联系</a></li>
             </ul>
             
             <div class="language-switcher">
@@ -380,7 +380,7 @@
                     </div>
                     <h3>Enterprise PAA</h3>
                     <p>高性能设备，适用于大规模企业部署，具有先进的安全性和管理功能。</p>
-                    <a href="#" class="btn btn-primary">了解更多</a>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
                 
                 <div class="category-card">
@@ -389,7 +389,7 @@
                     </div>
                     <h3>SMB PAA</h3>
                     <p>经济高效的解决方案，适用于中小型企业，部署和维护简单。</p>
-                    <a href="#" class="btn btn-primary">了解更多</a>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
                 
                 <div class="category-card">
@@ -398,7 +398,7 @@
                     </div>
                     <h3>Edge PAA</h3>
                     <p>紧凑型设备，适用于边缘计算场景，具有低延迟和离线操作能力。</p>
-                    <a href="#" class="btn btn-primary">了解更多</a>
+                    <a href="#" class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         </div>
@@ -426,10 +426,10 @@
                     <p>The A100 represents our first-generation PAA device, designed to provide a complete hardware + software solution for autonomous AI agent deployment.</p>
                     
                     <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> <strong>持续运行</strong>: 24/7自主代理运行时间</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>隐私优先</strong>: 完全数据隔离和控制</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>能效优化</strong>: 为可持续运行而优化</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>可扩展架构</strong>: 从单机到集群部署</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Continuous Operation</strong>: 24/7 autonomous agent runtime</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Privacy First</strong>: Complete data isolation and control</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Energy Efficient</strong>: Optimized for sustainable operation</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Scalable Architecture</strong>: From single unit to cluster deployment</li>
                         <li><i class="fas fa-check-circle"></i> <strong>OpenClaw Integration</strong>: Built-in agent framework support</li>
                     </ul>
                     
@@ -486,7 +486,7 @@
                 </div>
                 
                 <div class="spec-card">
-                    <div class="spec-value">2年</div>
+                    <div class="spec-value">2 Years</div>
                     <div class="spec-label">保修期</div>
                 </div>
             </div>
@@ -514,42 +514,42 @@
                     <div class="case-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>制造业</h3>
-                    <p>通过持续传感器数据分析实现预测性维护和质量控制。</p>
+                    <h3>Manufacturing</h3>
+                    <p>Predictive maintenance and quality control through continuous sensor data analysis.</p>
                 </div>
                 
                 <div class="case-card">
                     <div class="case-icon">
                         <i class="fas fa-stethoscope"></i>
                     </div>
-                    <h3>医疗健康</h3>
-                    <p>符合HIPAA标准的数据处理，用于患者监测和医学研究。</p>
+                    <h3>Healthcare</h3>
+                    <p>Patient monitoring and medical research with HIPAA-compliant data handling.</p>
                 </div>
                 
                 <div class="case-card">
                     <div class="case-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>网络安全</h3>
+                    <h3>Cybersecurity</h3>
                     <p>24/7 threat detection and response with isolated security operations.</p>
                 </div>
                 
-                <!-- 新增用例：呼叫中心 -->
+                <!-- 新增用例：Call Center -->
                 <div class="case-card">
                     <div class="case-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>呼叫中心</h3>
-                    <p>AI驱动的客户服务，具有智能路由、情感分析和自动响应。</p>
+                    <h3>Call Center</h3>
+                    <p>AI-powered customer service with intelligent routing, sentiment analysis, and automated responses.</p>
                 </div>
                 
-                <!-- 新增用例：银行 -->
+                <!-- 新增用例：Bank -->
                 <div class="case-card">
                     <div class="case-icon">
                         <i class="fas fa-university"></i>
                     </div>
-                    <h3>银行与金融</h3>
-                    <p>安全的银行运营，具有欺诈检测、合规自动化和个性化咨询。</p>
+                    <h3>Bank & Finance</h3>
+                    <p>Secure banking operations with fraud detection, compliance automation, and personalized advisory.</p>
                 </div>
             </div>
         </div>
@@ -561,19 +561,19 @@
             <div class="footer-content">
                 <div class="footer-logo">
                     <h3>Stratronix / 鼎图</h3>
-                    <p>构建AI智能体基础设施层</p>
+                    <p>Building the AI Agent Infrastructure Layer</p>
                 </div>
                 </div>
                 
                 <div class="footer-contact">
-                    <h4>联系我们</h4>
+                    <h4>联系</h4>
                     <p><i class="fas fa-envelope"></i> info@stratronix.ai</p>
                     <p><i class="fas fa-globe"></i> www.stratronix.ai</p>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Stratronix Technology. All rights reserved. | 私有AI智能体设备(PAA)类别创造者</p>
+                <p>&copy; 2026 Stratronix Technology. All rights reserved. | Private AI-Agent Appliance (PAA) Category Creator</p>
             </div>
         </div>
     </footer>
