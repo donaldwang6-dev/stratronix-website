@@ -1,4 +1,13 @@
 {
+  "version": 2,
+  "name": "stratronix-website",
+  "public": true,
+  "builds": [
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
   "redirects": [
     {
       "source": "https://stratronix.ai/:path*",
