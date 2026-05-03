@@ -1,0 +1,61 @@
+{
+  "version": 2,
+  "name": "stratronix-website",
+  "public": true,
+  "builds": [
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "https://stratronix.ai/:path*",
+      "destination": "https://www.stratronix.ai/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://stratronix.ai/:path*",
+      "destination": "https://www.stratronix.ai/:path*",
+      "permanent": true
+    },
+    {
+      "source": "http://www.stratronix.ai/:path*",
+      "destination": "https://www.stratronix.ai/:path*",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": false,
+  "cleanUrls": true
+}

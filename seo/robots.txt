@@ -1,0 +1,17 @@
+# Stratronix Robots.txt
+# https://www.stratronix.ai/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+
+# Sitemap
+Sitemap: https://www.stratronix.ai/sitemap.xml
+
+# Crawl-delay (optional, for search engines that support it)
+Crawl-delay: 10
+
+# Host
+Host: https://www.stratronix.ai

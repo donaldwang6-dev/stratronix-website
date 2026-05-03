@@ -1,0 +1,204 @@
+{
+  "version": "1.0",
+  "created": "2026-04-23",
+  "brand": "Stratronix",
+  "description": "Design tokens for Stratronix brand system",
+  
+  "colors": {
+    "primary": {
+      "blue-50": "#EFF6FF",
+      "blue-100": "#DBEAFE",
+      "blue-200": "#BFDBFE",
+      "blue-300": "#93C5FD",
+      "blue-400": "#60A5FA",
+      "blue-500": "#3B82F6",
+      "blue-600": "#2563EB",
+      "blue-700": "#1D4ED8",
+      "blue-800": "#1E40AF",
+      "blue-900": "#1E3A8A"
+    },
+    "brand": {
+      "stratronix-blue": "#3868D9",
+      "stratronix-dark-blue": "#1E3A8A",
+      "stratronix-light-blue": "#93C5FD",
+      "stratronix-tech-gray": "#374151"
+    },
+    "neutral": {
+      "gray-50": "#F9FAFB",
+      "gray-100": "#F3F4F6",
+      "gray-200": "#E5E7EB",
+      "gray-300": "#D1D5DB",
+      "gray-400": "#9CA3AF",
+      "gray-500": "#6B7280",
+      "gray-600": "#4B5563",
+      "gray-700": "#374151",
+      "gray-800": "#1F2937",
+      "gray-900": "#111827"
+    },
+    "functional": {
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "error": "#EF4444",
+      "info": "#3B82F6"
+    }
+  },
+  
+  "typography": {
+    "fontFamilies": {
+      "primary": "Montserrat, Arial, sans-serif",
+      "mono": "JetBrains Mono, Consolas, monospace"
+    },
+    "fontWeights": {
+      "light": 300,
+      "regular": 400,
+      "medium": 500,
+      "bold": 700
+    },
+    "fontSizes": {
+      "xs": "0.75rem",
+      "sm": "0.875rem",
+      "base": "1rem",
+      "lg": "1.125rem",
+      "xl": "1.25rem",
+      "2xl": "1.5rem",
+      "3xl": "1.875rem",
+      "4xl": "2.25rem",
+      "5xl": "3rem",
+      "6xl": "3.75rem"
+    },
+    "lineHeights": {
+      "none": 1,
+      "tight": 1.25,
+      "snug": 1.375,
+      "normal": 1.5,
+      "relaxed": 1.625,
+      "loose": 2
+    }
+  },
+  
+  "spacing": {
+    "scale": "8px",
+    "values": {
+      "0": "0",
+      "1": "0.125rem",
+      "2": "0.25rem",
+      "3": "0.375rem",
+      "4": "0.5rem",
+      "5": "0.625rem",
+      "6": "0.75rem",
+      "8": "1rem",
+      "10": "1.25rem",
+      "12": "1.5rem",
+      "16": "2rem",
+      "20": "2.5rem",
+      "24": "3rem",
+      "32": "4rem",
+      "40": "5rem",
+      "48": "6rem",
+      "56": "7rem",
+      "64": "8rem"
+    }
+  },
+  
+  "shadows": {
+    "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    "base": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+    "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+    "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+    "xl": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+    "2xl": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+    "inner": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)",
+    "brand": "0 4px 14px 0 rgba(56, 104, 217, 0.39)"
+  },
+  
+  "borders": {
+    "radius": {
+      "none": "0",
+      "sm": "0.125rem",
+      "base": "0.25rem",
+      "md": "0.375rem",
+      "lg": "0.5rem",
+      "xl": "0.75rem",
+      "2xl": "1rem",
+      "full": "9999px"
+    },
+    "width": {
+      "0": "0",
+      "1": "1px",
+      "2": "2px",
+      "4": "4px",
+      "8": "8px"
+    }
+  },
+  
+  "breakpoints": {
+    "sm": "640px",
+    "md": "768px",
+    "lg": "1024px",
+    "xl": "1280px",
+    "2xl": "1536px"
+  },
+  
+  "zIndex": {
+    "0": 0,
+    "10": 10,
+    "20": 20,
+    "30": 30,
+    "40": 40,
+    "50": 50,
+    "auto": "auto"
+  },
+  
+  "animations": {
+    "duration": {
+      "75": "75ms",
+      "100": "100ms",
+      "150": "150ms",
+      "200": "200ms",
+      "300": "300ms",
+      "500": "500ms",
+      "700": "700ms",
+      "1000": "1000ms"
+    },
+    "timing": {
+      "linear": "linear",
+      "in": "cubic-bezier(0.4, 0, 1, 1)",
+      "out": "cubic-bezier(0, 0, 0.2, 1)",
+      "in-out": "cubic-bezier(0.4, 0, 0.2, 1)"
+    }
+  },
+  
+  "components": {
+    "button": {
+      "primary": {
+        "background": "#3868D9",
+        "text": "#FFFFFF",
+        "hover": "#1D4ED8",
+        "active": "#1E40AF",
+        "disabled": "#9CA3AF"
+      },
+      "secondary": {
+        "background": "transparent",
+        "text": "#3868D9",
+        "border": "#3868D9",
+        "hover": "#EFF6FF",
+        "active": "#DBEAFE"
+      }
+    },
+    "card": {
+      "background": "#FFFFFF",
+      "border": "#E5E7EB",
+      "shadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+    },
+    "input": {
+      "background": "#FFFFFF",
+      "border": "#D1D5DB",
+      "text": "#374151",
+      "placeholder": "#9CA3AF",
+      "focus": {
+        "border": "#3868D9",
+        "shadow": "0 0 0 3px rgba(56, 104, 217, 0.1)"
+      }
+    }
+  }
+}

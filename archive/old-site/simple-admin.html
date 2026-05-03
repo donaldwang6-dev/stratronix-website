@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratronix Simple Admin</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .tabs {
+            display: flex;
+            border-bottom: 2px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background: none;
+            font-size: 16px;
+        }
+        
+        .tab.active {
+            border-bottom: 3px solid #1a73e8;
+            color: #1a73e8;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            background: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+        .btn:hover {
+            background: #0d47a1;
+        }
+        
+        .btn-success {
+            background: #34a853;
+        }
+        
+        .btn-danger {
+            background: #ea4335;
+        }
+        
+        .message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 5px;
+        }
+        
+        .preview {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .preview h3 {
+            margin-bottom: 10px;
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏢 Stratronix Simple Admin</h1>
+        
+        <!-- 标签页 -->
+        <div class="tabs">
+            <button class="tab active" data-tab="products">📦 Products</button>
+            <button class="tab" data-tab="content">📝 Content</button>
+            <button class="tab" data-tab="preview">👁️ Preview</button>
+        </div>
+        
+        <!-- 产品管理 -->
+        <div class="tab-content active" id="products-tab">
+            <h2>Product Management</h2>
+            
+            <!-- 添加产品表单 -->
+            <div style="background: #f8f9fa; padding: 20px; border-radius: 5px; margin-bottom: 20px;">
+                <h3>Add/Edit Product</h3>
+                <form id="productForm">
+                    <input type="hidden" id="productId">
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <div class="form-group">
+                            <label for="productName">Product Name *</label>
+                            <input type="text" id="productName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productCategory">Category *</label>
+                            <select id="productCategory" required>
+                                <option value="">Select</option>
+                                <option value="photography">Photography</option>
+                                <option value="audio">Audio</option>
+                                <option value="video">Video</option>
+                                <option value="lighting">Lighting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="productPrice">Price ($) *</label>
+                            <input type="number" id="productPrice" step="0.01" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="productStock">Stock *</label>
+                            <input type="number" id="productStock" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="productDescription">Description</label>
+                        <textarea id="productDescription"></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="btn btn-success">Save Product</button>
+                        <button type="button" class="btn" id="cancelBtn" style="display: none;">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- 产品列表 -->
+            <h3>Product List</h3>
+            <div id="productMessage" class="message"></div>
+            <table id="productsTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTableBody">
+                    <!-- 产品将动态加载 -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- 内容管理 -->
+        <div class="tab-content" id="content-tab">
+            <h2>Content Management</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <!-- 首页内容 -->
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 5px;">
+                    <h3>Homepage</h3>
+                    <div class="form-group">
+                        <label for="homeTitle">Title</label>
+                        <input type="text" id="homeTitle" value="Welcome to Stratronix">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeSubtitle">Subtitle</label>
+                        <input type="text" id="homeSubtitle" value="Professional Photography & Audio Equipment">
+                    </div>
+                    <div class="form-group">
+                        <label for="homeDescription">Description</label>
+                        <textarea id="homeDescription">High-quality equipment for professionals and enthusiasts. Experience the difference with Stratronix.</textarea>
+                    </div>
+                    <button class="btn" onclick="saveContent()">Save Homepage</button>
+                </div>
+                
+                <!-- 关于页面 -->
+                <div style="background: #f8f9fa; padding: 20px; border-radius: 5px;">
+                    <h3>About Page</h3>
+                    <div class="form-group">
+                        <label for="aboutTitle">Title</label>
+                        <input type="text" id="aboutTitle" value="About Stratronix">
+                    </div>
+                    <div class="form-group">
+                        <label for="aboutContent">Content</label>
+                        <textarea id="aboutContent">We provide professional photography, audio, and video equipment for creators worldwide.</textarea>
+                    </div>
+                    <button class="btn" onclick="saveContent()">Save About Page</button>
+                </div>
+            </div>
+            
+            <div id="contentMessage" class="message" style="margin-top: 20px;"></div>
+        </div>
+        
+        <!-- 预览 -->
+        <div class="tab-content" id="preview-tab">
+            <h2>Website Preview</h2>
+            <p>Your changes will appear on the website automatically.</p>
+            
+            <div class="preview">
+                <h3>Current Products on Website:</h3>
+                <div id="previewProducts">
+                    <!-- 产品预览将动态加载 -->
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <a href="https://www.stratronix.ai/simple-website.html" target="_blank" class="btn">Open Live Website</a>
+                <button class="btn" onclick="refreshPreview()">Refresh Preview</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 数据存储键
+        const STORAGE_KEY = 'stratronix_data';
+        
+        // 初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Simple Admin loaded');
+            
+            // 设置标签页切换
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // 移除所有active类
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    // 激活当前标签
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId + '-tab').classList.add('active');
+                });
+            });
+            
+            // 加载数据
+            loadProducts();
+            loadContent();
+            refreshPreview();
+            
+            // 产品表单提交
+            document.getElementById('productForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                saveProduct();
+            });
+            
+            // 取消编辑
+            document.getElementById('cancelBtn').addEventListener('click', function() {
+                resetProductForm();
+            });
+            
+            // 自动保存内容
+            document.querySelectorAll('#content-tab input, #content-tab textarea').forEach(input => {
+                input.addEventListener('change', saveContent);
+            });
+            
+            // 定期刷新预览
+            setInterval(refreshPreview, 5000);
+        });
+        
+        // 加载产品
+        function loadProducts() {
+            const data = getData();
+            const tbody = document.getElementById('productsTableBody');
+            
+            if (data.products.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 20px; color: #666;">No products yet. Add your first product above.</td></tr>';
+                return;
+            }
+            
+            let html = '';
+            data.products.forEach(product => {
+                const status = product.stock > 0 ? 'In Stock' : 'Out of Stock';
+                const statusColor = product.stock > 0 ? '#34a853' : '#ea4335';
+                
+                html += `
+                    <tr data-id="${product.id}">
+                        <td><strong>${product.name}</strong></td>
+                        <td>${product.category}</td>
+                        <td>$${product.price.toFixed(2)}</td>
+                        <td><span style="color: ${statusColor}">${product.stock} (${status})</span></td>
+                        <td class="actions">
+                            <button class="btn" onclick="editProduct('${product.id}')" style="padding: 5px 10px; font-size: 14px;">Edit</button>
+                            <button class="btn btn-danger" onclick="deleteProduct('${product.id}')" style="padding: 5px 10px; font-size: 14px;">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            tbody.innerHTML = html;
+        }
+        
+        // 保存产品
+        function saveProduct() {
+            const product = {
+                id: document.getElementById('productId').value || Date.now().toString(),
+                name: document.getElementById('productName').value.trim(),
+                category: document.getElementById('productCategory').value,
+                price: parseFloat(document.getElementById('productPrice').value) || 0,
+                stock: parseInt(document.getElementById('productStock').value) || 0,
+                description: document.getElementById('productDescription').value.trim(),
+                createdAt: document.getElementById('productId').value ? undefined : new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+            
+            // 验证
+            if (!product.name || !product.category || product.price <= 0) {
+                showMessage('Please fill in all required fields correctly', 'error', 'productMessage');
+                return;
+            }
+            
+            const data = getData();
+            const editingId = document.getElementById('productId').value;
+            
+            if (editingId) {
+                // 更新现有产品
+                const index = data.products.findIndex(p => p.id === editingId);
+                if (index !== -1) {
+                    data.products[index] = { ...data.products[index], ...product };
+                    showMessage('Product updated successfully', 'success', 'productMessage');
+                }
+            } else {
+                // 添加新产品
+                data.products.push(product);
+                showMessage('Product added successfully', 'success', 'productMessage');
+            }
+            
+            saveData(data);
+            loadProducts();
+            resetProductForm();
+        }
+        
+        // 编辑产品
+        function editProduct(productId) {
+            const data = getData();
+            const product = data.products.find(p => p.id === productId);
+            
+            if (!product) {
+                showMessage('Product not found', 'error', 'productMessage');
+                return;
+            }
+            
+            document.getElementById('productId').value = product.id;
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productCategory').value = product.category;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productStock').value = product.stock;
+            document.getElementById('productDescription').value = product.description || '';
+            
+            document.getElementById('cancelBtn').style.display = 'inline-block';
+            document.getElementById('productName').focus();
+        }
+        
+        // 删除产品
+        function deleteProduct(productId) {
+            if (!confirm('Are you sure you want to delete this product?')) {
+                return;
+            }
+            
+            const data = getData();
+            data.products = data.products.filter(p => p.id !== productId);
+            
+            saveData(data);
+            loadProducts();
+            showMessage('Product deleted successfully', 'success', 'productMessage');
+        }
+        
+        // 重置产品表单
+        function resetProductForm() {
+            document.getElementById('productForm').reset();
+            document.getElementById('productId').value = '';
+            document.getElementById('cancelBtn').style.display = 'none';
+        }
+        
+        // 加载内容
+        function loadContent() {
+            const data = getData();
+            
+            if (data.content) {
+                if (data.content.home) {
+                    document.getElementById('homeTitle').value = data.content.home.title || 'Welcome to Stratronix';
+                    document.getElementById('homeSubtitle').value = data.content.home.subtitle || 'Professional Photography & Audio Equipment';
+                    document.getElementById('homeDescription').value = data.content.home.description || 'High-quality equipment for professionals and enthusiasts. Experience the difference with Stratronix.';
+                }
+                
+                if (data.content.about) {
+                    document.getElementById('aboutTitle').value = data.content.about.title || 'About Stratronix';
+                    document.getElementById('aboutContent').value = data.content.about.content || 'We provide professional photography, audio, and video equipment for creators worldwide.';
+                }
+            }
+        }
+        
+        // 保存内容
+        function saveContent() {
+            const data = getData();
+            
+            data.content = {
+                home: {
+                    title: document.getElementById('homeTitle').value,
+                    subtitle: document.getElementById('homeSubtitle').value,
+                    description: document.getElementById('homeDescription').value
+                },
+                about: {
+                    title: document.getElementById('aboutTitle').value,
+                    content: document.getElementById('aboutContent').value
+                }
+            };
+            
+            saveData(data);
+            showMessage('Content saved successfully', 'success', 'contentMessage');
+        }
+        
+        // 刷新预览
+        function refreshPreview() {
+            const data = getData();
+            const previewDiv = document.getElementById('previewProducts');
+            
+            if (data.products.length === 0) {
+                previewDiv.innerHTML = '<p>No products yet. Add products in the Products tab.</p>';
+                return;
+            }
+            
+            let html = '<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 15px;">';
+            
+            data.products.slice(0, 6).forEach(product => {
+                const status = product.stock > 0 ? 'In Stock' : 'Out of Stock';
+                const statusClass = product.stock > 0 ? 'in-stock' : 'out-of-stock';
+                
+                html += `
+                    <div style="background: white; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <div style="font-weight: bold; color: #1a73e8;">${product.name}</div>
+                        <div style="color: #666; font-size: 14px;">${product.category} • $${product.price.toFixed(2)}</div>
+                        <div class="product-stock ${statusClass}" style="margin-top: 5px;">${status}</div>
+                    </div>
+                `;
+            });
+            
+            html += '</div>';
+            previewDiv.innerHTML = html;
+        }
+        
+        // 获取数据
+        function getData() {
+            try {
+                const data = localStorage.getItem(STORAGE_KEY);
+                return data ? JSON.parse(data) : {
+                    products: [],
+                    content: {
+                        home: {
+                            title: 'Welcome to Stratronix',
+                            subtitle: 'Professional Photography & Audio Equipment',
+                            description: 'High-quality equipment for professionals and enthusiasts. Experience the difference with Stratronix.'
+                        },
+                        about: {
+                            title: 'About Stratronix',
+                            content: 'We provide professional photography, audio, and video equipment for creators worldwide.'
+                        }
+                    }
+                };
+            } catch (error) {
+                console.error('Error loading data:', error);
+                return { products: [], content: {} };
+            }
+        }
+        
+        // 保存数据
+        function saveData(data) {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+                return true;
+            } catch (error) {
+                console.error('Error saving data:', error);
+                showMessage('Error saving data', 'error', 'productMessage');
+                return false;
+            }
+        }
+        
+        // 显示消息
+        function showMessage(text, type, elementId) {
+            const el = document.getElementById(elementId);
+            el.textContent = text;
+            el.className = `message ${type}`;
+            el.style.display = 'block';
+            
+            setTimeout(() => {
+                el.style.display = 'none';
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

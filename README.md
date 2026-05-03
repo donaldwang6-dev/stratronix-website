@@ -1,66 +1,46 @@
-# Stratronix / 鼎图 双语品牌网站
+# Stratronix 官方网站 (www.stratronix.ai)
 
-## 🎯 项目概述
-一个完整的双语企业网站，支持 Stratronix（英文品牌）和 鼎图（中文品牌），完全响应式设计，适合电脑、平板、手机查看。
+STRATRONIX 品牌官网，部署于 Vercel，托管在 GitHub。
 
-## 🌐 网站结构
+## 目录结构
+
 ```
-stratronix-website/
-├── index.html              # 语言选择页面
-├── en/                     # 英文版本
-│   ├── index.html         # 英文首页
-│   ├── about.html         # 关于我们（英文）
-│   ├── products.html      # 产品介绍（英文）
-│   ├── news.html          # 新闻动态（英文）
-│   └── contact.html       # 联系我们（英文）
-├── zh/                     # 中文版本
-│   ├── index.html         # 中文首页
-│   ├── about.html         # 关于鼎图（中文）
-│   ├── products.html      # 产品介绍（中文）
-│   ├── news.html          # 新闻动态（中文）
-│   └── contact.html       # 联系我们（中文）
-├── css/                    # 样式文件
-│   ├── style.css          # 主样式
-│   └── bilingual.css      # 双语样式
-├── js/                     # 脚本文件
-│   ├── main.js            # 主脚本
-│   └── language-switcher.js # 语言切换
-├── images/                 # 图片资源
-├── admin/                  # 后台管理
-│   ├── index.html         # 后台登录
-│   └── dashboard.html     # 控制面板
-├── deploy.sh              # 部署脚本
-└── README.md              # 项目说明
+Stratronix官方网站内容/
+├── README.md          ← 本文件：索引
+├── source/            ← 网站核心源文件（最新）
+│   ├── index.html     ← 语言选择页
+│   ├── en/            ← 英文版
+│   │   └── index.html ← 英文首页（已含电话号）
+│   ├── zh/            ← 中文版
+│   │   └── index.html ← 中文首页（已含电话号）
+│   ├── css/           ← 样式
+│   ├── js/            ← JavaScript
+│   └── admin/         ← 后台管理
+├── deploy/            ← 部署配置
+│   └── deploy-vercel.sh
+├── seo/               ← SEO / 搜索引擎优化
+├── archive/           ← 历史版本存档
+└── .git/              ← Git仓库（连接到GitHub）
 ```
 
-## 🎨 品牌信息
-- **英文品牌**: Stratronix
-- **中文品牌**: 鼎图
-- **行业**: 智能科技解决方案
-- **定位**: 企业数字化转型服务提供商
+## 核心信息
 
-## 📱 响应式设计
-- **电脑端**: ≥ 1200px
-- **平板端**: 768px - 1199px  
-- **手机端**: ≤ 767px
+| 项目 | 值 |
+|------|-----|
+| 域名 | www.stratronix.ai |
+| 部署 | Vercel (static) |
+| 代码仓库 | github.com/donaldwang6-dev/stratronix-website |
+| 本地源文件 | `/home/donald/.openclaw/workspace/stratronix-website-new/` |
+| 原始副本 | `/home/donald/.openclaw/workspace/stratronix-site/` |
 
-## 🚀 部署选项
-1. **GitHub Pages** (免费)
-2. **Vercel** (推荐，自动部署)
-3. **Netlify** (免费，支持表单)
-4. **自有服务器**
+## 编辑流程
 
-## 🔧 后台管理
-- **登录地址**: /admin/index.html
-- **默认账号**: admin
-- **默认密码**: stratronix2024
-- **功能**: 内容管理、用户管理、数据分析
+修改 `source/` 下的文件，然后通过以下方式之一部署：
 
-## 📞 技术支持
-如需帮助，请联系:
-- Email: support@stratronix.ai
-- Phone: +86 21 1234 5678
+1. **Git push** → `git add . && git commit -m "..." && git push`（GitHub自动触发Vercel部署）
+2. **Vercel API** → 直接通过 API 上传文件（需有效token）
+3. **Vercel网站** → 手动上传覆盖
 
----
-**创建时间**: 2024年4月8日
-**版本**: 2.0.0 (双语版)
+## 最近修改
+
+- **2026-05-02:** 英文版和中文版 CONTACT区域新增电话号 `86-755-2308 6689`

@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Stratronix / 鼎图</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .dashboard-container {
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        .dashboard-header {
+            background: white;
+            border-radius: 20px 20px 0 0;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .brand-logo .english {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #1a73e8;
+        }
+        
+        .brand-logo .chinese {
+            font-size: 1.8rem;
+            font-weight: 700;
+            font-family: 'Noto Sans SC', sans-serif;
+            color: #1a73e8;
+        }
+        
+        .admin-controls {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .control-btn {
+            padding: 8px 20px;
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .control-btn:hover {
+            background: #1a73e8;
+            color: white;
+            border-color: #1a73e8;
+            transform: translateY(-2px);
+        }
+        
+        .header-title {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .header-title h1 {
+            font-size: 2.5rem;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        
+        .header-title p {
+            color: #5f6368;
+            font-size: 1.1rem;
+        }
+        
+        .dashboard-content {
+            background: white;
+            border-radius: 0 0 20px 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .stat-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-icon {
+            font-size: 2.5rem;
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+        
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #202124;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            color: #5f6368;
+            font-size: 1rem;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+        
+        .content-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            color: #202124;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .action-btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #202124;
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn:hover {
+            background: #1a73e8;
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .action-btn i {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .action-btn span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .system-info {
+            margin-top: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .info-label {
+            color: #5f6368;
+        }
+        
+        .info-value {
+            font-weight: 500;
+            color: #202124;
+        }
+        
+        .dashboard-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            color: #5f6368;
+            font-size: 0.9rem;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+            
+            .admin-controls {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .quick-actions {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-title h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .control-btn {
+                padding: 6px 15px;
+                font-size: 0.8rem;
+            }
+            
+            .header-title h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header-title p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <div class="header-top">
+                <div class="brand-logo">
+                    <span class="english">STRATRONIX</span>
+                    <span>/</span>
+                    <span class="chinese">鼎图</span>
+                </div>
+                <div class="admin-controls">
+                    <button class="control-btn" onclick="window.location.href='index.html'">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                    <button class="control-btn" onclick="window.location.href='../index.html'">
+                        <i class="fas fa-globe"></i> View Site
+                    </button>
+                </div>
+            </div>
+            
+            <div class="header-title">
+                <h1>Admin Dashboard</h1>
+                <p>Website Management & Control Panel</p>
+            </div>
+        </div>
+        
+        <div class="dashboard-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="stat-value">24,589</div>
+                    <div class="stat-label">Total Visitors</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-value">1,247</div>
+                    <div class="stat-label">Registered Users</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <div class="stat-value">48</div>
+                    <div class="stat-label">Active Products</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-value">$89,420</div>
+                    <div class="stat-label">Total Revenue</div>
+                </div>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-section">
+                    <h2 class="section-title">Quick Actions</h2>
+                    <div class="quick-actions">
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-edit"></i>
+                            <span>Edit Content</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-user-plus"></i>
+                            <span>Add User</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-chart-line"></i>
+                            <span>View Analytics</span>
+                        </a>
+                        <a href="#" class="action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h2 class="section-title">System Information</h2>
+                    <div class="system-info">
+                        <div class="info-item">
+                            <span class="info-label">Website Status</span>
+                            <span class="info-value" style="color: #34a853;">Online</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Last Updated</span>
+                            <span class="info-value">2024-04-08</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">CMS Version</span>
+                            <span class="info-value">v2.4.1</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Storage Used</span>
+                            <span class="info-value">68%</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Uptime</span>
+                            <span class="info-value">99.9%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dashboard-footer">
+                <p>© 2024 Stratronix / 鼎图 Admin Panel. All rights reserved.</p>
+                <p style="margin-top: 5px; font-size: 0.8rem; color: #999;">
+                    Last login: Today at 12:45 PM | IP: 192.168.1.100
+                </p>
+                <a href="../index.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i> Back to Main Website
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 模拟实时数据更新
+            function updateStats() {
+                const visitors = document.querySelector('.stat-card:nth-child(1) .stat-value');
+                const users = document.querySelector('.stat-card:nth-child(2) .stat-value');
+                
+                // 模拟数据增长
+                let visitorCount = parseInt(visitors.textContent.replace(/,/g, ''));
+                let userCount = parseInt(users.textContent.replace(/,/g, ''));
+                
+                // 随机增加一些数据
+                visitorCount += Math.floor(Math.random() * 10);
+                userCount += Math.floor(Math.random() * 3);
+                
+                // 更新显示
+                visitors.textContent = visitorCount.toLocaleString();
+                users.textContent = userCount.toLocaleString();
+            }
+            
+            // 每30秒更新一次数据
+            setInterval(updateStats, 30000);
+            
+            // 添加点击效果
+            const actionButtons = document.querySelectorAll('.action-btn');
+            actionButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    alert('This feature would be implemented in a full admin system.');
+                });
+            });
+            
+            // 添加键盘快捷键
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+L 登出
+                if (e.ctrlKey && e.key === 'l') {
+                    e.preventDefault();
+                    window.location.href = 'index.html';
+                }
+                
+                // Ctrl+H 返回首页
+                if (e.ctrlKey && e.key === 'h') {
+                    e.preventDefault();
+                    window.location.href = '../index.html';
+                }
+            });
+            
+            // 显示欢迎消息
+            console.log('Admin Dashboard loaded successfully');
+            console.log('Keyboard shortcuts:');
+            console.log('Ctrl+L - Logout');
+            console.log('Ctrl+H - Homepage');
+            
+            // 初始化产品管理功能
+            initProductManagement();
+        });
+        
+        // 产品管理功能
+        function initProductManagement() {
+            console.log('Initializing product management...');
+            
+            // 创建产品管理区域
+            const productSection = document.createElement('div');
+            productSection.id = 'productManagementSection';
+            productSection.style.cssText = 'margin-top: 40px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);';
+            
+            productSection.innerHTML = `
+                <h2 style="color: #1a73e8; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-boxes"></i> Product Management
+                </h2>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <p style="color: #5f6368;">Manage your products directly from the admin dashboard</p>
+                    <button id="addProductBtn" style="background: #1a73e8; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500;">
+                        <i class="fas fa-plus"></i> Add New Product
+                    </button>
+                </div>
+                
+                <div id="productFormContainer" style="display: none; background: #f8f9fa; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h3 style="color: #202124; margin-bottom: 15px;">Add/Edit Product</h3>
+                    <form id="productForm">
+                        <input type="hidden" id="productId">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Product Name *</label>
+                                <input type="text" id="productName" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Category *</label>
+                                <select id="productCategory" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                                    <option value="">Select Category</option>
+                                    <option value="photography">Photography</option>
+                                    <option value="audio">Audio</option>
+                                    <option value="video">Video</option>
+                                    <option value="lighting">Lighting</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Price ($) *</label>
+                                <input type="number" id="productPrice" step="0.01" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                            </div>
+                            <div>
+                                <label style="display: block; margin-bottom: 5px; font-weight: 500;">Stock *</label>
+                                <input type="number" id="productStock" required style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;">
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 15px;">
+                            <label style="display: block; margin-bottom: 5px; font-weight: 500;">Description</label>
+                            <textarea id="productDescription" rows="3" style="width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px;"></textarea>
+                        </div>
+                        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                            <button type="button" id="cancelProductBtn" style="background: #f8f9fa; color: #202124; padding: 10px 20px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer;">Cancel</button>
+                            <button type="submit" style="background: #34a853; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500;">Save Product</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div id="productsTableContainer">
+                    <table id="productsTable" style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <thead>
+                            <tr style="background: #f8f9fa;">
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Name</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Category</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Price</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Stock</th>
+                                <th style="padding: 15px; text-align: left; color: #5f6368; font-weight: 500;">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="productsTableBody">
+                            <tr>
+                                <td colspan="5" style="padding: 30px; text-align: center; color: #666;">No products yet. Click "Add New Product" to add your first product.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="productMessage" style="display: none; padding: 15px; border-radius: 5px; margin: 15px 0;"></div>
+            `;
+            
+            // 添加到页面
+            const mainContent = document.querySelector('.dashboard-main');
+            if (mainContent) {
+                mainContent.appendChild(productSection);
+                
+                // 初始化产品管理
+                setupProductManagement();
+            }
+        }
+        
+        function setupProductManagement() {
+            const STORAGE_KEY = 'stratronix_dashboard_products';
+            let editingProductId = null;
+            
+            // 加载产品
+            function loadProducts() {
+                try {
+                    const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    const tbody = document.getElementById('productsTableBody');
+                    
+                    if (products.length === 0) {
+                        tbody.innerHTML = '<tr><td colspan="5" style="padding: 30px; text-align: center; color: #666;">No products yet. Click "Add New Product" to add your first product.</td></tr>';
+                        return;
+                    }
+                    
+                    let html = '';
+                    products.forEach(product => {
+                        const status = product.stock > 0 ? 'In Stock' : 'Out of Stock';
+                        const statusColor = product.stock > 0 ? '#34a853' : '#ea4335';
+                        
+                        html += `
+                            <tr data-id="${product.id}">
+                                <td style="padding: 15px; border-top: 1px solid #eee;"><strong>${product.name}</strong></td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;">${product.category}</td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;">$${product.price.toFixed(2)}</td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;"><span style="color: ${statusColor}">${product.stock} (${status})</span></td>
+                                <td style="padding: 15px; border-top: 1px solid #eee;">
+                                    <button onclick="editProduct('${product.id}')" style="background: #fbbc05; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; margin-right: 5px;">Edit</button>
+                                    <button onclick="deleteProduct('${product.id}')" style="background: #ea4335; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer;">Delete</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                    
+                    tbody.innerHTML = html;
+                } catch (error) {
+                    console.error('Error loading products:', error);
+                    showProductMessage('Error loading products', 'error');
+                }
+            }
+            
+            // 显示消息
+            function showProductMessage(text, type = 'success') {
+                const el = document.getElementById('productMessage');
+                el.textContent = text;
+                el.style.background = type === 'success' ? '#d4edda' : '#f8d7da';
+                el.style.color = type === 'success' ? '#155724' : '#721c24';
+                el.style.border = type === 'success' ? '1px solid #c3e6cb' : '1px solid #f5c6cb';
+                el.style.display = 'block';
+                
+                setTimeout(() => {
+                    el.style.display = 'none';
+                }, 3000);
+            }
+            
+            // 显示表单
+            document.getElementById('addProductBtn').addEventListener('click', function() {
+                document.getElementById('productFormContainer').style.display = 'block';
+                this.style.display = 'none';
+                document.getElementById('productName').focus();
+            });
+            
+            // 取消表单
+            document.getElementById('cancelProductBtn').addEventListener('click', function() {
+                document.getElementById('productFormContainer').style.display = 'none';
+                document.getElementById('addProductBtn').style.display = 'block';
+                document.getElementById('productForm').reset();
+                document.getElementById('productId').value = '';
+                editingProductId = null;
+            });
+            
+            // 保存产品
+            document.getElementById('productForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                try {
+                    const product = {
+                        id: editingProductId || Date.now().toString(),
+                        name: document.getElementById('productName').value.trim(),
+                        category: document.getElementById('productCategory').value,
+                        price: parseFloat(document.getElementById('productPrice').value) || 0,
+                        stock: parseInt(document.getElementById('productStock').value) || 0,
+                        description: document.getElementById('productDescription').value.trim(),
+                        createdAt: editingProductId ? undefined : new Date().toISOString(),
+                        updatedAt: new Date().toISOString()
+                    };
+                    
+                    // 验证
+                    if (!product.name || !product.category || product.price <= 0) {
+                        showProductMessage('Please fill in all required fields correctly', 'error');
+                        return;
+                    }
+                    
+                    let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    
+                    if (editingProductId) {
+                        // 更新现有产品
+                        const index = products.findIndex(p => p.id === editingProductId);
+                        if (index !== -1) {
+                            products[index] = { ...products[index], ...product };
+                            showProductMessage('Product updated successfully');
+                        }
+                    } else {
+                        // 添加新产品
+                        products.push(product);
+                        showProductMessage('Product added successfully');
+                    }
+                    
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+                    loadProducts();
+                    
+                    // 重置表单
+                    document.getElementById('productFormContainer').style.display = 'none';
+                    document.getElementById('addProductBtn').style.display = 'block';
+                    document.getElementById('productForm').reset();
+                    document.getElementById('productId').value = '';
+                    editingProductId = null;
+                } catch (error) {
+                    console.error('Error saving product:', error);
+                    showProductMessage('Error saving product', 'error');
+                }
+            });
+            
+            // 编辑产品
+            window.editProduct = function(productId) {
+                try {
+                    const products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    const product = products.find(p => p.id === productId);
+                    
+                    if (!product) {
+                        showProductMessage('Product not found', 'error');
+                        return;
+                    }
+                    
+                    editingProductId = productId;
+                    
+                    document.getElementById('productId').value = product.id;
+                    document.getElementById('productName').value = product.name;
+                    document.getElementById('productCategory').value = product.category;
+                    document.getElementById('productPrice').value = product.price;
+                    document.getElementById('productStock').value = product.stock;
+                    document.getElementById('productDescription').value = product.description || '';
+                    
+                    document.getElementById('productFormContainer').style.display = 'block';
+                    document.getElementById('addProductBtn').style.display = 'none';
+                    document.getElementById('productName').focus();
+                } catch (error) {
+                    console.error('Error editing product:', error);
+                    showProductMessage('Error editing product', 'error');
+                }
+            };
+            
+            // 删除产品
+            window.deleteProduct = function(productId) {
+                if (!confirm('Are you sure you want to delete this product?')) {
+                    return;
+                }
+                
+                try {
+                    let products = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]');
+                    products = products.filter(p => p.id !== productId);
+                    
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+                    loadProducts();
+                    showProductMessage('Product deleted successfully');
+                } catch (error) {
+                    console.error('Error deleting product:', error);
+                    showProductMessage('Error deleting product', 'error');
+                }
+            };
+            
+            // 初始加载
+            loadProducts();
+        }
+    </script>
+</body>
+</html>

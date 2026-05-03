@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="120" viewBox="0 0 400 120">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+    .logo-text {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      fill: #3868D9;
+    }
+    .logo-subtitle {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      fill: #374151;
+    }
+    .circuit-line {
+      stroke: #93C5FD;
+      stroke-width: 2;
+      fill: none;
+    }
+  </style>
+  
+  <!-- 电路板背景元素 -->
+  <path class="circuit-line" d="M20,60 Q60,40 100,60 T180,60" />
+  <path class="circuit-line" d="M220,60 Q260,80 300,60 T380,60" />
+  <circle cx="60" cy="40" r="3" fill="#3868D9" />
+  <circle cx="100" cy="60" r="3" fill="#3868D9" />
+  <circle cx="140" cy="40" r="3" fill="#3868D9" />
+  <circle cx="180" cy="60" r="3" fill="#3868D9" />
+  <circle cx="260" cy="80" r="3" fill="#3868D9" />
+  <circle cx="300" cy="60" r="3" fill="#3868D9" />
+  <circle cx="340" cy="40" r="3" fill="#3868D9" />
+  <circle cx="380" cy="60" r="3" fill="#3868D9" />
+  
+  <!-- 主LOGO文字 -->
+  <text x="200" y="70" text-anchor="middle" class="logo-text">STRATRONIX</text>
+  
+  <!-- 副标题 -->
+  <text x="200" y="100" text-anchor="middle" class="logo-subtitle">Focused on Private AI-agent Appliances</text>
+</svg>

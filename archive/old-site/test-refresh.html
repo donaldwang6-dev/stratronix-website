@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Featured Performance Subtitles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #202124;
+            text-align: center;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #1a73e8;
+            border-radius: 8px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+        .card-title {
+            color: #202124;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+        .card-subtitle {
+            color: #202124 !important;
+            font-weight: 600 !important;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+        }
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .info {
+            background: #d1ecf1;
+            color: #0c5460;
+            border: 1px solid #bee5eb;
+        }
+        .instructions {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px 5px;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Featured Performance Subtitles Test</h1>
+        
+        <div class="instructions">
+            <h3>📋 如果副标题还没有变黑，请按以下步骤操作：</h3>
+            <ol>
+                <li><strong>强制刷新</strong>: 按 Ctrl+F5 (Windows/Linux) 或 Cmd+Shift+R (Mac)</li>
+                <li><strong>清除缓存</strong>: 浏览器设置 → 清除浏览数据 → 选择"缓存的图片和文件"</li>
+                <li><strong>无痕模式</strong>: 使用浏览器的无痕/隐私模式</li>
+                <li><strong>不同浏览器</strong>: 尝试 Chrome, Firefox, Safari 等不同浏览器</li>
+            </ol>
+        </div>
+        
+        <div class="test-section">
+            <h2>测试1: 当前样式显示</h2>
+            
+            <div class="card">
+                <h3 class="card-title">OpenClaw Pre-installed</h3>
+                <p class="card-subtitle">Enterprise-Grade Reliability</p>
+                <p>如果这个副标题是<strong>深灰色/接近黑色</strong>且<strong>字体较粗</strong>，说明样式已生效。</p>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Private AI Assistant</h3>
+                <p class="card-subtitle">Secure AI Solution</p>
+                <p>颜色: <strong>#202124</strong> | 字重: <strong>600</strong></p>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">Private Cloud Platform</h3>
+                <p class="card-subtitle">Secure Cloud Infrastructure</p>
+                <p>对比: 这个颜色应该比页面上的普通文字更深。</p>
+            </div>
+            
+            <div class="status success">
+                ✅ 预期效果: 所有三个副标题都应该是深灰色(#202124)且字体较粗(600)
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>测试2: 直接链接验证</h2>
+            
+            <div class="status info">
+                📊 点击以下链接验证实际网站状态：
+            </div>
+            
+            <div>
+                <a href="https://www.stratronix.ai/en/index.html?v=10" class="btn" target="_blank">
+                    带版本参数访问 (v=10)
+                </a>
+                
+                <a href="https://www.stratronix.ai/en/index.html" class="btn" target="_blank">
+                    正常访问
+                </a>
+                
+                <a href="https://www.stratronix.ai/css/style.css?v=10" class="btn" target="_blank">
+                    查看CSS文件
+                </a>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <h4>检查方法：</h4>
+                <p>1. 右键点击副标题 → 检查元素</p>
+                <p>2. 查看应用的样式：应该看到 <code>color: #202124 !important</code> 和 <code>font-weight: 600 !important</code></p>
+                <p>3. 如果看到其他颜色或字重，说明有样式冲突</p>
+            </div>
+        </div>
+        
+        <div class="test-section">
+            <h2>测试3: 开发者工具验证</h2>
+            
+            <div class="status info">
+                🔧 使用浏览器开发者工具验证：
+            </div>
+            
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: monospace;">
+                <p>1. 打开开发者工具 (F12 或 Ctrl+Shift+I)</p>
+                <p>2. 切换到 Elements 标签</p>
+                <p>3. 找到副标题元素</p>
+                <p>4. 查看 Styles 面板，应该看到：</p>
+                <pre style="background: #e9ecef; padding: 10px; border-radius: 3px;">
+.card-subtitle {
+    color: #202124 !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: var(--space-md);
+}</pre>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>🚨 如果仍然看不到变化：</h3>
+            <p>这可能是 <strong>Vercel CDN 缓存</strong> 问题。Vercel的全球CDN可能需要几分钟到几小时才能完全更新所有节点。</p>
+            <p><strong>临时解决方案</strong>：等待15-30分钟，或者使用VPN切换到不同地区。</p>
+        </div>
+    </div>
+    
+    <script>
+        // 自动检查当前时间
+        document.addEventListener('DOMContentLoaded', function() {
+            const now = new Date();
+            const timeString = now.toLocaleString('zh-CN', { 
+                timeZone: 'Asia/Shanghai',
+                hour12: false 
+            });
+            
+            const timeElement = document.createElement('div');
+            timeElement.className = 'status info';
+            timeElement.innerHTML = `🕒 当前时间: ${timeString} (北京时间) | 最后部署时间: 约23:40`;
+            document.querySelector('.container').appendChild(timeElement);
+            
+            // 检查样式是否应用
+            const subtitles = document.querySelectorAll('.card-subtitle');
+            subtitles.forEach((subtitle, index) => {
+                const computedStyle = window.getComputedStyle(subtitle);
+                const color = computedStyle.color;
+                const fontWeight = computedStyle.fontWeight;
+                
+                const result = document.createElement('div');
+                result.className = 'status ' + (color === 'rgb(32, 33, 36)' && fontWeight === '600' ? 'success' : 'info');
+                result.innerHTML = `副标题 ${index + 1}: 颜色=${color}, 字重=${fontWeight}`;
+                subtitle.parentNode.appendChild(result);
+            });
+        });
+    </script>
+</body>
+</html>

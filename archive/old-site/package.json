@@ -1,0 +1,12 @@
+{
+  "name": "stratronix-website",
+  "version": "1.0.0",
+  "description": "Stratronix / 鼎图 双语品牌网站",
+  "scripts": {
+    "dev": "echo 'Static site - no build needed'",
+    "start": "echo 'Static site - no build needed'"
+  },
+  "keywords": ["stratronix", "鼎图", "website", "bilingual"],
+  "author": "Stratronix Team",
+  "license": "MIT"
+}

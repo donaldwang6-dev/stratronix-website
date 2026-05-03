@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Product Management - Stratronix</title>
+    <style>
+        body { font-family: Arial; padding: 20px; max-width: 1200px; margin: 0 auto; }
+        h1 { color: #1a73e8; }
+        .btn { padding: 10px 20px; margin: 5px; border: none; border-radius: 5px; cursor: pointer; }
+        .btn-primary { background: #1a73e8; color: white; }
+        .btn-secondary { background: #f0f0f0; color: #333; }
+        .form-group { margin: 15px 0; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background: #f5f5f5; }
+    </style>
+</head>
+<body>
+    <h1>📦 Simple Product Management</h1>
+    <p>This is a simplified version with real functionality.</p>
+    
+    <div id="message" style="padding: 10px; margin: 10px 0; display: none;"></div>
+    
+    <button class="btn btn-primary" onclick="showForm()">Add New Product</button>
+    
+    <div id="productForm" style="display: none; margin: 20px 0; padding: 20px; border: 1px solid #ddd; border-radius: 5px;">
+        <h3>Add/Edit Product</h3>
+        <form onsubmit="saveProduct(event)">
+            <input type="hidden" id="productId">
+            
+            <div class="form-group">
+                <label>Product Name *</label>
+                <input type="text" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Category *</label>
+                <select id="category" required>
+                    <option value="">Select</option>
+                    <option value="photography">Photography</option>
+                    <option value="audio">Audio</option>
+                    <option value="video">Video</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>Price ($) *</label>
+                <input type="number" id="price" step="0.01" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Stock Quantity *</label>
+                <input type="number" id="stock" required>
+            </div>
+            
+            <div class="form-group">
+                <label>Description</label>
+                <textarea id="description" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Save Product</button>
+            <button type="button" class="btn btn-secondary" onclick="hideForm()">Cancel</button>
+        </form>
+    </div>
+    
+    <h3>Product List</h3>
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="productTableBody">
+            <!-- Products will be loaded here -->
+        </tbody>
+    </table>
+    
+    <script>
+        // 产品数据存储
+        let products = JSON.parse(localStorage.getItem('stratronix_products')) || [];
+        let editingId = null;
+        
+        // 显示消息
+        function showMessage(text, type = 'info') {
+            const el = document.getElementById('message');
+            el.textContent = text;
+            el.style.display = 'block';
+            el.style.background = type === 'success' ? '#d4edda' : 
+                                 type === 'error' ? '#f8d7da' : '#d1ecf1';
+            el.style.color = type === 'success' ? '#155724' : 
+                            type === 'error' ? '#721c24' : '#0c5460';
+            setTimeout(() => el.style.display = 'none', 3000);
+        }
+        
+        // 显示表单
+        function showForm() {
+            document.getElementById('productForm').style.display = 'block';
+        }
+        
+        // 隐藏表单
+        function hideForm() {
+            document.getElementById('productForm').style.display = 'none';
+            resetForm();
+        }
+        
+        // 重置表单
+        function resetForm() {
+            document.getElementById('productForm').querySelector('form').reset();
+            document.getElementById('productId').value = '';
+            editingId = null;
+        }
+        
+        // 保存产品
+        function saveProduct(e) {
+            e.preventDefault();
+            
+            const product = {
+                id: editingId || Date.now().toString(),
+                name: document.getElementById('name').value,
+                category: document.getElementById('category').value,
+                price: parseFloat(document.getElementById('price').value),
+                stock: parseInt(document.getElementById('stock').value),
+                description: document.getElementById('description').value,
+                createdAt: editingId ? undefined : new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+            
+            // 验证
+            if (!product.name || !product.category || product.price <= 0) {
+                showMessage('Please fill required fields', 'error');
+                return;
+            }
+            
+            if (editingId) {
+                // 更新现有产品
+                const index = products.findIndex(p => p.id === editingId);
+                if (index !== -1) {
+                    products[index] = { ...products[index], ...product };
+                }
+                showMessage('Product updated', 'success');
+            } else {
+                // 添加新产品
+                products.push(product);
+                showMessage('Product added', 'success');
+            }
+            
+            // 保存到LocalStorage
+            localStorage.setItem('stratronix_products', JSON.stringify(products));
+            
+            // 更新表格
+            renderProducts();
+            
+            // 重置表单
+            hideForm();
+        }
+        
+        // 编辑产品
+        function editProduct(id) {
+            const product = products.find(p => p.id === id);
+            if (!product) return;
+            
+            editingId = id;
+            document.getElementById('productId').value = id;
+            document.getElementById('name').value = product.name;
+            document.getElementById('category').value = product.category;
+            document.getElementById('price').value = product.price;
+            document.getElementById('stock').value = product.stock;
+            document.getElementById('description').value = product.description || '';
+            
+            showForm();
+        }
+        
+        // 删除产品
+        function deleteProduct(id) {
+            if (!confirm('Delete this product?')) return;
+            
+            products = products.filter(p => p.id !== id);
+            localStorage.setItem('stratronix_products', JSON.stringify(products));
+            renderProducts();
+            showMessage('Product deleted', 'success');
+        }
+        
+        // 渲染产品列表
+        function renderProducts() {
+            const tbody = document.getElementById('productTableBody');
+            
+            if (products.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="5" style="text-align: center; padding: 20px;">No products yet. Click "Add New Product" to add one.</td></tr>';
+                return;
+            }
+            
+            let html = '';
+            products.forEach(product => {
+                html += `
+                    <tr>
+                        <td><strong>${product.name}</strong></td>
+                        <td>${product.category}</td>
+                        <td>$${product.price.toFixed(2)}</td>
+                        <td>${product.stock}</td>
+                        <td>
+                            <button class="btn-secondary" onclick="editProduct('${product.id}')">Edit</button>
+                            <button class="btn-secondary" onclick="deleteProduct('${product.id}')" style="background: #dc3545; color: white;">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+            
+            tbody.innerHTML = html;
+        }
+        
+        // 初始化
+        renderProducts();
+        console.log('Simple product management loaded');
+    </script>
+</body>
+</html>

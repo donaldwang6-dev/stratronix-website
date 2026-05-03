@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favicon Generator - Stratronix</title>
+    <style>
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        
+        h1 {
+            color: #1a73e8;
+            border-bottom: 2px solid #34a853;
+            padding-bottom: 10px;
+        }
+        
+        .favicon-preview {
+            display: flex;
+            gap: 30px;
+            margin: 30px 0;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .favicon-item {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        
+        .favicon-image {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 10px;
+        }
+        
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        
+        .instructions {
+            background: #e8f5e8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Stratronix Favicon Generator</h1>
+    
+    <p>To add a favicon to your website, you can:</p>
+    
+    <div class="favicon-preview">
+        <div class="favicon-item">
+            <div class="favicon-image" style="background: linear-gradient(135deg, #1a73e8, #34a853); border-radius: 12px;"></div>
+            <div>Simple Gradient</div>
+        </div>
+        
+        <div class="favicon-item">
+            <div class="favicon-image" style="background: #1a73e8; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">S</div>
+            <div>Letter "S"</div>
+        </div>
+        
+        <div class="favicon-item">
+            <div class="favicon-image" style="background: #34a853; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">ST</div>
+            <div>Letters "ST"</div>
+        </div>
+    </div>
+    
+    <div class="instructions">
+        <h3>How to Add Favicon:</h3>
+        <p>Add this code to the <code>&lt;head&gt;</code> section of your HTML files:</p>
+        <pre><code>&lt;link rel="icon" type="image/x-icon" href="/favicon.ico"&gt;
+&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
+&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
+&lt;link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"&gt;</code></pre>
+        
+        <p>You can create favicon images using:</p>
+        <ul>
+            <li><a href="https://favicon.io/" target="_blank">favicon.io</a> - Free favicon generator</li>
+            <li><a href="https://realfavicongenerator.net/" target="_blank">RealFaviconGenerator</a> - Advanced generator</li>
+            <li><a href="https://www.canva.com/" target="_blank">Canva</a> - Design tool</li>
+        </ul>
+    </div>
+    
+    <p>For now, I've created a simple favicon using CSS gradients. You can replace it with your custom design later.</p>
+</body>
+</html>
