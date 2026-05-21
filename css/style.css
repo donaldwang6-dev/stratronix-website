@@ -510,6 +510,15 @@ a:hover {
     }
 }
 
+.hero-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem 1.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0.5rem 0;
+}
+
 @media (max-width: 768px) {
     .hero-icons-grid {
         grid-template-columns: repeat(5, 1fr);
