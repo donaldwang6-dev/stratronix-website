@@ -430,6 +430,7 @@ a:hover {
     color: var(--text-secondary);
     margin: 0 0 1rem 0;
     letter-spacing: 1px;
+    text-align: left;
 }
 
 .hero-product-layout .hero-image {
@@ -513,10 +514,22 @@ a:hover {
 .hero-icons-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 1rem 1.5rem;
     width: 100%;
     max-width: 600px;
     margin: 0.5rem 0;
+}
+
+.hero-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.hero-icon-item span {
+    text-align: left;
 }
 
 @media (max-width: 768px) {
