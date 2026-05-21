@@ -396,9 +396,11 @@ a:hover {
 .hero-left-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
     gap: 1.5rem;
+    justify-content: center;
+    height: 100%;
 }
 
 .hero-logo {
@@ -417,18 +419,29 @@ a:hover {
 }
 
 .hero-product-name {
-    font-size: 3rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 0;
-    letter-spacing: 4px;
+    margin: 1rem 0 0.5rem;
+    letter-spacing: 3px;
+    text-align: center;
 }
 
 .hero-product-tagline {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     color: var(--text-secondary);
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    text-align: center;
+}
+
+.hero-product-layout .hero-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+    justify-self: end;
 }
 
 .hero-icons-grid {
