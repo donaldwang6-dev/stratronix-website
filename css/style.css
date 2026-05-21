@@ -97,6 +97,7 @@ body {
 /* 交错动画延迟 */
 .hero {
     animation-delay: 0.1s;
+    padding: 120px 0 60px;
 }
 
 .values-section {
