@@ -290,7 +290,9 @@ a:hover {
 }
 
 .logo-english {
-    color: #ec4899 !important;
+    color: #1A1A1A !important;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .logo-chinese {
@@ -381,29 +383,37 @@ a:hover {
 }
 
 .hero-product-layout {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
     align-items: center;
-    text-align: center;
-    gap: 1.5rem;
     width: 100%;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 4rem 0 2rem;
 }
 
+.hero-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+}
+
 .hero-logo {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .hero-product-layout .hero-image {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    max-width: 450px;
+    justify-self: end;
 }
 
 .hero-product-layout .tech-illustration {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 }
 
 .hero-product-name {
@@ -424,9 +434,9 @@ a:hover {
 .hero-icons-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 1.5rem 2rem;
+    gap: 1rem 1.5rem;
     width: 100%;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0.5rem 0;
 }
 
@@ -438,14 +448,14 @@ a:hover {
 }
 
 .hero-icon-circle {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: linear-gradient(135deg, #f472b6, #ec4899);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: white;
     box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
     transition: transform 0.3s, box-shadow 0.3s;
@@ -457,12 +467,40 @@ a:hover {
 }
 
 .hero-icon-item span {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
     font-weight: 500;
 }
 
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
 /* Responsive */
+@media (max-width: 1024px) {
+    .hero-product-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-left-content {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .hero-product-layout .hero-image {
+        justify-self: center;
+        max-width: 350px;
+    }
+    
+    .hero-product-layout .tech-illustration {
+        width: 350px;
+        height: 350px;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-icons-grid {
         grid-template-columns: repeat(5, 1fr);
