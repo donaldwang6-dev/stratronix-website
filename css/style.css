@@ -419,12 +419,12 @@ a:hover {
 }
 
 .hero-product-name {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 700;
     color: var(--text-primary);
-    margin: 1rem 0 0;
-    letter-spacing: 3px;
-    text-align: center;
+    margin: 0;
+    letter-spacing: 4px;
+    text-align: left;
 }
 
 .hero-product-tagline {
@@ -436,9 +436,6 @@ a:hover {
 }
 
 .hero-product-layout .hero-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: 100%;
     max-width: 450px;
     justify-self: end;
