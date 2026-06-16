@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在线商店控制中心 - Stratronix 鼎图</title>
+    <meta name="description" content="Stratronix 在线商店控制中心 - 实时销售、产品、流量、增长计划">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+
+    <style>
+        :root { --brand: #E6417F; --brand-light: #E94A87; --brand-dark: #E43C7A; --bg: #0f1117; --bg-card: #1a1d27; --bg-card-2: #232634; --border: #2a2e3a; --text: #e6e8ee; --text-dim: #8b8fa3; --success: #4ade80; --warning: #fbbf24; --info: #60a5fa; }
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.5; }
+        .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+        .topbar { background: var(--bg-card); border-bottom: 1px solid var(--border); padding: 16px 0; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(8px); }
+        .topbar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); }
+        .brand-logo { width: 36px; height: 36px; border-radius: 8px; background: linear-gradient(135deg, var(--brand), var(--brand-light)); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: 16px; }
+        .brand-name { font-size: 18px; font-weight: 700; } .brand-sub { font-size: 11px; color: var(--text-dim); letter-spacing: 0.5px; }
+        .topbar-actions { display: flex; gap: 12px; align-items: center; }
+        .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; cursor: pointer; border: none; transition: all 0.15s; }
+        .btn-primary { background: var(--brand); color: white; } .btn-primary:hover { background: var(--brand-light); }
+        .btn-ghost { background: transparent; color: var(--text); border: 1px solid var(--border); } .btn-ghost:hover { border-color: var(--brand); color: var(--brand); }
+        .hero-status { padding: 32px 0 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        .status-title h1 { margin: 0 0 4px 0; font-size: 28px; font-weight: 800; letter-spacing: -0.5px; }
+        .status-title p { margin: 0; color: var(--text-dim); font-size: 14px; }
+        .status-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: rgba(74, 222, 128, 0.1); color: var(--success); font-size: 12px; font-weight: 600; border: 1px solid rgba(74, 222, 128, 0.2); }
+        .pulse-dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+        .modules { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; padding-bottom: 40px; }
+        .module { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; padding: 24px; transition: border-color 0.2s; }
+        .module:hover { border-color: var(--brand); }
+        .module-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+        .module-title { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; }
+        .module-title-num { width: 24px; height: 24px; border-radius: 6px; background: rgba(230, 65, 127, 0.15); color: var(--brand); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; }
+        .module-icon { color: var(--brand); font-size: 18px; } .module-subtitle { font-size: 12px; color: var(--text-dim); }
+        .m-full { grid-column: span 12; } .m-6 { grid-column: span 6; } .m-4 { grid-column: span 4; } .m-8 { grid-column: span 8; }
+        @media (max-width: 900px) { .m-6, .m-4, .m-8 { grid-column: span 12; } }
+        .url-list { display: flex; flex-direction: column; gap: 10px; }
+        .url-item { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 10px; }
+        .url-item:hover { border-color: var(--brand); }
+        .url-label { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+        .badge { font-size: 10px; padding: 2px 8px; border-radius: 4px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .badge-primary { background: rgba(230, 65, 127, 0.15); color: var(--brand); }
+        .badge-success { background: rgba(74, 222, 128, 0.15); color: var(--success); }
+        .badge-warning { background: rgba(251, 191, 36, 0.15); color: var(--warning); }
+        .badge-info { background: rgba(96, 165, 250, 0.15); color: var(--info); }
+        .url-status { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-dim); }
+        .url-dot { width: 6px; height: 6px; border-radius: 50%; } .dot-up { background: var(--success); } .dot-down { background: #ef4444; } .dot-warn { background: var(--warning); }
+        .paypal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 20px; }
+        .metric { background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+        .metric-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; font-weight: 600; }
+        .metric-value { font-size: 22px; font-weight: 800; line-height: 1.1; }
+        .metric-value.brand { color: var(--brand); } .metric-value.success { color: var(--success); } .metric-value.warning { color: var(--warning); }
+        .metric-sub { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
+        .orders-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .orders-table thead th { text-align: left; padding: 10px 8px; font-size: 10px; text-transform: uppercase; color: var(--text-dim); font-weight: 700; letter-spacing: 0.5px; border-bottom: 1px solid var(--border); }
+        .orders-table tbody td { padding: 12px 8px; border-bottom: 1px solid var(--border); }
+        .orders-table tbody tr:last-child td { border-bottom: none; } .orders-table tbody tr:hover { background: var(--bg-card-2); }
+        .action-btn { padding: 5px 10px; background: transparent; border: 1px solid var(--border); color: var(--text); border-radius: 6px; font-size: 11px; cursor: pointer; text-decoration: none; display: inline-block; }
+        .action-btn:hover { border-color: var(--brand); color: var(--brand); }
+        .action-btn.primary { background: var(--brand); color: white; border-color: var(--brand); }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+        .product-card { background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+        .product-card:hover { border-color: var(--brand); }
+        .product-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+        .product-cat { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .product-price { font-size: 18px; font-weight: 800; color: var(--brand); }
+        .product-sku { font-size: 10px; color: var(--text-dim); font-family: monospace; margin-top: 4px; }
+        .product-stock { margin-top: 8px; display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--success); }
+        .analytics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+        @media (max-width: 700px) { .analytics-grid { grid-template-columns: repeat(2, 1fr); } }
+        .chart-container { position: relative; height: 220px; }
+        .country-list { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+        .country-item { display: flex; align-items: center; justify-content: space-between; padding: 8px 12px; background: var(--bg-card-2); border-radius: 6px; }
+        .country-name { font-size: 13px; display: flex; align-items: center; gap: 8px; }
+        .country-flag { font-size: 18px; } .country-pct { font-weight: 700; color: var(--brand); }
+        .roadmap { display: flex; flex-direction: column; gap: 12px; }
+        .roadmap-item { display: flex; gap: 14px; padding: 14px; background: var(--bg-card-2); border: 1px solid var(--border); border-radius: 10px; }
+        .roadmap-prio { width: 4px; border-radius: 4px; background: var(--brand); } .roadmap-prio.p2 { background: var(--info); } .roadmap-prio.p3 { background: var(--text-dim); }
+        .roadmap-content { flex: 1; } .roadmap-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; } .roadmap-desc { font-size: 12px; color: var(--text-dim); }
+        .roadmap-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 4px; background: rgba(96, 165, 250, 0.1); color: var(--info); margin-top: 6px; font-weight: 600; }
+        .notice { background: rgba(96, 165, 250, 0.1); border: 1px solid rgba(96, 165, 250, 0.2); border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; font-size: 13px; }
+        .notice i { color: var(--info); }
+        .loading { text-align: center; padding: 30px 10px; color: var(--text-dim); font-size: 13px; }
+        .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--brand); border-radius: 50%; animation: spin 0.8s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        .footer { text-align: center; padding: 30px 0 50px; color: var(--text-dim); font-size: 12px; }
+    </style>
+</head>
+<body>
+<div class="topbar">
+    <div class="container topbar-inner">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">S</div>
+            <div>
+                <div class="brand-name">STRATRONIX 鼎图</div>
+                <div class="brand-sub">在线商店控制中心</div>
+            </div>
+        </a>
+        <div class="topbar-actions">
+            <a href="products.html" class="btn btn-ghost"><i class="fas fa-arrow-left"></i> 返回产品</a>
+            <a href="https://stratronix-storefront.vercel.app/" target="_blank" class="btn btn-primary" id="openStoreBtn">
+                <i class="fas fa-external-link-alt"></i> 打开商店
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="hero-status">
+        <div class="status-title">
+            <h1>🛒 在线商店控制中心</h1>
+            <p>实时查看销售、产品、流量与增长计划</p>
+        </div>
+        <div>
+            <span class="status-pill"><span class="pulse-dot"></span> 实时</span>
+        </div>
+    </div>
+    <div class="notice">
+        <i class="fas fa-info-circle"></i>
+        <span><strong>只读视图。</strong> PayPal 与 Google Analytics 需要凭证接入前显示占位数据。产品数据已实时从商店 API 加载。</span>
+    </div>
+    <div class="modules">
+        <div class="module m-full">
+            <div class="module-header">
+                <div class="module-title">
+                    <span class="module-title-num">1</span>
+                    <i class="fas fa-link module-icon"></i>
+                    店铺网址链接
+                </div>
+                <span class="module-subtitle">所有可访问入口</span>
+            </div>
+            <div class="url-list">
+                <div class="url-item">
+                    <div class="url-label">
+                        <span class="badge badge-primary">主用</span>
+                        <span>stratronix-storefront.vercel.app</span>
+                    </div>
+                    <div class="url-status">
+                        <span class="url-dot dot-up"></span>
+                        <span>在线 · Vercel Hobby</span>
+                        <a href="https://stratronix-storefront.vercel.app/" target="_blank" class="action-btn primary" style="margin-left:12px">访问</a>
+                    </div>
+                </div>
+                <div class="url-item">
+                    <div class="url-label">
+                        <span class="badge badge-warning">待定</span>
+                        <span>store.stratonix.ai</span>
+                    </div>
+                    <div class="url-status">
+                        <span class="url-dot dot-warn"></span>
+                        <span>DNS: .ai NS 待委派</span>
+                    </div>
+                </div>
+                <div class="url-item">
+                    <div class="url-label">
+                        <span class="badge badge-info">备用</span>
+                        <span>stratronix-storefront.pages.dev</span>
+                    </div>
+                    <div class="url-status">
+                        <span class="url-dot dot-warn"></span>
+                        <span>DNS 未生成</span>
+                    </div>
+                </div>
+                <div class="url-item">
+                    <div class="url-label">
+                        <span class="badge badge-info">API</span>
+                        <span>enthusiastic-perfection-production-d86d.up.railway.app</span>
+                    </div>
+                    <div class="url-status">
+                        <span class="url-dot dot-up"></span>
+                        <span>后端 API · 在线</span>
+                        <a href="https://enthusiastic-perfection-production-d86d.up.railway.app/api/products" target="_blank" class="action-btn" style="margin-left:12px">API</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="module m-8">
+            <div class="module-header">
+                <div class="module-title">
+                    <span class="module-title-num">2</span>
+                    <i class="fab fa-paypal module-icon"></i>
+                    PayPal 收款与订单
+                </div>
+                <span class="module-subtitle">
+                    <span class="badge badge-warning" id="paypalStatus">待接入 API</span>
+                </span>
+            </div>
+            <div class="paypal-grid">
+                <div class="metric"><div class="metric-label">本月收入</div><div class="metric-value brand" id="revTotal">$0.00</div><div class="metric-sub">来自 0 笔交易</div></div>
+                <div class="metric"><div class="metric-label">待发货订单</div><div class="metric-value warning" id="ordersShip">0</div><div class="metric-sub">待处理</div></div>
+                <div class="metric"><div class="metric-label">已完成</div><div class="metric-value success" id="ordersDone">0</div><div class="metric-sub">本月</div></div>
+                <div class="metric"><div class="metric-label">客单价</div><div class="metric-value" id="avgOrder">$0.00</div><div class="metric-sub">累计</div></div>
+            </div>
+            <table class="orders-table" id="ordersTable">
+                <thead><tr><th>日期</th><th>客户</th><th>国家</th><th>商品</th><th>金额</th><th>状态</th><th>操作</th></tr></thead>
+                <tbody id="ordersBody">
+                    <tr><td colspan="7" class="loading"><span class="spinner"></span> 等待 PayPal API 凭证</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="module m-4">
+            <div class="module-header">
+                <div class="module-title">
+                    <i class="fas fa-file-invoice module-icon"></i>
+                    生成发票
+                </div>
+            </div>
+            <p style="font-size:12px;color:var(--text-dim);margin:0 0 14px 0">为任意订单生成 PDF 发票。PayPal 接入后将自动填充客户与商品。</p>
+            <form id="invoiceForm" onsubmit="return generateInvoice(event)">
+                <div style="display:flex;flex-direction:column;gap:10px">
+                    <input type="text" id="invName" placeholder="客户姓名" required style="padding:10px 12px;background:var(--bg-card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-family:inherit">
+                    <input type="email" id="invEmail" placeholder="customer@email.com" required style="padding:10px 12px;background:var(--bg-card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-family:inherit">
+                    <input type="text" id="invCountry" placeholder="国家" required style="padding:10px 12px;background:var(--bg-card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-family:inherit">
+                    <textarea id="invItems" placeholder="商品 (每行一个: 名称 x 数量)" required rows="3" style="padding:10px 12px;background:var(--bg-card-2);border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:13px;font-family:inherit;resize:vertical"></textarea>
+                    <button type="submit" class="btn btn-primary" style="justify-content:center"><i class="fas fa-file-pdf"></i> 生成发票 PDF</button>
+                </div>
+            </form>
+        </div>
+        <div class="module m-full">
+            <div class="module-header">
+                <div class="module-title">
+                    <span class="module-title-num">3</span>
+                    <i class="fas fa-boxes-stacked module-icon"></i>
+                    产品目录
+                </div>
+                <span class="module-subtitle" id="productCount">加载中…</span>
+            </div>
+            <div class="product-grid" id="productGrid">
+                <div class="loading" style="grid-column:1/-1"><span class="spinner"></span> 从商店 API 加载…</div>
+            </div>
+        </div>
+        <div class="module m-full">
+            <div class="module-header">
+                <div class="module-title">
+                    <span class="module-title-num">4</span>
+                    <i class="fas fa-chart-line module-icon"></i>
+                    流量与访问者分析
+                </div>
+                <span class="module-subtitle"><span class="badge badge-warning">Google Analytics · 待接入</span></span>
+            </div>
+            <div class="analytics-grid">
+                <div class="metric"><div class="metric-label">总访问（30 天）</div><div class="metric-value" id="visits30d">—</div><div class="metric-sub">需接入 GA</div></div>
+                <div class="metric"><div class="metric-label">独立访客</div><div class="metric-value" id="uniqueVis">—</div><div class="metric-sub">独立 IP</div></div>
+                <div class="metric"><div class="metric-label">转化率</div><div class="metric-value brand" id="convRate">—</div><div class="metric-sub">访问 → 下单</div></div>
+                <div class="metric"><div class="metric-label">热点地区</div><div class="metric-value" id="hotRegion">—</div><div class="metric-sub">流量最高</div></div>
+            </div>
+            <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;margin-top:20px">
+                <div>
+                    <div style="font-size:12px;color:var(--text-dim);margin-bottom:10px;font-weight:600">访问趋势</div>
+                    <div class="chart-container"><canvas id="visitsChart"></canvas></div>
+                </div>
+                <div>
+                    <div style="font-size:12px;color:var(--text-dim);margin-bottom:10px;font-weight:600">国家分布</div>
+                    <div class="country-list" id="countryList"><div class="loading"><span class="spinner"></span> 加载中…</div></div>
+                </div>
+            </div>
+            <div style="margin-top:20px">
+                <div style="font-size:12px;color:var(--text-dim);margin-bottom:10px;font-weight:600">受众分析 · 主要指标（GA 接入后可用）</div>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+                    <div class="metric"><div class="metric-label">年龄（最高）</div><div class="metric-value" id="ageTop">—</div></div>
+                    <div class="metric"><div class="metric-label">设备</div><div class="metric-value" id="deviceTop">—</div></div>
+                    <div class="metric"><div class="metric-label">跳出率</div><div class="metric-value" id="bounceRate">—</div></div>
+                </div>
+            </div>
+        </div>
+        <div class="module m-full">
+            <div class="module-header">
+                <div class="module-title">
+                    <span class="module-title-num">5</span>
+                    <i class="fas fa-road module-icon"></i>
+                    改进计划与建议
+                </div>
+                <span class="module-subtitle">AI 生成 + 人工</span>
+            </div>
+            <div class="roadmap">
+                <div class="roadmap-item"><div class="roadmap-prio"></div><div class="roadmap-content"><div class="roadmap-title">🔌 接入 PayPal Orders API</div><div class="roadmap-desc">在 Railway 后端环境变量添加 <code>PAYPAL_CLIENT_ID</code> + <code>PAYPAL_CLIENT_SECRET</code>。后端自动拉取交易，dashboard 自动填充。</div><span class="roadmap-tag">P0 · 收入追踪阻塞点</span></div></div>
+                <div class="roadmap-item"><div class="roadmap-prio"></div><div class="roadmap-content"><div class="roadmap-title">📊 接入 Google Analytics 4</div><div class="roadmap-desc">在 storefront 插入 GA4 测量 ID。通过 Measurement Protocol API 将位置/年龄/设备传到后端 → dashboard。</div><span class="roadmap-tag">P0 · 流量数据阻塞点</span></div></div>
+                <div class="roadmap-item"><div class="roadmap-prio"></div><div class="roadmap-content"><div class="roadmap-title">🌍 修复 <code>store.stratonix.ai</code> 自定义域</div><div class="roadmap-desc">Donald 需在 Donuts/Squarespace 注册商后台将 .ai 顶级域 NS 改为 Vercel nameservers (ns1.vercel-dns.com / ns2.vercel-dns.com)。CNAME 已配。</div><span class="roadmap-tag">P1 · 品牌 URL</span></div></div>
+                <div class="roadmap-item"><div class="roadmap-prio p2"></div><div class="roadmap-content"><div class="roadmap-title">📧 下单邮件自动确认</div><div class="roadmap-desc">Resend 已就绪。添加订单收据模板；PayPal webhook 触发自动发送。</div><span class="roadmap-tag">P2 · 用户体验</span></div></div>
+                <div class="roadmap-item"><div class="roadmap-prio p2"></div><div class="roadmap-content"><div class="roadmap-title">🌐 多币种显示</div><div class="roadmap-desc">访客国家检测（Cloudflare cf-ipcountry）→ 显示本地货币。当前仅 USD。</div><span class="roadmap-tag">P2 · 转化率</span></div></div>
+                <div class="roadmap-item"><div class="roadmap-prio p2"></div><div class="roadmap-content"><div class="roadmap-title">📦 库存追踪</div><div class="roadmap-desc">Postgres schema 添加 stock 计数。下单扣减。低库存邮件告警。</div><span class="roadmap-tag">P2 · 运营</span></div></div>
+                <div class="roadmap-item"><div class="roadmap-prio p3"></div><div class="roadmap-content"><div class="roadmap-title">🤖 AI 智能推荐</div><div class="roadmap-desc">根据购物车推荐配件（例如"为 Standard PAA 推荐 GPS Tracker"）。</div><span class="roadmap-tag">P3 · 锦上添花</span></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">最后更新 <span id="lastUpdate">刚刚</span> · 由 JERRY 构建 · v1.0</div>
+</div>
+<script>
+async function loadProducts() {
+    const grid = document.getElementById('productGrid');
+    const countEl = document.getElementById('productCount');
+    try {
+        const res = await fetch('https://enthusiastic-perfection-production-d86d.up.railway.app/api/products');
+        if (!res.ok) throw new Error('API down');
+        const products = await res.json();
+        countEl.textContent = `${products.length} 个产品 · 拉取于 ${new Date().toLocaleTimeString()}`;
+        grid.innerHTML = products.map(p => `
+            <div class="product-card">
+                <div class="product-cat">${p.category}</div>
+                <div class="product-name">${p.name}</div>
+                <div class="product-price">$${p.price}</div>
+                <div class="product-sku">SKU: ${p.sku}</div>
+                <div class="product-stock"><i class="fas fa-check-circle"></i> 现货</div>
+            </div>
+        `).join('');
+    } catch (err) {
+        grid.innerHTML = `<div class="loading" style="grid-column:1/-1;color:var(--warning)">⚠ API 不可达 — ${err.message}</div>`;
+        countEl.textContent = 'API 离线';
+    }
+}
+function generateInvoice(e) {
+    e.preventDefault();
+    const name = document.getElementById('invName').value;
+    const email = document.getElementById('invEmail').value;
+    const country = document.getElementById('invCountry').value;
+    const items = document.getElementById('invItems').value;
+    alert(`发票占位已生成：\n${name}\n${email}\n${country}\n\n商品：\n${items}\n\n→ PayPal API 接入后将激活真实 PDF 生成。`);
+    return false;
+}
+let visitsChart;
+function initChart() {
+    const ctx = document.getElementById('visitsChart').getContext('2d');
+    const labels = Array.from({length: 30}, (_, i) => `D${i+1}`);
+    const data = Array.from({length: 30}, () => 0);
+    visitsChart = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets: [{ label: '访问量', data, borderColor: '#E6417F', backgroundColor: 'rgba(230, 65, 127, 0.1)', borderWidth: 2, fill: true, tension: 0.3, pointRadius: 0 }] },
+        options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8fa3', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.04)' } }, y: { ticks: { color: '#8b8fa3', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.04)' } } } }
+    });
+}
+function renderCountryList() {
+    const list = document.getElementById('countryList');
+    list.innerHTML = `<div class="country-item"><div class="country-name"><span class="country-flag">🌍</span> 等待数据…</div><span class="country-pct">—</span></div>`;
+}
+loadProducts();
+initChart();
+renderCountryList();
+document.getElementById('lastUpdate').textContent = new Date().toLocaleString();
+setInterval(loadProducts, 5 * 60 * 1000);
+</script>
+</body>
+</html>
