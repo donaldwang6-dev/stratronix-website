@@ -400,7 +400,7 @@
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="products.html" class="nav-link active">Products</a></li>
                 <li><a href="news.html" class="nav-link">News</a></li>
-                <li><a href="https://store.stratonix.ai" target="_blank" rel="noopener" class="nav-link" style="color:var(--brand);font-weight:700">🛒 Buy</a></li>
+                <li><a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="nav-link" style="color:var(--brand);font-weight:700" data-buy-link>🛒 Buy</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             
@@ -490,7 +490,7 @@
                     </ul>
                     
                     <div class="product-actions">
-                        <a href="https://store.stratonix.ai" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="background:var(--brand);border-color:var(--brand)">
+                        <a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="background:var(--brand);border-color:var(--brand)" data-buy-link>
                             <i class="fas fa-shopping-cart"></i> Buy
                         </a>
                         <a href="mailto:info@stratronix.ai?subject=Request Quote for STA-100 Private AI-Agent Appliance&body=Dear Stratronix Team,%0D%0A%0D%0AI am interested in requesting a quote for your STA-100 Private AI-Agent Appliance. Please provide me with pricing information and availability details.%0D%0A%0D%0ABest regards," class="btn btn-secondary btn-lg">
@@ -666,6 +666,19 @@
                 section.classList.add('page-load');
             });
         });
+    </script>
+    <script>
+    // Store-link fallback: probe store.stratonix.ai availability; if reachable swap to it, else keep Vercel URL.
+    (function(){
+      var v = 'https://stratronix-storefront.vercel.app';
+      var s = 'https://store.stratonix.ai';
+      var TIMEOUT = 4000;
+      var ctl = new AbortController();
+      var t = setTimeout(function(){ ctl.abort(); }, TIMEOUT);
+      fetch(s + '/?cb=' + Date.now(), { mode: 'no-cors', signal: ctl.signal })
+        .then(function(){ clearTimeout(t); document.querySelectorAll('[data-buy-link]').forEach(function(a){ a.href = s; }); })
+        .catch(function(){ clearTimeout(t); /* keep Vercel URL — guaranteed reachable */ });
+    })();
     </script>
 </body>
 </html>
