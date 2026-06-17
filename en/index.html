@@ -385,6 +385,27 @@
     </footer>
 
     <script src="../js/main.js?v=2"></script>
+    <script>
+    // 兑底绑定:确保 mobile nav 一定能点 (Donald 2026-06-17 23:05)
+    (function(){
+      function bindNav(){
+        var t=document.getElementById('navToggle');
+        var m=document.getElementById('navMenu');
+        if(!t||!m||t.dataset.bound==='1')return;
+        t.dataset.bound='1';
+        t.addEventListener('click',function(e){
+          e.stopPropagation();
+          m.classList.toggle('active');
+          var i=this.querySelector('i');
+          if(m.classList.contains('active')){i.classList.remove('fa-bars');i.classList.add('fa-times');}
+          else{i.classList.remove('fa-times');i.classList.add('fa-bars');}
+        });
+      }
+      bindNav();
+      if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bindNav);}
+      else{setTimeout(bindNav,100);}
+    })();
+    </script>
     <style>
         /* Additional styles for English version */
         .values-section,
