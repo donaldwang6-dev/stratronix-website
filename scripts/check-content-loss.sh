@@ -85,7 +85,9 @@ for dir in "${TARGETS[@]}"; do
     refs=$(grep -oE '(src|href)="\.\./[^"]+' "$html" 2>/dev/null | sed -E 's/^(src|href)="//' || true)
     for ref in $refs; do
       # ../js/.. → js/.. in repo root
-      resolved="$ROOT/${ref#../}"
+      # 忽略 query string (?v=2 cache-bust)
+      ref_path="${ref%%\?*}"
+      resolved="$ROOT/${ref_path#../}"
       if [ ! -f "$resolved" ]; then
         echo "  ❌ $html → $ref (NOT FOUND: $resolved)"
         errors=$((errors + 1))

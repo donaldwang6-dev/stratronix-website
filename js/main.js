@@ -1,41 +1,33 @@
 // Stratronix / 鼎图 双语网站主脚本
 
-document.addEventListener('DOMContentLoaded', function() {
-    // ====================
-    // 1. 移动端导航菜单切换
-    // ====================
+// === 防御: 立即执行 nav 绑定,避免 DOMContentLoaded 错过或重复绑 ===
+// Donald 2026-06-17 23:05 手机 mobile nav 不展开:listener 未绑上(fallback)
+(function initNavImmediate() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
+    if (!navToggle || !navMenu) return;
+    if (navToggle.dataset.navBound === '1') return; // 防止双绑
+    navToggle.dataset.navBound = '1';
     
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            const icon = this.querySelector('i');
-            if (navMenu.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // 点击菜单项后关闭菜单（移动端）
-        const navLinks = navMenu.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    navMenu.classList.remove('active');
-                    const icon = navToggle.querySelector('i');
-                    icon.classList.remove('fa-times');
-                    icon.classList.add('fa-bars');
-                }
-            });
-        });
-        
-        // 点击页面其他区域关闭菜单
-        document.addEventListener('click', function(event) {
-            if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
+    // 1. 点 hamburger 切换菜单
+    navToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+        const icon = this.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
+    
+    // 2. 点菜单项后关闭菜单(移动端)
+    const navLinks = navMenu.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
                 navMenu.classList.remove('active');
                 const icon = navToggle.querySelector('i');
                 if (icon) {
@@ -44,7 +36,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         });
-    }
+    });
+    
+    // 3. 点击页面其他区域关闭菜单
+    document.addEventListener('click', function(event) {
+        if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('active');
+            const icon = navToggle.querySelector('i');
+            if (icon) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+    });
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
     
     // ====================
     // 2. 平滑滚动
