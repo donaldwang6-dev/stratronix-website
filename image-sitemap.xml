@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    <!-- STA-100 Product Hero Image -->
+    <url>
+        <loc>https://www.stratronix.ai/en/products.html</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.stratronix.ai/images/sta100-product.png</image:loc>
+            <image:title>STRATRONIX STA-100 PAA - Private AI-Agent Appliance</image:title>
+            <image:caption>STRATRONIX STA-100 PAA Local AI Inference Hardware with OpenClaw pre-installed</image:caption>
+            <image:geo_location>Shenzhen, China</image:geo_location>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta100-product.png</image:loc>
+            <image:title>Buy STRATRONIX STA-100 PAA</image:title>
+            <image:caption>STRATRONIX STA-100 Private AI-Agent Appliance - Local AI Inference Hardware</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-paa-standard/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta100-product.png</image:loc>
+            <image:title>STRATRONIX STA-100 Standard</image:title>
+            <image:caption>STA-100 PAA Standard - 4GB RAM, 32GB Storage, 8-core ARM Cortex</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-paa-pro/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta100-paa-pro.png</image:loc>
+            <image:title>STRATRONIX STA-100 Pro</image:title>
+            <image:caption>STA-100 PAA Pro - Coming 2027 - Higher Performance AI Hardware</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-paa-enterprise/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta100-paa-enterprise.png</image:loc>
+            <image:title>STRATRONIX STA-100 Enterprise</image:title>
+            <image:caption>STA-100 PAA Enterprise - Coming 2027 - Enterprise-grade AI Hardware</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-4g-lte-module/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-4g-lte-module.png</image:loc>
+            <image:title>STA-100 4G LTE Module</image:title>
+            <image:caption>4G LTE Module for STA-100 PAA - Edge Connectivity</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-gps-tracker/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-gps-tracker.png</image:loc>
+            <image:title>STA-100 GPS Tracker</image:title>
+            <image:caption>GPS Tracker Module for STA-100 PAA</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-voice-module/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-voice-module.png</image:loc>
+            <image:title>STA-100 Voice Module</image:title>
+            <image:caption>Voice Module for STA-100 PAA - Voice AI</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-ai-camera/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-ai-camera.png</image:loc>
+            <image:title>STA-100 AI Camera</image:title>
+            <image:caption>AI Camera Module for STA-100 PAA</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-installation-training/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-installation.png</image:loc>
+            <image:title>STA-100 Installation Training</image:title>
+            <image:caption>Professional Installation Training for STA-100 PAA</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-extended-warranty-1y/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-warranty-1y.png</image:loc>
+            <image:title>STA-100 Extended Warranty 1 Year</image:title>
+            <image:caption>1-Year Extended Warranty for STA-100 PAA</image:caption>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://store.stratronix.ai/products/sta-100-extended-warranty-3y/</loc>
+        <lastmod>2026-07-06</lastmod>
+        <image:image>
+            <image:loc>https://store.stratronix.ai/images/sta-100-warranty-3y.png</image:loc>
+            <image:title>STA-100 Extended Warranty 3 Year</image:title>
+            <image:caption>3-Year Extended Warranty for STA-100 PAA</image:caption>
+        </image:image>
+    </url>
+</urlset>

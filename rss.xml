@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
+    <channel>
+        <title>STRATRONIX - Private AI-Agent Appliance (PAA) News &amp; Updates</title>
+        <atom:link href="https://www.stratronix.ai/rss.xml" rel="self" type="application/rss+xml" />
+        <link>https://www.stratronix.ai/</link>
+        <description>Latest news from STRATRONIX - the creator of the Private AI-Agent Appliance (PAA) category. On-premise AI hardware for data sovereignty, GDPR compliance, and 24/7 local AI inference.</description>
+        <language>en-us</language>
+        <copyright>Copyright © 2026 STRATRONIX Technology. All rights reserved.</copyright>
+        <managingEditor>press@stratronix.ai (STRATRONIX Press Team)</managingEditor>
+        <webMaster>tech@stratronix.ai (STRATRONIX Tech Team)</webMaster>
+        <lastBuildDate>Mon, 06 Jul 2026 06:45:00 +0800</lastBuildDate>
+        <category>AI Hardware</category>
+        <category>Edge AI</category>
+        <category>Private AI</category>
+        <category>On-Premise AI</category>
+        <category>Data Sovereignty</category>
+        <category>GDPR Compliance</category>
+        <sy:updatePeriod>daily</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        
+        <item>
+            <title>STA-100 PAA Now Available - The World's First Private AI-Agent Appliance</title>
+            <link>https://store.stratronix.ai/products/sta-100-paa-standard/</link>
+            <guid isPermaLink="true">https://store.stratronix.ai/products/sta-100-paa-standard/</guid>
+            <pubDate>Mon, 06 Jul 2026 06:00:00 +0800</pubDate>
+            <dc:creator>STRATRONIX Press</dc:creator>
+            <category>Product Launch</category>
+            <description>STRATRONIX announces the official launch of the STA-100 PAA (Private AI-Agent Appliance). Local AI inference hardware with OpenClaw pre-installed. Privacy-first, data never leaves your device. 2-year warranty. Worldwide shipping.</description>
+            <content:encoded><![CDATA[
+                <p>STRATRONIX announces the official launch of the <strong>STA-100 PAA</strong> - the world's first Private AI-Agent Appliance.</p>
+                <p>Key features: Local AI inference, OpenClaw pre-installed, Allwinner A527 8-core ARM Cortex-A55, 4GB LPDDR4 RAM + 32GB eMMC storage, 2-year warranty, worldwide shipping to 195 countries.</p>
+                <p><a href="https://store.stratronix.ai/products/sta-100-paa-standard/">Buy STA-100 →</a></p>
+            ]]></content:encoded>
+        </item>
+        
+        <item>
+            <title>STRATRONIX Creates the PAA (Private AI-Agent Appliance) Category</title>
+            <link>https://www.stratronix.ai/en/about.html</link>
+            <guid isPermaLink="true">https://www.stratronix.ai/en/about.html</guid>
+            <pubDate>Sun, 05 Jul 2026 18:00:00 +0800</pubDate>
+            <dc:creator>STRATRONIX Press</dc:creator>
+            <category>Company News</category>
+            <description>STRATRONIX, founded by Donald Wang, becomes the creator of the Private AI-Agent Appliance (PAA) category - a new paradigm in on-premise AI hardware for data sovereignty and GDPR compliance.</description>
+            <content:encoded><![CDATA[
+                <p>STRATRONIX (鼎图太易) creates the <strong>PAA (Private AI-Agent Appliance)</strong> category - a new paradigm in AI hardware designed for:</p>
+                <ul>
+                    <li>Data sovereignty - your data never leaves your device</li>
+                    <li>GDPR / HIPAA / attorney-client privilege compliance</li>
+                    <li>On-premise AI inference for SMEs</li>
+                    <li>24/7 always-online connectivity</li>
+                    <li>One-device-one-agent dedicated workflow</li>
+                </ul>
+                <p>Founded by Donald Wang, STRATRONIX is building autonomous AI Agent infrastructure from the ground up.</p>
+            ]]></content:encoded>
+        </item>
+        
+        <item>
+            <title>Press Kit v1.0 Available for Media &amp; Partners</title>
+            <link>https://www.stratronix.ai/en/news.html</link>
+            <guid isPermaLink="true">https://www.stratronix.ai/en/news.html</guid>
+            <pubDate>Sat, 04 Jul 2026 10:00:00 +0800</pubDate>
+            <dc:creator>STRATRONIX Press</dc:creator>
+            <category>Press</category>
+            <description>STRATRONIX releases Press Kit v1.0 for media outlets, industry analysts, partners, and SEO backlinks. Includes company story, product specs, brand assets, and media contacts.</description>
+            <content:encoded><![CDATA[
+                <p>STRATRONIX Press Kit v1.0 is now available for:</p>
+                <ul>
+                    <li>Media outlets &amp; journalists</li>
+                    <li>Industry analysts &amp; researchers</li>
+                    <li>Channel partners &amp; resellers</li>
+                    <li>SEO backlinks &amp; citations</li>
+                </ul>
+            ]]></content:encoded>
+        </item>
+    </channel>
+</rss>
