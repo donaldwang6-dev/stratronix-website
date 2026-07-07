@@ -1,7 +1,5 @@
 {
   "version": 2,
-  "name": "stratronix-website",
-  "public": true,
   "builds": [
     {
       "src": "**",
