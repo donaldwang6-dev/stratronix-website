@@ -6,23 +6,7 @@
       "use": "@vercel/static"
     }
   ],
-  "redirects": [
-    {
-      "source": "https://stratronix.ai/:path*",
-      "destination": "https://www.stratronix.ai/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://stratronix.ai/:path*",
-      "destination": "https://www.stratronix.ai/:path*",
-      "permanent": true
-    },
-    {
-      "source": "http://www.stratronix.ai/:path*",
-      "destination": "https://www.stratronix.ai/:path*",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "headers": [
     {
       "source": "/(.*)",
