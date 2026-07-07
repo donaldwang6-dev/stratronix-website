@@ -117,4 +117,34 @@
         <priority>0.7</priority>
     </url>
     
+    <!-- ===== Blog (SEO Content Hub - 2026-07-07 added) ===== -->
+    <url>
+        <loc>https://www.stratronix.ai/en/blog/</loc>
+        <lastmod>2026-07-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/blog/"/>
+    </url>
+    
+    <url>
+        <loc>https://www.stratronix.ai/en/blog/private-ai-vs-cloud-ai.html</loc>
+        <lastmod>2026-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.stratronix.ai/en/blog/what-is-paa.html</loc>
+        <lastmod>2026-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
+    <url>
+        <loc>https://www.stratronix.ai/en/blog/on-premise-ai-deployment.html</loc>
+        <lastmod>2026-07-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+    
     </urlset>
