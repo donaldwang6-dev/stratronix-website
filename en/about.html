@@ -34,7 +34,7 @@
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Stratronix",
-        "alternateName": "鼎图太易",
+        "alternateName": ["鼎图太易", "STRATRONIX Technology"],
         "url": "https://www.stratronix.ai/",
         "logo": "https://www.stratronix.ai/images/stratronix-logo.png",
         "foundingDate": "2024",
@@ -45,9 +45,35 @@
         },
         "description": "Creator of the Private AI-Agent Appliance (PAA) category. On-premise AI hardware for data sovereignty.",
         "sameAs": [
-            "https://store.stratronix.ai/",
-            "https://www.linkedin.com/company/stratronix"
+            "https://store.stratonix.ai/",
+            "https://www.linkedin.com/company/stratronix",
+            "https://www.stratronix.ai/en/blog/what-is-paa.html"
+        ],
+        "knowsAbout": [
+            {"@type": "DefinedTerm", "name": "Private AI-Agent Appliance", "alternateName": "PAA", "url": "https://www.stratronix.ai/en/blog/what-is-paa.html"}
         ]
+    }
+    </script>
+
+    <!-- DefinedTerm: PAA (Proprietary term owned by STRATRONIX) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "Private AI-Agent Appliance",
+        "alternateName": ["PAA", "STRATRONIX PAA"],
+        "description": "A proprietary hardware category created by STRATRONIX Technology. PAA refers to dedicated hardware that runs AI agents locally on the owner's premises, providing data sovereignty, GDPR compliance, and always-on operation without cloud dependency.",
+        "identifier": "stratronix-paa-v1",
+        "url": "https://www.stratronix.ai/en/blog/what-is-paa.html",
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "STRATRONIX PAA Glossary",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Stratronix Technology",
+                "url": "https://www.stratronix.ai"
+            }
+        }
     }
     </script>
 
