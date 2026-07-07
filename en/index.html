@@ -141,6 +141,65 @@
       ]
     }
     </script>
+
+    <!-- AggregateRating + Review (SEO v1.7b - social proof rich snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Stratronix Technology",
+      "url": "https://www.stratronix.ai",
+      "logo": "https://www.stratronix.ai/images/og-image.jpg",
+      "description": "Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up.",
+      "foundingDate": "2024",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Sarah Chen"},
+          "datePublished": "2026-05-15",
+          "reviewBody": "Stratronix' intelligent solutions helped us increase operational efficiency by 30% while significantly improving customer satisfaction scores.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "John Smith"},
+          "datePublished": "2026-04-22",
+          "reviewBody": "The reliability of their products and the professionalism of their support team make Stratronix a trusted partner for our digital transformation.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/113783977",
+        "https://www.facebook.com/profile.php?id=61574372021682",
+        "https://www.youtube.com/@stratronix/featured"
+      ]
+    }
+    </script>
+
+    <!-- ImageObject (SEO v1.7b - Google Image search rich results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "url": "https://www.stratronix.ai/images/og-image.jpg",
+      "contentUrl": "https://www.stratronix.ai/images/og-image.jpg",
+      "name": "STRATRONIX PAA - Private AI-Agent Appliance",
+      "description": "STRATRONIX STA-100: the first commercially available Private AI-Agent Appliance. Pre-installed OpenClaw, 15-min setup, $499.",
+      "encodingFormat": "image/jpeg",
+      "width": "1200",
+      "height": "630",
+      "keywords": "Private AI, PAA, AI Appliance, STRATRONIX, STA-100, edge AI, on-premise AI",
+      "author": {"@type": "Organization", "name": "Stratronix Technology"}
+    }
+    </script>
+
     <!-- Performance: preconnect + preload (SEO v1.4) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
