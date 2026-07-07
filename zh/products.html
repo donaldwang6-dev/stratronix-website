@@ -27,6 +27,13 @@
     <link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh/products.html">
     <link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/products.html">
 
+    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://store.stratonix.ai">
+    <link rel="preload" href="../css/style.css" as="style">
+
     <!-- Structured Data: Product -->
     <script type="application/ld+json">
     {
@@ -56,6 +63,40 @@
                 "name": "Stratronix Store"
             }
         }
+    }
+    </script>
+
+    <!-- Structured Data: SoftwareApplication (SEO v1.4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OpenClaw for STA-100 预装系统",
+      "alternateName": "OpenClaw 私有AI智能体操作系统",
+      "applicationCategory": "AI Agent Platform",
+      "applicationSubCategory": "Private AI Inference / 私有AI推理",
+      "operatingSystem": "OpenClaw OS (基于 Linux ARM64)",
+      "softwareVersion": "v1.0",
+      "fileSize": "系统预装",
+      "datePublished": "2026-01-15",
+      "downloadUrl": "https://store.stratonix.ai/products/sta-100-paa-standard/",
+      "screenshot": "https://www.stratronix.ai/images/sta100-product.png",
+      "softwareRequirements": "Allwinner A527 芯片 / 4GB 内存 / 32GB 存储",
+      "memoryRequirements": "4096 MB",
+      "storageRequirements": "32768 MB",
+      "processorRequirements": "ARM Cortex-A55 八核",
+      "inLanguage": "zh-CN",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "499.00",
+        "availability": "https://schema.org/InStock"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Stratronix 鼎图太易",
+        "url": "https://www.stratronix.ai"
+      }
     }
     </script>
     <link rel="stylesheet" href="../css/style.css">

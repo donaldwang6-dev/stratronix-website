@@ -27,6 +27,13 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.stratronix.ai/en/products.html">
     
+    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://store.stratonix.ai">
+    <link rel="preload" href="../css/style.css" as="style">
+    
     <!-- Structured Data for Product -->
     <script type="application/ld+json">
     {
@@ -53,6 +60,43 @@
         "@type": "AggregateRating",
         "ratingValue": "4.8",
         "reviewCount": "12"
+      }
+    }
+    </script>
+
+    <!-- Structured Data: SoftwareApplication (SEO v1.4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "OpenClaw for STA-100",
+      "applicationCategory": "AI Agent Platform",
+      "applicationSubCategory": "Private AI Inference",
+      "operatingSystem": "OpenClaw OS (Linux-based ARM64)",
+      "softwareVersion": "v1.0",
+      "fileSize": "Pre-installed",
+      "datePublished": "2026-01-15",
+      "downloadUrl": "https://store.stratonix.ai/products/sta-100-paa-standard/",
+      "screenshot": "https://www.stratronix.ai/images/sta100-product.png",
+      "softwareRequirements": "Allwinner A527, 4GB RAM, 32GB storage",
+      "memoryRequirements": "4096 MB",
+      "storageRequirements": "32768 MB",
+      "processorRequirements": "ARM Cortex-A55 octa-core",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "499.00",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "12"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "Stratronix Technology",
+        "url": "https://www.stratronix.ai"
       }
     }
     </script>

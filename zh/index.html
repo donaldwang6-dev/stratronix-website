@@ -49,6 +49,23 @@
     }
     </script>
 
+    <!-- WebSite + SearchAction (SEO v1.4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Stratronix 鼎图太易",
+      "url": "https://www.stratronix.ai/zh/",
+      "description": "私有AI智能体设备（PAA）品类开创者，本地AI推理硬件+软件一体化",
+      "inLanguage": "zh-CN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.stratronix.ai/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
     <!-- FAQPage -->
     <script type="application/ld+json">
     {
@@ -122,6 +139,12 @@
       ]
     }
     </script>
+
+    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="../css/style.css" as="style">
 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">

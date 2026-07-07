@@ -27,6 +27,12 @@
     <link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/contact.html">
     <link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh/contact.html">
 
+    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="../css/style.css" as="style">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -48,6 +54,56 @@
           "name": "Contact",
           "item": "https://www.stratronix.ai/en/contact.html"
         }
+      ]
+    }
+    </script>
+
+    <!-- LocalBusiness: Stratronix HQ (SEO v1.4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.stratronix.ai/#localbusiness",
+      "name": "Stratronix Technology",
+      "alternateName": "鼎图太易",
+      "description": "Creator of the Private AI-Agent Appliance (PAA) category. Hardware + software for private AI inference.",
+      "url": "https://www.stratronix.ai",
+      "logo": "https://www.stratronix.ai/images/og-image.jpg",
+      "image": "https://www.stratronix.ai/images/og-image.jpg",
+      "telephone": "+86-755-2308-6689",
+      "email": "info@stratronix.ai",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shenzhen, Guangdong",
+        "addressLocality": "Shenzhen",
+        "addressRegion": "Guangdong",
+        "postalCode": "518000",
+        "addressCountry": "CN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.5431,
+        "longitude": 114.0579
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/stratronix",
+        "https://twitter.com/stratronix"
+      ],
+      "areaServed": [
+        {"@type": "Country", "name": "China"},
+        {"@type": "Country", "name": "United States"},
+        {"@type": "Country", "name": "Germany"},
+        {"@type": "Country", "name": "United Kingdom"},
+        {"@type": "Country", "name": "Japan"}
       ]
     }
     </script>

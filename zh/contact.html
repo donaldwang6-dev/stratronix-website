@@ -27,6 +27,12 @@
     <link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh/contact.html">
     <link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/contact.html">
 
+    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="../css/style.css" as="style">
+
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -48,6 +54,52 @@
           "name": "联系我们",
           "item": "https://www.stratronix.ai/zh/contact.html"
         }
+      ]
+    }
+    </script>
+
+    <!-- LocalBusiness: 鼎图太易总部 (SEO v1.4) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.stratronix.ai/#localbusiness-zh",
+      "name": "鼎图太易（Stratronix Technology）",
+      "alternateName": "Stratronix 鼎图",
+      "description": "私有AI智能体设备（PAA）品类开创者，硬件+软件一体化本地AI推理方案。",
+      "url": "https://www.stratronix.ai/zh/",
+      "logo": "https://www.stratronix.ai/images/og-image.jpg",
+      "image": "https://www.stratronix.ai/images/og-image.jpg",
+      "telephone": "+86-755-2308-6689",
+      "email": "info@stratronix.ai",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "深圳市",
+        "addressLocality": "深圳市",
+        "addressRegion": "广东省",
+        "postalCode": "518000",
+        "addressCountry": "CN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.5431,
+        "longitude": 114.0579
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": [
+        {"@type": "Country", "name": "中国"},
+        {"@type": "Country", "name": "美国"},
+        {"@type": "Country", "name": "德国"},
+        {"@type": "Country", "name": "英国"},
+        {"@type": "Country", "name": "日本"}
       ]
     }
     </script>
