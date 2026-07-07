@@ -686,6 +686,98 @@
         </div>
     </section>
 
+    <!-- FAQ Section (Added 2026-07-07 for SEO rich snippet eligibility) -->
+    <section class="faq-section" style="padding: 60px 0; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="font-size: 32px; text-align: center; margin-bottom: 12px; color: #1a1d27;">Frequently Asked Questions</h2>
+            <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 16px;">Everything you need to know about the STRATRONIX STA-100 PAA</p>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
+                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">Is the STA-100 a regular Mini PC or something different?</summary>
+                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">The STA-100 is purpose-built as a <strong>Private AI-Agent Appliance (PAA)</strong>: pre-installed with OpenClaw AI runtime, optimized for on-device LLM inference (Llama 3, Mistral, Qwen 2.5), and managed as an appliance (not a general computer). Unlike a Mini PC that you have to configure from scratch, the STA-100 ships working out-of-the-box with the AI agent stack pre-configured. The hardware uses an ARM Cortex-A55 octa-core SoC with neural processing unit (NPU), enabling 15-30W inference — 5-10× more efficient than x86 Mini PCs for the same AI workload.</p>
+                </details>
+                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
+                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">Does the STA-100 require internet to work?</summary>
+                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">No. All AI inference runs locally on your premises using on-device LLMs. The STA-100 is designed for <strong>always-on, online-required operation</strong> when you want updates, remote monitoring, or cloud-side AI supplementation — but it does not <em>require</em> internet access to run AI agents on your data. For regulated industries and air-gapped environments, this is the core benefit: zero data ever leaves your network unless you explicitly opt in.</p>
+                </details>
+                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
+                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">What AI models are pre-installed?</summary>
+                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">The STA-100 ships with three open-weight models pre-loaded: <strong>Llama 3.1 8B</strong> (general purpose), <strong>Mistral 7B</strong> (instruction following), and <strong>Qwen 2.5 7B</strong> (multilingual including Chinese). You can download additional models (Llama 3.1 70B, Mistral Large, DeepSeek, CodeLlama, custom fine-tunes) via the management UI. Model updates are pushed automatically as new high-quality open-weight models become available.</p>
+                </details>
+                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
+                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">What's the warranty and what's covered?</summary>
+                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">Every STA-100 includes a <strong>2-year limited warranty</strong> covering hardware defects, manufacturing faults, and pre-installed software issues. The warranty also includes firmware and model-library updates pushed automatically over the lifetime of the device. Extended warranty (3-year and 5-year) is available at point-of-sale. The warranty does not cover physical damage, unauthorized modifications, or third-party software issues.</p>
+                </details>
+                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
+                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">Can I fine-tune models on my own data?</summary>
+                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">Yes. The STA-100 supports fine-tuning of open-weight models (LoRA / QLoRA / full fine-tuning of 7B-class models on the included 32GB storage, expandable to 512GB). Typical fine-tuning projects (10,000-100,000 samples) complete in 4-12 hours on the device. Data used for fine-tuning never leaves your premises. See our technical documentation for detailed instructions.</p>
+                </details>
+                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
+                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">How does pricing compare to cloud AI services?</summary>
+                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">A STA-100 is a one-time $499 hardware purchase. Cloud AI subscriptions range from $20-30/user/month. For a team of 10+ users with steady AI usage (over 50,000 API calls per month), the STA-100 pays for itself in under 4 months. After that, ongoing cost is just electricity (~$5-10/month). Read our detailed analysis in the <a href="blog/private-ai-vs-cloud-ai.html" style="color: #E6417F;">Private AI vs Cloud AI Buyer's Guide</a>.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQPage JSON-LD (for Google rich snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is the STA-100 a regular Mini PC or something different?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The STA-100 is purpose-built as a Private AI-Agent Appliance (PAA): pre-installed with OpenClaw AI runtime, optimized for on-device LLM inference (Llama 3, Mistral, Qwen 2.5), and managed as an appliance. Unlike a Mini PC configured from scratch, the STA-100 ships with the AI agent stack pre-configured."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the STA-100 require internet to work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. All AI inference runs locally on your premises. The STA-100 is designed for always-on operation when you want updates, but does not require internet to run AI agents on your data. For regulated industries and air-gapped environments, zero data leaves your network unless you explicitly opt in."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What AI models are pre-installed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The STA-100 ships with three open-weight models pre-loaded: Llama 3.1 8B (general purpose), Mistral 7B (instruction following), and Qwen 2.5 7B (multilingual including Chinese). You can download additional models via the management UI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What's the warranty and what's covered?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every STA-100 includes a 2-year limited warranty covering hardware defects, manufacturing faults, and pre-installed software issues. Extended warranty (3-year and 5-year) is available at point-of-sale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I fine-tune models on my own data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The STA-100 supports fine-tuning of open-weight models (LoRA / QLoRA / full fine-tuning). Data used for fine-tuning never leaves your premises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does pricing compare to cloud AI services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A STA-100 is a one-time $499 hardware purchase. Cloud AI subscriptions range from $20-30/user/month. For a team of 10+ users with steady AI usage, the STA-100 pays for itself in under 4 months."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
