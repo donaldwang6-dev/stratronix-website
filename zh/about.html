@@ -577,6 +577,9 @@
     }
     </script>
 
+    <!-- Baidu Verification (百度站长平台验证) -->
+    <meta name="baidu-site-verification" content="codeva-AJ8fPahhKt" />
+    <meta name="baidu-tc" content="n9Y8K4e9y7s" />
 </head>
 <body lang="en">
     <!-- 导航栏 -->
@@ -851,6 +854,20 @@
                 section.classList.add('page-load');
             });
         });
+    </script>
+    <!-- Baidu Active Push JS (百度实时推送) -->
+    <script>
+    (function(){
+        var bp = document.createElement("script");
+        var curProtocol = window.location.protocol.split(":")[0];
+        if (curProtocol === "https") {
+            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+        } else {
+            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
     </script>
 </body>
 </html>

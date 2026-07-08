@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mobile sitemap for Baidu mobile indexing -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:mobile="http://www.baidu.com/schemas/sitemap-mobile/1/">
+    <url>
+        <loc>https://www.stratronix.ai/zh/</loc>
+        <mobile:mobile/>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.stratronix.ai/zh/products.html</loc>
+        <mobile:mobile/>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.stratronix.ai/en/</loc>
+        <mobile:mobile/>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://www.stratronix.ai/en/products.html</loc>
+        <mobile:mobile/>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>https://www.stratronix.ai/</loc>
+        <mobile:mobile/>
+        <lastmod>2026-07-08</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>
