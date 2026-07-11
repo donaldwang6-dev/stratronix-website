@@ -199,7 +199,7 @@
           "name": "什么是 PAA 私有AI智能体设备？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "PAA (Private AI-Agent Appliance) 是由鼎图太易 (Stratronix) 首创的硬件品类。PAA 是一种专用硬件设备，可在本地运行 AI 智能体，所有数据保留在设备上，绝不上传云端，提供 24/7 全天候在线的 AI 能力。PAA 适用于个人、中小企业以及大型企业的私有 AI 部署需求。"
+            "text": "PAA (Private AI-Agent Appliance) 是由鼎图太易 (Stratronix) 首创的硬件品类。本地 8 核 ARM 芯片内置 OpenClaw 智能体（小龙虾），智能体做数据脱敏 + 工具调用 + 本地记忆。云端通过用户配置的 API key 调用任意 LLM（OpenAI / Anthropic / Qwen / DeepSeek 等）。模型在云调用（不在本地跑），但敏感数据本地处理。"
           }
         },
         {
@@ -207,7 +207,7 @@
           "name": "STA-100 与云端 AI (ChatGPT/百度文心/通义千问) 有什么区别？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "云端 AI 服务需要将您的数据上传到第三方服务器进行处理；STA-100 PAA 在您自己的硬件上本地运行 AI 推理，所有数据始终保留在设备上。对于需要满足《数据安全法》、《个人信息保护法》、等保2.0、行业合规的客户，STA-100 是更安全的选择。云端 AI 适合通用对话；PAA 适合数据敏感型企业。"
+            "text": "云端 AI（如 ChatGPT）需要将您的数据全部上传到 OpenAI / 百度 / 阿里服务器处理。STA-100 PAA 通过本地 OpenClaw 智能体（小龙虾）做敏感数据脱敏，只有脱敏后的查询才上传到云端 LLM API（OpenAI / Claude / Qwen / DeepSeek 任选），返回结果本地后处理。模型调用在云（享受最强 LLM），但敏感数据始终在您自己的硬件上。对于需要满足《数据安全法》《个人信息保护法》、等保 2.0、GDPR 的客户，STA-100 是更安全的选择。云端 AI 适合公开数据对话；PAA 适合数据敏感型企业。"
           }
         },
         {
