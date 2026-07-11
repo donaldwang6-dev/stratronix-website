@@ -34,7 +34,7 @@ Google Search Console提示："找不到您的验证元标记"
 名称: @
 类型: TXT
 值: google-site-verification=lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw
-TTL: 1999
+TTL: 3600
 ```
 
 ## 立即操作步骤

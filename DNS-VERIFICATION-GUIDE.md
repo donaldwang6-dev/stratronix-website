@@ -22,7 +22,7 @@ Google会显示类似这样的信息：
 名称: @
 类型: TXT
 值: google-site-verification=lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw
-TTL: 自动（或1999）
+TTL: 自动（或3600）
 ```
 
 ### 第3步：登录你的域名注册商
@@ -42,7 +42,7 @@ TTL: 自动（或1999）
    - **记录类型**: TXT
    - **主机记录**: @ (或留空，或填写 stratronix.ai)
    - **记录值**: google-site-verification=lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw
-   - **TTL**: 自动或1999
+   - **TTL**: 自动或3600
 5. 点击"保存"或"确认"
 
 ### 第5步：等待DNS传播
