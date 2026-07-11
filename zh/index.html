@@ -170,6 +170,10 @@
 
     <!-- Performance: preconnect + preload (SEO v1.4) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//hm.baidu.com">
+    <link rel="dns-prefetch" href="//zz.bdstatic.com">
+    <link rel="dns-prefetch" href="//weibo.com">
+    <link rel="dns-prefetch" href="//space.bilibili.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preload" href="../css/style.css" as="style">
@@ -652,7 +656,7 @@
         </div>
     </footer>
 
-    <script src="../js/main.js?v=2"></script>
+    <script src="../js/main.js?v=2" defer></script>
     <script>
     // 兑底绑定:确保 mobile nav 一定能点 (Donald 2026-06-17 23:05)
     (function(){
@@ -789,8 +793,19 @@
             }
         }
     </style>
-    <script src="../js/core-values-animation.js"></script>
-    <script src="../js/simple-cards-animation.js"></script>
+    <script src="../js/core-values-animation.js" defer></script>
+    <script src="../js/simple-cards-animation.js" defer></script>
+        <!-- Baidu Tongji (百度统计 - 让百度更了解网站流量) -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_ID";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
     <!-- Baidu Active Push JS (百度实时推送) -->
     <script>
     (function(){
