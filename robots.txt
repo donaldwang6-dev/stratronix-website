@@ -49,6 +49,10 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
+# ===== 国内社媒域 (SEO v3.1 - 让百度收录所有社媒) =====
+User-agent: Baiduspider
+Allow: /
+
 # ===== AI Crawlers (block commercial scraping) =====
 User-agent: GPTBot
 Disallow: /

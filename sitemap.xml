@@ -160,4 +160,36 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+    
+    <!-- 国内社媒账号 (SEO v3.1 - 让百度收录) -->
+    <url>
+        <loc>https://weibo.com/u/7656329069</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://space.bilibili.com/3493136900819331</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>http://weixin.qq.com/r/mp/qifv95jENMVLrdyU93K4</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.linkedin.com/company/113783977</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://www.youtube.com/@stratronix/featured</loc>
+        <lastmod>2026-07-11</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
