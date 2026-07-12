@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <!-- STA-100 Product Hero Image -->
     <url>
-        <loc>https://www.stratronix.ai/en/products.html</loc>
+        <loc>https://www.stratronix.ai/en/products</loc>
         <lastmod>2026-07-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -16,7 +16,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/</loc>
+        <loc>https://store.stratronix.ai</loc>
         <lastmod>2026-07-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
@@ -28,7 +28,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-paa-standard/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-paa-standard</loc>
         <lastmod>2026-07-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -40,7 +40,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-paa-pro/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-paa-pro</loc>
         <lastmod>2026-07-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -52,7 +52,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-paa-enterprise/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-paa-enterprise</loc>
         <lastmod>2026-07-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -64,7 +64,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-4g-lte-module/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-4g-lte-module</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-4g-lte-module.png</image:loc>
@@ -74,7 +74,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-gps-tracker/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-gps-tracker</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-gps-tracker.png</image:loc>
@@ -84,7 +84,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-voice-module/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-voice-module</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-voice-module.png</image:loc>
@@ -94,7 +94,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-ai-camera/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-ai-camera</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-ai-camera.png</image:loc>
@@ -104,7 +104,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-installation-training/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-installation-training</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-installation.png</image:loc>
@@ -114,7 +114,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-extended-warranty-1y/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-extended-warranty-1y</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-warranty-1y.png</image:loc>
@@ -124,7 +124,7 @@
     </url>
     
     <url>
-        <loc>https://store.stratronix.ai/products/sta-100-extended-warranty-3y/</loc>
+        <loc>https://store.stratronix.ai/products/sta-100-extended-warranty-3y</loc>
         <lastmod>2026-07-06</lastmod>
         <image:image>
             <image:loc>https://store.stratronix.ai/images/sta-100-warranty-3y.png</image:loc>
