@@ -1,221 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-    <!-- 首页 (Language Selection) -->
-    <url>
-        <loc>https://www.stratronix.ai</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.stratronix.ai"/>
-    </url>
-    
-    <!-- ===== English Pages ===== -->
-    <url>
-        <loc>https://www.stratronix.ai/en</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh"/>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/about</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/products</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/news</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/contact</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- ===== Chinese Pages ===== -->
-    <url>
-        <loc>https://www.stratronix.ai/zh</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh"/>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en"/>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/zh/about</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/zh/products</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/zh/news</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/zh/contact</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- ===== STRATRONIX STORE (E-Commerce) ===== -->
-    <url>
-        <loc>https://store.stratronix.ai</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.95</priority>
-    </url>
-    
-    <url>
-        <loc>https://store.stratronix.ai/products</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-    
-    <url>
-        <loc>https://store.stratronix.ai/products/sta-100-paa-standard</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    
-    <url>
-        <loc>https://store.stratronix.ai/contact</loc>
-        <lastmod>2026-07-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    
-    <!-- ===== Blog (SEO Content Hub - 2026-07-07 added) ===== -->
-    <url>
-        <loc>https://www.stratronix.ai/en/blog</loc>
-        <lastmod>2026-07-07</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/blog"/>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/blog/private-ai-vs-cloud-ai</loc>
-        <lastmod>2026-07-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/blog/what-is-paa</loc>
-        <lastmod>2026-07-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/blog/on-premise-ai-deployment</loc>
-        <lastmod>2026-07-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    
-    <url>
-        <loc>https://www.stratronix.ai/en/blog/private-ai-use-cases</loc>
-        <lastmod>2026-07-07</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.85</priority>
-    </url>
-    
-      <url>
-    <loc>https://www.stratronix.ai/brand</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-    
-    <!-- 国内社媒账号 (SEO v3.1 - 让百度收录) -->
-    <url>
-        <loc>https://weibo.com/u/7656329069</loc>
-        <lastmod>2026-07-11</lastmod>
-        <changefreq>daily</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://space.bilibili.com/3493136900819331</loc>
-        <lastmod>2026-07-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>http://weixin.qq.com/r/mp/qifv95jENMVLrdyU93K4</loc>
-        <lastmod>2026-07-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.linkedin.com/company/113783977</loc>
-        <lastmod>2026-07-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.youtube.com/@stratronix/featured</loc>
-        <lastmod>2026-07-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-    </url>
 
-    <url>
-        <loc>https://www.stratronix.ai/zh/wechat-articles</loc>
-        <lastmod>2026-07-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
+<!-- Main pages (English) -->
+<url>
+  <loc>https://www.stratronix.ai/</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>1.0</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/products</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/about</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/contact</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/news</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/brand</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.7</priority>
+</url>
 
-    <url>
-        <loc>https://www.stratronix.ai/zh/blog/sta-100-price</loc>
-        <lastmod>2026-07-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.stratronix.ai/zh/blog/stratronix-vs-jetson-raspberry-pi</loc>
-        <lastmod>2026-07-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://www.stratronix.ai/zh/blog/stratronix-customer-cases</loc>
-        <lastmod>2026-07-13</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
+<!-- Main pages (Chinese) -->
+<url>
+  <loc>https://www.stratronix.ai/zh</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>1.0</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/products</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/about</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/contact</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/news</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.7</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/wechat-articles</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.9</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.9</priority>
+</url>
+
+<!-- ZH Blog posts (old + new) -->
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/sta-100-price</loc>
+  <lastmod>2026-07-13</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/stratronix-vs-jetson-raspberry-pi</loc>
+  <lastmod>2026-07-13</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/stratronix-customer-cases</loc>
+  <lastmod>2026-07-13</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/dingtu-medical-paa</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/dingtu-legal-paa</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/dingtu-education-paa</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/dingtu-smb-paa</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/zh/blog/dingtu-finance-paa</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- EN Blog posts -->
+<url>
+  <loc>https://www.stratronix.ai/blog/stratronix-vs-chatgpt</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/blog/stratronix-paa-setup-guide</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/blog/stratronix-self-hosted-ai</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>https://www.stratronix.ai/blog/stratronix-paa-roi</loc>
+  <lastmod>2026-07-14</lastmod>
+  <priority>0.8</priority>
+</url>
+
+<!-- Sales support index -->
+<url>
+  <loc>https://www.stratronix.ai/sales-support</loc>
+  <lastmod>2026-07-13</lastmod>
+  <priority>0.7</priority>
+</url>
+
 </urlset>
