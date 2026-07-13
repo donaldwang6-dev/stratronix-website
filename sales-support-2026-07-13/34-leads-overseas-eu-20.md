@@ -1,0 +1,48 @@
+# STRATRONIX EU Leads 20
+
+## Deutschland (10)
+1. Freshfields Bruckhaus Deringer (Frankfurt)
+2. Hengeler Mueller (Frankfurt)
+3. Linklaters (Frankfurt)
+4. Clifford Chance (Frankfurt)
+5. Allen & Overy (Frankfurt)
+6. Trumpf (Ditzingen) - manufacturing
+7. Miele (Gütersloh) - appliances
+8. Rittal (Herborn)
+9. Stihl (Waiblingen)
+10. Würth (Künzelsau)
+
+## Schweiz (4)
+11. Bär & Karrer (Zürich)
+12. Homburger (Zürich)
+13. Roche (Basel)
+14. Nestlé (Vevey)
+
+## Österreich (2)
+15. Wolf Theiss (Wien)
+16. Strabag (Villach)
+
+## Frankreich (2)
+17. Gide Loyrette Nouel (Paris)
+18. BNP Paribas (Paris)
+
+## Niederlande (2)
+19. De Brauw (Amsterdam)
+20. ASML (Veldhoven)
+
+## Pricing (€ EUR)
+- €339 (1-9, ~$369)
+- €305 (10-49, 10% off)
+- €271 (50-99, 20% off)
+- €237 (100+, 30% off)
+- 19% MwSt / VAT
+
+## Compliance
+- GDPR (DPA + DPO)
+- Schrems II (no US data transfer)
+- EU AI Act (Limited Risk)
+- ISO 27001 (Q4 2026)
+- BSI C5
+
+## 6-Month Goal
+20 customers, €10,000-30,000 MRR, 2-3 channel partners
