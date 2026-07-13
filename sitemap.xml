@@ -199,4 +199,23 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
+
+    <url>
+        <loc>https://www.stratronix.ai/zh/blog/sta-100-price</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.stratronix.ai/zh/blog/stratronix-vs-jetson-raspberry-pi</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://www.stratronix.ai/zh/blog/stratronix-customer-cases</loc>
+        <lastmod>2026-07-13</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>
