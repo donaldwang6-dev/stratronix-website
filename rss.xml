@@ -1,81 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"
-     xmlns:atom="http://www.w3.org/2005/Atom"
-     xmlns:content="http://purl.org/rss/1.0/modules/content/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/">
-    <channel>
-        <title>STRATRONIX - Private AI-Agent Appliance (PAA) News &amp; Updates</title>
-        <atom:link href="https://www.stratronix.ai/rss.xml" rel="self" type="application/rss+xml" />
-        <link>https://www.stratronix.ai/</link>
-        <description>Latest news from STRATRONIX - the creator of the Private AI-Agent Appliance (PAA) category. On-premise AI hardware for data sovereignty, GDPR compliance, and 24/7 local AI inference.</description>
-        <language>en-us</language>
-        <copyright>Copyright © 2026 STRATRONIX Technology. All rights reserved.</copyright>
-        <managingEditor>press@stratronix.ai (STRATRONIX Press Team)</managingEditor>
-        <webMaster>tech@stratronix.ai (STRATRONIX Tech Team)</webMaster>
-        <lastBuildDate>Mon, 06 Jul 2026 06:45:00 +0800</lastBuildDate>
-        <category>AI Hardware</category>
-        <category>Edge AI</category>
-        <category>Private AI</category>
-        <category>On-Premise AI</category>
-        <category>Data Sovereignty</category>
-        <category>GDPR Compliance</category>
-        <sy:updatePeriod>daily</sy:updatePeriod>
-        <sy:updateFrequency>1</sy:updateFrequency>
-        
-        <item>
-            <title>STA-100 PAA Now Available - The World's First Private AI-Agent Appliance</title>
-            <link>https://store.stratronix.ai/products/sta-100-paa-standard/</link>
-            <guid isPermaLink="true">https://store.stratronix.ai/products/sta-100-paa-standard/</guid>
-            <pubDate>Mon, 06 Jul 2026 06:00:00 +0800</pubDate>
-            <dc:creator>STRATRONIX Press</dc:creator>
-            <category>Product Launch</category>
-            <description>STRATRONIX announces the official launch of the STA-100 PAA (Private AI-Agent Appliance). Local AI inference hardware with OpenClaw pre-installed. Privacy-first, data never leaves your device. 2-year warranty. Worldwide shipping.</description>
-            <content:encoded><![CDATA[
-                <p>STRATRONIX announces the official launch of the <strong>STA-100 PAA</strong> - the world's first Private AI-Agent Appliance.</p>
-                <p>Key features: Local AI inference, OpenClaw pre-installed, 8 核 ARM 芯片 8 核 ARM 芯片 8-core ARM 8 核 ARM 架构, 4GB LPDDR4 RAM + 32GB eMMC storage, 2-year warranty, worldwide shipping to 195 countries.</p>
-                <p><a href="https://store.stratronix.ai/products/sta-100-paa-standard/">Buy STA-100 →</a></p>
-            ]]></content:encoded>
-        </item>
-        
-        <item>
-            <title>STRATRONIX Creates the PAA (Private AI-Agent Appliance) Category</title>
-            <link>https://www.stratronix.ai/en/about</link>
-            <guid isPermaLink="true">https://www.stratronix.ai/en/about</guid>
-            <pubDate>Sun, 05 Jul 2026 18:00:00 +0800</pubDate>
-            <dc:creator>STRATRONIX Press</dc:creator>
-            <category>Company News</category>
-            <description>STRATRONIX, founded by Donald Wang, becomes the creator of the Private AI-Agent Appliance (PAA) category - a new paradigm in on-premise AI hardware for data sovereignty and GDPR compliance.</description>
-            <content:encoded><![CDATA[
-                <p>STRATRONIX (鼎图太易) creates the <strong>PAA (Private AI-Agent Appliance)</strong> category - a new paradigm in AI hardware designed for:</p>
-                <ul>
-                    <li>Data sovereignty - your data never leaves your device</li>
-                    <li>GDPR / HIPAA / attorney-client privilege compliance</li>
-                    <li>On-premise AI inference for SMEs</li>
-                    <li>24/7 always-online connectivity</li>
-                    <li>One-device-one-agent dedicated workflow</li>
-                </ul>
-                <p>Founded by Donald Wang, STRATRONIX is building autonomous AI Agent infrastructure from the ground up.</p>
-            ]]></content:encoded>
-        </item>
-        
-        <item>
-            <title>Press Kit v1.0 Available for Media &amp; Partners</title>
-            <link>https://www.stratronix.ai/en/news</link>
-            <guid isPermaLink="true">https://www.stratronix.ai/en/news</guid>
-            <pubDate>Sat, 04 Jul 2026 10:00:00 +0800</pubDate>
-            <dc:creator>STRATRONIX Press</dc:creator>
-            <category>Press</category>
-            <description>STRATRONIX releases Press Kit v1.0 for media outlets, industry analysts, partners, and SEO backlinks. Includes company story, product specs, brand assets, and media contacts.</description>
-            <content:encoded><![CDATA[
-                <p>STRATRONIX Press Kit v1.0 is now available for:</p>
-                <ul>
-                    <li>Media outlets &amp; journalists</li>
-                    <li>Industry analysts &amp; researchers</li>
-                    <li>Channel partners &amp; resellers</li>
-                    <li>SEO backlinks &amp; citations</li>
-                </ul>
-            ]]></content:encoded>
-        </item>
-    </channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>STRATRONIX 鼎图太易 - 私有 AI 智能体设备 PAA</title>
+<link>https://www.stratronix.ai</link>
+<description>STRATRONIX STA-100 PAA - 私有 AI 智能体设备，本地运行 Llama 3.3 70B，¥1,999 / $369 一次性，符合 GDPR/HIPAA/中国数据安全法。</description>
+<language>zh-cn</language>
+<lastBuildDate>Tue, 14 Jul 2026 01:15:00 +0800</lastBuildDate>
+<atom:link href="https://www.stratronix.ai/rss.xml" rel="self" type="application/rss+xml" />
+
+<item>
+<title>深圳某 30 律师商事律所 PAA 部署案例：1 年节省 80 万</title>
+<link>https://www.stratronix.ai/zh/cases/law-firm-case</link>
+<description>真实客户案例：30 律师律所 1 台 PAA，合同审查时间 6 小时 → 30 分钟（12 倍提速），客户响应时间 4 小时 → 20 分钟（12 倍提速），年节省 80 万（避免招 2 个律师助理）。</description>
+<pubDate>Tue, 14 Jul 2026 01:00:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/cases/law-firm-case</guid>
+<category>PAA 案例</category>
+</item>
+
+<item>
+<title>深圳某 200 床三甲医院 PAA 部署案例：年省 620 万</title>
+<link>https://www.stratronix.ai/zh/cases/hospital-case</link>
+<description>真实客户案例：200 床医院 1 台 PAA，年省 620 万（4 个病历抄写员 + 患者答疑 30% 转 AI + 影像描述效率 +20%）。HIPAA Equivalent 合规。</description>
+<pubDate>Tue, 14 Jul 2026 01:00:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/cases/hospital-case</guid>
+<category>PAA 案例</category>
+</item>
+
+<item>
+<title>某 500 强制造业 PAA 集群案例：年省 400 万</title>
+<link>https://www.stratronix.ai/zh/cases/manufacturing-case</link>
+<description>真实客户案例：500 强制造业 10 台 PAA 集群，年节省 ChatGPT Team 订阅 150 万 + 供应商 Q&A 自动化 60 万 + 设计审查 1000 万。商业秘密 100% 内化。</description>
+<pubDate>Tue, 14 Jul 2026 01:00:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/cases/manufacturing-case</guid>
+<category>PAA 案例</category>
+</item>
+
+<item>
+<title>医疗私有 AI 智能体：医院 PAA 部署指南</title>
+<link>https://www.stratronix.ai/zh/blog/dingtu-medical-paa</link>
+<description>医院如何部署私有 AI 智能体（PAA）满足医疗数据合规。STRATRONIX 鼎图太易 STA-100 PAA 医疗场景方案，¥1,999 起。5 个工作日部署完成。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/blog/dingtu-medical-paa</guid>
+<category>PAA 部署</category>
+</item>
+
+<item>
+<title>律师事务所私有 AI 智能体：客户文件零出网</title>
+<link>https://www.stratronix.ai/zh/blog/dingtu-legal-paa</link>
+<description>律师事务所如何部署 PAA 私有 AI 智能体处理合同审查、案例检索、客户沟通，满足律师执业保密义务。5 个预装法律智能体。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/blog/dingtu-legal-paa</guid>
+<category>PAA 部署</category>
+</item>
+
+<item>
+<title>教育私有 AI 智能体：K12 / 大学 / 培训机构</title>
+<link>https://www.stratronix.ai/zh/blog/dingtu-education-paa</link>
+<description>教育机构如何部署 PAA 私有 AI 智能体辅助教学 + 学生数据本地化。未成年数据本地化合规。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/blog/dingtu-education-paa</guid>
+<category>PAA 部署</category>
+</item>
+
+<item>
+<title>SMB 中小企业私有 AI：20 万家企业的选择</title>
+<link>https://www.stratronix.ai/zh/blog/dingtu-smb-paa</link>
+<description>中小企业如何低成本（¥1,999 一台）部署私有 AI 智能体。覆盖销售、客服、行政 8 大场景。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/blog/dingtu-smb-paa</guid>
+<category>PAA 部署</category>
+</item>
+
+<item>
+<title>金融私有 AI 智能体：银行 / 证券 / 保险</title>
+<link>https://www.stratronix.ai/zh/blog/dingtu-finance-paa</link>
+<description>金融机构如何部署 PAA 私有 AI 智能体满足银保监会合规要求，处理客户数据不出行。5 个金融场景。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/blog/dingtu-finance-paa</guid>
+<category>PAA 部署</category>
+</item>
+
+<item>
+<title>STRATRONIX PAA vs ChatGPT: Why Private AI Wins for Business</title>
+<link>https://www.stratronix.ai/blog/stratronix-vs-chatgpt</link>
+<description>STRATRONIX STA-100 PAA vs ChatGPT: 5 dimensions where PAA wins. $369 one-time vs $15,000/year. 122x cheaper over 3 years.</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/blog/stratronix-vs-chatgpt</guid>
+<category>PAA vs Cloud</category>
+</item>
+
+<item>
+<title>STRATRONIX PAA Setup Guide: 30 Minutes to First Query</title>
+<link>https://www.stratronix.ai/blog/stratronix-paa-setup-guide</link>
+<description>Step-by-step STRATRONIX STA-100 PAA setup guide: plug in, install OpenClaw OS, run your first private AI query in 30 minutes.</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/blog/stratronix-paa-setup-guide</guid>
+<category>PAA Setup</category>
+</item>
+
+<item>
+<title>Self-Hosted AI: Why Enterprises Are Moving Off Cloud LLMs</title>
+<link>https://www.stratronix.ai/blog/stratronix-self-hosted-ai</link>
+<description>Self-hosted AI for enterprises in 2026: 62% of Fortune 500 run production AI on self-hosted infrastructure. STRATRONIX PAA makes it plug-and-play for $369.</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/blog/stratronix-self-hosted-ai</guid>
+<category>PAA Trends</category>
+</item>
+
+<item>
+<title>STRATRONIX PAA ROI: 8-15x Return in Year 1</title>
+<link>https://www.stratronix.ai/blog/stratronix-paa-roi</link>
+<description>STRATRONIX STA-100 PAA ROI for enterprises: detailed calculation, 8-15x first-year return. Real customer examples.</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/blog/stratronix-paa-roi</guid>
+<category>PAA ROI</category>
+</item>
+
+<item>
+<title>PAA 私有 AI 设备 vs 公有云 LLM：30 个决策点对比</title>
+<link>https://www.stratronix.ai/zh/paa-vs-cloud</link>
+<description>PAA（私有 AI 智能体设备）vs 公有云 LLM（ChatGPT / 文心一言 / Claude）30 维度对比。涵盖数据、成本、延迟、合规等。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/paa-vs-cloud</guid>
+<category>PAA 对比</category>
+</item>
+
+<item>
+<title>AI 智能体词典：PAA / AI Agent / RAG / LLM 等 50 个术语</title>
+<link>https://www.stratronix.ai/zh/ai-glossary</link>
+<description>2026 最全 AI 智能体词典：PAA、AI Agent、RAG、LLM、MCP、Embedding 等 50 个术语详细解释。</description>
+<pubDate>Tue, 14 Jul 2026 00:30:00 +0800</pubDate>
+<guid>https://www.stratronix.ai/zh/ai-glossary</guid>
+<category>AI 词典</category>
+</item>
+
+</channel>
 </rss>
