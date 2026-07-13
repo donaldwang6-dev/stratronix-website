@@ -1,0 +1,129 @@
+# DM Templates 23: International English (LinkedIn, Twitter DM, Indie Hackers)
+
+---
+
+## Template A: LinkedIn DM to Senior Lawyer
+
+**Scenario**: You found a senior partner's profile. He specializes in cross-border M&A in NYC.
+
+```
+Hi [XX],
+
+Came across your profile — interesting background in [specific detail: e.g., Harvard Law + 12 years cross-border M&A].
+
+Quick question: Does your firm use ChatGPT / Claude for legal research, or have your clients started putting "no public AI" in NDAs?
+
+We just launched a $369 private AI device (STRATRONIX STA-100) for legal practices — runs locally so no client data goes anywhere. Saves law firms ~15 hrs/week on research + drafting.
+
+Worth 15 min? I can demo via Zoom this week.
+
+— Donald
+```
+
+**Variation for Twitter / IndieHackers**:
+
+```
+Found your latest post on [topic] — interesting take.
+
+Quick context: I'm with STRATRONIX (Shenzhen). We make $369 local AI devices for professionals (lawyers, doctors, devs) who can't use cloud AI due to client NDAs.
+
+Just shipped 100 units to US/EU. If you've ever considered a "private ChatGPT" for sensitive work, happy to send you one to try.
+
+— Donald
+```
+
+---
+
+## Template B: LinkedIn DM to Indie Developer
+
+**Scenario**: Indie hacker / solopreneur building in AI space.
+
+```
+Hey [XX],
+
+Saw your [awesome product / GitHub repo]. Really cool.
+
+Question: Are you running LLMs locally yet? If so, you've probably spent 4+ hours setting up Jetson + JetPack + Ollama. Frustrating.
+
+We just released STRATRONIX STA-100 — $369, 5-minute setup, pre-installed Mistral 7B + OpenClaw AI agent framework. Just plug in and chat.
+
+Happy to send you a 30-day trial unit if you want to test it. (We'll cover shipping.)
+
+— Donald Wang
+Founder, STRATRONIX
+```
+
+---
+
+## Template C: Cold Email reply DM (after demo email no reply)
+
+```
+[XX] — did my email from last week reach you? Quick recap:
+
+STRATRONIX STA-100 = $369 local AI device, runs Mistral 7B on 8-core ARM, 5-min setup. Saves SMBs ~$240/yr vs ChatGPT Team + 100% data sovereignty.
+
+Worth a 15-min call this week? I can demo Thursday 3 PM ET or Friday 10 AM ET — your time.
+```
+
+---
+
+## Template D: After positive reply
+
+```
+Glad to hear it resonates!
+
+Quick logistics:
+- I can send a demo unit with 30-day money-back
+- Or, if you prefer, 30-min Zoom call first (I can show the actual product live)
+
+What's easier for you?
+```
+
+---
+
+## Template E: Closing message after demo
+
+```
+Thanks for the great conversation today!
+
+Next steps I've prepared:
+1. Order confirmation email (already sent, please check spam if not in inbox)
+2. ETA: ships in 2 weeks from [warehouse]
+3. OpenClaw deployment guide PDF attached
+4. I'm in Shenzhen timezone — fastest response via WeChat `donald_stratronix` or email
+
+Excited to have you as a customer! — Donald
+```
+
+---
+
+## Template F: Long-tail follow-up (3 weeks after purchase)
+
+```
+Hey [XX] — how's the STA-100 working out?
+
+Quick question: any feedback — what we nailed, what we missed? I'd love a 1-2 sentence honest reply.
+
+And if you're happy, could you leave a Google review here: [link]? That'd help small tech companies like us compete with bigger players.
+
+Cheers,
+Donald
+```
+
+---
+
+## Rules for International DMs
+
+1. **Don't spam** — max 3 DMs per week per person
+2. **Personalize first sentence** with specific reference
+3. **Be concise** — 6 lines max
+4. **CTA clarity** — always one clear next step
+5. **Time zone awareness** — DM during 9 AM - 5 PM recipient's local
+6. **No chain messages** — each DM should stand alone
+
+## What NOT to send
+- ❌ Long essays (LinkedIn DMs get cut at 300 chars preview)
+- ❌ Generic "Hi, let's connect!" messages
+- ❌ PDF attachments in initial DM
+- ❌ Ask for money / equity in first message
+
