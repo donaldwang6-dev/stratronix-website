@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRATRONIX 7 天 0 元试用 — 让你的团队亲手跑通</title>
+    
+    <!-- SEO Meta -->
+    <meta name="description" content="STRATRONIX STA-100 7 天 0 元试用。我们给你一台真机，让你的团队亲手部署、亲手测试、亲手感受 PAA。试用结束你决定买不买。">
+    <meta name="keywords" content="STRATRONIX 试用, STA-100 试用, PAA 试用, 私有 AI 试用, 本地 AI 设备, 7 天免费">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="STRATRONIX 7 天 0 元试用">
+    <meta property="og:description" content="一台真机 + 7 天时间 + 你的团队亲手跑通。试用结束你决定。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.stratronix.ai/zh/trial">
+    <meta property="og:image" content="https://www.stratronix.ai/images/STA-100-real.png">
+    
+    <link rel="canonical" href="https://www.stratronix.ai/zh/trial">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body { background: #0a0a0a; color: #f0f0f0; }
+        .trial-hero {
+            background: linear-gradient(135deg, #1a0a14 0%, #0a0a0a 50%, #1a0a14 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+            border-bottom: 2px solid var(--brand);
+        }
+        .trial-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        .trial-hero .accent { color: var(--brand); }
+        .trial-hero .subtitle {
+            font-size: 18px;
+            color: #b0b0b0;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .trial-form {
+            max-width: 480px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(230,65,127,0.3);
+            border-radius: 12px;
+            padding: 32px;
+        }
+        .trial-form input, .trial-form select, .trial-form textarea {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 14px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        .trial-form input:focus, .trial-form select:focus, .trial-form textarea:focus {
+            outline: none;
+            border-color: var(--brand);
+            background: rgba(255,255,255,0.08);
+        }
+        .trial-form button {
+            width: 100%;
+            padding: 16px;
+            background: var(--brand);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .trial-form button:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(230,65,127,0.4); }
+        .trial-form .terms { color: #808080; font-size: 12px; text-align: center; margin-top: 12px; }
+        .trial-form .terms a { color: var(--brand); }
+        
+        .trial-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat-num { font-size: 32px; font-weight: 800; color: var(--brand); }
+        .stat-label { font-size: 13px; color: #808080; }
+        
+        .trial-features {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .trial-features h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            font-size: 32px;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 24px;
+        }
+        .feature-card .icon { font-size: 28px; color: var(--brand); margin-bottom: 12px; }
+        .feature-card h3 { color: #fff; margin: 0 0 8px; font-size: 18px; }
+        .feature-card p { color: #b0b0b0; font-size: 14px; line-height: 1.6; margin: 0; }
+        
+        .trial-flow {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .trial-flow h2 { text-align: center; color: #fff; margin-bottom: 40px; font-size: 32px; }
+        .flow-steps { display: flex; flex-direction: column; gap: 16px; }
+        .flow-step {
+            display: flex;
+            gap: 20px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .flow-step .step-num {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--brand);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+        }
+        .flow-step h3 { color: #fff; margin: 0 0 4px; font-size: 17px; }
+        .flow-step p { color: #b0b0b0; font-size: 14px; margin: 0; line-height: 1.5; }
+        
+        .trial-positioning {
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 24px;
+            background: rgba(230,65,127,0.06);
+            border: 1px solid rgba(230,65,127,0.3);
+            border-radius: 12px;
+            text-align: center;
+        }
+        .trial-positioning .quote {
+            color: #fff;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .trial-positioning .author { color: #b0b0b0; font-size: 13px; font-style: italic; }
+        
+        @media (max-width: 768px) {
+            .trial-hero h1 { font-size: 32px; }
+            .trial-stats { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header style="background: rgba(10,10,10,0.95); padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+            <a href="/zh/" style="color:#fff;text-decoration:none;font-weight:700;font-size:18px;">STRATRONIX</a>
+            <div>
+                <a href="/zh/" style="color:#b0b0b0;text-decoration:none;margin-right:20px;font-size:14px;">← 返回首页</a>
+                <a href="/en/trial.html" style="color:#b0b0b0;text-decoration:none;font-size:14px;">EN</a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero -->
+    <section class="trial-hero">
+        <h1>7 天 <span class="accent">¥0</span> 试用</h1>
+        <p class="subtitle">
+            一台真机 · 7 天时间 · 你的团队亲手跑通<br>
+            <strong style="color:var(--brand);">需要资格审核</strong> · 不是所有申请都通过
+        </p>
+        
+        <div class="trial-stats">
+            <div class="stat">
+                <div class="stat-num">¥0</div>
+                <div class="stat-label">7 天费用</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">30s</div>
+                <div class="stat-label">上电开机</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">数据本地</div>
+            </div>
+        </div>
+        
+        <!-- Qualification Note -->
+        <div class="qualification-note" style="max-width:480px;margin:24px auto 0;padding:16px 20px;background:rgba(230,65,127,0.08);border:1px solid rgba(230,65,127,0.3);border-radius:10px;text-align:left;">
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:8px;">📋 我们选择适合的客户</div>
+            <div style="font-size:13px;color:#b0b0b0;line-height:1.5;">为了确保你的体验质量，STRATRONIX 会审核每个试用申请。我们优先考虑：</div>
+            <ul style="font-size:12px;color:#b0b0b0;line-height:1.7;margin:8px 0 0;padding-left:20px;">
+                <li>有明确本地 AI 部署需求的团队（律所 / 医院 / 工厂 / 金融）</li>
+                <li>数据合规要求强烈的企业（GDPR / HIPAA / 152-ФЗ / 个保法）</li>
+                <li>有技术能力评估设备并提供反馈的团队</li>
+                <li>愿意分享真实使用场景的客户</li>
+            </ul>
+            <div style="font-size:12px;color:#808080;margin-top:8px;font-style:italic;">不通过审核的申请，我们会在 2 个工作日内告知原因。</div>
+        </div>
+        
+        <!-- Form -->
+        <form class="trial-form" action="https://formspree.io/f/xnnzdqko" method="POST">
+            <input type="text" name="name" placeholder="你的姓名" required>
+            <input type="text" name="company" placeholder="公司名称" required>
+            <input type="email" name="email" placeholder="工作邮箱" required>
+            <input type="tel" name="phone" placeholder="手机号（用于发货）" required>
+            <select name="scenario" required>
+                <option value="">你们最常处理的数据类型？</option>
+                <option value="legal">法律合同 / 案件文档</option>
+                <option value="medical">医疗病历 / 诊断记录</option>
+                <option value="finance">财务报表 / 客户数据</option>
+                <option value="education">教学资料 / 学生作业</option>
+                <option value="manufacturing">设备日志 / 生产数据</option>
+                <option value="other">其他（请在备注说明）</option>
+            </select>
+            <textarea name="notes" rows="3" placeholder="请描述你的具体场景 + 为什么需要本地 AI（审核重点）"></textarea>
+            <button type="submit">
+                <i class="fas fa-paper-plane"></i> 提交试用申请
+            </button>
+            <p class="terms">
+                提交即同意 <a href="/zh/terms">试用条款</a>。<br>
+                2 个工作日内完成审核 · 通过后 1-2 个工作日发货
+            </p>
+        </form>
+    </section>
+    
+    <!-- Features -->
+    <section class="trial-features">
+        <h2>试用期间，你能做什么？</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-server"></i></div>
+                <h3>部署真机</h3>
+                <p>30 秒上电，浏览器打开 <code>openclaw.local</code>，立即跑通。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-file-upload"></i></div>
+                <h3>测试真实数据</h3>
+                <p>上传你的合同 / 病历 / 文档，让 AI 在本地完成处理。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-brain"></i></div>
+                <h3>切换不同 LLM</h3>
+                <p>试用 Qwen / LLaMA / Mistral / DeepSeek 多种模型，找到最适合你业务的。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-network-wired"></i></div>
+                <h3>接入企业 IM</h3>
+                <p>连接飞书 / 企微 / 钉钉 / Slack，让员工在熟悉的工作流里用 AI。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-shield-halved"></i></div>
+                <h3>验证数据主权</h3>
+                <p>全程断网测试 — 确认没有任何数据离开你的办公室。</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>对比云 AI 成本</h3>
+                <p>用你的真实业务量，对比一年推理费用，量化你的 ROI。</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Flow -->
+    <section class="trial-flow">
+        <h2>4 步拿到你的 STA-100</h2>
+        <div class="flow-steps">
+            <div class="flow-step">
+                <div class="step-num">1</div>
+                <div>
+                    <h3>提交申请（1 分钟）</h3>
+                    <p>填上方表单。我们会电话确认你的使用场景与资格（不是每个申请都通过）。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">2</div>
+                <div>
+                    <h3>资格审核（2 个工作日内）</h3>
+                    <p>我们评估你的场景 + 合规需求 + 团队能力。审核后 1 个工作日内通知结果。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>顺丰发出（1-2 工作日）</h3>
+                    <p>审核通过后，顺丰发出 STA-100 设备 + 电源 + 网线 + 快速上手指南。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>7 天亲自跑（无干预）</h3>
+                    <p>这 7 天我们不打扰你。我们相信你的团队比我们更懂你们的需求。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">5</div>
+                <div>
+                    <h3>决定买 / 还 / 退</h3>
+                    <p>第 7 天顺丰上门取件（我们付邮费），或者直接 ¥1,999 留下。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div>
+                    <h3>7 天亲自跑（无干预）</h3>
+                    <p>这 7 天我们不打扰你。我们相信你的团队比我们更懂你们的需求。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>决定买 / 还 / 退</h3>
+                    <p>第 7 天顺丰上门取件（我们付邮费），或者直接 ¥1,999 留下。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Positioning -->
+    <div class="trial-positioning">
+        <div class="quote">"把 AI 装回你的办公室。30 秒上电，7 天 0 元试用。我们让你亲手跑通——你决定买不买。"</div>
+        <div class="author">— Donald Wang, CEO</div>
+    </div>
+    
+    <!-- Footer -->
+    <footer style="background:#0a0a0a;padding:32px 0;text-align:center;border-top:1px solid rgba(255,255,255,0.1);margin-top:40px;">
+        <p style="color:#808080;font-size:13px;margin:0;">© 2026 STRATRONIX · 鼎图太易信息技术（深圳）有限公司</p>
+    </footer>
+</body>
+</html>
