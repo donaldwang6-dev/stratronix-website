@@ -77,7 +77,8 @@ echo "[$(date '+%Y-%m-%d %H:%M:%S')] IndexNow 大批量推送 $URL_COUNT URL" >>
 
 # 2. 百度主动推送（10/天 quota）
 if [ -f "/home/donald/.openclaw/workspace/baidu-launch/baidu-active-push.sh" ]; then
-  bash /home/donald/.openclaw/workspace/baidu-launch/baidu-active-push.sh >> "$LOG" 2>&1
+  export BAIDU_TOKEN="${BAIDU_TOKEN:-Kytd6us0gDfHVUqC}"
+  bash /home/donald/.openclaw/workspace/baidu-launch/baidu-active-push.sh >> "$LOG" 2>&1 || echo "[$(date '+%Y-%m-%d %H:%M:%S')] 百度推送跳过（quota 用尽或失败）" >> "$LOG"
 fi
 
 # 3. Bing sitemap ping
