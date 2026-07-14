@@ -177,7 +177,7 @@
         <h1>7-Day <span class="accent">$0</span> Trial</h1>
         <p class="subtitle">
             One real device · 7 days · Your team runs it<br>
-            At the end of day 7, **you** decide.
+            <strong style="color:var(--brand);">Application review required</strong> · Not all requests are approved
         </p>
         
         <div class="trial-stats">
@@ -195,6 +195,19 @@
             </div>
         </div>
         
+        <!-- Qualification Note -->
+        <div class="qualification-note" style="max-width:480px;margin:24px auto 0;padding:16px 20px;background:rgba(230,65,127,0.08);border:1px solid rgba(230,65,127,0.3);border-radius:10px;text-align:left;">
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:8px;">📋 We select the right customers</div>
+            <div style="font-size:13px;color:#b0b0b0;line-height:1.5;">To ensure a quality experience, STRATRONIX reviews every trial application. We prioritize:</div>
+            <ul style="font-size:12px;color:#b0b0b0;line-height:1.7;margin:8px 0 0;padding-left:20px;">
+                <li>Teams with clear on-prem AI needs (legal / medical / manufacturing / finance)</li>
+                <li>Companies with strong data compliance requirements (GDPR / HIPAA / 152-ФЗ)</li>
+                <li>Teams that can technically evaluate the device and provide feedback</li>
+                <li>Customers willing to share real-world use cases</li>
+            </ul>
+            <div style="font-size:12px;color:#808080;margin-top:8px;font-style:italic;">Unapproved applications will be informed within 2 business days with the reason.</div>
+        </div>
+        
         <form class="trial-form" action="https://formspree.io/f/xnnzdqko" method="POST">
             <input type="text" name="name" placeholder="Your name" required>
             <input type="text" name="company" placeholder="Company name" required>
@@ -209,13 +222,13 @@
                 <option value="manufacturing">Equipment logs / production data</option>
                 <option value="other">Other (specify in notes)</option>
             </select>
-            <textarea name="notes" rows="3" placeholder="Briefly describe your use case (1-2 sentences)"></textarea>
+            <textarea name="notes" rows="3" placeholder="Describe your specific scenario + why you need on-prem AI (key review criteria)"></textarea>
             <button type="submit">
-                <i class="fas fa-truck"></i> Request a STA-100 Trial
+                <i class="fas fa-paper-plane"></i> Submit Trial Application
             </button>
             <p class="terms">
                 By submitting you agree to our <a href="/en/terms">trial terms</a>.<br>
-                We'll contact you within 1 business day to confirm shipping.
+                Review within 2 business days · Shipping within 1-2 days after approval
             </p>
         </form>
     </section>
@@ -263,14 +276,35 @@
                 <div class="step-num">1</div>
                 <div>
                     <h3>Submit application (1 minute)</h3>
-                    <p>Fill the form above. We'll call to confirm your use case (not everyone qualifies).</p>
+                    <p>Fill the form above. We'll review your use case and qualifications (not all applications are approved).</p>
                 </div>
             </div>
             <div class="flow-step">
                 <div class="step-num">2</div>
                 <div>
+                    <h3>Qualification review (within 2 business days)</h3>
+                    <p>We evaluate your scenario, compliance needs, and team capability. Results in 1 business day after review.</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div>
                     <h3>DHL ships (3-5 business days globally)</h3>
-                    <p>We ship the STA-100 device + power adapter + Ethernet cable + quick-start guide.</p>
+                    <p>After approval, DHL ships the STA-100 device + power adapter + Ethernet cable + quick-start guide.</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>7 days, hands-on (zero interference)</h3>
+                    <p>We don't bother you for 7 days. We trust your team knows your needs better than we do.</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">5</div>
+                <div>
+                    <h3>Decide: keep / return</h3>
+                    <p>Day 7: DHL picks up (we pay return shipping). Or keep it for $369.</p>
                 </div>
             </div>
             <div class="flow-step">

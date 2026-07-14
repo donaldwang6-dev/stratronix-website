@@ -190,10 +190,10 @@
     
     <!-- Hero -->
     <section class="trial-hero">
-        <h1>7 天 <span class="accent">0 元</span> 试用</h1>
+        <h1>7 天 <span class="accent">¥0</span> 试用</h1>
         <p class="subtitle">
             一台真机 · 7 天时间 · 你的团队亲手跑通<br>
-            试用结束，**你**决定买不买
+            <strong style="color:var(--brand);">需要资格审核</strong> · 不是所有申请都通过
         </p>
         
         <div class="trial-stats">
@@ -211,6 +211,19 @@
             </div>
         </div>
         
+        <!-- Qualification Note -->
+        <div class="qualification-note" style="max-width:480px;margin:24px auto 0;padding:16px 20px;background:rgba(230,65,127,0.08);border:1px solid rgba(230,65,127,0.3);border-radius:10px;text-align:left;">
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:8px;">📋 我们选择适合的客户</div>
+            <div style="font-size:13px;color:#b0b0b0;line-height:1.5;">为了确保你的体验质量，STRATRONIX 会审核每个试用申请。我们优先考虑：</div>
+            <ul style="font-size:12px;color:#b0b0b0;line-height:1.7;margin:8px 0 0;padding-left:20px;">
+                <li>有明确本地 AI 部署需求的团队（律所 / 医院 / 工厂 / 金融）</li>
+                <li>数据合规要求强烈的企业（GDPR / HIPAA / 152-ФЗ / 个保法）</li>
+                <li>有技术能力评估设备并提供反馈的团队</li>
+                <li>愿意分享真实使用场景的客户</li>
+            </ul>
+            <div style="font-size:12px;color:#808080;margin-top:8px;font-style:italic;">不通过审核的申请，我们会在 2 个工作日内告知原因。</div>
+        </div>
+        
         <!-- Form -->
         <form class="trial-form" action="https://formspree.io/f/xnnzdqko" method="POST">
             <input type="text" name="name" placeholder="你的姓名" required>
@@ -226,13 +239,13 @@
                 <option value="manufacturing">设备日志 / 生产数据</option>
                 <option value="other">其他（请在备注说明）</option>
             </select>
-            <textarea name="notes" rows="3" placeholder="简单描述你的场景（1-2 句话即可）"></textarea>
+            <textarea name="notes" rows="3" placeholder="请描述你的具体场景 + 为什么需要本地 AI（审核重点）"></textarea>
             <button type="submit">
-                <i class="fas fa-truck"></i> 申请试用一台 STA-100
+                <i class="fas fa-paper-plane"></i> 提交试用申请
             </button>
             <p class="terms">
                 提交即同意 <a href="/zh/terms">试用条款</a>。<br>
-                我们会在 1 个工作日内联系你确认发货地址。
+                2 个工作日内完成审核 · 通过后 1-2 个工作日发货
             </p>
         </form>
     </section>
@@ -282,14 +295,35 @@
                 <div class="step-num">1</div>
                 <div>
                     <h3>提交申请（1 分钟）</h3>
-                    <p>填上方表单。我们会电话确认你的使用场景（不是每个人都能用）。</p>
+                    <p>填上方表单。我们会电话确认你的使用场景与资格（不是每个申请都通过）。</p>
                 </div>
             </div>
             <div class="flow-step">
                 <div class="step-num">2</div>
                 <div>
+                    <h3>资格审核（2 个工作日内）</h3>
+                    <p>我们评估你的场景 + 合规需求 + 团队能力。审核后 1 个工作日内通知结果。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">3</div>
+                <div>
                     <h3>顺丰发出（1-2 工作日）</h3>
-                    <p>我们用顺丰发出 STA-100 设备 + 电源 + 网线 + 快速上手指南。</p>
+                    <p>审核通过后，顺丰发出 STA-100 设备 + 电源 + 网线 + 快速上手指南。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">4</div>
+                <div>
+                    <h3>7 天亲自跑（无干预）</h3>
+                    <p>这 7 天我们不打扰你。我们相信你的团队比我们更懂你们的需求。</p>
+                </div>
+            </div>
+            <div class="flow-step">
+                <div class="step-num">5</div>
+                <div>
+                    <h3>决定买 / 还 / 退</h3>
+                    <p>第 7 天顺丰上门取件（我们付邮费），或者直接 ¥1,999 留下。</p>
                 </div>
             </div>
             <div class="flow-step">
