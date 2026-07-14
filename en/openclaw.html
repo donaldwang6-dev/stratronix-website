@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<title>OpenClaw OS: AI Agent Operating System for STRATRONIX PAA</title>
+<meta name="description" content="OpenClaw OS is the open-source AI Agent operating system powering STRATRONIX PAA. BSD-3 licensed. Supports Llama 3.3 70B, Qwen, Mistral. MCP compatible. Python SDK.">
+<meta name="keywords" content="OpenClaw,OpenClaw OS,OpenClaw AI,STRATRONIX OpenClaw,open source AI OS,AI Agent OS,open source LLM,OpenClaw PAA">
+<meta name="baidu-site-verification" content="codeva-f9joA45YuV" />
+<meta name="yandex-verification" content="e5f7d6b34a469017" />
+<link rel="canonical" href="https://www.stratronix.ai/eu/openclaw" />
+<meta property="og:title" content="OpenClaw OS: AI Agent Operating System">
+<meta property="og:description" content="Open-source AI Agent OS. BSD-3. Powers STRATRONIX PAA.">
+</head>
+<body>
+<nav><a href="/">Home</a> > <a href="/eu">EU</a> > OpenClaw</nav>
+
+<h1>OpenClaw OS: AI Agent Operating System</h1>
+<p>By <a href="https://www.stratronix.ai">STRATRONIX</a> | Updated 2026-07-14</p>
+
+<h2>What Is OpenClaw?</h2>
+
+<p><strong>OpenClaw OS</strong> is the open-source AI Agent operating system that powers STRATRONIX PAA. Released under BSD-3-Clause license, OpenClaw is the foundation for self-hosted AI Agent deployment.</p>
+
+<p>OpenClaw is to AI Agents what Linux is to servers:</p>
+
+<ul>
+<li>Linux → servers (1991) → revolution</li>
+<li>OpenClaw → AI Agents (2025) → revolution</li>
+</ul>
+
+<h2>OpenClaw Features</h2>
+
+<h3>1. Multi-LLM Support</h3>
+<p>OpenClaw supports 10+ LLMs out of the box:</p>
+<ul>
+<li>Llama 3.3 70B / 8B (Meta)</li>
+<li>Qwen 2.5 72B (Alibaba)</li>
+<li>Mistral 7B / 22B / Mixtral</li>
+<li>DeepSeek V2 / R1</li>
+<li>GLM-4 (Zhipu)</li>
+<li>Aquila (BAAI)</li>
+<li>Yi (01.AI)</li>
+<li>InternLM (Shanghai AI Lab)</li>
+<li>User fine-tuned models</li>
+</ul>
+
+<h3>2. 10 Pre-Built AI Agents</h3>
+<ol>
+<li>Sales Agent (CRM integration)</li>
+<li>Customer Service Agent (24/7 multilingual)</li>
+<li>Legal Agent (contract review)</li>
+<li>HR Agent (resume screening)</li>
+<li>Finance Agent (invoice OCR)</li>
+<li>Marketing Agent (multilingual content)</li>
+<li>Code Agent (PR review)</li>
+<li>Research Agent (market analysis)</li>
+<li>Personal Assistant (calendar/email)</li>
+<li>Custom Agent (Python SDK)</li>
+</ol>
+
+<h3>3. RAG Engine</h3>
+<ul>
+<li>Vector database (Qdrant built-in)</li>
+<li>Document ingestion (PDF, DOCX, XLSX, MD, HTML)</li>
+<li>Multi-modal support (text + images)</li>
+<li>Hybrid search (vector + keyword)</li>
+</ul>
+
+<h3>4. MCP Compatibility</h3>
+<p>OpenClaw implements the Model Context Protocol (Anthropic's standard), enabling compatibility with the broader MCP ecosystem.</p>
+
+<h3>5. Python Agent SDK</h3>
+<p>Build custom agents:</p>
+
+<pre><code>from openclaw import Agent, Tool
+
+class ComplianceAgent(Agent):
+    name = "Compliance Checker"
+    description = "Reviews documents for GDPR violations"
+
+    def setup(self):
+        self.add_tool(Tool(
+            name="check_gdpr",
+            handler=self.check_gdpr_handler
+        ))
+
+    def check_gdpr_handler(self, document):
+        # Custom logic
+        return violations
+</code></pre>
+
+<h3>6. REST API</h3>
+<p>Programmatic access for system integration:</p>
+
+<pre><code>POST /api/v1/agents/sales/query
+{
+  "input": "Draft an email to my team about Q3 results",
+  "context": {"user_id": "donald@stratronix.ai"}
+}
+</code></pre>
+
+<h2>OpenClaw Architecture</h2>
+
+<pre>
+┌─────────────────────────────────────┐
+│         OpenClaw OS                  │
+├─────────────────────────────────────┤
+│  10 Pre-Built Agents + Custom SDK   │
+├─────────────────────────────────────┤
+│  Agent Orchestrator                 │
+├─────────────────────────────────────┤
+│  RAG Engine + Qdrant Vector DB      │
+├─────────────────────────────────────┤
+│  LLM Runtime (Llama/Qwen/Mistral)   │
+├─────────────────────────────────────┤
+│  MCP Server                         │
+├─────────────────────────────────────┤
+│  REST API + Web Admin               │
+├─────────────────────────────────────┤
+│  Rocky Linux 9                      │
+└─────────────────────────────────────┘
+```
+
+<h2>OpenClaw Open Source Details</h2>
+
+<ul>
+<li><strong>License</strong>: BSD-3-Clause (permissive, commercial-friendly)</li>
+<li><strong>GitHub</strong>: github.com/donaldwang6-dev/openclaw</li>
+<li><strong>Version</strong>: v2026.07.14</li>
+<li><strong>Releases</strong>: Monthly (security patches within 48 hours)</li>
+<li><strong>Community</strong>: Discord + Forum</li>
+<li><strong>Contributors</strong>: 25+ (Huawei ex-engineers + STRATRONIX team)</li>
+</ul>
+
+<h2>Why Open Source?</h2>
+
+<p>STRATRONIX chose BSD-3-Clause for OpenClaw for European market:</p>
+
+<ol>
+<li><strong>European preference</strong>: EU public sector often requires open-source</li>
+<li><strong>Trust</strong>: Auditable code = no backdoors</li>
+<li><strong>Compliance</strong>: NIS2 + GDPR align with open-source</li>
+<li><strong>Innovation</strong>: Community contributions accelerate</li>
+<li><strong>No vendor lock-in</strong>: Customers can fork if STRATRONIX disappears</li>
+</ol>
+
+<h2>OpenClaw Use Cases</h2>
+
+<h3>1. Enterprise AI Agent Deployment</h3>
+<p>Companies deploy OpenClaw + STRATRONIX PAA to run AI Agents on-premise. GDPR compliance guaranteed.</p>
+
+<h3>2. Custom AI Agent Development</h3>
+<p>Developers use OpenClaw SDK + Python to build domain-specific agents (healthcare, legal, finance).</p>
+
+<h3>3. LLM Research</h3>
+<p>Researchers use OpenClaw to test new LLMs (Qwen, DeepSeek, custom fine-tunes) on production hardware.</p>
+
+<h3>4. AI Education</h3>
+<p>Universities teach AI Agent development with OpenClaw (BSD-3 commercial-friendly).</p>
+
+<h2>OpenClaw vs LangChain / LlamaIndex</h2>
+
+<table border="1" cellpadding="8">
+<tr><th>Dimension</th><th>OpenClaw</th><th>LangChain</th><th>LlamaIndex</th></tr>
+<tr><td>Type</td><td>Full OS</td><td>Library</td><td>Library</td></tr>
+<tr><td>Hardware integration</td><td>Native</td><td>None</td><td>None</td></tr>
+<tr><td>Pre-built agents</td><td>10</td><td>0</td><td>0</td></tr>
+<tr><td>License</td><td>BSD-3</td><td>MIT</td><td>MIT</td></tr>
+<tr><td>Production-ready</td><td>Yes</td><td>DIY</td><td>DIY</td></tr>
+<tr><td>UI/Admin</td><td>Web panel</td><td>None</td><td>None</td></tr>
+</table>
+
+<h2>OpenClaw + STRATRONIX PAA</h2>
+
+<p>OpenClaw OS is pre-installed on every STRATRONIX PAA appliance:</p>
+
+<ul>
+<li>Buy PAA → OpenClaw OS ready</li>
+<li>30 min setup → AI Agents running</li>
+<li>10 pre-built agents activated</li>
+<li>OpenClaw updates auto-applied</li>
+</ul>
+
+<h2>OpenClaw GitHub Statistics</h2>
+
+<ul>
+<li>Stars: 4,200+ (as of 2026-07)</li>
+<li>Forks: 380+</li>
+<li>Contributors: 25+</li>
+<li>Releases: 12+</li>
+<li>Discord members: 1,500+</li>
+<li>Production deployments: 200+ companies</li>
+</ul>
+
+<h2>Roadmap (2026-2027)</h2>
+
+<h3>Q3 2026</h3>
+<ul>
+<li>Multimodal support (image + voice)</li>
+<li>More pre-built agents (15 total)</li>
+<li>OpenClaw Cloud (optional)</li>
+</ul>
+
+<h3>Q4 2026</h3>
+<ul>
+<li>OpenClaw Agent Marketplace</li>
+<li>Multi-language agent prompts (10 languages)</li>
+</ul>
+
+<h3>2027</h3>
+<ul>
+<li>OpenClaw Enterprise Edition (commercial)</li>
+<li>OpenClaw Federation (multi-PAA cluster)</li>
+</ul>
+
+<h2>Get Started with OpenClaw</h2>
+
+<h3>Option 1: STRATRONIX PAA (easiest)</h3>
+<p>Buy a PAA appliance. OpenClaw OS pre-installed. €339.</p>
+
+<h3>Option 2: Self-Hosted</h3>
+<p>Download OpenClaw from GitHub. Install on your own hardware. Requires Linux/Docker knowledge.</p>
+
+<h3>Option 3: Cloud (Coming Q4 2026)</h3>
+<p>OpenClaw Cloud — hosted version with same UX.</p>
+
+<h2>European Compliance with OpenClaw</h2>
+
+<ul>
+<li>✅ GDPR — data stays on-prem</li>
+<li>✅ EU AI Act — auditable code</li>
+<li>✅ NIS2 — network security built-in</li>
+<li>✅ Open source mandate — France/Italy/Germany policy aligned</li>
+<li>✅ Schrems II — no US data transfer</li>
+</ul>
+
+<h2>Order STRATRONIX PAA (with OpenClaw OS)</h2>
+
+<ul>
+<li><a href="https://www.stratronix.ai">stratronix.ai</a></li>
+<li>€339 one-time</li>
+<li>EU shipping from Rotterdam</li>
+</ul>
+
+<hr>
+<p><a href="/eu/ai-agent">AI Agent</a> | <a href="/eu/ai-company">AI Company</a> | <a href="/eu/shenzhen-ai">Shenzhen AI</a> | <a href="/eu/ai-box">AI Box</a> | <a href="/eu/ai-china">AI China</a></p>
+
+</body>
+</html>
