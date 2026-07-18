@@ -39,8 +39,44 @@ footer a { color: #E6417F; }
   "inLanguage": "en"
 }
 </script>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<nav class="navbar">
+        <div class="container">
+            <a href="/en/" class="logo">
+                <span class="logo-english">STRATRONIX</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-chinese">鼎图</span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/en/" class="nav-link">Home</a></li>
+                <li><a href="/en/about" class="nav-link">About</a></li>
+                <li><a href="/en/products" class="nav-link">Products</a></li>
+                <li><a href="/en/news" class="nav-link">News</a></li>
+                <li><a href="/en/blog/" class="nav-link active">Blog</a></li>
+                <li><a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="nav-link" style="color:var(--brand);font-weight:700" data-buy-link>🛒 Buy</a></li>
+                <li><a href="/en/contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="language-switcher">
+                <a href="/zh/" class="lang-btn active" data-lang="zh">
+                    <i class="fas fa-language"></i> 中文
+                </a>
+            </div>
+        </div>
+    </nav>
 <header>
 <h1>5 Use Cases for Private AI Agents in 2026</h1>
 <p class="subtitle">Real deployments: contract review, patient triage, factory ops, research, tutoring</p>
@@ -238,9 +274,66 @@ footer a { color: #E6417F; }
 
 </div>
 
-<footer>
-<p><a href="https://donaldwang6-dev.github.io/stratronix-seo/">STRATRONIX SEO Hub</a> · <a href="https://www.stratronix.ai/">Official Site</a></p>
-<p>2026-07-15 · Independent deployment on GitHub Pages</p>
-</footer>
+<footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Stratronix</h3>
+                    <p>Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up to power the next generation of AI technology to leverage productivity and empower personal, business & industrial intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/113783977/admin/dashboard/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@stratronix/featured" class="social-link" title="YouTube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="/en/">Home</a></li>
+                        <li><a href="/en/about">About</a></li>
+                        <li><a href="/en/products">Products</a></li>
+                        <li><a href="/en/news">News</a></li>
+                        <li><a href="/en/blog/">Blog</a></li>
+                        <li><a href="/en/contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 1203D，C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</li>
+                        <li><i class="fas fa-envelope"></i> info@stratronix.ai</li>
+                        <li><i class="fas fa-phone"></i> 86-755-2308 6689</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri 9:00-18:00</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Language</h3>
+                    <div class="language-switcher">
+                        <a href="/en/" class="lang-btn active" data-lang="en">English</a>
+                        <a href="/zh/" class="lang-btn" data-lang="zh">中文</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.7;">
+                        © 2024 Stratronix. All rights reserved.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Stratronix Technology. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
