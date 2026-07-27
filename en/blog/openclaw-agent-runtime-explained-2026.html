@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>OpenClaw: The Open-Source AI-Agent Runtime Inside STRATRONIX STA-100 | STRATRONIX</title>
+<meta name="description" content="OpenClaw is the open-source AI-agent runtime (Apache 2.0) that powers STRATRONIX STA-100 PAA. Architecture overview: agent loop, RAG engine, tool integrations, chat client bindings (Feishu/WeChat/Slack/Teams/Telegram). Self-hostable, auditable, extensible. Built for enterprise trust.">
+<meta name="keywords" content="OpenClaw, open source AI agent, Apache 2.0 AI runtime, private AI agent runtime, self-hosted AI agent, STRATRONIX OpenClaw, AI agent architecture 2026, on-device AI agent">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.stratronix.ai/en/blog/openclaw-agent-runtime-explained-2026.html">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #0a0a0a 0%, #2d2d2d 100%); color: white; padding: 50px 20px; }
+header h1 { font-size: 2rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.95rem; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.5rem; color: #0a0a0a; margin: 32px 0 12px; border-left: 4px solid #E6417F; padding-left: 12px; }
+h3 { font-size: 1.2rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #0a0a0a; color: white; font-weight: 600; }
+.callout { background: #f8f8f8; border-left: 4px solid #E6417F; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+.cta { background: linear-gradient(135deg, #0a0a0a 0%, #2d2d2d 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #0a0a0a; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+footer a { color: #E6417F; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "OpenClaw: The Open-Source AI-Agent Runtime Inside STRATRONIX STA-100",
+  "author": {"@type": "Organization", "name": "Stratronix AI"},
+  "publisher": {"@type": "Organization", "name": "Stratronix", "url": "https://www.stratronix.ai/"},
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "inLanguage": "en"
+}
+</script>
+<meta property="og:title" content="OpenClaw: The Open-Source AI-Agent Runtime Inside STRATRONIX STA-100">
+<meta property="og:description" content="Architecture overview of OpenClaw — the Apache 2.0 agent runtime powering STRATRONIX PAA.">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+</head>
+<body>
+<header>
+<h1>OpenClaw: The Open-Source AI-Agent Runtime</h1>
+<p class="subtitle">The Apache 2.0 Engine Inside STRATRONIX STA-100 PAA — Self-Hostable, Auditable, Enterprise-Grade</p>
+</header>
+
+<div class="container">
+<p class="meta">Published 2026-07-27 · By Stratronix AI · 9 min read · Technical Series</p>
+
+<p class="callout"><strong>Why OpenClaw exists:</strong> AI agent infrastructure should be auditable. Closed-source AI agent platforms create vendor lock-in and unverifiable security claims. STRATRONIX built OpenClaw as a fully open-source (Apache 2.0) AI-agent runtime so every enterprise can inspect, modify, and self-host the agent that holds their prompts, documents, and business workflows.</p>
+
+<h2>1. What Is OpenClaw?</h2>
+
+<p>OpenClaw is the AI-agent runtime that runs inside STRATRONIX STA-100 PAA. It is also available standalone as an open-source project (Apache 2.0 license) for organisations that want to deploy the same agent runtime on their own infrastructure (Linux server, container, VM) without buying STRATRONIX hardware.</p>
+
+<table>
+<tr><th>Property</th><th>Value</th></tr>
+<tr><td>License</td><td>Apache 2.0 (permissive, commercial-friendly)</td></tr>
+<tr><td>Language</td><td>Python 3.11+ with Rust core for performance-critical paths</td></tr>
+<tr><td>Minimum hardware</td><td>4-core ARM / x86, 4GB RAM, 64GB storage</td></tr>
+<tr><td>OS support</td><td>Ubuntu 22.04+, Debian 12+, RHEL 9+, macOS, Windows WSL2</td></tr>
+<tr><td>Container support</td><td>Docker, Podman, Kubernetes</td></tr>
+<tr><td>Cloud LLM providers</td><td>OpenAI, Anthropic, Mistral, Aleph Alpha, OpenAI Azure, AWS Bedrock, Google Vertex, Aliyun, DeepSeek, Ollama, vLLM</td></tr>
+<tr><td>Embedding models</td><td>OpenAI text-embedding-3, BGE-M3, E5-large, instructor-xl, custom</td></tr>
+<tr><td>Vector stores</td><td>SQLite-vec, FAISS, Qdrant, Milvus, Pinecone, Weaviate</td></tr>
+<tr><td>Chat clients</td><td>Feishu, WeChat Work, Slack, Teams, Telegram, WhatsApp, Discord, Email</td></tr>
+<tr><td>Documentation</td><td>docs.openclaw.ai (mirrored to GitHub Pages)</td></tr>
+<tr><td>Source repository</td><td>github.com/stratronix/openclaw</td></tr>
+</table>
+
+<h2>2. Core Architecture</h2>
+
+<p>OpenClaw follows a modular agent architecture inspired by the ReAct (Reasoning + Acting) pattern. The runtime has four layers:</p>
+
+<ol>
+<li><strong>Inbound layer</strong> — receives messages from chat clients (Feishu, Slack, etc.) and web UI</li>
+<li><strong>Agent core</strong> — processes the message: classifies intent, retrieves RAG context, plans actions, calls LLM</li>
+<li><strong>Tool layer</strong> — executes actions: search documents, send emails, query databases, call APIs</li>
+<li><strong>Outbound layer</strong> — formats responses and sends back to the user via the originating chat client</li>
+</ol>
+
+<h2>3. The Agent Loop (ReAct Pattern)</h2>
+
+<p>For each user message, OpenClaw runs the following loop:</p>
+
+<ol>
+<li><strong>Receive</strong> message from chat client</li>
+<li><strong>Pre-process</strong> — redact PII, classify intent, check permissions</li>
+<li><strong>Retrieve</strong> — query local RAG knowledge base for relevant context (vector search + keyword)</li>
+<li><strong>Plan</strong> — agent decides: direct answer, retrieve more, or call a tool</li>
+<li><strong>Act</strong> — call cloud LLM with full context; optionally call a tool (e.g., search internal CRM)</li>
+<li><strong>Verify</strong> — check response for policy violations, hallucinations, sensitive content</li>
+<li><strong>Respond</strong> — format and send back to the user</li>
+<li><strong>Log</strong> — write structured log entry to local audit database</li>
+</ol>
+
+<p>Each step is logged locally for auditability and replay debugging.</p>
+
+<h2>4. RAG Engine</h2>
+
+<p>OpenClaw's RAG (Retrieval-Augmented Generation) engine keeps your documents on-device:</p>
+
+<ul>
+<li><strong>Ingestion</strong> — PDF, DOCX, MD, HTML, TXT, EML, CSV; chunked and embedded</li>
+<li><strong>Embedding</strong> — your choice of embedding model; embeddings stored on-device</li>
+<li><strong>Retrieval</strong> — hybrid (vector + keyword); configurable recall/precision trade-off</li>
+<li><strong>Citation</strong> — every LLM response includes source citations to the source document + paragraph</li>
+<li><strong>Refresh</strong> — incremental re-indexing when documents change</li>
+</ul>
+
+<p><strong>Important:</strong> Document text never leaves your device. Only the embedding vectors and the LLM context window contents are sent to the cloud LLM during a query. The cloud LLM provider sees the query text + retrieved context (which you can redact before sending), but never sees your full document store.</p>
+
+<h2>5. Tool Layer (Integrations)</h2>
+
+<p>OpenClaw ships with pre-built integrations for common enterprise tools:</p>
+
+<table>
+<tr><th>Category</th><th>Tools</th></tr>
+<tr><td>Chat / Messaging</td><td>Feishu, WeChat Work, Slack, MS Teams, Telegram, WhatsApp, Discord</td></tr>
+<tr><td>Email</td><td>SMTP/IMAP, Gmail API, Microsoft Graph, Outlook</td></tr>
+<tr><td>Calendar</td><td>Google Calendar, Microsoft 365, CalDAV</td></tr>
+<tr><td>Document Storage</td><td>Local filesystem, S3, Aliyun OSS, Nextcloud, SharePoint</td></tr>
+<tr><td>Databases</td><td>PostgreSQL, MySQL, SQLite, MongoDB, ClickHouse</td></tr>
+<tr><td>CRM</td><td>Salesforce, HubSpot, Zoho, Pipedrive (via REST)</td></tr>
+<tr><td>Ticketing</td><td>Jira, Linear, Zendesk, Freshdesk</td></tr>
+<tr><td>Search</td><td>Elasticsearch, Meilisearch, Typesense</td></tr>
+<tr><td>Custom</td><td>Webhook + OpenAPI / OpenRPC / MCP tools</td></tr>
+</table>
+
+<p>Custom tools can be added via the MCP (Model Context Protocol) standard or simple Python function decorators. Every tool call is logged locally.</p>
+
+<h2>6. Configuration & Deployment</h2>
+
+<p>A minimal OpenClaw config (YAML) for a typical European SMB:</p>
+
+<pre style="background: #1a1a1a; color: #00ff00; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem;">
+# openclaw.yaml — minimal European SMB deployment
+agent:
+  name: paa-smb
+  cloud_llm:
+    provider: mistral
+    region: eu-west-1
+    api_key_secret: env:MISTRAL_API_KEY
+rag:
+  embedding_model: bge-m3
+  vector_store: sqlite-vec
+  documents_path: /srv/openclaw/documents
+chat_clients:
+  feishu:
+    app_id: env:FEISHU_APP_ID
+    app_secret: env:FEISHU_APP_SECRET
+security:
+  disk_encryption: aes-256
+  audit_log: /var/log/openclaw/audit.jsonl
+  redaction_pii: enabled
+network:
+  outbound_allow:
+    - api.mistral.ai
+    - api.openclaw.ai (OTA updates only)
+</pre>
+
+<h2>7. Audit Trail & Compliance</h2>
+
+<p>Every agent action is logged to a local append-only JSONL file. Each log entry includes:</p>
+
+<ul>
+<li>Timestamp (RFC 3339 with timezone)</li>
+<li>User identity (chat client user ID)</li>
+<li>Intent classification</li>
+<li>Retrieved document IDs</li>
+<li>LLM call: provider, model, prompt hash, completion hash, token counts</li>
+<li>Tool calls: tool name, inputs (redacted), outputs (truncated)</li>
+<li>Final response (full text)</li>
+<li>Verification results (PII scan, hallucination score, policy check)</li>
+</ul>
+
+<p>Audit logs can be exported to your SIEM (Splunk, Elastic, Datadog) via OpenClaw's webhook integration.</p>
+
+<h2>8. Security Model</h2>
+
+<p>OpenClaw's security model assumes the host network is hostile. Defences include:</p>
+
+<ul>
+<li><strong>TLS 1.3</strong> for all outbound calls to cloud LLMs</li>
+<li><strong>PII redaction</strong> before sending prompts to cloud LLMs (regex + ML-based)</li>
+<li><strong>Prompt injection defence</strong> — content from documents treated as untrusted; system prompts isolated</li>
+<li><strong>Tool allowlisting</strong> — only configured tools can be called by the agent</li>
+<li><strong>Rate limiting</strong> — per-user and per-API-key throttling</li>
+<li><strong>Sandboxing</strong> — tool execution in containerised sandboxes (gVisor / firecracker)</li>
+<li><strong>SBOM + signed releases</strong> — every release includes a Software Bill of Materials and cryptographic signatures</li>
+</ul>
+
+<h2>9. OTA Updates</h2>
+
+<p>STRATRONIX-managed OpenClaw instances (running on STA-100) receive automatic OTA updates for security patches and new features. Update cadence:</p>
+
+<ul>
+<li><strong>Security patches:</strong> within 24 hours of upstream fix</li>
+<li><strong>Feature releases:</strong> monthly, with 7-day staged rollout</li>
+<li><strong>Major versions:</strong> quarterly, opt-in</li>
+</ul>
+
+<p>Self-hosted OpenClaw installations can opt out of OTA and pin to a specific version. STRATRONIX commits to maintaining the v1.x branch for 3 years from release.</p>
+
+<h2>10. Self-Hosting OpenClaw (Without STRATRONIX Hardware)</h2>
+
+<p>If your organisation prefers to deploy OpenClaw on existing infrastructure:</p>
+
+<ol>
+<li><strong>Clone the repository</strong> — github.com/stratronix/openclaw</li>
+<li><strong>Install dependencies</strong> — pip install openclaw (or docker pull stratronix/openclaw)</li>
+<li><strong>Configure</strong> — openclaw.yaml with your cloud LLM provider and document paths</li>
+<li><strong>Run</strong> — openclaw serve --config openclaw.yaml</li>
+<li><strong>Bind chat clients</strong> — scan QR code from the admin UI</li>
+</ol>
+
+<p>Self-hosted instances receive the same OTA updates (configurable) and access the same documentation. STRATRONIX charges no licensing fee for OpenClaw itself; revenue comes from the STA-100 hardware.</p>
+
+<h2>11. Roadmap (2026-2027)</h2>
+
+<ul>
+<li><strong>Q3 2026:</strong> v1.4 — multi-agent orchestration, parallel tool calls</li>
+<li><strong>Q4 2026:</strong> v1.5 — on-device speech-to-text (Whisper-cpp) for voice input</li>
+<li><strong>Q1 2027:</strong> v2.0 — typed tool definitions, formal verification of agent plans</li>
+<li><strong>Q2 2027:</strong> v2.1 — federated OpenClaw instances for multi-site enterprises</li>
+</ul>
+
+<h2>12. Why Open Source?</h2>
+
+<p class="callout">Closed-source AI infrastructure creates unverifiable security claims. Every line of OpenClaw that runs on your device is auditable. Security researchers can inspect, modify, and self-host the runtime. This is a deliberate architectural choice: open-source is the only path to enterprise trust at scale. STRATRONIX commits to keeping OpenClaw open-source indefinitely; the business model is built around hardware and managed services, not software lock-in.</p>
+
+<div class="cta">
+<h2 style="color: white; border: none; padding: 0;">Try OpenClaw today</h2>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin: 16px 0;">Apache 2.0 · Self-hostable · $399 on STRATRONIX STA-100</p>
+<a href="https://github.com/stratronix/openclaw" class="primary">→ View on GitHub</a>
+<a href="https://www.stratronix.ai/en/products/sta-100.html">→ View STA-100</a>
+</div>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai/">www.stratronix.ai</a> · <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · +86-755-23086689</p>
+<p>© 2026 STRATRONIX · Stratronix Technology (Shenzhen) Company, Limited</p>
+</footer>
+</body>
+</html>

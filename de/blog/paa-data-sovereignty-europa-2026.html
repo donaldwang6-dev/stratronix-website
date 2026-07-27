@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Datenhoheit für europäische Unternehmen: PAA-Architektur unter DSGVO & EU AI Act | STRATRONIX</title>
+<meta name="description" content="Wie STRATRONIX STA-100 PAA europäische Datenhoheit liefert: DSGVO-konforme Datenresidenz, EU AI Act 2026 Bereitschaft, Cloud-Regionen in Frankfurt/Madrid/Amsterdam/Paris. Benutzerdaten bleiben lokal; KI-Inferenz läuft in EU-jurisdiktionalen Clouds über API-Schlüssel.">
+<meta name="keywords" content="EU Datenhoheit, DSGVO Compliance, EU AI Act 2026, PAA Europa, Datenresidenz Europa, Cloud Frankfurt, AWS Frankfurt, DSGVO Artikel 28, Auftragsverarbeitungsvertrag, Stratronix STA-100, PAA Europa 2026, EU DSGVO PAA">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.stratronix.ai/de/blog/paa-data-sovereignty-europa-2026.html">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #003399 0%, #0055cc 100%); color: white; padding: 50px 20px; }
+header h1 { font-size: 2rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.95rem; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.5rem; color: #003399; margin: 32px 0 12px; border-left: 4px solid #003399; padding-left: 12px; }
+h3 { font-size: 1.2rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #003399; color: white; font-weight: 600; }
+.callout { background: #f0f5ff; border-left: 4px solid #003399; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+.cta { background: linear-gradient(135deg, #003399 0%, #0055cc 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #003399; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+footer a { color: #ffcc00; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Datenhoheit für europäische Unternehmen: PAA-Architektur unter DSGVO & EU AI Act",
+  "author": {"@type": "Organization", "name": "Stratronix AI"},
+  "publisher": {"@type": "Organization", "name": "Stratronix", "url": "https://www.stratronix.ai/"},
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "inLanguage": "de"
+}
+</script>
+<meta property="og:title" content="Datenhoheit für europäische Unternehmen: PAA-Architektur unter DSGVO & EU AI Act">
+<meta property="og:description" content="Wie STRATRONIX STA-100 PAA europäische Datenhoheit liefert.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="de_DE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+</head>
+<body>
+<header>
+<h1>Datenhoheit für europäische Unternehmen</h1>
+<p class="subtitle">Wie STRATRONIX STA-100 PAA-Architektur DSGVO & EU AI Act 2026 erfüllt</p>
+</header>
+
+<div class="container">
+<p class="meta">Veröffentlicht 2026-07-27 · Von Stratronix AI · 8 Min Lesezeit · EU-Souveränität Serie #1</p>
+
+<p class="callout"><strong>Die Quintessenz für europäische CTOs und Datenschutzbeauftragte:</strong> STRATRONIX STA-100 speichert Ihre <em>Benutzerdaten, Eingabeaufforderungen, Dokumente, Einbettungen und Geschäftsprozesse</em> physisch auf einem Gerät in Ihrem EU-Büro oder EU-Rechenzentrum. Die KI-Inferenz — der eigentliche Sprachmodellaufruf — erfolgt in EU-jurisdiktionalen Cloud-Regionen (Frankfurt, Madrid, Amsterdam, Paris, Dublin, Stockholm) mit Ihren eigenen API-Schlüsseln. Sie wählen den Cloud-LLM-Anbieter; wir hosten, trainieren oder speichern keine Daten auf Stratronix-Servern.</p>
+
+<h2>1. Die europäische Compliance-Landschaft (2026)</h2>
+
+<p>Drei regulatorische Schichten betreffen jeden KI-Einsatz in der EU:</p>
+
+<ul>
+<li><strong>DSGVO (Verordnung 2016/679)</strong> — personenbezogene Datenresidenz, Rechtsgrundlage, Betroffenenrechte, Auftragsverarbeitungspflichten</li>
+<li><strong>EU AI Act (Verordnung 2024/1689)</strong> — risikoklassifizierte KI-Systemanforderungen; vollständige Durchsetzung <strong>August 2026</strong></li>
+<li><strong>Schrems II / EDPB-Empfehlungen</strong> — Transfer-Impact-Bewertungen für jeden Nicht-EU-Auftragsverarbeiter</li>
+</ul>
+
+<p>Für KI-Bereitstellungen dominieren zwei praktische Fragen jede EU-Unternehmensbeschaffung:</p>
+
+<ol>
+<li><strong>Wo befinden sich meine Daten physisch?</strong></li>
+<li><strong>Wer ist der Verantwortliche vs. Auftragsverarbeiter, und unter welcher Gerichtsbarkeit?</strong></li>
+</ol>
+
+<p>Die PAA-Architektur (Private AI-Agent Appliance) wurde speziell entwickelt, um diese Fragen mit überprüfbarer Sicherheit zu beantworten.</p>
+
+<h2>2. PAA-Architektur: Lokale Daten, Cloud-Inferenz (in der EU)</h2>
+
+<p>STRATRONIX STA-100 ist eine kompakte Edge-Appliance (8-Kern ARM + 4GB RAM), die <strong>OpenClaw</strong> — die Open-Source-KI-Agent-Laufzeitumgebung (Apache 2.0) — auf <strong>Ubuntu 24.04 LTS</strong> ausführt. Das Gerät befindet sich in Ihrem Büronetzwerk und speichert alles lokal:</p>
+
+<table>
+<tr><th>Komponente</th><th>Standort</th><th>Gerichtsbarkeit</th></tr>
+<tr><td>Benutzereingaben, Chat-Verlauf, Agent-Protokolle</td><td>Auf Gerät SQLite + verschlüsselte Festplatte</td><td>In Ihren EU-Räumen</td></tr>
+<tr><td>RAG-Wissensbasis (Ihre Dokumente)</td><td>Auf Gerät Vektor-Datenbank</td><td>In Ihren EU-Räumen</td></tr>
+<tr><td>Geschäftsprozesse, Integrationen, Anmeldedaten</td><td>Auf Gerät Konfigurationsspeicher</td><td>In Ihren EU-Räumen</td></tr>
+<tr><td>KI-Inferenz (LLM-API-Aufrufe)</td><td>EU-Cloud-Regionen (Ihre Wahl)</td><td>EU-Gerichtsbarkeit</td></tr>
+<tr><td>Modellgewichte</td><td>Gehostet von Ihrem gewählten Anbieter</td><td>Pro Anbieter-DPA</td></tr>
+</table>
+
+<p><strong>Wichtiger architektonischer Punkt:</strong> Stratronix betreibt <em>keinen</em> Cloud-Dienst, der Ihre Eingabeaufforderungen, Dokumente oder Agent-Daten aufnimmt. Die PAA ist kein Frontend für ein von Stratronix gehostetes Backend — sie ist ein direktes Edge-Gerät, das EU-Cloud-KI-Anbieter (OpenAI EU, Anthropic EU, Mistral AI Paris, Aleph Alpha Heidelberg, OpenAI Azure Sweden Central usw.) über Ihren Unternehmens-API-Schlüssel aufruft.</p>
+
+<h2>3. DSGVO-Compliance-Zuordnung</h2>
+
+<h3>Artikel 28 (Auftragsverarbeiter)</h3>
+<p>Bei einer standardmäßigen PAA-Bereitstellung ist <strong>Ihre Organisation</strong> der Datenverantwortliche. Der Cloud-LLM-Anbieter fungiert als Auftragsverarbeiter unter seinem veröffentlichten DPA. Stratronix ist weder Verantwortlicher noch Auftragsverarbeiter für Kundendaten — wir liefern nur Hardware und Open-Source-Software. Dies eliminiert die Schrems II Transfer-Impact-Bewertungs-Belastung, die entsteht, wenn ein Nicht-EU-SaaS-Anbieter der Auftragsverarbeiter ist.</p>
+
+<h3>Artikel 30 (Verzeichnis der Verarbeitungstätigkeiten)</h3>
+<p>Da kein Dritter Ihre Daten verarbeitet, werden Ihre RoPA-Einträge einfacher: Listen Sie die PAA als internes Tool auf, listen Sie den Cloud-LLM-Anbieter als Auftragsverarbeiter unter seinem DPA auf. Keine mehrstufigen Auftragsverarbeiterketten.</p>
+
+<h3>Artikel 32 (Sicherheit der Verarbeitung)</h3>
+<ul>
+<li>Daten-at-rest: AES-256 Full-Disk-Verschlüsselung auf der PAA</li>
+<li>Daten-in-transit: TLS 1.3 zu Cloud-LLM-Endpunkten</li>
+<li>Zugriffskontrolle: rollenbasiert, integriert mit Unternehmens-SSO über OpenClaw</li>
+<li>Auditierbarkeit: alle Agent-Aktionen lokal protokolliert, in SIEM exportierbar</li>
+</ul>
+
+<h3>Artikel 15-22 (Betroffenenrechte)</h3>
+<p>Alle Betroffenendaten befinden sich auf dem Gerät, das Sie kontrollieren. Export, Berichtigung und Löschung sind direkte Dateioperationen auf Hardware, die Sie besitzen — kein SaaS-Ticket, keine Anbieter-SLA, keine Transfer-Impact-Bewertung.</p>
+
+<h2>4. EU AI Act 2026 Compliance</h2>
+
+<p>Der EU AI Act klassifiziert KI-Systeme nach Risiko. Die meisten Unternehmens-Produktivitäts-KI-Agenten fallen unter <strong>begrenztes Risiko</strong> (Transparenzpflichten) oder <strong>hohes Risiko</strong> (Anhang III Anwendungsfälle — Kreditwürdigkeitsprüfung, Beschäftigung, Strafverfolgung usw.).</p>
+
+<p>Die STRATRONIX STA-100 PAA-Architektur unterstützt Compliance für beide Kategorien:</p>
+
+<table>
+<tr><th>AI Act Anforderung</th><th>PAA-Implementierung</th></tr>
+<tr><td>Artikel 9 (Risikomanagement)</td><td>Lokale Risikoprotokollierung + Human-in-the-Loop für sensible Workflows</td></tr>
+<tr><td>Artikel 10 (Daten-Governance)</td><td>Alle Trainings-/Eval-Daten auf Gerät unter Ihrer Kontrolle</td></tr>
+<tr><td>Artikel 11-12 (Technische Dokumentation / Protokollierung)</td><td>OpenClaw protokolliert jede Agent-Entscheidung; für Audit exportierbar</td></tr>
+<tr><td>Artikel 13 (Transparenz für Nutzer)</td><td>Alle KI-Antworten gekennzeichnet; Nutzer wissen, wann Inhalte KI-generiert sind</td></tr>
+<tr><td>Artikel 14 (Menschliche Aufsicht)</td><td>Konfigurierbare Genehmigungs-Workflows; sensible Aktionen erfordern menschliche Freigabe</td></tr>
+<tr><td>Artikel 15 (Genauigkeit, Robustheit, Cybersicherheit)</td><td>Open-Source-Code-Audit, OTA-Sicherheitspatches, sandboxed Agent-Ausführung</td></tr>
+</table>
+
+<h2>5. Cloud-Anbieter-Wahl: Ihre Entscheidung, Ihr DPA</h2>
+
+<p>Die PAA bindet Sie <em>nicht</em> an einen bestimmten Cloud-LLM-Anbieter. Sie bringen Ihren eigenen API-Schlüssel mit. Empfohlene EU-jurisdiktionale Anbieter für 2026:</p>
+
+<ul>
+<li><strong>Mistral AI (Paris, FR)</strong> — Le Chat, Mistral Large 2; vollständig EU-domiziliert</li>
+<li><strong>Aleph Alpha (Heidelberg, DE)</strong> — Pharia-1-LLM; BSI C5 Testat</li>
+<li><strong>OpenAI via Azure (Sweden Central, IE)</strong> — GPT-4o / GPT-5; Microsoft EU Data Boundary</li>
+<li><strong>AWS Bedrock (eu-central-1, eu-west-1)</strong> — Claude / Llama 3; AWS Frankfurt / Irland Regionen</li>
+<li><strong>Aliyun (eu-central-1, Frankfurt)</strong> — Qwen / DeepSeek; Alibaba Cloud EU</li>
+<li><strong>OVHcloud AI Endpoints (Roubaix, FR)</strong> — Mistral / Llama; vollständig EU-souverän</li>
+</ul>
+
+<p>Jeder Anbieter hat eine veröffentlichte Auftragsverarbeitungsvereinbarung gemäß DSGVO Artikel 28. Ihr Rechts-Team kann pro Anbieter Transfer-Impact-Bewertungen abschließen. Die PAA erfordert keinen bestimmten Anbieter, sodass Sie basierend auf Ihrem Risikoappetit, Ihrer Sprachabdeckung und Ihren bestehenden Cloud-Verträgen wählen können.</p>
+
+<h2>6. Bereitstellungstopologien (EU-Unternehmen)</h2>
+
+<p>Drei häufige Bereitstellungsmuster, die wir 2026 in der EU-Unternehmensbeschaffung sehen:</p>
+
+<h3>Muster A: Einzelnes Büro / KMU (1-50 Mitarbeiter)</h3>
+<p>Ein STA-100 in einem Netzwerkschrank. Versorgt das gesamte Büro. Gesamtkosten: €/$399 Hardware + Standard-Cloud-LLM-Abonnement. Einrichtungszeit: 30 Minuten.</p>
+
+<h3>Muster B: Filialnetzwerk (50-500 Mitarbeiter pro Standort)</h3>
+<p>Eine PAA pro Büro. Zentralisiertes Management-Dashboard (von Ihnen gehostet, nicht von Stratronix). Datenhoheit pro Standort erhalten.</p>
+
+<h3>Muster C: Regulierte Industrie (Finanzen, Gesundheitswesen, Recht, Behörden)</h3>
+<p>PAAs in sicheren On-Prem-Rechenzentren bereitgestellt. Strenge Air-Gap optional. Cloud-LLM-Endpunkte über dedizierte VPN-Tunnel zu EU-Regionen zugegriffen. Stratronix bietet Architekturprüfung und Integrationsunterstützung.</p>
+
+<h2>7. Ehrliche Einschränkungen</h2>
+
+<p>Für technische Integrität hat die PAA-Architektur Grenzen:</p>
+
+<ul>
+<li><strong>Cloud-LLM ist für Inferenz erforderlich.</strong> Die PAA enthält kein großes Sprachmodell, das GPT-Klasse-Reasoning lokal ausführen kann. Lokale Berechnung dient zum Routing, zur Schwärzung und zu Small-Class-Embedding-Aufgaben. Komplexes Reasoning findet in der Cloud statt.</li>
+<li><strong>Einzelstandort-Umfang.</strong> Eine PAA bedient ein Büro / ein LAN. Multi-Standort-Bereitstellungen erfordern mehrere PAAs oder eine Cloud-Bridge-Topologie.</li>
+<li><strong>Internet für KI-Funktionen erforderlich.</strong> KI-Inferenz erfordert Netzwerkkonnektivität zu Ihrem gewählten Cloud-LLM-Anbieter. Ohne Internet speichert das Gerät Daten, kann aber keine KI-Antworten generieren. (Lokale Automatisierungs-Workflows ohne KI können weiterhin ausgeführt werden.)</li>
+</ul>
+
+<h2>8. Die €399 Investition</h2>
+
+<p>STA-100 wird zu <strong>$399 USD globalem Leitpreis</strong> verkauft — ein fester Preis über alle Märkte hinweg. Für EU-Kunden entspricht dies ungefähr €370 (abhängig vom EUR/USD-Wechselkurs). Keine regionale Prämie, kein Datenhoheits-Aufschlag. Mengenpreise ab 10+ Einheiten verfügbar.</p>
+
+<h2>9. Wie Sie starten</h2>
+
+<ol>
+<li><strong>Lesen Sie unser PAA-Architektur-Brief</strong> — vollständiges Whitepaper unter www.stratronix.ai/whitepapers</li>
+<li><strong>Führen Sie eine Compliance-Mapping-Sitzung durch</strong> — Ihr DSB + unser Lösungs-Team, 60 Minuten, kostenlos</li>
+<li><strong>Stellen Sie eine Pilot-PAA bereit</strong> — einzelnes Büro, 30-Minuten-Einrichtung</li>
+<li><strong>Skalieren Sie auf Produktion</strong> — nach 4-Wochen-Pilot, Erweiterung auf volle Bereitstellung</li>
+</ol>
+
+<div class="cta">
+<h2 style="color: white; border: none; padding: 0;">Bereit, PAA auf Ihre EU-Compliance abzubilden?</h2>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin: 16px 0;">$399 USD · 30-Min-Bereitstellung · EU-jurisdiktionale Cloud-LLM</p>
+<a href="https://www.stratronix.ai/de/contact.html" class="primary">→ Compliance-Mapping-Sitzung buchen</a>
+<a href="https://www.stratronix.ai/de/products/sta-100.html">→ STA-100 Specs ansehen</a>
+</div>
+
+<h2>Über Stratronix AI</h2>
+<p>STRATRONIX 鼎图太易 ist ein in Shenzhen ansässiges KI-Infrastrukturunternehmen. Gegründet 2026, fokussiert auf Private AI-Agent Appliances für Unternehmen und regulierte Branchen. Der STA-100 ist das erste PAA-Produkt des Unternehmens, basierend auf der Open-Source-Laufzeitumgebung OpenClaw (Apache 2.0) und Ubuntu 24.04 LTS.</p>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai/">www.stratronix.ai</a> · <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · +86-755-23086689</p>
+<p>© 2026 STRATRONIX · Stratronix Technology (Shenzhen) Company, Limited</p>
+</footer>
+</body>
+</html>
