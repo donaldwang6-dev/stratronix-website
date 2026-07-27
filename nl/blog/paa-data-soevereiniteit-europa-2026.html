@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<title>Datsoevereiniteit voor Europese ondernemingen: PAA-architectuur conform AVG & EU AI Act | STRATRONIX</title>
+<meta name="description" content="Hoe STRATRONIX STA-100 PAA Europese datsoevereiniteit levert: AVG-conforme data-residentie, EU AI Act 2026-gereedheid, cloudregio's in Frankfurt/Madrid/Amsterdam/Parijs. Gebruikersgegevens blijven lokaal; AI-inferentie draait in EU-jurisdictie clouds via API-sleutels.">
+<meta name="keywords" content="EU datsoevereiniteit, AVG compliance, EU AI Act 2026, PAA Europa, data-residentie Europa, cloud Frankfurt, AWS Frankfurt, AVG artikel 28, verwerkersovereenkomst, Stratronix STA-100, PAA Europa 2026">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.stratronix.ai/nl/blog/paa-data-soevereiniteit-europa-2026.html">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #003399 0%, #0055cc 100%); color: white; padding: 50px 20px; }
+header h1 { font-size: 2rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.95rem; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.5rem; color: #003399; margin: 32px 0 12px; border-left: 4px solid #003399; padding-left: 12px; }
+h3 { font-size: 1.2rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #003399; color: white; font-weight: 600; }
+.callout { background: #f0f5ff; border-left: 4px solid #003399; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+.cta { background: linear-gradient(135deg, #003399 0%, #0055cc 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #003399; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+footer a { color: #ffcc00; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Datsoevereiniteit voor Europese ondernemingen: PAA-architectuur conform AVG & EU AI Act",
+  "author": {"@type": "Organization", "name": "Stratronix AI"},
+  "publisher": {"@type": "Organization", "name": "Stratronix", "url": "https://www.stratronix.ai/"},
+  "datePublished": "2026-07-27",
+  "dateModified": "2026-07-27",
+  "inLanguage": "nl"
+}
+</script>
+<meta property="og:title" content="Datsoevereiniteit voor Europese ondernemingen: PAA-architectuur conform AVG & EU AI Act">
+<meta property="og:description" content="Hoe STRATRONIX STA-100 PAA Europese datsoevereiniteit levert.">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@stratronix">
+</head>
+<body>
+<header>
+<h1>Datsoevereiniteit voor Europese ondernemingen</h1>
+<p class="subtitle">Hoe STRATRONIX STA-100 PAA-architectuur voldoet aan de AVG & EU AI Act 2026</p>
+</header>
+
+<div class="container">
+<p class="meta">Gepubliceerd 2026-07-27 · Door Stratronix AI · 8 min leestijd · EU-soevereiniteit Serie #1</p>
+
+<p class="callout"><strong>De kern voor Europese CTO's en DPO's:</strong> STRATRONIX STA-100 bewaart uw <em>gebruikersgegevens, prompts, documenten, embeddings en bedrijfsworkflows</em> fysiek op een apparaat binnen uw EU-kantoor of EU-datacenter. AI-inferentie — de daadwerkelijke taalmodelaanroep — vindt plaats in EU-jurisdictie cloudregio's (Frankfurt, Madrid, Amsterdam, Parijs, Dublin, Stockholm) met uw eigen API-sleutels. U kiest de cloud-LLM-provider; wij hosten, trainen of bewaren geen gegevens op Stratronix-servers.</p>
+
+<h2>1. Het Europese compliance-landschap (2026)</h2>
+
+<p>Drie regelgevende lagen beïnvloeden elke AI-implementatie in de EU:</p>
+
+<ul>
+<li><strong>AVG (Verordening 2016/679)</strong> — verblijfplaats persoonsgegevens, rechtsgrond, rechten betrokkenen, verplichtingen verwerker</li>
+<li><strong>EU AI Act (Verordening 2024/1689)</strong> — risicogeclassificeerde AI-systeemvereisten; volledige handhaving <strong>augustus 2026</strong></li>
+<li><strong>Schrems II / EDPB-aanbevelingen</strong> — doorgifte-effectbeoordelingen voor elke niet-EU-verwerker</li>
+</ul>
+
+<p>Voor AI-implementaties specifiek domineren twee praktische vragen elke EU-ondernemingsinkoop:</p>
+
+<ol>
+<li><strong>Waar verblijven mijn gegevens fysiek?</strong></li>
+<li><strong>Wie is de verwerkingsverantwoordelijke versus verwerker, en onder welke jurisdictie?</strong></li>
+</ol>
+
+<p>De PAA-architectuur (Private AI-Agent Appliance) is specifiek ontworpen om deze vragen met verifieerbare zekerheid te beantwoorden.</p>
+
+<h2>2. PAA-architectuur: lokale gegevens, cloud-inferentie (in de EU)</h2>
+
+<p>STRATRONIX STA-100 is een compact edge-apparaat (8-core ARM + 4 GB RAM) dat <strong>OpenClaw</strong> draait — de open-source AI-agent runtime (Apache 2.0) — op <strong>Ubuntu 24.04 LTS</strong>. Het apparaat bevindt zich op uw kantoornetwerk en slaat alles lokaal op:</p>
+
+<table>
+<tr><th>Component</th><th>Locatie</th><th>Jurisdictie</th></tr>
+<tr><td>Gebruikersprompts, chatgeschiedenis, agent-logs</td><td>SQLite op apparaat + versleutelde schijf</td><td>Binnen uw EU-locatie</td></tr>
+<tr><td>RAG-kennisbank (uw documenten)</td><td>Vector store op apparaat</td><td>Binnen uw EU-locatie</td></tr>
+<tr><td>Bedrijfsworkflows, integraties, inloggegevens</td><td>Config store op apparaat</td><td>Binnen uw EU-locatie</td></tr>
+<tr><td>AI-inferentie (LLM API-aanroepen)</td><td>EU-cloudregio's (uw keuze)</td><td>EU-jurisdictie</td></tr>
+<tr><td>Modelgewichten</td><td>Gehost door uw gekozen provider</td><td>Per provider-DPA</td></tr>
+</table>
+
+<p><strong>Belangrijk architectuurpunt:</strong> Stratronix exploiteert <em>geen</em> clouddienst die uw prompts, documenten of agent-gegevens opneemt. De PAA is geen frontend voor een door Stratronix gehost backend — het is een direct edge-apparaat dat EU-cloud-AI-providers aanroept (OpenAI EU, Anthropic EU, Mistral AI Parijs, Aleph Alpha Heidelberg, OpenAI Azure Sweden Central, enz.) met uw zakelijke API-sleutel.</p>
+
+<h2>3. AVG-compliance mapping</h2>
+
+<h3>Artikel 28 (Verwerker)</h3>
+<p>Bij een standaard PAA-implementatie is <strong>uw organisatie</strong> de verwerkingsverantwoordelijke. De cloud-LLM-provider treedt op als verwerker onder hun gepubliceerde DPA. Stratronix is noch verwerkingsverantwoordelijke noch verwerker voor klantgegevens — wij leveren alleen hardware en open-source software. Dit elimineert de Schrems II doorgifte-effectbeoordelingslast die ontstaat wanneer een niet-EU SaaS-provider de verwerker is.</p>
+
+<h3>Artikel 30 (Verwerkingsregister)</h3>
+<p>Omdat geen derde partij uw gegevens verwerkt, worden uw RoPA-vermeldingen eenvoudiger: vermeld de PAA als intern hulpmiddel, vermeld de cloud-LLM-provider als verwerker onder hun DPA. Geen meerpartijen verwerkersketens.</p>
+
+<h3>Artikel 32 (Beveiliging van verwerking)</h3>
+<ul>
+<li>Gegevens at rest: AES-256 volledige schijfversleuteling op de PAA</li>
+<li>Gegevens in transit: TLS 1.3 naar cloud-LLM-eindpunten</li>
+<li>Toegangscontrole: op rollen gebaseerd, geïntegreerd met bedrijfs-SSO via OpenClaw</li>
+<li>Auditbaarheid: alle agent-acties lokaal gelogd, exporteerbaar naar SIEM</li>
+</ul>
+
+<h3>Artikelen 15-22 (Rechten betrokkenen)</h3>
+<p>Alle betrokkenengegevens bevinden zich op het apparaat dat u beheert. Export, rectificatie en wissing zijn directe bestandsbewerkingen op hardware die u bezit — geen SaaS-ticket, geen provider-SLA, geen doorgifte-effectbeoordeling.</p>
+
+<h2>4. EU AI Act 2026 compliance</h2>
+
+<p>De EU AI Act classificeert AI-systemen op risico. De meeste enterprise-productiviteits-AI-agenten vallen onder <strong>beperkt risico</strong> (transparantieverplichtingen) of <strong>hoog risico</strong> (Bijlage III gebruikssituaties — kredietbeoordeling, werkgelegenheid, rechtshandhaving, enz.).</p>
+
+<p>STRATRONIX STA-100 PAA-architectuur ondersteunt compliance voor beide categorieën:</p>
+
+<table>
+<tr><th>AI Act vereiste</th><th>PAA-implementatie</th></tr>
+<tr><td>Artikel 9 (Risicobeheer)</td><td>Lokale risicologging + mens-in-het-circuit voor gevoelige workflows</td></tr>
+<tr><td>Artikel 10 (Data-governance)</td><td>Alle trainings-/eval-gegevens op apparaat onder uw controle</td></tr>
+<tr><td>Artikelen 11-12 (Technische documentatie / Logging)</td><td>OpenClaw logt elke agent-beslissing; exporteerbaar voor audit</td></tr>
+<tr><td>Artikel 13 (Transparantie naar gebruikers)</td><td>Alle AI-reacties gelabeld; gebruikers weten wanneer inhoud AI-gegenereerd is</td></tr>
+<tr><td>Artikel 14 (Menselijk toezicht)</td><td>Configureerbare goedkeuringsworkflows; gevoelige acties vereisen menselijke goedkeuring</td></tr>
+<tr><td>Artikel 15 (Nauwkeurigheid, robuustheid, cyberbeveiliging)</td><td>Open-source code-audit, OTA-beveiligingspatches, sandbox agent-uitvoering</td></tr>
+</table>
+
+<h2>5. Cloudproviderkeuze: uw beslissing, uw DPA</h2>
+
+<p>De PAA vergrendelt u <em>niet</em> aan een specifieke cloud-LLM-provider. U brengt uw eigen API-sleutel mee. Aanbevolen EU-jurisdictie providers voor 2026:</p>
+
+<ul>
+<li><strong>Mistral AI (Parijs, FR)</strong> — Le Chat, Mistral Large 2; volledig EU-gedomicilieerd</li>
+<li><strong>Aleph Alpha (Heidelberg, DE)</strong> — Pharia-1-LLM; BSI C5-attestatie</li>
+<li><strong>OpenAI via Azure (Sweden Central, IE)</strong> — GPT-4o / GPT-5; Microsoft EU Data Boundary</li>
+<li><strong>AWS Bedrock (eu-central-1, eu-west-1)</strong> — Claude / Llama 3; AWS Frankfurt / Ierland regio's</li>
+<li><strong>Aliyun (eu-central-1, Frankfurt)</strong> — Qwen / DeepSeek; Alibaba Cloud EU</li>
+<li><strong>OVHcloud AI Endpoints (Roubaix, FR)</strong> — Mistral / Llama; volledig EU-soeverein</li>
+</ul>
+
+<p>Elke provider heeft een gepubliceerde verwerkersovereenkomst conform AVG artikel 28. Uw juridische team kan per provider doorgifte-effectbeoordelingen voltooien. De PAA vereist geen specifieke provider, dus u kiest op basis van uw risicobereidheid, taaldekking en bestaande cloudcontracten.</p>
+
+<h2>6. Implementatietopologieën (EU-ondernemingen)</h2>
+
+<p>Drie veelvoorkomende implementatiepatronen die we in 2026 zien in EU-ondernemingsinkoop:</p>
+
+<h3>Patroon A: Enkel kantoor / MKB (1-50 medewerkers)</h3>
+<p>Eén STA-100 in een netwerkkast. Voedt het hele kantoor. Totale kosten: €/$399 hardware + standaard cloud-LLM-abonnement. Installatietijd: 30 minuten.</p>
+
+<h3>Patroon B: Filiaalnetwerk (50-500 medewerkers per locatie)</h3>
+<p>Eén PAA per kantoor. Gecentraliseerd beheerdashboard (door u gehost, niet door Stratronix). Datsoevereiniteit per locatie behouden.</p>
+
+<h3>Patroon C: Gereglementeerde industrie (financiën, gezondheidszorg, juridisch, overheid)</h3>
+<p>PAA's geïmplementeerd in veilige on-prem datacenters. Strikte air-gap optioneel. Cloud-LLM-eindpunten benaderd via speciale VPN-tunnels naar EU-regio's. Stratronix biedt architectuurbeoordeling en integratieondersteuning.</p>
+
+<h2>7. Eerlijke beperkingen</h2>
+
+<p>Voor technische integriteit heeft de PAA-architectuur grenzen:</p>
+
+<ul>
+<li><strong>Cloud-LLM vereist voor inferentie.</strong> De PAA bevat geen groot taalmodel dat lokaal GPT-klasse redeneren kan uitvoeren. Lokale verwerking handelt routering, redactie en embedding-taken van kleine klasse af. Complex redeneren gebeurt in de cloud.</li>
+<li><strong>Enkele-locatie bereik.</strong> Eén PAA bedient één kantoor / één LAN. Multi-site-implementaties vereisen meerdere PAA's of een cloud-bridge-topologie.</li>
+<li><strong>Internet vereist voor AI-functies.</strong> AI-inferentie vereist netwerkverbinding met uw gekozen cloud-LLM-provider. Zonder internet slaat het apparaat gegevens op maar kan geen AI-reacties genereren. (Lokale automatiseringsworkflows zonder AI kunnen wel draaien.)</li>
+</ul>
+
+<h2>8. De €399 investering</h2>
+
+<p>STA-100 wordt verkocht voor <strong>$399 USD wereldwijde richtprijs</strong> — een vaste prijs over alle markten. Voor EU-klanten converteert dit naar ongeveer €370 (afhankelijk van EUR/USD). Geen regionale premie, geen datsoevereiniteit-toeslag. Volumeprijzen beschikbaar vanaf 10+ eenheden.</p>
+
+<h2>9. Hoe te starten</h2>
+
+<ol>
+<li><strong>Lees onze PAA-architectuur-brief</strong> — volledig whitepaper op www.stratronix.ai/whitepapers</li>
+<li><strong>Voer een compliance-mapping-sessie uit</strong> — uw DPO + ons solutions-team, 60 minuten, gratis</li>
+<li><strong>Implementeer een pilot-PAA</strong> — enkel kantoor, 30-minuten installatie</li>
+<li><strong>Schaal naar productie</strong> — na pilot van 4 weken, uitbreiding naar volledige implementatie</li>
+</ol>
+
+<div class="cta">
+<h2 style="color: white; border: none; padding: 0;">Klaar om PAA op uw EU-compliance af te stemmen?</h2>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin: 16px 0;">$399 USD · 30-min implementatie · EU-jurisdictie cloud-LLM</p>
+<a href="https://www.stratronix.ai/nl/contact.html" class="primary">→ Boek compliance-mapping-sessie</a>
+<a href="https://www.stratronix.ai/nl/products/sta-100.html">→ Bekijk STA-100 specs</a>
+</div>
+
+<h2>Over Stratronix AI</h2>
+<p>STRATRONIX 鼎图太易 is een in Shenzhen gevestigd AI-infrastructuurbedrijf. Opgericht in 2026, gericht op Private AI-Agent Appliances voor ondernemingen en gereglementeerde industrieën. De STA-100 is het eerste PAA-product van het bedrijf, gebouwd op de open-source OpenClaw-runtime (Apache 2.0) en Ubuntu 24.04 LTS.</p>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai/">www.stratronix.ai</a> · <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · +86-755-23086689</p>
+<p>© 2026 STRATRONIX · Stratronix Technology (Shenzhen) Company, Limited</p>
+</footer>
+</body>
+</html>
