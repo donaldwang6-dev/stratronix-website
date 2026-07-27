@@ -65,7 +65,7 @@ while IFS= read -r url; do
 done < "$URLS_FILE"
 urls_json="[${urls_json%,}]"
 
-curl -sS --max-time 30 -X POST "https://api.indexnow.org/IndexNow" \
+curl -sS --max-time 60 -X POST "https://api.indexnow.org/IndexNow" \
   -H "Content-Type: application/json" \
   -d "{
     \"host\": \"www.stratronix.ai\",

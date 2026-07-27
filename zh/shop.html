@@ -292,7 +292,7 @@
             </div>
         </div>
     </div>
-    <div class="footer">最后更新 <span id="lastUpdate">刚刚</span> · 由 JERRY 构建 · v1.0</div>
+    <div class="footer">最后更新 <span id="lastUpdate">刚刚</span> · 由 STRATRONIX AI 构建 · v1.0</div>
 </div>
 <script>
 async function loadProducts() {
@@ -314,7 +314,7 @@ async function loadProducts() {
         `).join('');
     } catch (err) {
         grid.innerHTML = `<div class="loading" style="grid-column:1/-1;color:var(--warning)">⚠ API 不可达 — ${err.message}</div>`;
-        countEl.textContent = 'API 离线';
+        countEl.textContent = 'API 未连接';
     }
 }
 function generateInvoice(e) {
