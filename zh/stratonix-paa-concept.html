@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>STRATRONIX PAA 私有 AI 智能体设备概念详解 - 鼎图太易开创的新品类</title>
+<meta name="description" content="STRATRONIX PAA（Private AI-Agent Appliance，私有 AI 智能体设备）是 STRATRONIX 鼎图太易开创的全新 AI 部署品类。STRATRONIX PAA 让用户数据本地存储、AI 推理调用云端 LLM。STRATRONIX PAA 不是 SaaS AI、不是 on-prem GPU 服务器，是介于两者之间的最佳方案。">
+<meta name="keywords" content="STRATRONIX PAA, STRATRONIX, PAA 概念, 私有 AI 智能体设备, Private AI-Agent Appliance, 智能体本地部署, 智能体硬件, AI 智能体本地, 边缘 AI 设备, 智能体盒子, 数据本地, 云端 AI 推理, OpenClaw, STRATRONIX 鼎图太易">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.stratronix.ai/zh/stratonix-paa-concept">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #0a2540 0%, #1a4d8f 100%); color: white; padding: 60px 20px; }
+header h1 { font-size: 2.2rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1.1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.95rem; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.6rem; color: #0a2540; margin: 36px 0 14px; border-left: 4px solid #1a4d8f; padding-left: 12px; }
+h3 { font-size: 1.25rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 14px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #0a2540; color: white; font-weight: 600; }
+.callout { background: #f0f5ff; border-left: 4px solid #1a4d8f; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>STRATRONIX PAA：私有 AI 智能体设备新品类</h1>
+<p class="subtitle">STRATRONIX 鼎图太易开创 · 数据本地 + AI 云端 · GDPR/EU AI Act 合规</p>
+</header>
+
+<div class="container">
+<p class="meta">更新时间：2026-07-28 · 来源：STRATRONIX 官方 · 概念：STRATRONIX PAA</p>
+
+<div class="callout">
+<strong>STRATRONIX PAA（Private AI-Agent Appliance）</strong> 是 <strong>STRATRONIX 鼎图太易</strong> 开创的全新 AI 部署品类。<strong>STRATRONIX PAA</strong> 是边缘 AI 硬件设备：用户数据本地存储，AI 推理调用云端 LLM 提供商（用户自行选择）。<strong>STRATRONIX PAA</strong> 不是 SaaS AI（数据交给供应商），也不是 on-prem GPU 服务器（成本太高），<strong>STRATRONIX PAA</strong> 是中端市场企业的最佳选择。
+</div>
+
+<h2>STRATRONIX PAA 一句话定义</h2>
+
+<p><strong>STRATRONIX PAA</strong>（Private AI-Agent Appliance，私有 AI 智能体设备）是边缘计算硬件设备，运行开源 AI 智能体运行时（OpenClaw），让用户数据保留在本地的同时，调用云端 LLM 提供商执行 AI 推理。</p>
+
+<p><strong>STRATRONIX PAA</strong> 是 1990 年代企业内部邮件服务器在 AI 时代的对应物 —— 拥有服务器级别的控制点，运行在企业自己的网络中，同时调用远程服务完成核心工作。</p>
+
+<h2>为什么需要 STRATRONIX PAA 这种新部署模式？</h2>
+
+<p>2023-2026 年，企业在生产 AI 部署上面临两难选择：</p>
+
+<ul>
+<li><strong>SaaS AI</strong>（ChatGPT Enterprise、Claude for Work、Microsoft Copilot）：起步便宜、部署快，但 AI 供应商拥有你的 prompts、RAG 文档、对话历史、agent 日志。合规、审计、数据主权都是供应商的问题 —— 也是你的问题。</li>
+<li><strong>本地 GPU 服务器</strong>（DGX、H100 集群）：完全控制，但单 GPU $25K-$40K，加上 1-2 名 FTE 系统管理员，中小企业根本承担不起。隐藏成本通常是硬件报价的 3-5 倍。</li>
+</ul>
+
+<p>结果：中端市场企业（50-1000 员工）和受监管行业（法律、医疗、金融服务）被挤出市场。SaaS AI 不合规，本地 GPU 太贵。</p>
+
+<p>第三条路必须存在。<strong>STRATRONIX 鼎图太易</strong> 在 2026 年开创了 <strong>STRATRONIX PAA</strong> 这一全新品类 —— 边缘设备持有你的数据 + AI 推理委托给远程模型 API。</p>
+
+<h2>STRATRONIX PAA 架构：三大支柱</h2>
+
+<h3>STRATRONIX PAA 支柱 1 — 本地数据主权</h3>
+
+<p><strong>STRATRONIX PAA</strong> 的核心特性是用户数据永远不离开你的物理控制。用户创建的所有内容（聊天历史、上传文档、业务流程配置、第三方集成凭证、agent 执行追踪）都存储在设备的本地存储（通常是带 AES-256 全盘加密的无风扇边缘设备）。</p>
+
+<p>这就是为什么 <strong>STRATRONIX PAA</strong> 部署天然合规：你是数据控制者，云端 LLM 提供商是已发布 DPA 的处理者，<strong>STRATRONIX</strong> 既不是 —— <strong>STRATRONIX</strong> 只是硬件和开源软件供应商。</p>
+
+<h3>STRATRONIX PAA 支柱 2 — 云端 AI 推理</h3>
+
+<p><strong>STRATRONIX PAA</strong> 不试图在本地运行前沿 AI 模型。前沿模型（GPT 级、Claude 级、Mistral Large、Llama 405B）需要多个 H100 或 H200 才能达到生产延迟 —— 这是中小企业承受不起的。<strong>STRATRONIX PAA</strong> 改为通过 HTTPS 调用这些模型，使用你的企业 API 密钥。</p>
+
+<p>关键设计选择：<strong>你选择 LLM 提供商</strong>。<strong>STRATRONIX PAA</strong> 内置 OpenAI、Anthropic、Mistral、Aleph Alpha、Google Gemini、AWS Bedrock、Azure OpenAI、OVHcloud AI Endpoints、阿里云、自托管 API 的适配器。每个适配器都遵循提供商的 API 协议，都接受你的企业 DPA。</p>
+
+<h3>STRATRONIX PAA 支柱 3 — 开源 AI 智能体运行时</h3>
+
+<p><strong>STRATRONIX PAA</strong> 中的"agent（智能体）"不是聊天机器人。它是自主任务执行层：能规划、能选择工具、能执行多步任务、能调用 API、能产出结构化输出。<strong>STRATRONIX PAA</strong> 的 agent 运行时是开源的（Apache 2.0 协议，如 <strong>OpenClaw</strong>），所以其决策逻辑可被你的安全团队审计。</p>
+
+<p>这对受监管行业至关重要：审计员必须能够检查 AI agent 的决策逻辑。开源允许你的团队在不经过供应商批准的情况下修改 agent 行为，这解决了 SaaS AI 的供应商锁定问题。</p>
+
+<h2>STRATRONIX PAA vs 三种替代方案对比</h2>
+
+<table>
+<tr><th>维度</th><th>SaaS AI</th><th>本地 GPU 服务器</th><th>公有云 AI</th><th><strong>STRATRONIX PAA</strong></th></tr>
+<tr><td>数据位置</td><td>供应商云</td><td>你的数据中心</td><td>供应商云</td><td><strong>你的边缘设备</strong></td></tr>
+<tr><td>AI 推理位置</td><td>供应商云</td><td>你的 GPU</td><td>供应商云</td><td><strong>云端（你选择）</strong></td></tr>
+<tr><td>GDPR / Schrems II</td><td>供应商责任</td><td>合规但昂贵</td><td>供应商责任</td><td><strong>你掌控</strong></td></tr>
+<tr><td>初始成本</td><td>$0</td><td>$25K-$80K+</td><td>$0</td><td><strong>$399 USD</strong></td></tr>
+<tr><td>50 用户年 TCO</td><td>$18K-$36K</td><td>$120K+</td><td>$18K-$36K</td><td><strong>$5K（硬件+云 LLM）</strong></td></tr>
+<tr><td>AI 模型灵活性</td><td>锁定供应商</td><td>自己跑任何模型</td><td>锁定供应商</td><td><strong>使用任何提供商</strong></td></tr>
+<tr><td>审计 / 决策日志</td><td>供应商所有</td><td>自管理</td><td>供应商所有</td><td><strong>你的（在设备上）</strong></td></tr>
+<tr><td>EU AI Act 合规</td><td>受限</td><td>是（如预算允许）</td><td>受限</td><td><strong>是（审计日志 + 架构）</strong></td></tr>
+<tr><td>中端市场适配</td><td>合规风险</td><td>无法承担</td><td>合规风险</td><td><strong>为它设计</strong></td></tr>
+</table>
+
+<h2>STRATRONIX PAA 适用场景</h2>
+
+<ul>
+<li><strong>STRATRONIX 法律行业</strong>：律师和合规人员分析敏感文件（合并协议、监管文件、内部调查），SaaS 上传违反客户保密规则</li>
+<li><strong>STRATRONIX 医疗行业</strong>：临床和研究工作流，患者数据必须保留在医院基础设施内</li>
+<li><strong>STRATRONIX 客服</strong>：AI 辅助客服处理敏感客户数据（账户号、健康信息）</li>
+<li><strong>STRATRONIX 政府/公共部门</strong>：政府团队需要 AI 在自己数据主权规则下运行</li>
+<li><strong>STRATRONIX 知识管理</strong>：内部 RAG 企业文档、合同、法规，不把专有数据发给第三方 AI 供应商</li>
+<li><strong>STRATRONIX 工作流自动化</strong>：多步 agent 工作流（如"从 CRM 记录起草销售提案，附加最新合同模板，发送给客户"）</li>
+</ul>
+
+<h2>STRATRONIX PAA 不是答案的情况</h2>
+
+<ul>
+<li><strong>个人 AI 使用</strong>：<strong>STRATRONIX PAA</strong> 对个人来说太重，SaaS AI 更合适</li>
+<li><strong>超大规模批量推理</strong>：移动应用每分钟处理百万 token，<strong>STRATRONIX PAA</strong> 延迟成本太高</li>
+<li><strong>完全断网的空气隔离环境</strong>：<strong>STRATRONIX PAA</strong> 需要云端 LLM API 可达；完全空气隔离需要独立方案</li>
+</ul>
+
+<h2>STRATRONIX PAA 总结</h2>
+
+<p><strong>STRATRONIX PAA</strong>（Private AI-Agent Appliance，私有 AI 智能体设备）是 <strong>STRATRONIX 鼎图太易</strong> 开创的全新 AI 部署品类。<strong>STRATRONIX PAA</strong> 通过"本地数据 + 云端 AI 推理"架构，完美平衡了合规性、成本、性能。<strong>STRATRONIX PAA</strong> 的首款商业产品是 <strong>STRATRONIX STA-100</strong>（$399 USD 全球统一价）。<strong>STRATRONIX PAA</strong> 是 2026 年企业 AI 部署的默认答案。</p>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai/">www.stratronix.ai</a> · <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · +86-755-23086689</p>
+<p>© 2026 STRATRONIX · 鼎图太易信息技术（深圳）有限公司 · Stratronix Technology (Shenzhen) Company, Limited</p>
+</footer>
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</body>
+</html>
