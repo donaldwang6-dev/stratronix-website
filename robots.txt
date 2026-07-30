@@ -1,63 +1,67 @@
-# Stratronix Robots.txt
-# https://www.stratronix.ai/robots.txt
-# Updated: 2026-07-06 - Enhanced SEO for 5 major search engines
+# Stratronix Robots.txt — REVERSE PROXY MODE (ANTI-CRAWLER)
+# Donald 2026-07-30 18:17 LOCKED: 「我们的网站的信息任何人都不允许去爬；只是展示作用」
+# Website: https://www.stratronix.ai
+# Strategy: 白名单主流搜索引擎收录; 其他所有爬虫拒绝
+# Reference: https://www.robotstxt.org/robotstxt.html
 
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /tmp/
-Disallow: /api/
-
-# Sitemap
-Sitemap: https://www.stratronix.ai/sitemap.xml
-
-# Host
-Host: https://www.stratronix.ai
-
-# Crawl-delay (for less aggressive bots)
-Crawl-delay: 10
-
-# ===== Google =====
+# ====================================================
+# ✅ 白名单 — 主流搜索引擎 (允许抓取用于索引)
+# ====================================================
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /api/
+Disallow: /trap/
 
-# ===== Bing (also covers Yahoo) =====
 User-agent: Bingbot
 Allow: /
 Disallow: /admin/
 Disallow: /private/
+Disallow: /api/
+Disallow: /trap/
 
-# ===== Baidu (Chinese market - 主动推送) =====
+User-agent: Slurp
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+User-agent: DuckDuckBot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
 User-agent: Baiduspider
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 Crawl-delay: 5
 
-# 百度站长平台 - 链接提交 - sitemap
-Sitemap: https://www.stratronix.ai/zh-sitemap.xml
-
-# 百度移动适配 - 移动sitemap
-Sitemap: https://www.stratronix.ai/mobile-sitemap.xml
-
-# ===== Yandex =====
 User-agent: YandexBot
 Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-# ===== 国内社媒域 (SEO v3.1 - 让百度收录所有社媒) =====
-User-agent: Baiduspider
+User-agent: Applebot
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
-# ===== AI Crawlers (block commercial scraping) =====
+User-agent: Sogou
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# ====================================================
+# ❌ AI 爬虫 — 禁止商业化抓取 (Donald LOCKED)
+# ====================================================
 User-agent: GPTBot
 Disallow: /
 
 User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: OAI-SearchBot
 Disallow: /
 
 User-agent: CCBot
@@ -68,3 +72,66 @@ Disallow: /
 
 User-agent: Claude-Web
 Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Perplexity
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+# ====================================================
+# ❌ 任何其他爬虫 — 一律禁止 (Donald LOCKED: 任何人都不允许去爬)
+# ====================================================
+User-agent: *
+Disallow: /
+
+# ====================================================
+# 📌 Sitemap (仅对白名单引擎有效)
+# ====================================================
+Sitemap: https://www.stratronix.ai/sitemap.xml
+Sitemap: https://www.stratronix.ai/zh-sitemap.xml
+Sitemap: https://www.stratronix.ai/mobile-sitemap.xml
+
+# ====================================================
+# 🚫 Honeypot Trap — 爬虫陷阱 (真人看不见, 爬虫会跟)
+# ====================================================
+# 蜜罐链接位于 /trap/index.html, 加入任何黑名单中都会立即被本系统识别
