@@ -13,7 +13,7 @@
       "headers": [
         {
           "key": "X-Robots-Tag",
-          "value": "index, follow, noai, noimageindex, nosnippet"
+          "value": "index, follow"
         },
         {
           "key": "Strict-Transport-Security",
@@ -34,15 +34,6 @@
         {
           "key": "Referrer-Policy",
           "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/trap/(.*)",
-      "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "value": "noindex, nofollow, noarchive, nosnippet"
         }
       ]
     },
