@@ -208,28 +208,23 @@
       "statusCode": 301
     },
     {
-      "source": "/en/blog",
+      "source": "/es/blog.html",
       "destination": "/en/blog/",
       "statusCode": 301
     },
     {
       "source": "/es/blog",
-      "destination": "/es/blog/",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ru/blog.html",
+      "destination": "/en/blog/",
       "statusCode": 301
     },
     {
       "source": "/ru/blog",
-      "destination": "/blog/",
-      "statusCode": 301
-    },
-    {
-      "source": "/zh/blog",
-      "destination": "/zh/blog/",
-      "statusCode": 301
-    },
-    {
-      "source": "/blog",
-      "destination": "/blog/",
+      "destination": "/en/blog/",
       "statusCode": 301
     }
   ],
