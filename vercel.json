@@ -126,6 +126,111 @@
       "source": "/stratonix-ai-appliance.html",
       "destination": "/products",
       "statusCode": 301
+    },
+    {
+      "source": "/stratonix-ai-appliance",
+      "destination": "/products",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/on-premise-llm-appliance-2026",
+      "destination": "/en/blog/on-prem-llm-appliance",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/on-premise-ai-deployment",
+      "destination": "/en/blog/on-premise-ai-deployment-7-steps",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/private-ai-use-cases",
+      "destination": "/en/blog/5-use-cases-private-ai-agents",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/private-ai-vs-cloud-ai",
+      "destination": "/en/blog/5-use-cases-private-ai-agents",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/what-is-paa",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/es/blog/llm-local-empresa-2026",
+      "destination": "/es/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/ru/blog/lokalnyj-llm-dlya-predpriyatiya-2026",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-ai",
+      "destination": "/zh/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-education-paa",
+      "destination": "/zh/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-finance-paa",
+      "destination": "/zh/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-legal-paa",
+      "destination": "/zh/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-paa-roi",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-paa-setup-guide",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-self-hosted-ai",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-vs-chatgpt",
+      "destination": "/blog",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/es/blog",
+      "destination": "/es/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ru/blog",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog",
+      "destination": "/zh/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/",
+      "statusCode": 301
     }
   ],
   "headers": [
