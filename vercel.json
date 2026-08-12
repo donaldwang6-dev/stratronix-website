@@ -6,7 +6,128 @@
       "use": "@vercel/static"
     }
   ],
-  "redirects": [],
+  "redirects": [
+    {
+      "source": "/en/blog.html",
+      "destination": "/en/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/es/blog.html",
+      "destination": "/es/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ru/blog.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog.html",
+      "destination": "/zh/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-paa-roi.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-paa-setup-guide.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-self-hosted-ai.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/stratronix-vs-chatgpt.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/on-premise-llm-appliance-2026.html",
+      "destination": "/en/blog/on-prem-llm-appliance.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/on-premise-ai-deployment.html",
+      "destination": "/en/blog/on-premise-ai-deployment-7-steps.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/private-ai-use-cases.html",
+      "destination": "/en/blog/5-use-cases-private-ai-agents.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/private-ai-vs-cloud-ai.html",
+      "destination": "/en/blog/5-use-cases-private-ai-agents.html",
+      "statusCode": 301
+    },
+    {
+      "source": "/en/blog/what-is-paa.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/es/blog/llm-local-empresa-2026.html",
+      "destination": "/es/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/ru/blog/lokalnyj-llm-dlya-predpriyatiya-2026.html",
+      "destination": "/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-ai.html",
+      "destination": "/zh/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-education-paa.html",
+      "destination": "/zh/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-finance-paa.html",
+      "destination": "/zh/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/zh/blog/dingtu-legal-paa.html",
+      "destination": "/zh/blog/",
+      "statusCode": 301
+    },
+    {
+      "source": "/store",
+      "destination": "/contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/store/",
+      "destination": "/contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/cases/",
+      "statusCode": 301
+    },
+    {
+      "source": "/stratonix-ai-appliance.html",
+      "destination": "/products",
+      "statusCode": 301
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
