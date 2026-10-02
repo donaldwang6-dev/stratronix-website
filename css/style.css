@@ -1242,6 +1242,18 @@ a:hover {
 }
 
 /* 页脚 */
+
+/* Footer Full-Width (汪总指令 2026-10-02) */
+.footer-fullwidth {
+    background-color: var(--bg-dark);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
+}
+
 .footer {
     background-color: var(--bg-dark);
     color: var(--text-light);
@@ -2185,4 +2197,13 @@ section.about-section .strategy-feature {
         color: #000000 !important;
         text-shadow: none !important;
     }
+}
+
+/* Hero Product Description - smaller than model name (汪总指令 2026-10-02) */
+.hero-product-description {
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    margin-top: 0.25rem;
+    letter-spacing: 0.02em;
 }
