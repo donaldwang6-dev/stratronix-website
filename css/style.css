@@ -2201,9 +2201,9 @@ section.about-section .strategy-feature {
 
 /* Hero Product Description - smaller than model name (汪总指令 2026-10-02) */
 .hero-product-description {
-    font-size: 1.5rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 300;
+    font-size: 1.75rem;
+    color: #E6417F;
+    font-weight: 600;
     margin-top: 0.25rem;
     letter-spacing: 0.02em;
 }
