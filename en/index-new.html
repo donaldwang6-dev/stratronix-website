@@ -46,12 +46,14 @@ body {
  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .nav-logo {
- font-family: var(--font-head);
- font-size: 1.1rem;
- font-weight: 700;
- letter-spacing: 0.15em;
- color: var(--text-primary);
+ display: flex;
+ align-items: center;
  text-decoration: none;
+}
+.nav-logo img {
+ height: 28px;
+ width: auto;
+ filter: brightness(1) saturate(1);
 }
 .nav-links {
  display: flex;
@@ -625,7 +627,7 @@ footer .pink { color: var(--accent-pink); }
 
 <!-- NAV -->
 <nav class="navbar">
- <a href="#" class="nav-logo">STRATRONIX</a>
+ <a href="#" class="nav-logo"><img src="https://donaldwang6-dev.github.io/stratronix-website/images/stratronix-logo-pink.png" alt="STRATRONIX"></a>
  <ul class="nav-links">
  <li><a href="#">Workie</a></li>
  <li><a href="#how">How It Works</a></li>
@@ -869,7 +871,10 @@ footer .pink { color: var(--accent-pink); }
 
 <!-- FOOTER -->
 <footer>
+ <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+ <img src="https://donaldwang6-dev.github.io/stratronix-website/images/stratronix-logo-pink.png" alt="STRATRONIX" style="height:24px;width:auto;">
  <p>STRATRONIX — Personal AI Computing <span class="pink">●</span> <a href="#" style="color:var(--text-secondary);">Privacy</a> <a href="#" style="color:var(--text-secondary);">Terms</a></p>
+ </div>
 </footer>
 
 </body>
