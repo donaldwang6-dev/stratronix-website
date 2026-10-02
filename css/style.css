@@ -2207,3 +2207,15 @@ section.about-section .strategy-feature {
     margin-top: 0.25rem;
     letter-spacing: 0.02em;
 }
+
+/* ===== FULL-BLEED SECTIONS (汪总指令 2026-10-02) ===== */
+.hero,
+.core-values-enhanced,
+.featured-performance,
+.testimonials-section,
+.cta-section,
+.footer-fullwidth {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+}
