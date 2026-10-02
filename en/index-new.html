@@ -9,6 +9,7 @@
  <link rel="canonical" href="https://www.stratronix.ai/en/">
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>.section-title, .big-quote, .hero-left h1, .product-center h2, .cta-final h2, .one-assistant h2, .desk-section h2 { font-family: var(--font-body); }</style>
  <style>
 /* ===== NEW STRATRONIX DESIGN SYSTEM (2026-10-02) ===== */
 :root {
@@ -17,7 +18,7 @@
  --bg-graphite: #11151A;
  --text-primary: #F5F7FA;
  --text-secondary: #858C96;
- --tech-blue: #2F80FF;
+ --tech-blue: #E6417F;
  --accent-pink: #E6417F;
  --font-head: 'Space Grotesk', sans-serif;
  --font-body: 'Inter', sans-serif;
@@ -46,12 +47,14 @@ body {
  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 .nav-logo {
- font-family: var(--font-head);
- font-size: 1.1rem;
- font-weight: 700;
- letter-spacing: 0.15em;
- color: var(--text-primary);
+ display: flex;
+ align-items: center;
  text-decoration: none;
+}
+.nav-logo img {
+ height: 28px;
+ width: auto;
+ filter: brightness(1) saturate(1);
 }
 .nav-links {
  display: flex;
@@ -207,7 +210,7 @@ section {
  width: 100%;
  max-width: 500px;
  height: auto;
- filter: drop-shadow(0 0 80px rgba(47,128,255,0.15));
+ filter: drop-shadow(0 0 80px rgba(230,65,127,0.15));
 }
 .hero-bottom-tagline {
  max-width: 1200px;
@@ -311,7 +314,7 @@ section {
  max-width: 560px;
  margin: 60px auto;
  display: block;
- filter: drop-shadow(0 0 100px rgba(47,128,255,0.12));
+ filter: drop-shadow(0 0 100px rgba(230,65,127,0.12));
 }
 .three-words {
  display: flex;
@@ -372,8 +375,8 @@ section {
  margin-top: 60px;
 }
 .agent-card {
- background: rgba(47,128,255,0.05);
- border: 1px solid rgba(47,128,255,0.12);
+ background: rgba(230,65,127,0.05);
+ border: 1px solid rgba(230,65,127,0.12);
  border-radius: 10px;
  padding: 28px 24px;
  font-family: var(--font-head);
@@ -385,7 +388,7 @@ section {
  transition: all 0.2s;
 }
 .agent-card:hover {
- background: rgba(47,128,255,0.1);
+ background: rgba(230,65,127,0.1);
  border-color: var(--tech-blue);
  color: var(--text-primary);
 }
@@ -409,7 +412,7 @@ section {
 }
 .specs-img {
  width: 100%;
- filter: drop-shadow(0 0 60px rgba(47,128,255,0.1));
+ filter: drop-shadow(0 0 60px rgba(230,65,127,0.1));
 }
 .spec-list { list-style: none; }
 .spec-list li {
@@ -482,8 +485,8 @@ section {
 }
 .ws-center {
  grid-column: 2;
- background: rgba(47,128,255,0.08);
- border: 1px solid rgba(47,128,255,0.2);
+ background: rgba(230,65,127,0.08);
+ border: 1px solid rgba(230,65,127,0.2);
  color: var(--tech-blue);
  font-size: 0.9rem;
  letter-spacing: 0.1em;
@@ -511,8 +514,8 @@ section {
 .context-result {
  text-align: center;
  padding: 20px;
- background: rgba(47,128,255,0.08);
- border: 1px solid rgba(47,128,255,0.2);
+ background: rgba(230,65,127,0.08);
+ border: 1px solid rgba(230,65,127,0.2);
  border-radius: 8px;
  font-family: var(--font-head);
  font-size: 0.8rem;
@@ -625,7 +628,7 @@ footer .pink { color: var(--accent-pink); }
 
 <!-- NAV -->
 <nav class="navbar">
- <a href="#" class="nav-logo">STRATRONIX</a>
+ <a href="#" class="nav-logo"><img src="https://donaldwang6-dev.github.io/stratronix-website/images/stratronix-logo-pink.png" alt="STRATRONIX"></a>
  <ul class="nav-links">
  <li><a href="#">Workie</a></li>
  <li><a href="#how">How It Works</a></li>
@@ -688,7 +691,7 @@ footer .pink { color: var(--accent-pink); }
  <div class="ws-item">RESEARCH</div>
  <div class="ws-item">DOCUMENTS</div>
  <div class="ws-item">EMAIL</div>
- <div class="ws-item" style="grid-column:2;background:rgba(47,128,255,0.08);border-color:rgba(47,128,255,0.2);color:var(--tech-blue);">WORKIE</div>
+ <div class="ws-item" style="grid-column:2;background:rgba(230,65,127,0.08);border-color:rgba(230,65,127,0.2);color:var(--tech-blue);">WORKIE</div>
  <div class="ws-item">MEETINGS</div>
  <div class="ws-item">REPORTS</div>
  <div class="ws-item">AUTOMATION</div>
@@ -760,7 +763,7 @@ footer .pink { color: var(--accent-pink); }
  <div class="workflow-step"><span class="num">03</span> You do the work</div>
  </div>
  </div>
- <div class="workflow-box" style="border-color:rgba(47,128,255,0.2);">
+ <div class="workflow-box" style="border-color:rgba(230,65,127,0.2);">
  <h3 style="color:var(--tech-blue);">WORKIE</h3>
  <div class="workflow-steps">
  <div class="workflow-step"><span class="num">01</span> Understand <span class="arrow">↓</span></div>
@@ -869,7 +872,10 @@ footer .pink { color: var(--accent-pink); }
 
 <!-- FOOTER -->
 <footer>
+ <div style="display:flex;flex-direction:column;align-items:center;gap:16px;">
+ <img src="https://donaldwang6-dev.github.io/stratronix-website/images/stratronix-logo-pink.png" alt="STRATRONIX" style="height:24px;width:auto;">
  <p>STRATRONIX — Personal AI Computing <span class="pink">●</span> <a href="#" style="color:var(--text-secondary);">Privacy</a> <a href="#" style="color:var(--text-secondary);">Terms</a></p>
+ </div>
 </footer>
 
 </body>
