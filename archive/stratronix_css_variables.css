@@ -1,0 +1,473 @@
+/* STRATRONIX CSS Variables - Design System */
+:root {
+  /* Brand Colors */
+  --stratronix-blue: #3868D9;
+  --stratronix-dark-blue: #1E3A8A;
+  --stratronix-light-blue: #93C5FD;
+  --stratronix-tech-gray: #374151;
+  
+  /* Primary Colors */
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+  
+  /* Neutral Colors */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-200: #E5E7EB;
+  --gray-300: #D1D5DB;
+  --gray-400: #9CA3AF;
+  --gray-500: #6B7280;
+  --gray-600: #4B5563;
+  --gray-700: #374151;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+  
+  /* Functional Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --error: #EF4444;
+  --info: #3B82F6;
+  
+  /* Typography */
+  --font-primary: 'Montserrat', Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', Consolas, monospace;
+  
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Spacing (8px scale) */
+  --space-0: 0;
+  --space-1: 0.125rem;
+  --space-2: 0.25rem;
+  --space-3: 0.375rem;
+  --space-4: 0.5rem;
+  --space-5: 0.625rem;
+  --space-6: 0.75rem;
+  --space-8: 1rem;
+  --space-10: 1.25rem;
+  --space-12: 1.5rem;
+  --space-16: 2rem;
+  --space-20: 2.5rem;
+  --space-24: 3rem;
+  --space-32: 4rem;
+  --space-40: 5rem;
+  --space-48: 6rem;
+  --space-56: 7rem;
+  --space-64: 8rem;
+  
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-full: 9999px;
+  
+  /* Border Width */
+  --border-0: 0;
+  --border-1: 1px;
+  --border-2: 2px;
+  --border-4: 4px;
+  --border-8: 8px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  --shadow-brand: 0 4px 14px 0 rgba(56, 104, 217, 0.39);
+  
+  /* Z-Index */
+  --z-0: 0;
+  --z-10: 10;
+  --z-20: 20;
+  --z-30: 30;
+  --z-40: 40;
+  --z-50: 50;
+  --z-auto: auto;
+  
+  /* Breakpoints */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  
+  /* Animations */
+  --duration-75: 75ms;
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --duration-700: 700ms;
+  --duration-1000: 1000ms;
+  
+  --ease-linear: linear;
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Component Variables */
+  --button-primary-bg: var(--stratronix-blue);
+  --button-primary-text: #FFFFFF;
+  --button-primary-hover: var(--blue-700);
+  --button-primary-active: var(--blue-800);
+  --button-primary-disabled: var(--gray-400);
+  
+  --button-secondary-bg: transparent;
+  --button-secondary-text: var(--stratronix-blue);
+  --button-secondary-border: var(--stratronix-blue);
+  --button-secondary-hover: var(--blue-50);
+  --button-secondary-active: var(--blue-100);
+  
+  --card-bg: #FFFFFF;
+  --card-border: var(--gray-200);
+  --card-shadow: var(--shadow-base);
+  
+  --input-bg: #FFFFFF;
+  --input-border: var(--gray-300);
+  --input-text: var(--gray-700);
+  --input-placeholder: var(--gray-400);
+  --input-focus-border: var(--stratronix-blue);
+  --input-focus-shadow: 0 0 0 3px rgba(56, 104, 217, 0.1);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(45deg, var(--stratronix-blue), var(--stratronix-dark-blue));
+  --gradient-light: linear-gradient(to right, var(--stratronix-light-blue), var(--stratronix-blue));
+  --gradient-radial: radial-gradient(circle, var(--stratronix-blue), transparent);
+}
+
+/* Dark Mode Variables */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: var(--gray-800);
+    --card-border: var(--gray-700);
+    
+    --input-bg: var(--gray-800);
+    --input-border: var(--gray-600);
+    --input-text: var(--gray-200);
+    --input-placeholder: var(--gray-500);
+    
+    --button-primary-hover: var(--blue-600);
+    --button-primary-active: var(--blue-700);
+    
+    --button-secondary-hover: rgba(56, 104, 217, 0.1);
+    --button-secondary-active: rgba(56, 104, 217, 0.2);
+  }
+}
+
+/* Utility Classes */
+.stratronix-text-primary { color: var(--stratronix-blue); }
+.stratronix-bg-primary { background-color: var(--stratronix-blue); }
+.stratronix-border-primary { border-color: var(--stratronix-blue); }
+
+.stratronix-text-dark { color: var(--stratronix-dark-blue); }
+.stratronix-bg-dark { background-color: var(--stratronix-dark-blue); }
+
+.stratronix-text-light { color: var(--stratronix-light-blue); }
+.stratronix-bg-light { background-color: var(--stratronix-light-blue); }
+
+.stratronix-text-tech { color: var(--stratronix-tech-gray); }
+.stratronix-bg-tech { background-color: var(--stratronix-tech-gray); }
+
+/* Typography Utilities */
+.font-primary { font-family: var(--font-primary); }
+.font-mono { font-family: var(--font-mono); }
+
+.text-brand { font-size: var(--text-4xl); font-weight: var(--font-bold); color: var(--stratronix-blue); }
+.text-title { font-size: var(--text-2xl); font-weight: var(--font-bold); color: var(--stratronix-dark-blue); }
+.text-subtitle { font-size: var(--text-xl); font-weight: var(--font-medium); color: var(--stratronix-blue); }
+.text-body { font-size: var(--text-base); font-weight: var(--font-regular); color: var(--stratronix-tech-gray); line-height: var(--leading-normal); }
+.text-caption { font-size: var(--text-sm); font-weight: var(--font-regular); color: var(--gray-500); }
+
+/* Spacing Utilities */
+.m-0 { margin: var(--space-0); }
+.p-0 { padding: var(--space-0); }
+
+.m-4 { margin: var(--space-4); }
+.p-4 { padding: var(--space-4); }
+
+.m-8 { margin: var(--space-8); }
+.p-8 { padding: var(--space-8); }
+
+.m-16 { margin: var(--space-16); }
+.p-16 { padding: var(--space-16); }
+
+/* Border Utilities */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-base { border-radius: var(--radius-base); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-full { border-radius: var(--radius-full); }
+
+.border-1 { border-width: var(--border-1); }
+.border-2 { border-width: var(--border-2); }
+
+/* Shadow Utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-base { box-shadow: var(--shadow-base); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-brand { box-shadow: var(--shadow-brand); }
+
+/* Component Classes */
+.stratronix-button {
+  font-family: var(--font-primary);
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-200) var(--ease-in-out);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.stratronix-button-primary {
+  background-color: var(--button-primary-bg);
+  color: var(--button-primary-text);
+}
+
+.stratronix-button-primary:hover {
+  background-color: var(--button-primary-hover);
+}
+
+.stratronix-button-primary:active {
+  background-color: var(--button-primary-active);
+}
+
+.stratronix-button-primary:disabled {
+  background-color: var(--button-primary-disabled);
+  cursor: not-allowed;
+}
+
+.stratronix-button-secondary {
+  background-color: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border: var(--border-1) solid var(--button-secondary-border);
+}
+
+.stratronix-button-secondary:hover {
+  background-color: var(--button-secondary-hover);
+}
+
+.stratronix-button-secondary:active {
+  background-color: var(--button-secondary-active);
+}
+
+.stratronix-card {
+  background-color: var(--card-bg);
+  border: var(--border-1) solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.stratronix-input {
+  font-family: var(--font-primary);
+  background-color: var(--input-bg);
+  border: var(--border-1) solid var(--input-border);
+  border-radius: var(--radius-base);
+  color: var(--input-text);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-base);
+  transition: all var(--duration-200) var(--ease-in-out);
+}
+
+.stratronix-input:focus {
+  border-color: var(--input-focus-border);
+  box-shadow: var(--input-focus-shadow);
+  outline: none;
+}
+
+.stratronix-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+/* Grid System */
+.stratronix-container {
+  width: 100%;
+  max-width: var(--breakpoint-xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (min-width: var(--breakpoint-sm)) {
+  .stratronix-container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .stratronix-container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+}
+
+.stratronix-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: var(--space-6);
+}
+
+@media (min-width: var(--breakpoint-md)) {
+  .stratronix-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: var(--breakpoint-lg)) {
+  .stratronix-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: var(--breakpoint-xl)) {
+  .stratronix-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Animation Classes */
+.stratronix-fade-in {
+  animation: stratronixFadeIn var(--duration-300) var(--ease-out);
+}
+
+.stratronix-slide-up {
+  animation: stratronixSlideUp var(--duration-300) var(--ease-out);
+}
+
+.stratronix-pulse {
+  animation: stratronixPulse 2s var(--ease-in-out) infinite;
+}
+
+@keyframes stratronixFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes stratronixSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stratronixPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Logo Styling */
+.stratronix-logo {
+  font-family: var(--font-primary);
+  font-weight: var(--font-bold);
+  color: var(--stratronix-blue);
+  letter-spacing: 0.05em;
+}
+
+.stratronix-logo-dark {
+  color: #FFFFFF;
+  background-color: var(--stratronix-dark-blue);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-base);
+}
+
+.stratronix-logo-minimal {
+  color: var(--stratronix-tech-gray);
+  font-weight: var(--font-medium);
+}
+
+/* Brand Gradient Backgrounds */
+.bg-gradient-primary {
+  background: var(--gradient-primary);
+}
+
+.bg-gradient-light {
+  background: var(--gradient-light);
+}
+
+.bg-gradient-radial {
+  background: var(--gradient-radial);
+}
+
+/* Accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.focus-visible:focus {
+  outline: 2px solid var(--stratronix-blue);
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .stratronix-button,
+  .stratronix-input,
+  .stratronix-card {
+    border: 1px solid #000000 !important;
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+  
+  .bg-gradient-primary,
+  .bg-gradient-light,
+  .bg-gradient-radial {
+    background: #FFFFFF !important;
+  }
+  
+  .stratronix-logo-dark {
+    background-color: #FFFFFF !important;
+    color: #000000 !important;
+    border: 1px solid #000000 !important;
+  }
+}

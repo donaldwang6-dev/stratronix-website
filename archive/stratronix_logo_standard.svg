@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="60" viewBox="0 0 400 60">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&amp;display=swap');
+    .logo-text {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      font-size: 42px;
+      fill: #1A1A1A;
+    }
+  </style>
+  
+  <!-- 主LOGO文字 - 黑色 -->
+  <text x="200" y="45" text-anchor="middle" class="logo-text">STRATRONIX</text>
+</svg>

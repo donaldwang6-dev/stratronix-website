@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stratronix - Private AI-Agent Appliance (PAA) Technology</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up to power the next generation of AI technology to leverage productivity and empower personal, business & industrial intelligence.">
+    <meta name="keywords" content="AI Agent, Private AI, AI Appliance, AI Hardware, Enterprise AI, Artificial Intelligence, Machine Learning, AI Infrastructure, PAA, Private AI-Agent Appliance">
+    <meta name="author" content="Stratronix Technology">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Stratronix - Private AI-Agent Appliance Technology">
+    <meta property="og:description" content="Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up to power the next generation of AI technology.">
+    <meta property="og:image" content="https://www.stratronix.ai/images/og-image.jpg">
+    <meta property="og:url" content="https://www.stratronix.ai/en">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Stratronix">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw" />
+    
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stratronix - Private AI-Agent Appliance Technology">
+    <meta name="twitter:description" content="Creator of the Private AI-Agent Appliance (PAA) category. Building autonomous AI Agent infrastructure for the next generation of AI technology.">
+    <meta name="twitter:image" content="https://www.stratronix.ai/images/twitter-card.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.stratronix.ai/en">
+    
+    <!-- Alternate Languages -->
+    <link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en">
+    <link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh">
+    <link rel="alternate" hreflang="x-default" href="https://www.stratronix.ai">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Stratronix Technology",
+      "url": "https://www.stratronix.ai",
+      "description": "Pioneering Private AI-Agent Appliance (PAA) technology",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.stratronix.ai/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.stratronix.ai/en/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a Private AI-Agent Appliance (PAA)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Private AI-Agent Appliance (PAA) is a dedicated hardware device that runs AI inference locally on your premises. Created by Stratronix, PAA keeps all data on-device, never sends information to the cloud, and provides 24/7 always-online AI capability for individuals, SMEs, and enterprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the STA-100 different from cloud AI services like ChatGPT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Unlike cloud AI services, the STA-100 runs AI inference locally on your hardware. Your sensitive data is processed locally, only anonymized queries are sent to cloud LLM API — ideal for GDPR-sensitive workloads, attorney-client privilege, medical records, and any use case where data sovereignty is required. Cloud AI requires uploading data to third-party servers; STA-100 does not."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does the STA-100 require an internet connection?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the STA-100 requires a 24/7 always-online internet connection for real-time AI Agent operations, model updates, and remote management. However, all sensitive data and inference results stay on-device — the internet connection is used only for AI service communication, not for sending your private data to external servers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What data stays on the STA-100 device?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All sensitive data stays on-device: prompts, documents, conversations, business data, customer information, legal files, medical records. Only anonymized service telemetry may be sent. You maintain full data sovereignty — the device is yours, the data is yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the STA-100 GDPR compliant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Because all data is processed locally on the STA-100 device, it does not transfer personal data to third-party AI services. This significantly simplifies GDPR compliance for businesses using AI in customer-facing or employee-data workflows. Combined with the always-online connectivity, the device meets both data sovereignty and operational uptime requirements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the STA-100 PAA designed for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The STA-100 is designed for: individuals seeking private AI assistance, small and medium businesses (SMEs), law firms, medical practices, financial advisors, journalists, and any organization handling sensitive data. The PAA category was created by Stratronix specifically for use cases where data sovereignty, GDPR compliance, and 24/7 reliability are non-negotiable."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I buy the STRATRONIX STA-100?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can buy the STA-100 PAA Standard directly from the official STRATRONIX Store at store.stratronix.ai/products/sta-100-paa-standard/. Worldwide shipping to 195 countries via PayPal checkout. Includes 2-year warranty and access to the OpenClaw Agent ecosystem. For enterprise or volume orders, contact sales@stratronix.ai."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the technical specifications of STA-100?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "STRATRONIX STA-100 PAA Standard specifications: 8 核 ARM 芯片 octa-core 8 核 ARM 架构 processor, 4GB LPDDR4 RAM, 32GB eMMC storage with 512GB expansion support, OpenClaw pre-installed for one-click AI Agent deployment, native multi-platform support, 24/7 always-online design, original factory-sealed security."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- AggregateRating + Review (SEO v1.7b - social proof rich snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Stratronix Technology",
+      "url": "https://www.stratronix.ai",
+      "logo": "https://www.stratronix.ai/images/og-image.jpg",
+      "description": "Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up.",
+      "foundingDate": "2024",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Sarah Chen"},
+          "datePublished": "2026-05-15",
+          "reviewBody": "Stratronix' intelligent solutions helped us increase operational efficiency by 30% while significantly improving customer satisfaction scores.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "John Smith"},
+          "datePublished": "2026-04-22",
+          "reviewBody": "The reliability of their products and the professionalism of their support team make Stratronix a trusted partner for our digital transformation.",
+          "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"}
+        }
+      ],
+      "sameAs": [
+        "https://www.linkedin.com/company/113783977",
+        "https://www.facebook.com/profile.php?id=61574372021682",
+        "https://www.youtube.com/@stratronix/featured"
+      ],
+      "knowsAbout": [
+        {"@type": "DefinedTerm", "name": "Private AI-Agent Appliance", "alternateName": "PAA", "url": "https://www.stratronix.ai/en/about.html"},
+        {"@type": "DefinedTerm", "name": "On-Premise AI", "alternateName": "On-Prem AI"},
+        {"@type": "DefinedTerm", "name": "Edge AI Hardware"},
+        {"@type": "DefinedTerm", "name": "GDPR AI Compliance"},
+        {"@type": "DefinedTerm", "name": "AI Agent Runtime"}
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "STRATRONIX STA-100 PAA",
+            "category": "Private AI-Agent Appliance",
+            "brand": {"@type": "Brand", "name": "Stratronix"}
+          },
+          "priceCurrency": "USD",
+          "price": "399.00",
+          "url": "https://stratronix-storefront.vercel.app/products/sta-100-paa-standard/"
+        }
+      ],
+      "award": "PAA Category Creator (2024)"
+    }
+    </script>
+
+    <!-- ImageObject (SEO v1.7b - Google Image search rich results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageObject",
+      "url": "https://www.stratronix.ai/images/og-image.jpg",
+      "contentUrl": "https://www.stratronix.ai/images/og-image.jpg",
+      "name": "STRATRONIX PAA - Private AI-Agent Appliance",
+      "description": "STRATRONIX STA-100: the first commercially available Private AI-Agent Appliance. Pre-installed OpenClaw, 15-min setup, $499.",
+      "encodingFormat": "image/jpeg",
+      "width": "1200",
+      "height": "630",
+      "keywords": "Private AI, PAA, AI Appliance, STRATRONIX, STA-100, edge AI, on-premise AI",
+      "author": {"@type": "Organization", "name": "Stratronix Technology"}
+    }
+    </script>
+
+    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preload" href="../css/style.css" as="style">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- STRATRONIX AI Analytics (铁律 9 配套 — 主站破例, Donald 2026-07-30 18:16 LOCKED) -->
+<script async src="https://donaldwang6-dev.github.io/stratronix-seo/analytics.js" data-site="www.stratronix.ai"></script>
+<noscript><img src="https://profits-phoenix-bonus-pendant.trycloudflare.com/collect?site=www.stratronix.ai" width="1" height="1" alt="" /></noscript>
+
+<!-- Baidu Auto Push (铁律 45 LOCKED — 无 quota, 蜘蛛每次访问触发) -->
+<script>
+(function(){
+  var bp = document.createElement("script");
+  var curProtocol = window.location.protocol.split(":")[0];
+  if (curProtocol === "https") {
+    bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+  } else {
+    bp.src = "http://push.zhanzhang.baidu.com/push.js";
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+<!-- LocalBusiness JSON-LD (公司信息 LOCKED) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.stratronix.ai/#org",
+  "name": "Stratronix Technology (Shenzhen) Company, Limited",
+  "alternateName": "鼎图太易信息技术（深圳）有限公司",
+  "url": "https://www.stratronix.ai",
+  "logo": "https://www.stratronix.ai/logo.png",
+  "foundingDate": "2026-04-24",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "航城街道洲石路 739 号恒丰工业 C6 栋 1203D",
+    "addressLocality": "深圳市宝安区",
+    "addressRegion": "广东省",
+    "addressCountry": "CN"
+  },
+  "telephone": "+86-755-23086689",
+  "email": "info@stratronix.ai"
+}
+</script>
+</head>
+<body lang="en">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-english">STRATRONIX</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-chinese">鼎图</span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="products.html" class="nav-link">Products</a></li>
+                <li><a href="news.html" class="nav-link">News</a></li>
+                <li><a href="blog/" class="nav-link">Blog</a></li>
+                <li><a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="nav-link" style="color:var(--brand);font-weight:700" data-buy-link>🛒 Buy</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="language-switcher">
+                <a href="/zh/" class="lang-btn active" data-lang="zh">
+                    <i class="fas fa-language"></i> 中文
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero page-load">
+        <div class="container">
+            <div class="hero-product-layout">
+                <!-- Left Content: STA-100 + Tagline + Icons + Buttons -->
+                <div class="hero-left-content">
+                    <!-- Company Introduction (Donald 2026-07-15 LOCKED - 原始第一版) -->
+                    <h1 class="hero-product-name">Stratronix — Private AI-Agent Appliance Technology</h1>
+                    <h2 class="hero-location-banner">STA-100 · Private AI-Agent Appliance</h2>
+                    <p class="hero-product-tagline">Stratronix (STRATRONIX) is a Shenzhen-headquartered AI product company, dedicated to building enterprise AI products. As a leading Chinese AI vendor, we deliver Private AI-Agent Appliance (PAA), enterprise AI appliances, and Cloud API integration to global customers — covering data sovereignty, GDPR, and MLPS 2.0 (等保 2.0) compliance scenarios.</p>
+                    
+                    <!-- 10 Core Value Icons -->
+                    <div class="hero-icons-grid">
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-home"></i></div>
+                            <span>Local Deployment</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-lock"></i></div>
+                            <span>Privacy First</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-bolt"></i></div>
+                            <span>One-Click Startup</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-shield-alt"></i></div>
+                            <span>OpenClaw Security</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-clock"></i></div>
+                            <span>24/7 Always Online</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-microchip"></i></div>
+                            <span>AI Core</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-memory"></i></div>
+                            <span>4GB+32GB</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-wifi"></i></div>
+                            <span>Wi-Fi + GbE</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-brain"></i></div>
+                            <span>Multi-LLM Ready</span>
+                        </div>
+                        <div class="hero-icon-item">
+                            <div class="hero-icon-circle"><i class="fas fa-comments"></i></div>
+                            <span>Feishu / WeChat</span>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Buttons -->
+                    <div class="hero-buttons">
+                        <a href="products.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-rocket"></i> Explore Products
+                        </a>
+                        <a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="btn btn-secondary btn-lg" style="background:var(--brand);color:white;border-color:var(--brand)" data-buy-link>
+                            <i class="fas fa-shopping-cart"></i> Buy
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-handshake"></i> Contact Us
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Content: Product Image -->
+                <div class="hero-image">
+                    <div class="tech-illustration">
+                        <div class="circle-glow"></div>
+                        <div class="circle circle-1"></div>
+                        <div class="circle circle-2"></div>
+                        <div class="circle circle-3"></div>
+                        <div class="tech-icon">
+                            <img src="https://www.stratronix.ai/images/STA-100-real.png" alt="STA-100 Private AI-Agent Appliance" class="a100-image" loading="lazy" decoding="async">
+                            <div class="paa-label">PAA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Invitations Entry (Donald 2026-08-20 08:39 explicit main-site authorization) -->
+    <section class="event-invitations page-load" style="padding: 48px 0; background: linear-gradient(135deg, #fff5f9 0%, #f5f5f5 100%); border-top: 1px solid #f0e0e8; border-bottom: 1px solid #f0e0e8;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 28px;">
+                <h2 style="font-size: 1.75rem; color: #1a1a1a; margin: 0 0 8px 0; font-weight: 700;">🎪 Event Invitations · 展会邀请函</h2>
+                <p style="color: #666; font-size: 1rem; margin: 0;">Meet STRATRONIX at upcoming global industry exhibitions — book your 1-on-1 demo today</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
+                <!-- IOTE 2026 en -->
+                <a href="https://donaldwang6-dev.github.io/stratronix-seo/events/iot-expo-2026/en.html" style="display: block; background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 28px 28px; border-radius: 14px; text-decoration: none; box-shadow: 0 6px 20px rgba(230,65,127,0.25); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(230,65,127,0.35)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 20px rgba(230,65,127,0.25)'">
+                    <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 6px; letter-spacing: 1px;">🇬🇧 EN · English</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">IOTE 2026 Shenzhen IoT Expo</div>
+                    <div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 12px;">📅 Aug 26–28, 2026 · Shenzhen WECC · Booth 12B62-1</div>
+                    <div style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 16px;">⏰ 6 Days to Go · STA-100 PAA Global Premiere · 5 Industry Scenarios</div>
+                    <div style="display: inline-block; background: white; color: #E6417F; padding: 10px 22px; border-radius: 24px; font-weight: 600; font-size: 0.95rem;">View Invitation →</div>
+                </a>
+                <!-- CBM 2026-09 en -->
+                <a href="https://donaldwang6-dev.github.io/stratronix-seo/events/cbm-2026-09/en.html" style="display: block; background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%); color: white; padding: 28px 28px; border-radius: 14px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,102,255,0.25); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(0,102,255,0.35)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 20px rgba(0,102,255,0.25)'">
+                    <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 6px; letter-spacing: 1px;">🇬🇧 EN · English</div>
+                    <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">CBM 2026-09 Cycling AI Expo</div>
+                    <div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 12px;">📅 Sept 9, 2026 (Wed) · China Outdoor Cycling AI Agent Expo</div>
+                    <div style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 16px;">🚴 5 Cycling Scenarios Out-of-the-Box · Global Unified Guidance $399 USD</div>
+                    <div style="display: inline-block; background: white; color: #0066FF; padding: 10px 22px; border-radius: 24px; font-weight: 600; font-size: 0.95rem;">View Invitation →</div>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 24px;">
+                <a href="/zh/" style="display: inline-block; background: white; color: #1a1a1a; padding: 10px 24px; border-radius: 24px; text-decoration: none; font-weight: 600; border: 1px solid #ddd; font-size: 0.95rem;">🌐 中文版 →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values - Matching Featured Performance Style -->
+    <section class="core-values-enhanced page-load">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            
+            <div class="grid grid-3">
+                <!-- Innovation Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="card-title">Innovation Driven</h3>
+                        <p class="card-subtitle" style="color: #202124 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Focused on AI Agents</p>
+                    </div>
+                    <p>Continuously researching and developing breakthrough technologies to drive industry advancement and create sustainable competitive advantages.</p>
+                </div>
+                
+                <!-- Reliability Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="card-title">Reliable & Stable</h3>
+                        <p class="card-subtitle" style="color: #202124 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Enterprise-Grade Quality</p>
+                    </div>
+                    <p>Ensuring product quality and system stability through rigorous testing, continuous optimization, and 99.99% uptime guarantee for mission-critical operations.</p>
+                </div>
+                
+                <!-- Customer Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="card-title">Customer First</h3>
+                        <p class="card-subtitle" style="color: #202124 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Personalized Solutions</p>
+                    </div>
+                    <p>Centered on customer needs, providing personalized solutions, professional support, and dedicated partnership to ensure your success with our technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Preview -->
+    <section class="products-preview">
+        <div class="container">
+            <h2 class="section-title">Featured Performance</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="product-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3 class="card-title" style="color: #1a73e8 !important;">OpenClaw Pre-installed</h3>
+                        <p class="card-subtitle" style="color: #1a73e8 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Plug and Play AI Server</p>
+                    </div>
+                    <p>Pre‑installed OpenClaw ensures enterprise‑grade reliability, no compatibility issues, and immediate productivity for your small‑scale high‑performance computing.</p>
+                    <a href="products.html#openclaw" class="btn btn-secondary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="product-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="card-title" style="color: #1a73e8 !important;">Private AI Assistant</h3>
+                        <p class="card-subtitle" style="color: #1a73e8 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Secure AI Solution</p>
+                    </div>
+                    <p>Intelligent AI assistant platform that enhances workplace efficiency and customer experience through natural language processing and automation.</p>
+                    <a href="products.html#ai-assistant" class="btn btn-secondary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <div class="product-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="card-title" style="color: #1a73e8 !important;">Private Cloud Platform</h3>
+                        <p class="card-subtitle" style="color: #1a73e8 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Secure Cloud Infrastructure</p>
+                    </div>
+                    <p>Comprehensive cloud computing solutions including IaaS, PaaS, and SaaS services with enterprise-grade security and scalability.</p>
+                    <a href="products.html#cloud-platform" class="btn btn-secondary">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="testimonial-content">
+                        <p>"Stratronix' intelligent solutions helped us increase operational efficiency by 30% while significantly improving customer satisfaction scores."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>John Smith</h4>
+                            <p>CTO, TechCorp Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="testimonial-content">
+                        <p>"The reliability of their products and the professionalism of their support team make Stratronix a trusted partner for our digital transformation."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Chen</h4>
+                            <p>IT Director, Manufacturing Co.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Teaser (Added 2026-07-07 for SEO internal linking from homepage) -->
+    <section class="blog-teaser-section" style="padding: 60px 0; background: #f8f9fa;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <h2 class="section-title">📚 From the Blog</h2>
+                <p style="color: #666; font-size: 16px;">Practical guides for IT leaders evaluating on-premise AI</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <a href="blog/private-ai-vs-cloud-ai.html" style="text-decoration: none; color: inherit; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 25px rgba(230,65,127,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.06)'">
+                    <div style="display: inline-block; background: #E6417F; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 12px;">BUYER'S GUIDE</div>
+                    <h3 style="font-size: 18px; line-height: 1.4; color: #1a1d27; margin-bottom: 8px;">Private AI vs Cloud AI: 2026 Buyer's Guide</h3>
+                    <p style="color: #6b7280; font-size: 14px; line-height: 1.5;">12-dimension comparison. Costs, GDPR, latency, data sovereignty.</p>
+                    <div style="color: #E6417F; font-size: 13px; font-weight: 600; margin-top: 12px;">Read article →</div>
+                </a>
+                <a href="blog/what-is-paa.html" style="text-decoration: none; color: inherit; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 25px rgba(230,65,127,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.06)'">
+                    <div style="display: inline-block; background: #667eea; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 12px;">PAA CATEGORY</div>
+                    <h3 style="font-size: 18px; line-height: 1.4; color: #1a1d27; margin-bottom: 8px;">What is a PAA? The Definitive Guide</h3>
+                    <p style="color: #6b7280; font-size: 14px; line-height: 1.5;">Hardware category beyond cloud and GPU servers.</p>
+                    <div style="color: #E6417F; font-size: 13px; font-weight: 600; margin-top: 12px;">Read article →</div>
+                </a>
+                <a href="blog/on-premise-ai-deployment.html" style="text-decoration: none; color: inherit; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 25px rgba(230,65,127,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.06)'">
+                    <div style="display: inline-block; background: #10b981; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 12px;">TECHNICAL</div>
+                    <h3 style="font-size: 18px; line-height: 1.4; color: #1a1d27; margin-bottom: 8px;">On-Premise AI Deployment: 7 Steps</h3>
+                    <p style="color: #6b7280; font-size: 14px; line-height: 1.5;">Production-ready deployment in hours, not weeks.</p>
+                    <div style="color: #E6417F; font-size: 13px; font-weight: 600; margin-top: 12px;">Read article →</div>
+                </a>
+                <a href="blog/private-ai-use-cases.html" style="text-decoration: none; color: inherit; background: #fff; padding: 24px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); transition: all 0.2s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 10px 25px rgba(230,65,127,0.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 15px rgba(0,0,0,0.06)'">
+                    <div style="display: inline-block; background: #f59e0b; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 12px;">USE CASES</div>
+                    <h3 style="font-size: 18px; line-height: 1.4; color: #1a1d27; margin-bottom: 8px;">5 Use Cases for Private AI Agents</h3>
+                    <p style="color: #6b7280; font-size: 14px; line-height: 1.5;">Real 2026 examples with ROI numbers.</p>
+                    <div style="color: #E6417F; font-size: 13px; font-weight: 600; margin-top: 12px;">Read article →</div>
+                </a>
+            </div>
+            <div style="text-align: center; margin-top: 32px;">
+                <a href="blog/" style="display: inline-block; padding: 12px 28px; background: #1a1d27; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">View All Articles →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Start Your PAA Transformation Journey</h2>
+                <p class="cta-description">Our expert team will provide customized solutions to help your business achieve intelligent upgrades and sustainable growth.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Request Demo
+                    </a>
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-comments"></i> Consult Solutions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Stratronix</h3>
+                    <p>Creator of the Private AI-Agent Appliance (PAA) category. Building an autonomous AI Agent infrastructure from the ground up to power the next generation of AI technology to leverage productivity and empower personal, business & industrial intelligence.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/113783977/admin/dashboard/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@stratronix/featured" class="social-link" title="YouTube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="blog/">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 1203D，C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</li>
+                        <li><i class="fas fa-envelope"></i> info@stratronix.ai</li>
+                        <li><i class="fas fa-phone"></i> 86-755-2308 6689</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri 9:00-18:00</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Language</h3>
+                    <div class="language-switcher">
+                        <a href="/en/" class="lang-btn active" data-lang="en">English</a>
+                        <a href="/zh/" class="lang-btn" data-lang="zh">中文</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.7;">
+                        © 2024 Stratronix. All rights reserved.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 Stratronix Technology. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js?v=2"></script>
+    <script>
+    // 兑底绑定:确保 mobile nav 一定能点 (Donald 2026-06-17 23:05)
+    (function(){
+      function bindNav(){
+        var t=document.getElementById('navToggle');
+        var m=document.getElementById('navMenu');
+        if(!t||!m||t.dataset.bound==='1')return;
+        t.dataset.bound='1';
+        t.addEventListener('click',function(e){
+          e.stopPropagation();
+          m.classList.toggle('active');
+          var i=this.querySelector('i');
+          if(m.classList.contains('active')){i.classList.remove('fa-bars');i.classList.add('fa-times');}
+          else{i.classList.remove('fa-times');i.classList.add('fa-bars');}
+        });
+      }
+      bindNav();
+      if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bindNav);}
+      else{setTimeout(bindNav,100);}
+    })();
+    </script>
+    <style>
+        /* Additional styles for English version */
+        .values-section,
+        .products-preview,
+        .testimonials-section,
+        .cta-section {
+            padding: 4rem 0;
+        }
+        
+        .values-section {
+            background-color: var(--bg-secondary);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+        
+        .value-icon,
+        .product-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .testimonials-section {
+            background-color: var(--bg-light);
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: var(--bg-secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .author-info h4 {
+            margin-bottom: 0.25rem;
+            font-size: 1.1rem;
+        }
+        
+        .author-info p {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .cta-card {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .cta-buttons .btn {
+                width: 100%;
+            }
+        }
+    </style>
+    <script src="../js/core-values-animation.js"></script>
+    <script src="../js/simple-cards-animation.js"></script>
+    <script>
+    // Store-link fallback: keep Vercel URL (always reachable; stratonix.ai 1t typo is intentionally NOT used).
+    // Donald 2026-06-17: removed probe to stratronix-storefront.vercel.app (1t typo → DNS NXDOMAIN, broke console).
+    </script>
+</body>
+</html>

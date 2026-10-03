@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品 - Stratronix PAA解决方案</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 产品页面特有样式 */
+        .products-hero {
+            background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .products-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .products-hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .products-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .products-hero p {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        /* 产品分类 */
+        .product-categories {
+            padding: 60px 0;
+            background: var(--bg-light);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .category-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 115, 232, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .category-icon {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .category-card h3 {
+            font-size: 1.8rem;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+        }
+        
+        .category-card p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+        
+        /* 旗舰产品 */
+        .flagship-product {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 115, 232, 0.1);
+        }
+        
+        .product-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        @media (max-width: 768px) {
+            .product-showcase {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .product-image-container {
+            text-align: center;
+        }
+        
+        .product-main-image {
+            width: 100%;
+            max-width: 500px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            transition: all 0.3s ease;
+        }
+        
+        .product-main-image:hover {
+            transform: scale(1.02);
+        }
+        
+        .product-info h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .product-tag {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .product-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .product-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .product-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .product-features i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* 技术规格 */
+        .tech-specs {
+            padding: 80px 0;
+            background: var(--bg-secondary);
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .spec-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 115, 232, 0.1);
+            border-radius: var(--radius-lg);
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .spec-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .spec-label {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        /* 应用场景 */
+        .use-cases {
+            padding: 80px 0;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 115, 232, 0.1);
+        }
+        
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .case-card {
+            background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .case-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(26, 115, 232, 0.1);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+        
+        .case-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 25px;
+        }
+        
+        /* 图片占位符 */
+        .product-image-placeholder {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--bg-light), var(--bg-secondary));
+            border-radius: var(--radius-lg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            font-size: 1.2rem;
+            border: 2px dashed var(--border-color);
+        }
+        
+        .product-image-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        /* 科技图片样式 */
+        .tech-image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .tech-image {
+            width: 100%;
+            max-width: 800px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            transition: all 0.3s ease;
+        }
+        
+        .tech-image:hover {
+            transform: scale(1.01);
+            box-shadow: var(--shadow-xxl);
+        }
+        
+        .image-caption {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--text-tertiary);
+            font-style: italic;
+        }
+        
+        /* 添加阴影变量 */
+        :root {
+            --shadow-xxl: 0 30px 80px rgba(0, 0, 0, 0.25);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .products-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .products-hero p {
+                font-size: 1.1rem;
+            }
+            
+            .product-info h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body lang="en">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <span class="logo-english">STRATRONIX</span>
+                <span class="logo-divider">/</span>
+                <span class="logo-chinese">鼎图</span>
+            </a>
+            
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">首页</a></li>
+                <li><a href="about.html" class="nav-link">关于</a></li>
+                <li><a href="products.html" class="nav-link active">产品</a></li>
+                <li><a href="news.html" class="nav-link">新闻</a></li>
+                <li><a href="contact.html" class="nav-link">联系</a></li>
+            </ul>
+            
+            <div class="language-switcher">
+                <a href="../zh/products.html" class="lang-btn">
+                    <i class="fas fa-language"></i> 中文
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 产品 Hero -->
+    <section class="products-hero">
+        <div class="products-hero-content">
+            <h1>PAA Product Solutions</h1>
+            <p>Hardware + software integrated systems for autonomous AI agent operation. Our Private AI-Agent Appliances enable continuous, private, and efficient AI deployment.</p>
+        </div>
+    </section>
+
+    <!-- 产品分类 -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>产品类别</h2>
+                <p>Comprehensive PAA solutions for different deployment scenarios</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Enterprise PAA</h3>
+                    <p>高性能设备，适用于大规模企业部署，具有先进的安全性和管理功能。</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>SMB PAA</h3>
+                    <p>经济高效的解决方案，适用于中小型企业，部署和维护简单。</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Edge PAA</h3>
+                    <p>紧凑型设备，适用于边缘计算场景，具有低延迟和离线操作能力。</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 旗舰产品 -->
+    <section class="flagship-product">
+        <div class="container">
+            <div class="section-header">
+                <h2>Flagship Product: A100 PAA</h2>
+                <p>The foundation of autonomous AI infrastructure</p>
+            </div>
+            
+            <div class="product-showcase">
+                <div class="product-image-container">
+                    <div class="tech-image-container">
+                        <img src="https://i.imgur.com/neCWQlr.jpg" alt="A100 私有AI代理设备" class="tech-image">
+                        <div class="image-caption">A100 私有AI代理设备 - Our flagship PAA product</div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-tag">FLAGSHIP</div>
+                    <h2>A100 私有AI代理设备</h2>
+                    <p>The A100 represents our first-generation PAA device, designed to provide a complete hardware + software solution for autonomous AI agent deployment.</p>
+                    
+                    <ul class="product-features">
+                        <li><i class="fas fa-check-circle"></i> <strong>Continuous Operation</strong>: 24/7 autonomous agent runtime</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Privacy First</strong>: Complete data isolation and control</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Energy Efficient</strong>: Optimized for sustainable operation</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Scalable Architecture</strong>: From single unit to cluster deployment</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>OpenClaw Integration</strong>: Built-in agent framework support</li>
+                    </ul>
+                    
+                    <div class="product-actions">
+                        <a href="mailto:info@stratronix.ai?subject=A100私有AI代理设备报价请求&body=尊敬的Stratronix团队，%0D%0A%0D%0A我对贵公司的A100私有AI代理设备感兴趣，希望获取报价信息。请提供价格详情和供货信息。%0D%0A%0D%0A此致，" class="btn btn-primary btn-lg">
+                            <i class="fas fa-shopping-cart"></i> 请求报价
+                        </a>
+                        <a href="#" class="btn btn-secondary btn-lg">
+                            <i class="fas fa-file-pdf"></i> 下载规格书
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技术规格 -->
+    <section class="tech-specs">
+        <div class="container">
+            <div class="section-header">
+                <h2>技术规格</h2>
+                <p>为性能和可靠性而设计</p>
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-value" style="font-size: 1.8rem; font-weight: 700;">Linux</div>
+                    <div class="spec-label">稳定的服务器级系统</div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-value" style="font-size: 1.8rem; font-weight: 700;">Octa-core ARM Cortex</div>
+                    <div class="spec-label">高效能架构</div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-value">32GB</div>
+                    <div class="spec-label">高速内存</div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-value">4× 100GbE</div>
+                    <div class="spec-label">网络接口</div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-value">99.9%</div>
+                    <div class="spec-label">运行时间保证</div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-value">≤ 500W</div>
+                    <div class="spec-label">功耗</div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-value">2 Years</div>
+                    <div class="spec-label">保修期</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 应用场景 -->
+    <section class="use-cases">
+        <div class="container">
+            <div class="section-header">
+                <h2>应用场景</h2>
+                <p>用自主AI代理改变行业</p>
+            </div>
+            
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>金融分析</h3>
+                    <p>实时市场监控和自动化交易策略，具有完全的数据隐私。</p>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Predictive maintenance and quality control through continuous sensor data analysis.</p>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Patient monitoring and medical research with HIPAA-compliant data handling.</p>
+                </div>
+                
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity</h3>
+                    <p>24/7 threat detection and response with isolated security operations.</p>
+                </div>
+                
+                <!-- 新增用例：Call Center -->
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Call Center</h3>
+                    <p>AI-powered customer service with intelligent routing, sentiment analysis, and automated responses.</p>
+                </div>
+                
+                <!-- 新增用例：Bank -->
+                <div class="case-card">
+                    <div class="case-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Bank & Finance</h3>
+                    <p>Secure banking operations with fraud detection, compliance automation, and personalized advisory.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Stratronix / 鼎图</h3>
+                    <p>Building the AI Agent Infrastructure Layer</p>
+                </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>联系</h4>
+                    <p><i class="fas fa-envelope"></i> info@stratronix.ai</p>
+                    <p><i class="fas fa-globe"></i> www.stratronix.ai</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Stratronix Technology. All rights reserved. | Private AI-Agent Appliance (PAA) Category Creator</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航菜单切换
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+        });
+        
+        // 关闭菜单当点击链接时
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('show');
+            });
+        });
+        
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.product-categories, .flagship-product, .tech-specs, .use-cases');
+            sections.forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.2}s`;
+                section.classList.add('page-load');
+            });
+        });
+    </script>
+</body>
+</html>

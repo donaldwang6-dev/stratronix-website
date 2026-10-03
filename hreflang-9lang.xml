@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 9-Language Hreflang Reference for STRATRONIX (2026-07-06 SEO v1.3) -->
+<!-- 当前已上线: en + zh (其他 7 国语言待 Donald 部署翻译) -->
+<!-- 优先级: en (P0 全球), zh (P0 中国), ja (P1 日本/雅虎), de (P1 德国), es (P2 西语), fr (P2 法语), pt (P2 葡语), ru (P3 俄罗斯), ko (P3 韩国), ar (P3 中东) -->
+
+<!-- Homepage hreflang template -->
+<link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/" />
+<link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh/" />
+<link rel="alternate" hreflang="ja" href="https://www.stratronix.ai/ja/" />  <!-- 待 -->
+<link rel="alternate" hreflang="ko" href="https://www.stratronix.ai/ko/" />  <!-- 待 -->
+<link rel="alternate" hreflang="de" href="https://www.stratronix.ai/de/" />  <!-- 待 -->
+<link rel="alternate" hreflang="es" href="https://www.stratronix.ai/es/" />  <!-- 待 -->
+<link rel="alternate" hreflang="fr" href="https://www.stratronix.ai/fr/" />  <!-- 待 -->
+<link rel="alternate" hreflang="pt" href="https://www.stratronix.ai/pt/" />  <!-- 待 -->
+<link rel="alternate" hreflang="ru" href="https://www.stratronix.ai/ru/" />  <!-- 待 -->
+<link rel="alternate" hreflang="ar" href="https://www.stratronix.ai/ar/" />  <!-- 待 -->
+<link rel="alternate" hreflang="x-default" href="https://www.stratronix.ai/" />
