@@ -3,865 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STA-100 Private AI-Agent Appliance - Stratronix Products</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Stratronix STA-100 Private AI-Agent Appliance: Enterprise-grade AI hardware for autonomous AI agents and machine learning workloads.">
-    <meta name="keywords" content="STA-100 AI Appliance, AI Agent Hardware, Private AI Server, Enterprise AI Solution, AI Inference, Machine Learning Server, GPU Server, AI Infrastructure">
-    <meta name="author" content="Stratronix Technology">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="STA-100 Private AI-Agent Appliance - Stratronix">
-    <meta property="og:description" content="Enterprise-grade AI hardware for autonomous AI agents and ML workloads.">
-    <meta property="og:image" content="https://www.stratronix.ai/images/sta100-product.png">
-    <meta property="og:url" content="https://www.stratronix.ai/en/products">
-    <meta property="og:type" content="product">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="STA-100 Private AI-Agent Appliance - Stratronix">
-    <meta name="twitter:description" content="Enterprise AI hardware for autonomous AI agents.">
-    <meta name="twitter:image" content="https://www.stratronix.ai/images/sta100-product.png">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.stratronix.ai/en/products">
-    
-    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <title>STA-100 Workie — Hardware Specifications | STRATRONIX</title>
+    <meta name="description" content="STA-100 Workie hardware specs: Octa-core ARM, 4GB DDR4, 32GB eMMC, 15W/Month, 3.5 TouchScreen, up to 16TB storage. Pre-installed OpenClaw OS.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="dns-prefetch" href="https://store.stratronix.ai">
-    <link rel="preload" href="css/style.css" as="style">
-    
-    <!-- Structured Data for Product -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      "name": "STA-100 Private AI-Agent Appliance",
-      "image": "https://www.stratronix.ai/images/sta100-product.png",
-      "description": "Enterprise-grade AI hardware appliance for autonomous AI agents and machine learning workloads.",
-      "brand": {
-        "@type": "Brand",
-        "name": "Stratronix"
-      },
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "399.00",
-        "availability": "https://schema.org/InStock",
-        "url": "https://store.stratronix.ai/products/sta-100-paa-standard/",
-        "seller": {
-          "@type": "Organization",
-          "name": "Stratronix Technology"
-        }
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "12",
-        "bestRating": "5"
-      }
-    }
-    </script>
-
-    <!-- Structured Data: SoftwareApplication (SEO v1.4) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "OpenClaw for STA-100",
-      "applicationCategory": "AI Agent Platform",
-      "applicationSubCategory": "Private AI Inference",
-      "operatingSystem": "OpenClaw 智能体（小龙虾） (Linux-based ARM64)",
-      "softwareVersion": "v1.0",
-      "fileSize": "Pre-installed",
-      "datePublished": "2026-01-15",
-      "downloadUrl": "https://store.stratronix.ai/products/sta-100-paa-standard/",
-      "screenshot": "https://www.stratronix.ai/images/sta100-product.png",
-      "softwareRequirements": "8 核 ARM 芯片, 4GB RAM, 32GB storage",
-      "memoryRequirements": "4096 MB",
-      "storageRequirements": "32768 MB",
-      "processorRequirements": "8 核 ARM 架构 octa-core",
-      "offers": {
-        "@type": "Offer",
-        "priceCurrency": "USD",
-        "price": "399.00",
-        "availability": "https://schema.org/InStock"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "reviewCount": "12"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "Stratronix Technology",
-        "url": "https://www.stratronix.ai"
-      }
-    }
-    </script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Products页面特有样式 */
-        .products-hero {
-            background: linear-gradient(135deg, #1a73e8 0%, #34a853 100%);
-            color: white;
-            padding: 100px 0;
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; /*汪总: 缩到70% (36*0.7=25.2)*/ }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+
+        /* HERO */
+        .hero { padding: 130px 80px 80px; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-left .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .hero-left h1 { font-size: clamp(32px, 4vw, 56px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+        .hero-left h1 .pink { color: var(--brand); }
+        .hero-left .tagline { font-size: 16px; color: var(--text-dim); margin-bottom: 32px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+        .hero-right { position: relative; text-align: center; }
+        .hero-right img.main-product { width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 30px 70px rgba(0,0,0,0.6); animation: floatY 5s ease-in-out infinite; }
+        .hero-right .product-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(230,65,127,0.2) 0%, transparent 70%); pointer-events: none; z-index: -1; animation: pulseGlow 3s ease-in-out infinite; }
+        @keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+        /* PRICE BADGE */
+        .price-badge { display: inline-block; background: rgba(230,65,127,0.12); border: 1px solid var(--brand); border-radius: 12px; padding: 12px 24px; margin-bottom: 24px; }
+        .price-badge .price { font-size: 28px; font-weight: 900; color: var(--brand); }
+        .price-badge .period { font-size: 13px; color: var(--text-dim); margin-left: 8px; }
+        .price-badge .note { font-size: 11px; color: var(--text-muted); display: block; margin-top: 2px; }
+
+        /* SECTION */
+        .section { padding: 100px 80px; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 44px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        /* SPECS TABLE */
+        .specs-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .specs-container { max-width: 1100px; margin: 0 auto; }
+        .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .spec-group { padding: 32px; border: 1px solid var(--border-solid); margin: -0.5px; }
+        .spec-group .sg-title { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border-solid); }
+        .spec-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); gap: 20px; }
+        .spec-row:last-child { border-bottom: none; }
+        .spec-row .s-label { font-size: 13px; color: var(--text-dim); flex-shrink: 0; }
+        .spec-row .s-value { font-size: 13px; font-weight: 600; color: var(--text); text-align: right; }
+
+        /* PRODUCT IMAGE GALLERY */
+        .gallery-section { padding: 100px 80px; }
+        .gallery-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .gallery-item { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); overflow: hidden; transition: all 0.3s; }
+        .gallery-item:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .gallery-item .gi-label { padding: 14px 18px; font-size: 13px; font-weight: 600; color: var(--text-dim); }
+
+        /* PERFORMANCE */
+        .perf-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .perf-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 36px 28px; text-align: center; transition: all 0.3s; }
+        .perf-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .perf-card .pc-num { font-size: 52px; font-weight: 900; color: var(--brand); line-height: 1; margin-bottom: 8px; }
+        .perf-card .pc-unit { font-size: 16px; font-weight: 600; color: var(--text-dim); }
+        .perf-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+        .perf-card p { font-size: 13px; color: var(--text-dim); }
+
+        /* HOW IT'S BUILT */
+        .build-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .build-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .build-img img { width: 100%; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .build-text h2 { font-size: clamp(24px, 2.5vw, 36px); font-weight: 800; margin-bottom: 20px; }
+        .build-text h2 .pink { color: var(--brand); }
+        .build-text ul { list-style: none; }
+        .build-text ul li { padding: 12px 0; font-size: 15px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .build-text ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; margin-right: 10px; }
+        .build-text ul li:last-child { border-bottom: none; }
+
+        /* INDUSTRY USE CASES */
+        .industry-section { padding: 100px 80px; }
+        .industry-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .ind-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 32px 20px; text-align: center; transition: all 0.3s; }
+        .ind-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .ind-card .ind-icon { font-size: 36px; margin-bottom: 14px; }
+        .ind-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+        .ind-card p { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+        /* PACKAGE */
+        .package-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 80px; }
+        .package-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+        .pkg-item { background: var(--bg); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 28px 16px; }
+        .pkg-item .pkg-icon { font-size: 36px; margin-bottom: 12px; }
+        .pkg-icon svg { width: 36px; height: 36px; stroke: var(--brand); }
+        .pkg-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+        .pkg-item p { font-size: 12px; color: var(--text-dim); }
+
+        /* CTA */
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 900; margin-bottom: 14px; }
+        .cta-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; /*和左上角一致 25px*/ }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        
-        .products-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
-            background-size: cover;
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
         }
-        
-        .products-hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 120px 40px 60px; text-align: center; }
+            .hero-btns { justify-content: center; }
+            .section, .specs-section, .build-section, .industry-section, .package-section, .cta-section { padding: 60px 40px; }
+            .specs-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .perf-grid { grid-template-columns: 1fr; }
+            .build-grid { grid-template-columns: 1fr; }
+            .industry-grid { grid-template-columns: repeat(2, 1fr); }
+            .package-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
         }
-        
-        .products-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            font-weight: 700;
+        @media (max-width: 640px) {
+            .gallery-grid, .industry-grid, .package-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
-        
-        .products-hero p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            opacity: 0.9;
-            max-width: 700px;
-            margin: 0 auto 40px;
-        }
-        
-        /* 产品分类 */
-        .product-categories {
-            padding: 60px 0;
-            background: var(--bg-light);
-        }
-        
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+    
+        /* TRUST FOUNDATION (LOCKED 2026-10-02 — Wang Jie's exact wording) */
+        .trust-foundation {
             max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .category-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(26, 115, 232, 0.1);
-            border-radius: var(--radius-lg);
-            padding: 40px 30px;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-            transition: all 0.3s ease;
-            border-top: 4px solid var(--primary-color);
-        }
-        
-        .category-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .category-icon {
-            font-size: 3.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .category-card h3 {
-            font-size: 1.8rem;
-            color: var(--text-primary);
-            margin-bottom: 15px;
-        }
-        
-        .category-card p {
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-        
-        /* 旗舰产品 */
-        .flagship-product {
-            padding: 80px 0;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(26, 115, 232, 0.1);
-        }
-        
-        .product-showcase {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        @media (max-width: 768px) {
-            .product-showcase {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        .product-image-container {
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
             text-align: center;
         }
-        
-        .product-main-image {
-            width: 100%;
-            max-width: 500px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-xl);
-            transition: all 0.3s ease;
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
         }
-        
-        .product-main-image:hover {
-            transform: scale(1.02);
-        }
-        
-        .product-info h2 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-        
-        .product-tag {
-            display: inline-block;
-            background: var(--secondary-color);
-            color: white;
-            padding: 8px 20px;
-            border-radius: var(--radius-full);
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-top: 8px;
         }
-        
-        .product-features {
-            list-style: none;
-            padding: 0;
-            margin: 25px 0;
+        @media (max-width: 1024px) {
+            .trust-foundation { padding: 30px 40px 20px; }
         }
-        
-        .product-features li {
-            padding: 8px 0;
-            border-bottom: 1px solid var(--border-light);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 0.92rem;
-            line-height: 1.4;
+    
+        /* 10 CORE ICONS */
+        .icons-section {
+            padding: 80px 80px;
+            background: var(--bg);
         }
-        
-        .product-features li:last-child {
-            border-bottom: none;
-        }
-        
-        .product-features i {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-        }
-        
-        /* 技术规格 */
-        .tech-specs {
-            padding: 80px 0;
-            background: var(--bg-secondary);
-        }
-        
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
+        .icons-grid {
+            max-width: 1100px;
             margin: 0 auto;
-        }
-        
-        .spec-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(26, 115, 232, 0.1);
-            border-radius: var(--radius-lg);
-            padding: 30px;
-            text-align: center;
-            box-shadow: var(--shadow-md);
-        }
-        
-        .spec-value {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 10px;
-        }
-        
-        .spec-label {
-            color: var(--text-secondary);
-            font-size: 1.1rem;
-        }
-        
-        /* 应用场景 */
-        .use-cases {
-            padding: 80px 0;
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(26, 115, 232, 0.1);
-        }
-        
-        .cases-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
         }
-        
-        .case-card {
-            background: var(--bg-light);
-            border-radius: var(--radius-lg);
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        
-        .case-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(26, 115, 232, 0.1);
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-5px);
-        }
-        
-        .case-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            margin: 0 auto 25px;
-        }
-        
-        /* 图片占位符 */
-        .product-image-placeholder {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--bg-light), var(--bg-secondary));
-            border-radius: var(--radius-lg);
+        .icon-card {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            color: var(--text-tertiary);
-            font-size: 1.2rem;
-            border: 2px dashed var(--border-color);
+            gap: 10px;
+            padding: 20px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: 12px;
+            transition: all 0.3s;
         }
-        
-        .product-image-placeholder i {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: var(--primary-color);
+        .icon-card:hover { border-color: var(--brand); }
+        .icon-circle {
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            background: rgba(230,65,127,0.1);
+            border-radius: 50%;
         }
-        
-        /* 科技图片样式 */
-        .tech-image-container {
-            margin: 30px 0;
+        .icon-card span {
+            font-size: 13px; font-weight: 600; color: var(--text);
             text-align: center;
         }
-        
-        .tech-image {
-            width: 100%;
-            max-width: 800px;
-            border-radius: var(--radius-lg);
-            box-shadow: var(--shadow-xl);
-            transition: all 0.3s ease;
+        @media (max-width: 1024px) {
+            .icons-section { padding: 60px 40px; }
+            .icons-grid { grid-template-columns: repeat(3, 1fr); }
         }
-        
-        .tech-image:hover {
-            transform: scale(1.01);
-            box-shadow: var(--shadow-xxl);
-        }
-        
-        .image-caption {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: var(--text-tertiary);
-            font-style: italic;
-        }
-        
-        /* 添加阴影变量 */
-        :root {
-            --shadow-xxl: 0 30px 80px rgba(0, 0, 0, 0.25);
-        }
-        
-        /* 响应式调整 */
-        @media (max-width: 768px) {
-            .products-hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .products-hero p {
-                font-size: 1.1rem;
-            }
-            
-            .product-info h2 {
-                font-size: 2rem;
-            }
-        }
+        /* Fade-in on scroll */
+        .scroll-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .scroll-fade.visible { opacity: 1; transform: translateY(0); }
+        .section, .section-header, .specs-section, .specs-grid, .perf-section, .perf-grid, .spec-group, .spec-row, .biz-card, .edu-card, .perf-card, .gallery-section, .gallery-grid, .specs-container { transition: all 0.4s ease; }
     </style>
-    <!-- BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.stratronix.ai/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Products",
-          "item": "https://www.stratronix.ai/products"
-        }
-      ]
-    }
-    </script>
-
-<!-- Baidu Auto Push (铁律 9 LOCKED — 无 quota, 蜘蛛每次访问触发) -->
-<script>
-(function(){
-  var bp = document.createElement("script");
-  var curProtocol = window.location.protocol.split(":")[0];
-  if (curProtocol === "https") {
-    bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
-  } else {
-    bp.src = "http://push.zhanzhang.baidu.com/push.js";
-  }
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(bp, s);
-})();
-</script>
-<!-- STRATRONIX AI Analytics (主站破例: Donald 2026-07-30 18:16 LOCKED) -->
-<script async src="https://donaldwang6-dev.github.io/stratronix-seo/analytics.js" data-site="www.stratronix.ai"></script>
-<noscript><img src="https://profits-phoenix-bonus-pendant.trycloudflare.com/collect?site=www.stratronix.ai" width="1" height="1" alt="" /></noscript>
-
 </head>
-<body lang="en">
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <span class="logo-english">STRATRONIX</span>
-                <span class="logo-divider">/</span>
-                <span class="logo-chinese">鼎图</span>
-            </a>
-            
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="ai-use.html">AI Use</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 Online Shop</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Buy Now</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-left">
+        <div class="eyebrow">STA-100 Workie · Hardware</div>
+        <h1>The <span class="pink">Hardware</span> That Powers Your AI Office</h1>
+        <p class="tagline">Workie is a dedicated AI agent that runs 24/7 on the STA-100 hardware, connected to your favorite messaging apps. Unlike cloud-based chatbots, Workie lives in your local network — your data will stay in your device and become your permanent data asset.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 24px 0;">
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ Works inside WhatsApp / Telegram / WeChat / Slack / Larksuite</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ No app download — just message it like a colleague</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ Cloud API Keys from Multi-LLM: Claude, GPT, Gemini, DeepSeek, Mistral etc.</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ Local memory — remembers your projects and preferences</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ Full system access: email, calendar, files, terminal</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ GDPR & data sovereignty compliant</li>
+        </ul>
+        <div class="hero-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Buy Now — $399</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="product-glow"></div>
+        <img src="images/sta100-product-shot-angle.png" class="main-product" alt="STA-100 Workie">
+    </div>
+</section>
+
+<!-- STA-100 FEATURE IMAGE -->
+<section style="padding:30px 80px;text-align:center;">
+    <img src="images/sta100-feature-4icons.png" alt="STA-100 Workie Features" style="max-width:100%;border-radius:12px;">
+</section>
+
+<!-- STA-100 EASY INSTALL -->
+<section style="padding:0 80px 30px;text-align:center;">
+    <img src="images/sta100-easy-install.png" alt="Easy Installation & Quick Start" style="max-width:100%;border-radius:12px;">
+</section>
+
+<!-- STA-100 24/7 GATEWAY -->
+<section style="padding:0 80px 30px;text-align:center;">
+    <img src="images/sta100-24-7-gateway.png" alt="24/7 All-Time Gateway" style="max-width:100%;border-radius:12px;">
+</section>
+
+<!-- HARDWARE SPECS TABLE -->
+<section class="specs-section">
+    <div class="specs-container">
+        <div class="section-header">
+            <div class="section-label">Full Specifications</div>
+            <h2 class="section-title">Engineered for AI Workloads</h2>
+            <p class="section-subtitle">Built on proven enterprise hardware standards with 6-layer PCBA</p>
+        </div>
+        <div class="specs-grid">
+
+            <div class="spec-group">
+                <div class="sg-title">Processor & Memory</div>
+                <div class="spec-row"><span class="s-label">CPU</span><span class="s-value">Octa-core ARM</span></div>
+                <div class="spec-row"><span class="s-label">RAM</span><span class="s-value">4GB DDR4</span></div>
+                <div class="spec-row"><span class="s-label">Storage (Built-in)</span><span class="s-value">32GB eMMC</span></div>
+                <div class="spec-row"><span class="s-label">Storage Expansion</span><span class="s-value">Up to 512GB (Extended micro SD slot)</span></div>
             </div>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="products.html" class="nav-link active">Products</a></li>
-                <li><a href="news.html" class="nav-link">News</a></li>
-                <li><a href="#" class="nav-link">Blog</a></li>
-                <li><a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="nav-link" style="color:var(--brand);font-weight:700" data-buy-link>🛒 Buy</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
+
+            <div class="spec-group">
+                <div class="sg-title">Power & Thermal</div>
+                <div class="spec-row"><span class="s-label">Power Consumption</span><span class="s-value">15W/Month</span></div>
+                <div class="spec-row"><span class="s-label">Power Supply</span><span class="s-value">DC 12V / 2A</span></div>
+                <div class="spec-row"><span class="s-label">Thermal Design</span><span class="s-value">Inner Fan</span></div>
+                <div class="spec-row"><span class="s-label">PCB Layers</span><span class="s-value">6-Layer PCBA (anti-EMI)</span></div>
+            </div>
+
+            <div class="spec-group">
+                <div class="sg-title">Agent and Size</div>
+                <div class="spec-row"><span class="s-label">Built-in Agent</span><span class="s-value">OpenClaw (Tested Version)</span></div>
+                <div class="spec-row"><span class="s-label">Dimensions</span><span class="s-value">100 × 88 × 35 MM</span></div>
+                <div class="spec-row"><span class="s-label">Weight</span><span class="s-value">150 G</span></div>
+                <div class="spec-row"><span class="s-label">OS Pre-installed</span><span class="s-value">Linux Ubuntu</span></div>
+                <div class="spec-row"><span class="s-label">GUI</span><span class="s-value">XFCE Desktop Environment</span></div>
+            </div>
+
+            <div class="spec-group">
+                <div class="sg-title">Connectivity</div>
+                <div class="spec-row"><span class="s-label">Wi-Fi</span><span class="s-value">Dual Band 5G / 2.4G</span></div>
+                <div class="spec-row"><span class="s-label">Ethernet</span><span class="s-value">RJ45 Gigabit Ethernet</span></div>
+                <div class="spec-row"><span class="s-label">USB</span><span class="s-value">USB 3.0 × 1 / USB 2.0 × 2</span></div>
+                <div class="spec-row"><span class="s-label">Video Output</span><span class="s-value">HDMI</span></div>
+                <div class="spec-row"><span class="s-label">Card Slot</span><span class="s-value">TF card slot</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 10 CORE ICONS (moved from home) -->
+<section class="icons-section" id="icons">
+    <div class="section-header">
+        <div class="section-label">10 Core Features</div>
+        <h2 class="section-title">Why STA-100?</h2>
+        <p class="section-subtitle">Ten pillars of the Personal AI Office Assistant</p>
+    </div>
+    <div class="icons-grid">
+        <div class="icon-card">
+            <div class="icon-circle">🏠</div>
+            <span>Local Data</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🔒</div>
+            <span>Permanent Data Asset</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">⚡</div>
+            <span>One-Click Startup</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🛡️</div>
+            <span>OpenClaw Security</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🕐</div>
+            <span>24/7 Always Online</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🤖</div>
+            <span>AI Core</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">⚙️</div>
+            <span>4GB DDR4 + 32GB</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">📶</div>
+            <span>Wi-Fi + GbE</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🧠</div>
+            <span>Multi-LLM API Key</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">💬</div>
+            <span>Slack/Teams/Whatsapp etc.</span>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCT IMAGE GALLERY -->
+<section class="gallery-section">
+    <div class="section-header">
+        <div class="section-label">Product Gallery</div>
+        <h2 class="section-title">Every Angle, Every Detail</h2>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="images/sta100-gallery-1.jpg" alt="STA-100 Front View">
+            <div class="gi-label">Front View</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-gallery-2.png" alt="STA-100 Side View">
+            <div class="gi-label">Side View</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-gallery-3.png" alt="STA-100 Ports">
+            <div class="gi-label">Ports Detail</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-desk-product.png" alt="STA-100 on desk">
+            <div class="gi-label">Desktop Setup</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-multiview.png" alt="STA-100 multi-view">
+            <div class="gi-label">5-Angle Views</div>
+        </div>
+        
+    </div>
+</section>
+
+<!-- PERFORMANCE HIGHLIGHTS -->
+<!-- HOW IT'S BUILT -->
+<section class="build-section">
+    <div class="build-grid">
+        <div class="build-img">
+            <img src="images/sta100-holo-3d.png" alt="STA-100 3D Holographic">
+        </div>
+        <div class="build-text">
+            <div class="section-label" style="text-align:left;">Built Different</div>
+            <h2>Enterprise-Grade <span class="pink">Hardware Standards</span></h2>
+            <ul>
+                <li><strong>6-Layer PCBA</strong> — Superior signal integrity and anti-electromagnetic interference</li>
+                <li><strong>OpenClaw Pre-installed</strong> — Out-of-box AI, no OS installation needed</li>
+                <li><strong>XFCE GUI OS</strong> — Lightweight Linux desktop, familiar and easy to use</li>
+                <li><strong>Multi-LLM API Key</strong> — Anthropic, OpenAI, Google, Mistral, xAI, DeepSeek</li>
+                <li><strong>All Major IMs</strong> — WhatsApp, Telegram, Discord, Slack, WeChat, Feishu</li>
             </ul>
-            
-            <div class="language-switcher">
-                <a href="../zh/products.html" class="lang-btn">
-                    <i class="fas fa-language"></i> 中文
-                </a>
-            </div>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Products Hero -->
-    <section class="products-hero">
-        <div class="products-hero-content">
-            <h1>PAA Product Solutions</h1>
-            <p>Hardware + software integrated systems for autonomous AI agent operation. Our Private AI-Agent Appliances enable continuous, private, and efficient AI deployment.</p>
+<!-- INDUSTRY USE CASES -->
+<!-- WHAT'S IN THE BOX -->
+<section class="package-section">
+    <div class="section-header">
+        <div class="section-label">Package Contents</div>
+        <h2 class="section-title">Everything You Need in the Box</h2>
+    </div>
+    <div class="package-grid">
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                  <rect x="3" y="4" width="18" height="12" rx="1"/>
+                  <line x1="8" y1="20" x2="16" y2="20"/>
+                  <line x1="12" y1="16" x2="12" y2="20"/>
+                  <circle cx="12" cy="10" r="1.5" fill="#E6417F" stroke="none"/>
+                </svg></div>
+            <h4>STA-100</h4>
+            <p>Main Unit</p>
         </div>
-    </section>
-
-    <!-- 产品分类 -->
-    <section class="product-categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Product Categories</h2>
-                <p>Comprehensive PAA solutions for different deployment scenarios</p>
-            </div>
-            
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Private AI Assistant</h3>
-                    <p>Daily personal document organization and analysis, daily schedule planning, daily industry reports, personal finance analysis and advice. Lightweight AI agent services for urban professionals, super-individuals, and content creators to dramatically improve efficiency.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h3>SMB PAA</h3>
-                    <p>One device serves one job position, working alongside humans; forming an agent collaboration team, 24/7 operation to liberate human resources; humans focus more on decision-making and direction setting. Cost-effective solutions for small and medium enterprises with high IT budgets, easy deployment and maintenance.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
-                </div>
-                
-                <div class="category-card">
-                    <div class="category-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Edge PAA</h3>
-                    <p>Compact devices for edge computing scenarios with low latency and offline operation capabilities.</p>
-                    <a href="#" class="btn btn-primary">Learn More</a>
-                </div>
-            </div>
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                <path d="M2 8 L22 8 L20 16 L4 16 Z"/>
+                <line x1="7" y1="11" x2="7" y2="13"/>
+                <line x1="10" y1="11" x2="10" y2="13"/>
+                <line x1="13" y1="11" x2="13" y2="13"/>
+                <line x1="16" y1="11" x2="16" y2="13"/>
+                <line x1="19" y1="11" x2="19" y2="13"/>
+                <path d="M7 6 L7 4 M12 6 L12 4 M17 6 L17 4"/>
+              </svg></div>
+            <h4>HDMI Cable</h4>
+            <p>Video Output</p>
         </div>
-    </section>
-
-    <!-- 旗舰产品 -->
-    <section class="flagship-product">
-        <div class="container">
-            <div class="section-header">
-                <h2>STA-100 PAA: One Lightweight AI Agent</h2>
-                <p>The foundation of autonomous AI infrastructure</p>
-            </div>
-            
-            <div class="product-showcase">
-                <div class="product-image-container">
-                    <div class="tech-image-container">
-                        <img src="sta100-product.png" alt="STA-100 Private AI-Agent Appliance" class="tech-image" loading="lazy" decoding="async">
-                        <div class="image-caption">STA-100 Private AI-Agent Appliance - Our flagship PAA product</div>
-                    </div>
-                </div>
-                
-                <div class="product-info">
-                    <div class="product-tag">FLAGSHIP</div>
-                    <h2>STA-100 Private AI-Agent Appliance</h2>
-                    <p>The STA-100 represents our first-generation PAA device, designed to provide a complete hardware + software solution for autonomous AI agent deployment.</p>
-                    
-                    <ul class="product-features">
-                        <li><i class="fas fa-check-circle"></i> <strong>Easy to install in 15 min</strong>: We have optimized the OpenClaw framework installation inside our PAA. Customers only click and click till it works. Never so easy!</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Continuous Operation</strong>: 24/7 autonomous agent runtime</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Privacy First</strong>: Complete data isolation and control</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Energy Efficient</strong>: Optimized for sustainable operation</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>Scalable Architecture</strong>: From single unit to cluster deployment</li>
-                        <li><i class="fas fa-check-circle"></i> <strong>OpenClaw Integration</strong>: Built-in agent framework support</li>
-                    </ul>
-                    
-                    <div class="product-actions">
-                        <a href="https://stratronix-storefront.vercel.app" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="background:var(--brand);border-color:var(--brand)" data-buy-link>
-                            <i class="fas fa-shopping-cart"></i> Buy
-                        </a>
-                        <a href="mailto:info@stratronix.ai?subject=Request Quote for STA-100 Private AI-Agent Appliance&body=Dear Stratronix Team,%0D%0A%0D%0AI am interested in requesting a quote for your STA-100 Private AI-Agent Appliance. Please provide me with pricing information and availability details.%0D%0A%0D%0ABest regards," class="btn btn-secondary btn-lg">
-                            <i class="fas fa-shopping-cart"></i> Request Quote
-                        </a>
-                        <a href="#" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-file-pdf"></i> Download Specs
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                      <path d="M4 4 L4 20 L20 20 L20 8 L16 4 Z"/>
+                      <path d="M16 4 L16 8 L20 8"/>
+                      <line x1="7" y1="13" x2="17" y2="13"/>
+                      <line x1="7" y1="16" x2="14" y2="16"/>
+                      <circle cx="9" cy="6" r="1" fill="#E6417F" stroke="none"/>
+                      <path d="M11.5 5.5 L13.5 6.5 L11.5 7.5 Z" fill="#E6417F" stroke="none"/>
+                    </svg></div>
+            <h4>Quick Start Guide</h4>
+            <p>8-10-min setup manual</p>
         </div>
-    </section>
-
-    <!-- 技术规格 -->
-    <section class="tech-specs">
-        <div class="container">
-            <div class="section-header">
-                <h2>Technical Specifications</h2>
-                <p>Engineered for performance and reliability</p>
-            </div>
-            
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <div class="spec-value" style="font-size: 1.8rem; font-weight: 700;">XFCE GUI</div>
-                    <div class="spec-label">Stable Server-used System</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value" style="font-size: 1.8rem; font-weight: 700;">Octa-core ARM Cortex</div>
-                    <div class="spec-label">High-efficiency architecture</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value">32GB</div>
-                    <div class="spec-label">High-Speed Memory</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value" style="font-size: 1.8rem; font-weight: 700;">Up to 512GB</div>
-                    <div class="spec-label">MicroSD (TF Card) Slot</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value" style="font-size: 1.5rem; font-weight: 700;">WiFi & Gigabit Ethernet</div>
-                    <div class="spec-label">Network Interfaces</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value">99.9%</div>
-                    <div class="spec-label">Uptime Guarantee</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value">15KWH / Month Only</div>
-                    <div class="spec-label">Power Consumption</div>
-                </div>
-                
-                <div class="spec-card">
-                    <div class="spec-value">2 Years</div>
-                    <div class="spec-label">Warranty Period</div>
-                </div>
-            </div>
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                  <rect x="6" y="3" width="12" height="16" rx="1.5"/>
+                  <line x1="9" y1="6.5" x2="15" y2="6.5"/>
+                  <circle cx="12" cy="14" r="1.8"/>
+                  <path d="M12 16 L12 18"/>
+                  <path d="M2 12 L5.5 9.5 L5.5 14.5 Z" fill="currentColor" opacity="0.3"/>
+                  <path d="M22 12 L18.5 9.5 L18.5 14.5 Z" fill="currentColor" opacity="0.3"/>
+                </svg></div>
+            <h4>DC Power Adapter</h4>
+            <p>12V / 3A</p>
         </div>
-    </section>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+        <img src="images/sta100-package.png" alt="STA-100 Package Contents" style="max-width:600px;width:100%;border-radius:12px;">
+    </div>
+</section>
 
-    <!-- 应用场景 -->
-    <section class="use-cases">
-        <div class="container">
-            <div class="section-header">
-                <h2>Use Cases</h2>
-                <p>Transforming industries with autonomous AI agents</p>
-            </div>
-            
-            <div class="cases-grid">
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Financial Analysis</h3>
-                    <p>Real-time market monitoring and automated trading strategies with complete data privacy.</p>
-                </div>
-                
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Manufacturing</h3>
-                    <p>Predictive maintenance and quality control through continuous sensor data analysis.</p>
-                </div>
-                
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-stethoscope"></i>
-                    </div>
-                    <h3>Healthcare</h3>
-                    <p>Patient monitoring and medical research with HIPAA-compliant data handling.</p>
-                </div>
-                
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Cybersecurity</h3>
-                    <p>24/7 threat detection and response with isolated security operations.</p>
-                </div>
-                
-                <!-- 新增用例：Call Center -->
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Call Center</h3>
-                    <p>AI-powered customer service with intelligent routing, sentiment analysis, and automated responses.</p>
-                </div>
-                
-                <!-- 新增用例：Bank -->
-                <div class="case-card">
-                    <div class="case-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>Bank & Finance</h3>
-                    <p>Secure banking operations with fraud detection, compliance automation, and personalized advisory.</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 32px;">
-                <a href="#" style="display: inline-block; padding: 12px 28px; background: #E6417F; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">📚 Read 5 Real Use Cases with ROI Numbers →</a>
-            </div>
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>Ready to Power Your <span style="color:var(--brand)">AI Office</span>?</h2>
+        <p>STA-100 Workie — <strong style="color:var(--brand)">$399 USD</strong> one-time. No subscription. Free global shipping. 2-year warranty.</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Buy Now — $399</a>
+            <a href="ai-use.html" class="btn-outline">AI Use Cases</a>
+            <a href="contact.html" class="btn-outline">Contact Sales</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FAQ Section (Added 2026-07-07 for SEO rich snippet eligibility) -->
-    <section class="faq-section" style="padding: 60px 0; background: #f8f9fa;">
-        <div class="container">
-            <h2 style="font-size: 32px; text-align: center; margin-bottom: 12px; color: #1a1d27;">Frequently Asked Questions</h2>
-            <p style="text-align: center; color: #6b7280; margin-bottom: 40px; font-size: 16px;">Everything you need to know about the STRATRONIX STA-100 PAA</p>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
-                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">Is the STA-100 a regular Mini PC or something different?</summary>
-                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">The STA-100 is purpose-built as a <strong>Private AI-Agent Appliance (PAA)</strong>: pre-installed with OpenClaw AI runtime, optimized for on-device LLM inference (Llama 3, Mistral, Qwen 2.5), and managed as an appliance (not a general computer). Unlike a Mini PC that you have to configure from scratch, the STA-100 ships working out-of-the-box with the AI agent stack pre-configured. The hardware uses an 8 核 ARM 架构 octa-core SoC with neural processing unit (NPU), enabling 15-30W inference — 5-10× more efficient than x86 Mini PCs for the same AI workload.</p>
-                </details>
-                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
-                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">Does the STA-100 require internet to work?</summary>
-                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">No. All AI inference runs locally on your premises using on-device LLMs. The STA-100 is designed for <strong>always-on, online-required operation</strong> when you want updates, remote monitoring, or cloud-side AI supplementation — but it does not <em>require</em> internet access to run AI agents on your data. For regulated industries and air-gapped environments, this is the core benefit: zero data ever leaves your network unless you explicitly opt in.</p>
-                </details>
-                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
-                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">What AI models are pre-installed?</summary>
-                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">The STA-100 ships with three open-weight models pre-loaded: <strong>Llama 3.1 8B</strong> (general purpose), <strong>Mistral 7B</strong> (instruction following), and <strong>Qwen 2.5 7B</strong> (multilingual including Chinese). You can download additional models (Llama 3.1 70B, Mistral Large, DeepSeek, CodeLlama, custom fine-tunes) via the management UI. Model updates are pushed automatically as new high-quality open-weight models become available.</p>
-                </details>
-                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
-                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">What's the warranty and what's covered?</summary>
-                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">Every STA-100 includes a <strong>2-year limited warranty</strong> covering hardware defects, manufacturing faults, and pre-installed software issues. The warranty also includes firmware and model-library updates pushed automatically over the lifetime of the device. Extended warranty (3-year and 5-year) is available at point-of-sale. The warranty does not cover physical damage, unauthorized modifications, or third-party software issues.</p>
-                </details>
-                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
-                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">Can I fine-tune models on my own data?</summary>
-                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">Yes. The STA-100 supports fine-tuning of open-weight models (LoRA / QLoRA / full fine-tuning of 7B-class models on the included 32GB storage, expandable to 512GB). Typical fine-tuning projects (10,000-100,000 samples) complete in 4-12 hours on the device. Data used for fine-tuning never leaves your premises. See our technical documentation for detailed instructions.</p>
-                </details>
-                <details style="background: white; padding: 24px; border-radius: 8px; margin-bottom: 16px; cursor: pointer; border: 1px solid #e5e7eb;">
-                    <summary style="font-weight: 600; font-size: 18px; color: #1a1d27;">How does pricing compare to cloud AI services?</summary>
-                    <p style="color: #4b5563; line-height: 1.7; margin-top: 12px;">A STA-100 is a one-time $499 hardware purchase. Cloud AI subscriptions range from $20-30/user/month. For a team of 10+ users with steady AI usage (over 50,000 API calls per month), the STA-100 pays for itself in under 4 months. After that, ongoing cost is just electricity (~$5-10/month). Read our detailed analysis in the <a href="#" style="color: #E6417F;">Private AI vs Cloud AI Buyer's Guide</a>.</p>
-                </details>
-            </div>
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>Mon-Fri 9:00-18:00</p>
         </div>
-    </section>
+        <div>
+            <h4>Products</h4>
+            <ul>
+                <li><a href="products.html">STA-100 Workie</a></li>
+                <li><a href="ai-use.html">AI Use Cases</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 Online Shop</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Resources</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">Buy STA-100</a></li>
+                <li><a href="contact.html">Enterprise Inquiry</a></li>
+                <li><a href="contact.html">Custom AI Agent Dev</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Social</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX is the pioneer of PAA — Personal AI Office Assistant, creating a new category of Office AI products designed to enhance everyday productivity. We build private AI-powered assistants and customized AI Agent solutions for individuals, businesses, and industries.</p>
+        <p class="trust-tagline">Building the next generation of AI-powered productivity.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="news.html">News</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</footer>
 
-    <!-- FAQPage JSON-LD (for Google rich snippets) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Is the STA-100 a regular Mini PC or something different?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The STA-100 is purpose-built as a Private AI-Agent Appliance (PAA): pre-installed with OpenClaw AI runtime, optimized for on-device LLM inference (Llama 3, Mistral, Qwen 2.5), and managed as an appliance. Unlike a Mini PC configured from scratch, the STA-100 ships with the AI agent stack pre-configured."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does the STA-100 require internet to work?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. All AI inference runs locally on your premises. The STA-100 is designed for always-on operation when you want updates, but does not require internet to run AI agents on your data. For regulated industries and air-gapped environments, zero data leaves your network unless you explicitly opt in."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What AI models are pre-installed?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "The STA-100 ships with three open-weight models pre-loaded: Llama 3.1 8B (general purpose), Mistral 7B (instruction following), and Qwen 2.5 7B (multilingual including Chinese). You can download additional models via the management UI."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's the warranty and what's covered?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Every STA-100 includes a 2-year limited warranty covering hardware defects, manufacturing faults, and pre-installed software issues. Extended warranty (3-year and 5-year) is available at point-of-sale."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I fine-tune models on my own data?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The STA-100 supports fine-tuning of open-weight models (LoRA / QLoRA / full fine-tuning). Data used for fine-tuning never leaves your premises."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does pricing compare to cloud AI services?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "A STA-100 is a one-time $499 hardware purchase. Cloud AI subscriptions range from $20-30/user/month. For a team of 10+ users with steady AI usage, the STA-100 pays for itself in under 4 months."
-          }
+<script>
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
         }
-      ]
-    }
-    </script>
+    });
+}, observerOptions);
 
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Stratronix / 鼎图</h3>
-                    <p>Building the AI Agent Infrastructure Layer</p>
-                </div>
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .section-header, .specs-section, .perf-section, .gallery-section, .edu-section, .biz-section, .cta-section, .specs-container, .perf-grid, .gallery-grid, .edu-grid, .biz-grid, .spec-group, .perf-card, .edu-card, .biz-card, .gallery-item');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+</script>
 
-                <div class="footer-links" style="margin-top: 20px;">
-                    <h4>Resources</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> info@stratronix.ai</p>
-                    <p><i class="fas fa-globe"></i> www.stratronix.ai</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Stratronix Technology. All rights reserved. | Private AI-Agent Appliance (PAA) Category Creator</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // 导航菜单切换
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-        
-        // 关闭菜单当点击链接时
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-            });
-        });
-        
-        // 页面加载动画
-        document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.product-categories, .flagship-product, .tech-specs, .use-cases');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.2}s`;
-                section.classList.add('page-load');
-            });
-        });
-    </script>
-    <script>
-    // Store-link fallback: keep Vercel URL (always reachable; stratonix.ai 1t typo is intentionally NOT used).
-    // Donald 2026-06-17: removed probe to store.stratronix.ai (1t typo → DNS NXDOMAIN, broke console).
-    </script>
 </body>
 </html>
