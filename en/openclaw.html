@@ -259,5 +259,6 @@ class ComplianceAgent(Agent):
 <hr>
 <p><a href="/eu/ai-agent">AI Agent</a> | <a href="/eu/ai-company">AI Company</a> | <a href="/eu/shenzhen-ai">Shenzhen AI</a> | <a href="/eu/ai-box">AI Box</a> | <a href="/eu/ai-china">AI China</a></p>
 
+<script>function toggleLang(e){e.stopPropagation();const s=document.getElementById("langSelector");s.classList.toggle("open");const d=document.getElementById("langDropdown");d.style.display=s.classList.contains("open")?"block":"none"}document.addEventListener("click",()=>{const s=document.getElementById("langSelector");if(s){s.classList.remove("open");const d=document.getElementById("langDropdown");if(d)d.style.display="none"}});function initLang(){const c=document.cookie.match(/(?:^|; )lang=([^;]+)/);const p=window.location.pathname.match(/\/([^/]+)\//);const l=c?c[1]:(p?p[1]:"en");const m=document.getElementById("currentLangLabel");if(m)m.textContent=l.toUpperCase()}</script>
 </body>
 </html>

@@ -100,6 +100,19 @@
         .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid var(--border); border-top-color: var(--brand); border-radius: 50%; animation: spin 0.8s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
         .footer { text-align: center; padding: 30px 0 50px; color: var(--text-dim); font-size: 12px; }
+
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
     </style>
 <!-- Baidu Auto Push (铁律 9 LOCKED — 无 quota, 蜘蛛每次访问触发) -->
 <script>
@@ -119,7 +132,7 @@
 <body>
 <div class="topbar">
     <div class="container topbar-inner">
-        <a href="index.html" class="brand">
+        <a href="/en/index.html" class="brand">
             <div class="brand-logo">S</div>
             <div>
                 <div class="brand-name">STRATRONIX</div>
@@ -127,7 +140,7 @@
             </div>
         </a>
         <div class="topbar-actions">
-            <a href="products.html" class="btn btn-ghost"><i class="fas fa-arrow-left"></i> Back to Products</a>
+            <a href="/en/products.html" class="btn btn-ghost"><i class="fas fa-arrow-left"></i> Back to Products</a>
             <a href="https://stratronix-storefront.vercel.app/" target="_blank" class="btn btn-primary" id="openStoreBtn">
                 <i class="fas fa-external-link-alt"></i> Open Store
             </a>
@@ -388,5 +401,6 @@ renderCountryList();
 document.getElementById('lastUpdate').textContent = new Date().toLocaleString();
 setInterval(loadProducts, 5 * 60 * 1000);
 </script>
+<script>function toggleLang(e){e.stopPropagation();const s=document.getElementById("langSelector");s.classList.toggle("open");const d=document.getElementById("langDropdown");d.style.display=s.classList.contains("open")?"block":"none"}document.addEventListener("click",()=>{const s=document.getElementById("langSelector");if(s){s.classList.remove("open");const d=document.getElementById("langDropdown");if(d)d.style.display="none"}});function initLang(){const c=document.cookie.match(/(?:^|; )lang=([^;]+)/);const p=window.location.pathname.match(/\/([^/]+)\//);const l=c?c[1]:(p?p[1]:"en");const m=document.getElementById("currentLangLabel");if(m)m.textContent=l.toUpperCase()}</script>
 </body>
 </html>

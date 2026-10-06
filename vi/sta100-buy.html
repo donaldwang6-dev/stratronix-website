@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STA-100 Workie – AI Agent Riêng Tư Cắm Là Dùng | STRATRONIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brand: #E6417F;
+            --brand-dark: #c9356b;
+            --bg: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-card: #111111;
+            --text: #ffffff;
+            --text-secondary: #999999;
+            --border: #222222;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        a { color: inherit; text-decoration: none; }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            height: 68px;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+        }
+        .nav-logo span { color: var(--brand); }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .nav-icon-btn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .nav-icon-btn:hover { color: var(--text); }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.25s;
+        }
+        .btn-primary {
+            background: var(--brand);
+            color: #fff;
+        }
+        .btn-primary:hover { background: var(--brand-dark); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 1.5px solid rgba(255,255,255,0.2);
+        }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 60px 60px;
+            max-width: 1280px;
+            margin: 0 auto;
+            gap: 60px;
+        }
+        .hero-left { flex: 1; }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 28px;
+        }
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(230,65,127,0.12);
+            border: 1px solid rgba(230,65,127,0.3);
+            color: var(--brand);
+        }
+        .hero-title {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 900;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 20px;
+        }
+        .hero-title .brand { color: var(--brand); }
+        .hero-sub {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 480px;
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+        .hero-price {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        .hero-price small {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-lg { padding: 14px 32px; font-size: 16px; }
+        .hero-right { flex: 1; display: flex; justify-content: center; }
+        .hero-right img {
+            width: 100%;
+            max-width: 480px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 60px rgba(230,65,127,0.15));
+        }
+
+        /* SECTION BASE */
+        section { padding: 80px 60px; max-width: 1280px; margin: 0 auto; }
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--brand);
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 44px);
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        .section-sub {
+            font-size: 16px;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin-bottom: 48px;
+            line-height: 1.7;
+        }
+        .divider {
+            border: none;
+            border-top: 1px solid var(--border);
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* WHY CHOOSE */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .why-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: border-color 0.25s, transform 0.25s;
+        }
+        .why-card:hover {
+            border-color: var(--brand);
+            transform: translateY(-3px);
+        }
+        .why-icon { font-size: 32px; margin-bottom: 16px; }
+        .why-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+        .why-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+        /* USE CASES */
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .uc-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: border-color 0.25s, transform 0.25s;
+        }
+        .uc-card:hover { border-color: var(--brand); transform: translateY(-3px); }
+        .uc-icon { font-size: 36px; margin-bottom: 16px; }
+        .uc-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .uc-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+        /* SPECS */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .spec-item {
+            background: var(--bg-card);
+            padding: 24px 28px;
+        }
+        .spec-label {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand);
+            margin-bottom: 8px;
+        }
+        .spec-value { font-size: 16px; font-weight: 600; }
+
+        /* IN THE BOX */
+        .box-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            max-width: 800px;
+        }
+        .box-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px 24px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: border-color 0.25s;
+        }
+        .box-item:hover { border-color: var(--brand); }
+        .box-check { color: var(--brand); font-size: 18px; }
+
+        /* COMPARE */
+        .compare-table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        .compare-table th, .compare-table td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        .compare-table th {
+            background: var(--bg-card);
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--text-secondary);
+        }
+        .compare-table th:last-child, .compare-table td:last-child {
+            color: var(--brand);
+            font-weight: 700;
+        }
+        .compare-table tr:last-child td { border-bottom: none; }
+        .compare-table tr:hover td { background: rgba(230,65,127,0.04); }
+        .compare-table td:first-child { color: var(--text-secondary); }
+
+        /* TESTIMONIALS */
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .testi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: border-color 0.25s, transform 0.25s;
+        }
+        .testi-card:hover { border-color: var(--brand); transform: translateY(-3px); }
+        .testi-stars { color: #F5A623; font-size: 14px; margin-bottom: 14px; letter-spacing: 2px; }
+        .testi-quote {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            margin-bottom: 18px;
+            font-style: italic;
+        }
+        .testi-author { font-size: 13px; font-weight: 700; }
+        .testi-role { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+        /* FAQ */
+        .faq-list { max-width: 720px; }
+        details {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: border-color 0.25s;
+        }
+        details[open] { border-color: var(--brand); }
+        summary {
+            padding: 18px 24px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; font-size: 20px; color: var(--brand); transition: transform 0.2s; }
+        details[open] summary::after { transform: rotate(45deg); }
+        .faq-body {
+            padding: 0 24px 20px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            text-align: center;
+            padding: 100px 60px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .final-cta .section-title { font-size: clamp(32px, 4vw, 52px); }
+        .cta-price {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-secondary);
+            margin: 20px 0 32px;
+        }
+        .cta-price span { color: var(--brand); }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 60px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        .footer-brand-logo {
+            font-weight: 800;
+            font-size: 20px;
+            letter-spacing: -0.5px;
+            margin-bottom: 14px;
+        }
+        .footer-brand-logo span { color: var(--brand); }
+        .footer-brand p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 260px;
+        }
+        .footer-col h4 {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: color 0.2s;
+        }
+        .footer-col ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        .footer-contact { display: flex; gap: 20px; flex-wrap: wrap; }
+        .footer-contact a { transition: color 0.2s; }
+        .footer-contact a:hover { color: var(--brand); }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .hero { flex-direction: column; padding: 100px 24px 60px; text-align: center; }
+            .hero-left { display: flex; flex-direction: column; align-items: center; }
+            .hero-tags { justify-content: center; }
+            .hero-sub { margin: 0 auto 32px; }
+            .hero-btns { justify-content: center; }
+            section { padding: 60px 24px; }
+            .final-cta { padding: 60px 24px; }
+            footer { padding: 40px 24px; }
+            .footer-top { grid-template-columns: 1fr 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+        @media (max-width: 600px) {
+            .footer-top { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <div class="nav-logo">STRATRONIX<span>.</span></div>
+    <ul class="nav-links">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">AI Use</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+    <div class="nav-right">
+        <button class="nav-icon-btn">🛒</button>
+        <a href="#final-cta" class="btn btn-primary">Mua Ngay</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-left">
+        <div class="hero-tags">
+            <span class="tag">⚡ 15W/Tháng</span>
+            <span class="tag">🌐 24/7 Luôn Online</span>
+            <span class="tag">⏱️ Thiết Lập 8-10 Phút</span>
+        </div>
+        <h1 class="hero-title">STA-100 <span class="brand">Workie</span></h1>
+        <p class="hero-sub">AI Agent Riêng Tư Cắm Là Dùng. Không Cloud. Không Đăng Ký. Không Thỏa Hiệp.</p>
+        <div class="hero-price">$399 <small>USD</small></div>
+        <div class="hero-btns">
+            <a href="#final-cta" class="btn btn-primary btn-lg">Mua Ngay</a>
+            <a href="#specs" class="btn btn-outline btn-lg">Xem Thông Số</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="images/sta100-product-shot-angle.jpg" alt="STA-100 Workie">
+    </div>
+</div>
+
+<hr class="divider">
+
+<!-- WHY CHOOSE -->
+<section id="why">
+    <div class="section-label">Tại Sao Chọn</div>
+    <h2 class="section-title">Mọi Thứ Bạn Cần.<br>Không Có Thứ Bạn Không Cần.</h2>
+    <p class="section-sub">Được xây dựng cho các chuyên gia cần khả năng AI thực sự mà không phải từ bỏ dữ liệu của mình cho cloud.</p>
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="why-icon">🔒</div>
+            <h3>100% Riêng Tư</h3>
+            <p>Tất cả dữ liệu ở trên thiết bị của bạn. Không cloud, không theo dõi, không rò rỉ. Công việc của bạn là của riêng bạn.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">⚡</div>
+            <h3>Sẵn Sàng OpenClaw</h3>
+            <p>Đã cài sẵn OpenClaw AI Agent. Chỉ cần cắm và bắt đầu. Không cần cài đặt phức tạp.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🌍</div>
+            <h3>Vận Chuyển Toàn Cầu</h3>
+            <p>Hỗ trợ 195 quốc gia. Giao hàng trong 1-3 ngày làm việc từ Thâm Quyến.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🛡️</div>
+            <h3>Bảo Hành 2 Năm</h3>
+            <p>Bảo hành phần cứng đầy đủ cộng với cập nhật phần mềm trọn đời. Chúng tôi đứng sau sản phẩm của mình.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-icon">🎯</div>
+            <h3>Được Xây Dựng Cho Công Việc Thực</h3>
+            <p>Một thiết bị, mọi workflow — từ văn phòng nhà đến edge công nghiệp. Linh hoạt theo thiết kế.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- USE CASES -->
+<section id="use-cases">
+    <div class="section-label">Trường Hợp Sử Dụng</div>
+    <h2 class="section-title">Hỗ Trợ Chuyên Gia<br>Trong Mọi Ngành</h2>
+    <p class="section-sub">STA-100 thích ứng với workflow của bạn. Triển khai một lần, sử dụng mãi mãi — trên bàn làm việc, ngoài thực địa, hoặc tại edge.</p>
+    <div class="use-cases-grid">
+        <div class="uc-card">
+            <div class="uc-icon">🏠</div>
+            <h3>Văn Phòng Nhà</h3>
+            <p>Chạy trợ lý AI, tóm tắt tài liệu, soạn email, lên lịch họp — tất cả trên bàn làm việc, không phụ thuộc cloud. Cuộc trò chuyện gia đình không bao giờ rời khỏi nhà.</p>
+        </div>
+        <div class="uc-card">
+            <div class="uc-icon">🏢</div>
+            <h3>Doanh Nghiệp Nhỏ</h3>
+            <p>AI hỗ trợ khách hàng, tự động hóa tài liệu, cơ sở kiến thức nội bộ. 1 thiết bị / 1 agent dành riêng cho workflow của bạn. Không bị khóa đăng ký SaaS.</p>
+        </div>
+        <div class="uc-card">
+            <div class="uc-icon">🛡️</div>
+            <h3>Pháp Lý & Y Tế</h3>
+            <p>Tuân thủ HIPAA / GDPR / đặc quyền luật sư-khách hàng. Xử lý tài liệu nhạy cảm trên thiết bị. Không có quyền truy cập AI của bên thứ ba vào dữ liệu khách hàng. Vượt qua mọi kiểm tra tuân thủ.</p>
+        </div>
+        <div class="uc-card">
+            <div class="uc-icon">🎓</div>
+            <h3>Nghiên Cứu & Giáo Dục</h3>
+            <p>Suy luận LLM cục bộ, phân tích tập dữ liệu, soạn bài báo. Không phí API theo token. Kết hợp với API endpoint cho các mô hình lớn hơn khi cần.</p>
+        </div>
+        <div class="uc-card">
+            <div class="uc-icon">🏭</div>
+            <h3>Công Nghiệp & Edge</h3>
+            <p>Kết hợp với module 4G LTE + GPS cho các địa điểm từ xa, phương tiện, nhà máy. Hoạt động không cần internet. Hỗ trợ dải nhiệt độ công nghiệp.</p>
+        </div>
+        <div class="uc-card">
+            <div class="uc-icon">👨‍💻</div>
+            <h3>Nhà Phát Triển</h3>
+            <p>KHÔNG. Nó chạy bằng cách kết nối với Cloud API Keys.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- HARDWARE SPECS -->
+<section id="specs">
+    <div class="section-label">Thông Số Phần Cứng</div>
+    <h2 class="section-title">Phần Cứng Xây Dựng.<br>Hiệu Suất Thực.</h2>
+    <p class="section-sub">Được xây dựng có mục đích cho khối lượng công việc AI 24/7 — không phải phần cứng tiêu dùng được tận dụng lại.</p>
+    <div class="specs-grid">
+        <div class="spec-item">
+            <div class="spec-label">Bộ Xử Lý</div>
+            <div class="spec-value">8-core ARM Cortex</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">RAM</div>
+            <div class="spec-value">4 GB DDR4</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Lưu Trữ</div>
+            <div class="spec-value">32 GB eMMC (mở rộng lên 16TB)</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Công Suất</div>
+            <div class="spec-value">15W/Tháng</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Kết Nối</div>
+            <div class="spec-value">Ethernet Gigabit + 5G WiFi</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Màn Hình</div>
+            <div class="spec-value">Màn Hình Cảm Ứng 3.5"</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Hệ Điều Hành</div>
+            <div class="spec-value">OpenClaw Đã Cài Sẵn</div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- WHAT'S IN THE BOX -->
+<section id="box">
+    <div class="section-label">Trong Hộp</div>
+    <h2 class="section-title">Mọi Thứ Bạn Cần<br>Để Bắt Đầu</h2>
+    <p class="section-sub">Mở hộp, cắm điện, và bắt đầu làm việc trong chưa đến 10 phút. Không cần công cụ.</p>
+    <div class="box-list">
+        <div class="box-item"><span class="box-check">✓</span> Thiết Bị STA-100</div>
+        <div class="box-item"><span class="box-check">✓</span> Bộ Chuyển Đổi Nguồn</div>
+        <div class="box-item"><span class="box-check">✓</span> Cáp Ethernet</div>
+        <div class="box-item"><span class="box-check">✓</span> Hướng Dẫn Bắt Đầu Nhanh</div>
+        <div class="box-item"><span class="box-check">✓</span> Thẻ Bảo Hành 2 Năm</div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- COMPARE -->
+<section id="compare">
+    <div class="section-label">So Sánh</div>
+    <h2 class="section-title">Một Sản Phẩm.<br>Không Thỏa Hiệp.</h2>
+    <p class="section-sub">Định giá đơn giản, minh bạch. Không phí ẩn, không giới hạn sử dụng, không đăng ký.</p>
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>Tính Năng</th>
+                <th>STA-100 Tiêu Chuẩn</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Giá</td><td>$399 USD</td></tr>
+            <tr><td>RAM</td><td>4 GB</td></tr>
+            <tr><td>Lưu trữ</td><td>32 GB (lên đến 16TB)</td></tr>
+            <tr><td>CPU</td><td>8-core ARM Cortex</td></tr>
+            <tr><td>AI Agents Đồng Thời</td><td>1 Thiết Bị / 1 Agent</td></tr>
+            <tr><td>OpenClaw Đã Cài Sẵn</td><td>✓</td></tr>
+            <tr><td>Bảo Hành</td><td>2 năm</td></tr>
+            <tr><td>Phù Hợp Nhất Cho</td><td>Chuyên gia nhạy cảm về quyền riêng tư, văn phòng nhà, SME, nhà phát triển</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<hr class="divider">
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+    <div class="section-label">Đánh Giá</div>
+    <h2 class="section-title">Được Tin Tưởng Bởi Chuyên Gia<br>Trên Toàn Thế Giới</h2>
+    <p class="section-sub">Người dùng thực. Kết quả thực. Quyền riêng tư thực.</p>
+    <div class="testi-grid">
+        <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Thiết lập trong 10 phút. Thay thế ba đăng ký SaaS. Việc không có gì rời khỏi mạng văn phòng của tôi mới là tính năng quan trọng thực sự."</p>
+            <div class="testi-author">Marcus L.</div>
+            <div class="testi-role">Tư Vấn CNTT, Hoa Kỳ</div>
+        </div>
+        <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Cloud AI không thể sử dụng được do HIPAA. STA-100 trên bàn làm việc cho phép chúng tôi triển khai trợ lý cấp GPT với tuân thủ đầy đủ."</p>
+            <div class="testi-author">Dr. Sarah K.</div>
+            <div class="testi-role">Giám Đốc Phòng Khám, Canada</div>
+        </div>
+        <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"PAA Tiêu chuẩn thay thế SaaS xem xét tài liệu của chúng tôi. Hoàn vốn trong tháng đầu tiên. Các OpenClaw agents xử lý tiếp nhận 24/7."</p>
+            <div class="testi-author">James R.</div>
+            <div class="testi-role">Luật Sư, Vương Quốc Anh</div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- FAQ -->
+<section id="faq">
+    <div class="section-label">FAQ</div>
+    <h2 class="section-title">Câu Hỏi?<br>Chúng Tôi Có Câu Trả Lời.</h2>
+    <div class="faq-list">
+        <details>
+            <summary>OpenClaw là gì và tại sao nó được cài sẵn?</summary>
+            <div class="faq-body">OpenClaw là nền tảng thiết bị AI agent riêng tư. Nó được cài sẵn để thiết bị hoạt động ngay khi bạn cắm điện — không cần cài phần mềm, không cần cấu hình. Bạn có một AI agent hoạt động đầy đủ trên mạng của mình, dưới sự kiểm soát của bạn.</div>
+        </details>
+        <details>
+            <summary>STA-100 có hoạt động không cần internet không?</summary>
+            <div class="faq-body">Có. STA-100 chạy hoàn toàn trên thiết bị. Nó có thể hoạt động đầy đủ offline. Internet chỉ cần cho thiết lập ban đầu và truy cập cloud model API tùy chọn nếu bạn chọn sử dụng các nhà cung cấp LLM bên ngoài.</div>
+        </details>
+        <details>
+            <summary>Tôi có thể chạy LLM của riêng mình (Llama, Mistral, v.v.) không?</summary>
+            <div class="faq-body">Hoàn toàn có thể. STA-100 hỗ trợ suy luận LLM cục bộ qua OpenClaw. Bạn có thể chạy Llama, Mistral, Phi và các mô hình open-weight khác trực tiếp trên thiết bị mà không phụ thuộc cloud.</div>
+        </details>
+        <details>
+            <summary>Điều này khác với ChatGPT như thế nào?</summary>
+            <div class="faq-body">ChatGPT gửi dữ liệu của bạn đến máy chủ OpenAI. STA-100 giữ tất cả dữ liệu trên mạng cục bộ của bạn. Không phí đăng ký hàng tháng, không thu hoạch dữ liệu, không giới hạn tốc độ, không cần internet. Bạn sở hữu phần cứng, bạn sở hữu AI.</div>
+        </details>
+        <details>
+            <summary>Hỗ trợ và bảo hành như thế nào?</summary>
+            <div class="faq-body">Mỗi STA-100 đi kèm bảo hành phần cứng 2 năm đầy đủ và cập nhật phần mềm trọn đời. Hỗ trợ có sẵn qua email tại info@stratronix.ai trong Thứ 2 - Thứ 6 9:00-18:00 CST.</div>
+        </details>
+        <details>
+            <summary>Bạn có giao hàng đến quốc gia của tôi không?</summary>
+            <div class="faq-body">Chúng tôi giao hàng đến 195 quốc gia trên toàn thế giới qua các hãng vận chuyển quốc tế tiêu chuẩn. Hầu hết đơn hàng được gửi trong 1-3 ngày làm việc từ kho hàng Thâm Quyến của chúng tôi. Chi phí vận chuyển và thời gian giao hàng khác nhau tùy theo điểm đến.</div>
+        </details>
+        <details>
+            <summary>Tôi có thể trả lại nếu nó không phù hợp với tôi không?</summary>
+            <div class="faq-body">Có. Chúng tôi cung cấp chính sách trả lại 30 ngày cho các thiết bị không bị hư hại trong bao bì gốc. Liên hệ info@stratronix.ai để bắt đầu trả lại. Chi phí vận chuyển trả lại do người mua chịu trừ khi thiết bị bị lỗi.</div>
+        </details>
+        <details>
+            <summary>Giá sỉ/nền tảng có sẵn không?</summary>
+            <div class="faq-body">Có. Chúng tôi cung cấp giảm giá số lượng cho đơn hàng nền tảng và sỉ (5+ đơn vị). Liên hệ đội ngũ bán hàng tại info@stratronix.ai để được báo giá tùy chỉnh phù hợp với nhu cầu của tổ chức bạn.</div>
+        </details>
+    </div>
+</section>
+
+<hr class="divider">
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="final-cta">
+    <div class="section-label">Bắt Đầu Hôm Nay</div>
+    <h2 class="section-title">Sẵn Sàng Gặp Đồng Nghiệp<br>AI Của Bạn?</h2>
+    <p class="section-sub" style="margin: 0 auto 0;">Ngừng trả tiền hàng tháng cho AI bán dữ liệu của bạn. Một thiết bị. Giá một lần. Sở hữu vĩnh viễn.</p>
+    <div class="cta-price"><span>$399</span> USD — Mua một lần. Không đăng ký. Vận chuyển toàn cầu.</div>
+    <div class="cta-btns">
+        <a href="https://store.stratronix.ai" class="btn btn-primary btn-lg">Mua Ngay — $399 USD</a>
+        <a href="#" class="btn btn-outline btn-lg">Liên Hệ Bán Hàng</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top">
+        <div class="footer-brand">
+            <div class="footer-brand-logo">STRATRONIX<span>.</span></div>
+            <p>1203D, C6, Thành Phố Công Nghiệp Henfeng, Đường Zhoushi, Phường Hangcheng, Quận Bao'an, Thành Phố Thâm Quyến, Tỉnh Quảng Đông, Trung Quốc</p>
+        </div>
+        <div class="footer-col">
+            <h4>Sản Phẩm</h4>
+            <ul>
+                <li><a href="#">STA-100 Workie</a></li>
+                <li><a href="#">Phụ Kiện</a></li>
+                <li><a href="#">Doanh Nghiệp</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Công Ty</h4>
+            <ul>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Tuyển Dụng</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Tài Nguyên</h4>
+            <ul>
+                <li><a href="#">Tài Liệu</a></li>
+                <li><a href="#">Hỗ Trợ</a></li>
+                <li><a href="#">Diễn Đàn</a></li>
+                <li><a href="#">Chính Sách Bảo Mật</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. Mọi quyền được bảo lưu.</span>
+        <div class="footer-contact">
+            <a href="mailto:info@stratronix.ai">info@stratronix.ai</a>
+            <a href="tel:+8675523086689">86-755-2308 6689</a>
+            <span>Thứ 2 - Thứ 6 9:00-18:00 CST</span>
+        </div>
+    </div>
+</footer>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

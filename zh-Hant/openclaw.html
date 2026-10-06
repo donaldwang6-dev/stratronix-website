@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<title>OpenClaw OS：STRATRONIX PAA AI 代理作業系統</title>
+<meta name="description" content="OpenClaw OS 是為 STRATRONIX PAA 提供動力的開源 AI 代理作業系統。BSD-3 許可。支援 Llama 3.3 70B、Qwen、Mistral。MCP 相容。Python SDK。">
+<meta name="keywords" content="OpenClaw,OpenClaw OS,OpenClaw AI,STRATRONIX OpenClaw,open source AI OS,AI Agent OS,open source LLM,OpenClaw PAA">
+<meta name="yandex-verification" content="e5f7d6b34a469017" />
+<link rel="canonical" href="https://www.stratronix.ai/eu/openclaw" />
+<meta property="og:title" content="OpenClaw OS：AI 代理作業系統">
+<meta property="og:description" content="開源 AI 代理 OS。BSD-3。為 STRATRONIX PAA 提供動力。">
+</head>
+<body>
+<nav><a href="/">首頁</a> > <a href="/eu">歐洲</a> > OpenClaw</nav>
+
+<h1>OpenClaw OS：AI 代理作業系統</h1>
+<p>由 <a href="https://www.stratronix.ai">STRATRONIX</a> | 更新於 2026-07-14</p>
+
+<h2>什麼是 OpenClaw？</h2>
+
+<p><strong>OpenClaw OS</strong> 是為 STRATRONIX PAA 提供動力的開源 AI 代理作業系統。在 BSD-3-Clause 許可下發布，OpenClaw 是自託管 AI 代理部署的基礎。</p>
+
+<p>OpenClaw 對於 AI 代理，就像 Linux 對於伺服器：</p>
+
+<ul>
+<li>Linux → 伺服器（1991）→ 革命</li>
+<li>OpenClaw → AI 代理（2025）→ 革命</li>
+</ul>
+
+<h2>OpenClaw 功能</h2>
+
+<h3>1. 多 LLM 支援</h3>
+<p>OpenClaw 出廠支援 10+ 個 LLM：</p>
+<ul>
+<li>Llama 3.3 70B / 8B（Meta）</li>
+<li>Qwen 2.5 72B（阿里巴巴）</li>
+<li>Mistral 7B / 22B / Mixtral</li>
+<li>DeepSeek V2 / R1</li>
+<li>GLM-4（智譜）</li>
+<li>Aquila（BAAI）</li>
+<li>Yi（01.AI）</li>
+<li>InternLM（上海 AI Lab）</li>
+<li>使用者微調模型</li>
+</ul>
+
+<h3>2. 10 個預建 AI 代理</h3>
+<ol>
+<li>銷售代理（CRM 整合）</li>
+<li>客戶服務代理（24/7 多語言）</li>
+<li>法務代理（合同審查）</li>
+<li>人力資源代理（簡歷篩選）</li>
+<li>財務代理（發票 OCR）</li>
+<li>行銷代理（多語言內容）</li>
+<li>程式代理（PR 審查）</li>
+<li>研究代理（市場分析）</li>
+<li>個人助理（行事曆/郵件）</li>
+<li>自訂代理（Python SDK）</li>
+</ol>
+
+<h3>3. RAG 引擎</h3>
+<ul>
+<li>向量資料庫（內建 Qdrant）</li>
+<li>文件攝取（PDF、DOCX、XLSX、MD、HTML）</li>
+<li>多模態支援（文字 + 圖像）</li>
+<li>混合搜索（向量 + 關鍵字）</li>
+</ul>
+
+<h3>4. MCP 相容性</h3>
+<p>OpenClaw 實現了模型上下文協定（Anthropic 的標準），實作了與更廣泛的 MCP 生態系統的相容性。</p>
+
+<h3>5. Python Agent SDK</h3>
+<p>構建自訂代理：</p>
+
+<pre><code>from openclaw import Agent, Tool
+
+class ComplianceAgent(Agent):
+    name = "Compliance Checker"
+    description = "Reviews documents for GDPR violations"
+
+    def setup(self):
+        self.add_tool(Tool(
+            name="check_gdpr",
+            handler=self.check_gdpr_handler
+        ))
+
+    def check_gdpr_handler(self, document):
+        # 自訂邏輯
+        return violations
+</code></pre>
+
+<h3>6. REST API</h3>
+<p>用於系統整合的程式化存取：</p>
+
+<pre><code>POST /api/v1/agents/sales/query
+{
+  "input": "Draft an email to my team about Q3 results",
+  "context": {"user_id": "donald@stratronix.ai"}
+}
+</code></pre>
+
+<h2>OpenClaw 架構</h2>
+
+<pre>
+┌─────────────────────────────────────┐
+│         OpenClaw OS                  │
+├─────────────────────────────────────┤
+│  10 個預建代理 + 自訂 SDK            │
+├─────────────────────────────────────┤
+│  代理編排器                         │
+├─────────────────────────────────────┤
+│  RAG 引擎 + Qdrant 向量 DB           │
+├─────────────────────────────────────┤
+│  LLM 運行時（Llama/Qwen/Mistral）   │
+├─────────────────────────────────────┤
+│  MCP 伺服器                         │
+├─────────────────────────────────────┤
+│  REST API + Web 管理                │
+├─────────────────────────────────────┤
+│  Rocky Linux 9                      │
+└─────────────────────────────────────┘
+```
+
+<h2>OpenClaw 開源詳情</h2>
+
+<ul>
+<li><strong>許可</strong>：BSD-3-Clause（寬容，商業友好）</li>
+<li><strong>GitHub</strong>：github.com/donaldwang6-dev/openclaw</li>
+<li><strong>版本</strong>：v2026.07.14</li>
+<li><strong>發布</strong>：每月（48 小時內安全補丁）</li>
+<li><strong>社群</strong>：Discord + 論壇</li>
+<li><strong>貢獻者</strong>：25+（華為前工程師 + STRATRONIX 團隊）</li>
+</ul>
+
+<h2>為什麼開源？</h2>
+
+<p>STRATRONIX 為歐洲市場選擇 BSD-3-Clause 許可是因為：</p>
+
+<ol>
+<li><strong>歐洲偏好</strong>：歐盟公共部門通常需要開源</li>
+<li><strong>信任</strong>：可審計的程式碼 = 無後門</li>
+<li><strong>合規</strong>：NIS2 + GDPR 與開源一致</li>
+<li><strong>創新</strong>：社群貢獻加速</li>
+<li><strong>無供應商鎖定</strong>：如果 STRATRONIX 消失，客戶可以分叉</li>
+</ol>
+
+<h2>OpenClaw 應用場景</h2>
+
+<h3>1. 企業 AI 代理部署</h3>
+<p>公司部署 OpenClaw + STRATRONIX PAA 在本地運行 AI 代理。GDPR 合規有保證。</p>
+
+<h3>2. 自訂 AI 代理開發</h3>
+<p>開發者使用 OpenClaw SDK + Python 構建特定領域代理（醫療、法律、金融）。</p>
+
+<h3>3. LLM 研究</h3>
+<p>研究人員使用 OpenClaw 在生產硬體上測試新 LLM（Qwen、DeepSeek、自訂微調）。</p>
+
+<h3>4. AI 教育</h3>
+<p>大學使用 OpenClaw 教學 AI 代理開發（BSD-3 商業友好）。</p>
+
+<h2>OpenClaw vs LangChain / LlamaIndex</h2>
+
+<table border="1" cellpadding="8">
+<tr><th>維度</th><th>OpenClaw</th><th>LangChain</th><th>LlamaIndex</th></tr>
+<tr><td>類型</td><td>完整 OS</td><td>函式庫</td><td>函式庫</td></tr>
+<tr><td>硬體整合</td><td>原生</td><td>無</td><td>無</td></tr>
+<tr><td>預建代理</td><td>10</td><td>0</td><td>0</td></tr>
+<tr><td>許可</td><td>BSD-3</td><td>MIT</td><td>MIT</td></tr>
+<tr><td>生產就緒</td><td>是</td><td>DIY</td><td>DIY</td></tr>
+<tr><td>UI/管理</td><td>Web 面板</td><td>無</td><td>無</td></tr>
+</table>
+
+<h2>OpenClaw + STRATRONIX PAA</h2>
+
+<p>OpenClaw OS 預裝在每台 STRATRONIX PAA 設備上：</p>
+
+<ul>
+<li>購買 PAA → OpenClaw OS 就緒</li>
+<li>8-10 分鐘設定 → AI 代理運行</li>
+<li>10 個預建代理已啟動</li>
+<li>OpenClaw 更新自動應用</li>
+</ul>
+
+<h2>OpenClaw GitHub 統計</h2>
+
+<ul>
+<li>Stars：4,200+（截至 2026-07）</li>
+<li>Forks：380+</li>
+<li>貢獻者：25+</li>
+<li>發布：12+</li>
+<li>Discord 會員：1,500+</li>
+<li>生產部署：200+ 公司</li>
+</ul>
+
+<h2>路線圖（2026-2027）</h2>
+
+<h3>2026 年第三季度</h3>
+<ul>
+<li>多模態支援（圖像 + 語音）</li>
+<li>更多預建代理（共 15 個）</li>
+<li>OpenClaw Cloud（可選）</li>
+</ul>
+
+<h3>2026 年第四季度</h3>
+<ul>
+<li>OpenClaw 代理市場</li>
+<li>多語言代理提示（10 種語言）</li>
+</ul>
+
+<h3>2027 年</h3>
+<ul>
+<li>OpenClaw 企業版（商業版）</li>
+<li>OpenClaw Federation（多 PAA 集群）</li>
+</ul>
+
+<h2>開始使用 OpenClaw</h2>
+
+<h3>選項 1：STRATRONIX PAA（最簡單）</h3>
+<p>購買 PAA 設備。OpenClaw OS 預裝。€339。</p>
+
+<h3>選項 2：自託管</h3>
+<p>從 GitHub 下載 OpenClaw。在您自己的硬體上安裝。需要 Linux/Docker 知識。</p>
+
+<h3>選項 3：雲端（2026 年第四季度推出）</h3>
+<p>OpenClaw Cloud——相同 UX 的託管版本。</p>
+
+<h2>歐洲合規與 OpenClaw</h2>
+
+<ul>
+<li>✅ GDPR — 資料留在本地</li>
+<li>✅ EU AI Act — 可審計程式碼</li>
+<li>✅ NIS2 — 網路安全內建</li>
+<li>✅ 開源授權 — 法國/義大利/德國政策一致</li>
+<li>✅ Schrems II — 無美國資料傳輸</li>
+</ul>
+
+<h2>訂購 STRATRONIX PAA（含 OpenClaw OS）</h2>
+
+<ul>
+<li><a href="https://www.stratronix.ai">stratronix.ai</a></li>
+<li>€339 一次性</li>
+<li>從鹿特丹發貨至 EU</li>
+</ul>
+
+<hr>
+<p><a href="/eu/ai-agent">AI 代理</a> | <a href="/eu/ai-company">AI 公司</a> | <a href="/eu/shenzhen-ai">深圳 AI</a> | <a href="/eu/ai-box">AI Box</a> | <a href="/eu/ai-china">AI 中國</a></p>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script><script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Halaman Tidak Ditemukan | STRATRONIX</title>
+<meta name="description" content="Halaman yang Anda cari tidak ditemukan. Kembali ke beranda STRATRONIX atau jelajahi produk STA-100 PAA Appliance.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; text-align: center; padding: 60px 20px; }
+.container { max-width: 600px; margin: 0 auto; }
+.error-code { font-size: 8rem; font-weight: 900; color: #E6417F; line-height: 1; margin-bottom: 20px; }
+h1 { font-size: 2rem; color: #1a1a1a; margin-bottom: 16px; }
+p { font-size: 1.1rem; color: #666; margin-bottom: 30px; }
+.btn { display: inline-block; background: #E6417F; color: white; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 8px; }
+.btn-outline { background: white; color: #E6417F; border: 2px solid #E6417F; }
+.error-illustration { font-size: 6rem; margin-bottom: 20px; }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="error-illustration">🔍</div>
+<div class="error-code">404</div>
+<h1>Halaman Tidak Ditemukan</h1>
+<p>Halaman yang Anda cari tidak tersedia. Mungkin telah dipindahkan atau dihapus.</p>
+<div>
+<a href="/id/index.html" class="btn">🏠 Kembali ke Beranda</a>
+<a href="/id/products.html" class="btn btn-outline">🛒 Lihat Produk</a>
+</div>
+</div>
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

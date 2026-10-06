@@ -1,495 +1,347 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新闻与动态 - 深圳AI公司·鼎图太易 STRATRONIX AI产品资讯</title>
-    <meta name="description" content="深圳AI公司鼎图太易STRATRONIX最新动态、AI产品PAA行业洞察、AI智能体技术进展、产品发布、合作伙伴与行业报道。">
-    <meta name="keywords" content="鼎图智能体, 鼎图太易, 智能体, PAA, 私有智能体, AI, 深圳AI公司, AI智能体, 智能体设备, 智能体底座, 边缘计算, AI盒子, 龙虾盒子, AI私有智能体, AI底座, AI HUB, OPenclaw盒子">
-    <meta name="author" content="Stratronix Technology">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Stratronix新闻与动态 - PAA行业洞察">
-    <meta property="og:description" content="PAA行业洞察、AI智能体技术进展、STRATRONIX产品发布。">
-    <meta property="og:image" content="https://www.stratronix.ai/images/og-image.jpg">
-    <meta property="og:url" content="https://www.stratronix.ai/zh/news">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Stratronix 鼎图太易">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Stratronix新闻与动态">
-    <meta name="twitter:description" content="PAA行业洞察 + AI智能体技术进展。">
-
-    <!-- Canonical + hreflang -->
-    <link rel="canonical" href="https://www.stratronix.ai/zh/news">
-    <link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh/news">
-    <link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en/news">
-
-    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <title>新闻动态 — STRATRONIX | PAA产品发布 & AI Agent洞察</title>
+    <meta name="description" content="Latest news from STRATRONIX: product launches, AI Agent development updates, exhibition appearances, and industry insights for the 个人 AI 办公助手 category.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//hm.baidu.com">
-    <link rel="dns-prefetch" href="//zz.bdstatic.com">
-    <link rel="dns-prefetch" href="//weibo.com">
-    <link rel="dns-prefetch" href="//space.bilibili.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" href="/css/style.css" as="style">
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <!-- BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.stratronix.ai/en/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "新闻",
-          "item": "https://www.stratronix.ai/zh/news.html"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
         }
-      ]
-    }
-    </script>
-
-    <!-- Article: STA-100 PAA 上市 (SEO v1.4) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "STRATRONIX 发布 STA-100 私有AI智能体设备（PAA）",
-      "description": "Stratronix 鼎图太易发布 STA-100 PAA，全球首款商用私有AI智能体设备，专为个人办公、中小企业与边缘AI部署设计。",
-      "image": "https://www.stratronix.ai/images/sta100-product.png",
-      "datePublished": "2026-01-15",
-      "dateModified": "2026-07-06",
-      "inLanguage": "zh-CN",
-      "author": {
-        "@type": "Organization",
-        "name": "Stratronix 鼎图太易",
-        "url": "https://www.stratronix.ai"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Stratronix 鼎图太易",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://www.stratronix.ai/images/og-image.jpg"
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
         }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://www.stratronix.ai/zh/news.html"
-      },
-      "articleSection": "产品发布",
-      "keywords": "PAA, STA-100, 私有AI, AI智能体, 边缘AI, 本地AI部署"
-    }
-    </script>
+        nav .logo-img { height: 25px; margin-right: 8px; /*汪总: 缩到70% (36*0.7=25.2)*/ }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+        nav .shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-primary:hover { background: var(--brand-light); transform: translateY(-1px); }
+        .hero { padding: 140px 80px 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(36px, 4vw, 56px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 17px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .section { padding: 80px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 40px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
 
-    <!-- Baidu Verification (百度站长平台验证) -->
-    <meta name="baidu-site-verification" content="codeva-f9joA45YuV" />
-    <meta name="baidu-tc" content="n9Y8K4e9y7s" />
+        /* News Grid */
+        .news-grid { display: flex; flex-direction: column; gap: 24px; }
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 32px;
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 24px;
+            align-items: start;
+            transition: border-color 0.3s;
+        }
+        .news-card:hover { border-color: var(--brand); }
+        .news-date { text-align: center; }
+        .news-date .day { font-size: 32px; font-weight: 900; color: var(--brand); line-height: 1; }
+        .news-date .month { font-size: 13px; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        .news-date .year { font-size: 11px; color: var(--text-muted); }
+        .news-content .tag {
+            display: inline-block;
+            font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            padding: 4px 10px; border-radius: 20px; margin-bottom: 10px;
+        }
+        .tag.exhibition { background: rgba(100,200,255,0.15); color: #64C8FF; }
+        .tag.product { background: rgba(230,65,127,0.15); color: var(--brand); }
+        .tag.category { background: rgba(150,100,255,0.15); color: #9678FF; }
+        .tag.company { background: rgba(100,200,100,0.15); color: #64C864; }
+        .news-content h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+        .news-content p { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-bottom: 12px; }
+        .news-content .read-more { font-size: 13px; font-weight: 600; color: var(--brand); }
+        .news-content .read-more:hover { color: var(--brand-light); }
 
-    <!-- NewsItemList (百度新闻源收录关键 schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "STRATRONIX 鼎图太易 2026 新闻列表",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "url": "https://www.stratronix.ai/zh/news", "name": "STRATRONIX 发布首款轻量级私有AI智能体设备 STA-100"},
-        {"@type": "ListItem", "position": 2, "url": "https://www.stratronix.ai/zh/news", "name": "微信公众号「鼎图太易智能体-Stratronix」正式上线"},
-        {"@type": "ListItem", "position": 3, "url": "https://www.stratronix.ai/zh/news", "name": "Baiduspider 全站抓取测试返回 200，STRATRONIX 中文站 SEO 100% 合规"},
-        {"@type": "ListItem", "position": 5, "url": "https://www.stratronix.ai/zh/news", "name": "STRATRONIX STA-100 出货 20+ 国家：深圳 AI 公司全球布局"},
-        {"@type": "ListItem", "position": 6, "url": "https://www.stratronix.ai/zh/news", "name": "STRATRONIX 中国团队扩展至 8 人"},
-        {"@type": "ListItem", "position": 7, "url": "https://www.stratronix.ai/zh/news", "name": "STRATRONIX 受邀 2026 中国 AI 硬件峰会 PAA 主题演讲"},
-        {"@type": "ListItem", "position": 8, "url": "https://www.stratronix.ai/zh/news", "name": "OpenClaw OS v1.3 推送：Mistral 7B 推理速度 +40%"},
-        {"@type": "ListItem", "position": 9, "url": "https://www.stratronix.ai/zh/news", "name": "STRATRONIX 与某头部律所管理公司 100 台 PAA 批量部署"},
-        {"@type": "ListItem", "position": 10, "url": "https://www.stratronix.ai/zh/news", "name": "STRATRONIX GitHub 开源：OpenClaw 智能体框架首次公开"}
-      ]
-    }
-    </script>
+        /* Newsletter */
+        .newsletter-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            border-bottom: 1px solid var(--border-solid);
+            padding: 80px 80px;
+            text-align: center;
+        }
+        .newsletter-card {
+            max-width: 700px; margin: 0 auto;
+            background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.02) 100%);
+            border: 1px solid rgba(230,65,127,0.4);
+            border-radius: 24px;
+            padding: 50px 40px;
+        }
+        .newsletter-card h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; margin-bottom: 14px; }
+        .newsletter-card h2 .pink { color: var(--brand); }
+        .newsletter-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 24px; }
+        .newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+        .newsletter-form input {
+            flex: 1; padding: 13px 20px; border-radius: 50px; border: 1.5px solid var(--border-solid);
+            background: var(--bg); color: var(--text); font-size: 14px; outline: none;
+            transition: border-color 0.2s;
+        }
+        .newsletter-form input:focus { border-color: var(--brand); }
+        .newsletter-form input::placeholder { color: var(--text-muted); }
 
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            padding: 60px 80px 40px;
+        }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; /*和左上角一致 25px*/ }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .social-links li a { display: flex; align-items: center; }
+        .social-links svg { flex-shrink: 0; }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted); text-align: center;
+        }
+        .footer-nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 12px; }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); }
+        .footer-bottom a:hover { color: var(--brand); }
+        .trust-foundation {
+            max-width: 1200px; margin: 0 auto; padding: 36px 0 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p { font-size: 11px; color: var(--text-dim); line-height: 1.7; max-width: 900px; margin: 0 auto 12px; }
+        .trust-foundation .trust-tagline { font-size: 11px; color: var(--brand); font-weight: 600; }
 
-    <!-- NewsArticle 2: 微信公众号「鼎图太易智能体-Stratronix」正式上线 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "微信公众号「鼎图太易智能体-Stratronix」正式上线",
-      "datePublished": "2026-07-08",
-      "dateModified": "2026-07-08",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 3: Baiduspider 全站抓取测试返回 200，STRATRONIX 中文站 SEO 100% 合规 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "Baiduspider 全站抓取测试返回 200，STRATRONIX 中文站 SEO 100% 合规",
-      "datePublished": "2026-07-11",
-      "dateModified": "2026-07-11",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 4: 微信公众号文章矩阵：6 篇深度长文全公开，覆盖 PAA 概念全维度 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "微信公众号文章矩阵：6 篇深度长文全公开，覆盖 PAA 概念全维度",
-      "datePublished": "2026-07-11",
-      "dateModified": "2026-07-11",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 5: STRATRONIX STA-100 出货 20+ 国家：深圳 AI 公司全球布局 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "STRATRONIX STA-100 出货 20+ 国家：深圳 AI 公司全球布局",
-      "datePublished": "2026-06-25",
-      "dateModified": "2026-06-25",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 6: STRATRONIX 中国团队扩展至 8 人，深圳总部 24 小时运转 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "STRATRONIX 中国团队扩展至 8 人，深圳总部 24 小时运转",
-      "datePublished": "2026-06-10",
-      "dateModified": "2026-06-10",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 7: STRATRONIX 受邀 2026 中国 AI 硬件峰会，发表 PAA 主题演讲 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "STRATRONIX 受邀 2026 中国 AI 硬件峰会，发表 PAA 主题演讲",
-      "datePublished": "2026-05-18",
-      "dateModified": "2026-05-18",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 8: OpenClaw OS v1.3 推送：Mistral 7B 推理速度 +40% -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "OpenClaw OS v1.3 推送：Mistral 7B 推理速度 +40%",
-      "datePublished": "2026-04-22",
-      "dateModified": "2026-04-22",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 9: STRATRONIX 与某头部律所管理公司 100 台 PAA 批量部署 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "STRATRONIX 与某头部律所管理公司 100 台 PAA 批量部署",
-      "datePublished": "2026-03-15",
-      "dateModified": "2026-03-15",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
-
-    <!-- NewsArticle 10: STRATRONIX GitHub 开源：OpenClaw 智能体框架首次公开 -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "NewsArticle",
-      "headline": "STRATRONIX GitHub 开源：OpenClaw 智能体框架首次公开",
-      "datePublished": "2026-02-28",
-      "dateModified": "2026-02-28",
-      "author": {"@type": "Organization", "name": "鼎图太易 STRATRONIX"},
-      "publisher": {"@type": "Organization", "name": "鼎图太易信息技术（深圳）有限公司", "logo": {"@type": "ImageObject", "url": "https://www.stratronix.ai/images/logo.png"}},
-      "mainEntityOfPage": "https://www.stratronix.ai/zh/news"
-    }
-    </script>
+        @media (max-width: 1024px) {
+            .hero, .section, .newsletter-section { padding-left: 40px; padding-right: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+            nav .nav-links { gap: 16px; }
+            .news-card { grid-template-columns: 60px 1fr; }
+        }
+        @media (max-width: 768px) {
+            .news-card { grid-template-columns: 1fr; }
+            .news-date { display: flex; align-items: baseline; gap: 8px; text-align: left; }
+            .newsletter-form { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
 </head>
-<body lang="zh-CN">
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/zh" class="logo">
-                <span class="logo-english">STRATRONIX</span>
-                <span class="logo-divider">/</span>
-                <span class="logo-chinese">鼎图</span>
-            </a>
-            
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
+<body>
+    <nav>
+        <a href="/zh/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+        <ul class="nav-links">
+            <li><a href="/zh/index.html">首页</a></li>
+            <li><a href="/zh/about.html">关于我们</a></li>
+            <li><a href="/zh/products.html">产品</a></li>
+            <li><a href="/zh/ai-use.html">AI 应用</a></li>
+            <li><a href="/zh/news.html" class="active">新闻动态</a></li>
+            <li><a href="/zh/contact.html">联系我们</a></li>
+        </ul>
+        <a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="shop-btn">立即购买</a></li>
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">ZH</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
             </div>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/zh" class="nav-link">首页</a></li>
-                <li><a href="/zh/about" class="nav-link">关于</a></li>
-                <li><a href="/zh/products" class="nav-link">产品</a></li>
-                <li><a href="/zh/news" class="nav-link active">新闻</a></li>
-                <li><a href="/zh/contact" class="nav-link">联系</a></li>
-            </ul>
-            
-            <div class="language-switcher">
-                <a href="/en/news" class="lang-btn">
-                    <i class="fas fa-language"></i> English
-                </a>
-            </div>
-        </div>
-    </nav>
+        </li>
+    </ul>
+</nav>
 
-    <!-- News Hero -->
-    <section class="hero" style="background: linear-gradient(135deg, #34a853 0%, #1a73e8 100%);">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">最新新闻与动态</h1>
-                <p class="hero-subtitle">了解Stratronix发展动态、PAA行业洞察和AI智能体技术进展。</p>
-            </div>
+    <section class="hero">
+        <div class="eyebrow">新闻动态 & Updates</div>
+        <h1>保持领先 <span class="pink">PAA World</span></h1>
+        <p>STRATRONIX 最新产品发布、展会回顾、行业洞察与公司里程碑动态。</p>
+    </section>
+
+    <section class="section">
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="news-date">
+                    <div class="day">28</div>
+                    <div class="month">Aug</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="news-content">
+                    <span class="tag exhibition">展会</span>
+                    <h3>STRATRONIX 亮相 IOTE 2026 — 深圳展位 12B62-1</h3>
+                    <p>我们在深圳第二十五届国际物联网展会上展示了 STA-100 Workie。数百位观众现场体验了 Workie 在微信中回答问题、在飞书中起草报告，以及在 5 瓦设备上 24/7 全天候运行的强大能力。</p>
+                    <a href="#" class="read-more">📍 深圳国际会展中心 → 查看回顾</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date">
+                    <div class="day">26</div>
+                    <div class="month">May</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="news-content">
+                    <span class="tag product">Product Launch</span>
+                    <h3>STRATRONIX 推出首款轻量级私有 AI Agent 设备 — STA-100</h3>
+                    <p>我们激动地宣布，STRATRONIX 首款轻量级私有 AI Agent 设备 STA-100 已进入最终测试阶段，即将正式发布！</p>
+                    <p style="margin-top:10px;"><strong>核心特点：</strong></p>
+                    <ul style="font-size:13px;color:var(--text-dim);margin:8px 0;padding-left:20px;">
+                        <li>🖥️ XFCE Stable OS — 轻量级 Linux 桌面，服务器级稳定性</li>
+                        <li>⚡ 八核 ARM — 超低功耗，24/7 全天候运行仅约 15 千瓦时/月</li>
+                        <li>🔧 内置 OpenClaw 框架 — 开箱即用 AI Agent 运行时</li>
+                        <li>🚀 轻松部署 — 20 分钟完成，无需 IT 专员</li>
+                        <li>🏠 广泛应用 — 教育、医疗、零售、家庭助手</li>
+                    </ul>
+                    <p style="margin-top:10px;">STA-100 是一款面向个人和小型企业的私有 AI Agent 设备。所有数据本地存储，无需依赖云端，实现完全的隐私与掌控。小型桌面形态——只需连接任意显示器即可使用。</p>
+                    <a href="/zh/products.html" class="read-more">🚀 在线商店已开业 → 查看产品</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date">
+                    <div class="day">02</div>
+                    <div class="month">Jul</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="news-content">
+                    <span class="tag category">品类</span>
+                    <h3>STRATRONIX Defines the PAA 品类 — 个人 AI 办公助手</h3>
+                    <p>我们正式定义一个全新产品品类：PAA——个人 AI 办公助手。不同于聊天机器人和迷你 PC，PAA 设备以本地优先、常驻运行、原生集成于现有消息应用为核心理念。让即时通讯拥有 AI 大脑。</p>
+                    <a href="/zh/ai-use.html" class="read-more">📖 品类定义 → 阅读公告</a>
+                </div>
+            </article>
         </div>
     </section>
 
-    <!-- 新闻文章 -->
-    <section class="section" style="padding: 60px 0; background: #f8f9fa;">
-        <div class="container">
-            <div class="news-article" style="background: #fff; border-radius: 12px; padding: 40px; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <span style="background: #EB3E7E; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 15px;">产品发布</span>
-                <h2 style="font-size: 28px; margin-bottom: 15px; color: #333;">STRATRONIX 发布首款轻量级私有AI智能体设备 STA-100</h2>
-                <p style="color: #666; font-size: 14px; margin-bottom: 20px;">
-                    <i class="fas fa-calendar-alt"></i> 2026年5月26日 &nbsp;&nbsp;
-                    <i class="fas fa-user"></i> STRATRONIX
-                </p>
-                <div style="display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start;">
-                    <div style="flex: 1; min-width: 280px;">
-                        <div style="color: #555; line-height: 1.8; font-size: 15px;">
-                            <p style="margin-bottom: 15px;">我们激动地宣布，STRATRONIX 首款轻量级私有AI智能体设备 <strong>STA-100</strong> 已进入最终测试阶段，即将正式上线！</p>
-                            
-                            <p style="margin-bottom: 15px;"><strong>STA-100 的核心特点：</strong></p>
-                            <ul style="margin-bottom: 15px; padding-left: 20px;">
-                                <li style="margin-bottom: 10px;">🖥️ <strong>XFCE稳定操作系统</strong> — 专为紧凑型设备设计的轻量级桌面环境，基于Linux，服务器级稳定性</li>
-                                <li style="margin-bottom: 10px;">⚡ <strong>八核ARM架构</strong> — 超低功耗，24小时全天候运行一个月仅消耗约15度电</li>
-                                <li style="margin-bottom: 10px;">🔧 <strong>内置OpenClaw Framework</strong> — 开箱即用的AI智能体运行环境</li>
-                                <li style="margin-bottom: 10px;">🚀 <strong>部署极简</strong> — 跟着指引一步步操作，约20分钟即可完成部署，普通消费者也能轻松安装</li>
-                                <li style="margin-bottom: 10px;">🏠 <strong>应用场景广泛</strong> — 教育、医疗、零售、家庭个人助手等各类场景均可适用</li>
-                            </ul>
-                            
-                            <p style="margin-bottom: 15px;">STA-100 是一款专为个人和小型企业设计的私有AI智能体设备。数据完全存储在本地环境，核心功能无需依赖云端，真正实现<strong>数据隐私自主可控</strong>。</p>
-                            
-                            <p style="margin-bottom: 15px;">紧凑的桌面形态，连接显示器即可使用。无论是搭建私有AI助手，还是为业务场景引入AI能力，STA-100 都是您轻松上手的选择。</p>
-                            
-                            <p style="color: #EB3E7E; font-weight: 500; font-size: 16px;">🔥 样机预约现已开放，限量20台！</p>
-                        </div>
-                    </div>
-                    <div style="flex: 0 0 300px; min-width: 250px;">
-                        <img src="https://www.stratronix.ai/images/STA-100-real.png" alt="STA-100 智能体设备" style="width: 100%; max-width: 400px; height: auto; object-fit: contain; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);" loading="lazy" decoding="async">
-                    </div>
-                </div>
-            </div>
+    <section class="newsletter-section">
+        <div class="newsletter-card">
+            <div class="section-label">获取最新动态</div>
+            <h2>订阅 <span class="pink">STRATRONIX</span> 最新资讯</h2>
+            <p>产品发布、AI Agent 案例研究与行业洞察。绝无垃圾邮件——每月一封，随时退订。</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('感谢订阅！我们会尽快与您联系。');">
+                <input type="email" placeholder="your.email@company.com" required>
+                <button type="submit" class="btn-primary">订阅</button>
+            </form>
         </div>
     </section>
 
-
-    <!-- P1: 8 条新闻动态（百度新闻源 SEO 收录） -->
-    <section class="section" style="padding: 60px 0; background: #fff;">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 50px;">
-                <h2 style="font-size: 28px; color: #E6417F; margin-bottom: 10px;">📰 最新动态（2026）</h2>
-                <p style="color: #666; font-size: 15px;">STRATRONIX 鼎图太易 · 公众号「鼎图太易智能体-Stratronix」同步更新</p>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+                <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+                <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+                <p>86-755-2308 6689</p>
+                <p>周一至周五 9:00-18:00</p>
             </div>
-
-            <!-- 新闻 1（置顶）：IOTE 2026 展会邀请函 (汪总 2026-08-20 显式授权写入新闻页) -->
-            <div class="news-article" style="background: linear-gradient(135deg, #fff5f9 0%, #ffffff 100%); border-radius: 12px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(230,65,127,0.12); border: 2px solid #E6417F;">
-                <span style="background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: #fff; padding: 5px 14px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 15px; font-weight: 600;">🎪 展会邀请</span>
-                <h2 style="font-size: 24px; margin-bottom: 12px; color: #1a1a1a; line-height: 1.4;">STRATRONIX 邀您莅临 IOTE 2026 第 25 届国际物联网展（深圳）· 8 月 26-28 日 · 展位 12B62-1</h2>
-                <p style="color: #888; font-size: 13px; margin-bottom: 16px;">
-                    <i class="fas fa-calendar-alt"></i> 2026-08-20 &nbsp;&nbsp;
-                    <i class="fas fa-user"></i> STRATRONIX 市场团队
-                </p>
-                <!-- 官方邀请函海报 (汪总 2026-08-20 09:51 提供) -->
-                <div style="margin: 0 0 20px 0; text-align: center; background: #f8f9fa; padding: 16px; border-radius: 8px;">
-                    <img src="/images/iote-2026/invitation-zh.jpg" alt="STRATRONIX IOTE 2026 中文邀请函 - 展位 12B62-1" style="max-width: 100%; height: auto; display: block; margin: 0 auto; box-shadow: 0 4px 16px rgba(0,0,0,0.08); border-radius: 6px;" loading="lazy" decoding="async">
-                    <p style="color: #888; font-size: 12px; margin-top: 10px; margin-bottom: 0;">官方邀请函 · 鼎图太易信息技术（深圳）有限公司 · 主办：STRATRONIX / AGIC / IOTE</p>
-                </div>
-                <div style="color: #333; line-height: 1.85; font-size: 15px;">
-                    <p style="margin-bottom: 14px;"><strong>STRATRONIX 鼎图太易</strong>将于 <strong>2026 年 8 月 26-28 日</strong> 携 <strong>STA-100 PAA 私有 AI 智能体设备</strong>亮相 <strong>IOTE 2026 第 25 届国际物联网展</strong>（同期举办 AGIC 人工智能展 + ISVE 智慧商显展）。展会在 <strong>深圳国际会展中心 9-12 号馆</strong> 举行，<strong>STRATRONIX 展位 12B62-1</strong>。</p>
-
-                    <p style="margin-bottom: 14px;"><strong>🎯 现场首发亮点</strong>：STA-100 PAA 私有 AI 智能体设备 <strong>全球首发</strong> — 8-10 分钟完成部署、设备端 LLM 推理、数据完全本地、<strong>全球统一指导价 $399 USD</strong>。</p>
-
-                    <p style="margin-bottom: 14px;"><strong>🛠️ 5 大现场演示场景</strong>（开箱即用）：</p>
-                    <ul style="margin-left: 24px; margin-bottom: 14px;">
-                        <li><strong>医疗</strong> — 病历本地化 + HIPAA / 等保 2.0 合规 + 联网急救 AI</li>
-                        <li><strong>法律</strong> — 客户数据脱敏 + 案卷本地检索 + GDPR 合规</li>
-                        <li><strong>金融</strong> — 投研本地分析 + 客户隐私 + 监管合规</li>
-                        <li><strong>制造</strong> — 工厂车间 AI + 设备预测维护 + 知识图谱</li>
-                        <li><strong>跨境电商</strong> — 多语 AI 客服 + 海外数据合规 + 成本节省</li>
-                    </ul>
-
-                    <p style="margin-bottom: 14px;"><strong>🌏 亚太地区领先的 IoT 行业盛会</strong> — 预计吸引 <strong>30+ 国家 / 50,000+ 专业观众</strong>，重点辐射 <strong>澳洲 · 日本 · 韩国 · 印度 · 东南亚 · 港澳台 · 大中华区</strong>。STRATRONIX 展位 12B62-1 现场呈现 STA-100 PAA 私有 AI 智能体设备，欢迎亚太合作伙伴到现场洽谈。</p>
-
-                    <p style="margin-bottom: 14px;"><strong>📅 展会时间</strong>：2026 年 8 月 26 日 - 28 日（周三至周五），每天 9:00 AM - 5:00 PM<br>
-                    <strong>📍 展会地点</strong>：深圳国际会展中心（Shenzhen World Exhibition & Convention Center）9-12 号馆<br>
-                    <strong>🎪 STRATRONIX 展位</strong>：12B62-1（B 区）<br>
-                    <strong>⏰ 倒计时</strong>：展会开幕还有 <strong>6 天</strong>（以 2026-08-20 计）</p>
-
-                    <p style="margin-bottom: 14px;"><strong>📨 预约通道</strong>：</p>
-                    <ul style="margin-left: 24px; margin-bottom: 14px;">
-                        <li>中文 / 简体中文：<a href="mailto:sales@stratronix.ai?subject=IOTE 2026 预约&body=我想预约 IOTE 2026 展位 12B62-1 的 1 对 1 演示" style="color:#E6417F;font-weight:600;">sales@stratronix.ai</a></li>
-                        <li>亚太合作伙伴：<a href="mailto:apac@stratronix.ai?subject=IOTE 2026 亚太地区预约" style="color:#E6417F;font-weight:600;">apac@stratronix.ai</a>（中文 / English / 日本語 / 한국어 / हिन्दी）</li>
-                        <li>完整邀请函：<a href="https://donaldwang6-dev.github.io/stratronix-seo/events/iot-expo-2026/zh.html" style="color:#E6417F;font-weight:600;" target="_blank" rel="noopener noreferrer">donaldwang6-dev.github.io/stratronix-seo/events/iot-expo-2026/zh.html</a></li>
-                    </ul>
-
-                    <div style="background: #fff; border-left: 4px solid #E6417F; padding: 14px 18px; margin-top: 16px; border-radius: 6px;">
-                        <strong style="color: #E6417F;">🎁 展会专属：</strong>现场预约 1 对 1 演示的客户，享受 STA-100 PAA 现场体验价 + 现场免费技术评估 + 2026 年 Q4 优先交付名额。
-                    </div>
-                </div>
+            <div>
+                <h4>产品</h4>
+                <ul>
+                    <li><a href="/zh/products.html">STA-100 Workie</a></li>
+                    <li><a href="/zh/ai-use.html">AI 应用场景</a></li>
+                    <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank">🛒 淘宝购买</a></li>
+                </ul>
             </div>
-
-            <!-- 新闻 2：微信公众号上线 -->
-            <div class="news-article" style="background: #fff; border-radius: 12px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(230,65,127,0.08); border: 1px solid #FFE0EC;">
-                <span style="background: #E6417F; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 15px;">品牌动态</span>
-                <h2 style="font-size: 22px; margin-bottom: 12px; color: #333;">微信公众号「鼎图太易智能体-Stratronix」正式上线</h2>
-                <p style="color: #888; font-size: 13px; margin-bottom: 16px;">
-                    <i class="fas fa-calendar-alt"></i> 2026-07-08 &nbsp;&nbsp;
-                    <i class="fas fa-user"></i> STRATRONIX 市场团队
-                </p>
-                <p style="color: #555; line-height: 1.8; font-size: 15px;">
-                    STRATRONIX 鼎图太易正式开通微信公众号「<strong>鼎图太易智能体-Stratronix</strong>」。该公众号将作为深圳 AI 公司面向中国市场的核心内容渠道，定期发布 <strong>私有 AI 智能体设备（PAA）</strong> 行业洞察、AI 智能体落地实战、产品更新与客户案例。微信内搜索公众号「鼎图太易智能体-Stratronix」即可关注。
-                </p>
+            <div>
+                <h4>公司</h4>
+                <ul>
+                    <li><a href="/zh/about.html">关于我们</a></li>
+                    <li><a href="/zh/news.html">新闻动态</a></li>
+                    <li><a href="/zh/contact.html">联系我们</a></li>
+                </ul>
             </div>
-
-            <!-- 新闻 3：Baiduspider 测试 200 -->
-            <div class="news-article" style="background: #fff; border-radius: 12px; padding: 35px; margin-bottom: 30px; box-shadow: 0 4px 20px rgba(230,65,127,0.08); border: 1px solid #FFE0EC;">
-                <span style="background: #10b981; color: #fff; padding: 4px 12px; border-radius: 20px; font-size: 12px; display: inline-block; margin-bottom: 15px;">技术进展</span>
-                <h2 style="font-size: 22px; margin-bottom: 12px; color: #333;">Baiduspider 全站抓取测试返回 200，STRATRONIX 中文站 SEO 100% 合规</h2>
-                <p style="color: #888; font-size: 13px; margin-bottom: 16px;">
-                    <i class="fas fa-calendar-alt"></i> 2026-07-11 &nbsp;&nbsp;
-                    <i class="fas fa-user"></i> STRATRONIX 技术团队
-                </p>
-                <p style="color: #555; line-height: 1.8; font-size: 15px;">
-                    通过 Baiduspider/2.0 User-Agent 测试全站 19 个核心 URL，<strong>19 / 19 全部返回 HTTP 200 OK</strong>。检查通过项包括：zh 7 页面 + brand.html canonical/og:url/hreflang 三方一致、站内导航块完整、baidu-site-verification 真 token 已生效、en/zh/sitemap 三方同步。这一里程碑为百度索引 <strong>鼎图智能体 / 鼎图太易 / PAA / 私有 AI 智能体</strong> 等 17 个关键词奠定基础。
-                    <h3 style="font-size: 18px; line-height: 1.4; color: #1a1d27; margin-bottom: 8px;" lang="en">什么是 PAA？私有 AI 智能体设备终极指南</h3>
-                    <p style="color: #6b7280; font-size: 14px; line-height: 1.5;">超越云端与 GPU 服务器的硬件品类</p>
-                    <div style="color: #E6417F; font-size: 13px; font-weight: 600; margin-top: 12px;">阅读全文 (EN) →</div>
-                </a>
-                    <div style="display: inline-block; background: #10b981; color: white; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 12px;">TECHNICAL</div>
-                    <h3 style="font-size: 18px; line-height: 1.4; color: #1a1d27; margin-bottom: 8px;" lang="en">本地部署 AI：7 步实施指南</h3>
-                    <p style="color: #6b7280; font-size: 14px; line-height: 1.5;">几小时内上线生产，而不是几周</p>
-                    <div style="color: #E6417F; font-size: 13px; font-weight: 600; margin-top: 12px;">阅读全文 (EN) →</div>
-                </a>
+            <div>
+                <h4>资源</h4>
+                <ul>
+                    <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank">购买 STA-100</a></li>
+                    <li><a href="/zh/contact.html">企业咨询</a></li>
+                    <li><a href="/zh/contact.html">定制 AI Agent 开发</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>社交媒体</h4>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                    <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                    <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+                </ul>
             </div>
         </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <h3>Stratronix / 鼎图</h3>
-                    <p>构建AI智能体基础设施层</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>快速链接</h4>
-                    <ul>
-                        <li><a href="/zh">首页</a></li>
-                        <li><a href="/zh/about">关于</a></li>
-                        <li><a href="/zh/products">产品</a></li>
-                        <li><a href="/zh/news">新闻</a></li>
-                        <li><a href="/zh/contact">联系</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>联系我们</h4>
-                    <p><i class="fas fa-envelope"></i> info@stratronix.ai</p>
-                    <p><i class="fas fa-globe"></i> www.stratronix.ai</p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Stratronix Technology. 保留所有权利。 | 私有AI智能体设备(PAA)类别创造者</p>
-            </div>
+        <div class="trust-foundation">
+            <p>STRATRONIX 是 PAA（个人 AI 办公助手）品类的开创者，致力于创造全新的办公 AI 产品品类，提升日常工作效率。我们为个人、企业和行业构建私有 AI 助手及定制化 AI Agent 解决方案。</p>
+            <p class="trust-tagline">构建下一代 AI 驱动的生产力。</p>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Stratronix Technology. 保留所有权利。 | <a href="#">隐私政策</a> | <a href="#">服务条款</a></span>
+        </div>
+        <div class="footer-nav">
+            <a href="/zh/index.html">首页</a>
+            <a href="/zh/about.html">关于我们</a>
+            <a href="/zh/products.html">产品</a>
+            <a href="/zh/news.html">新闻动态</a>
+            <a href="/zh/contact.html">联系我们</a>
         </div>
     </footer>
-
-    <script>
-        // 导航菜单切换
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('show');
-        });
-        
-        // 关闭菜单当点击链接时
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('show');
-            });
-        });
-    </script>
-        <!-- Baidu Tongji (百度统计 - 让百度更了解网站流量) -->
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_ID";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-
-    <!-- Baidu Active Push JS (百度实时推送) -->
-    <script>
-    (function(){
-        var bp = document.createElement("script");
-        var curProtocol = window.location.protocol.split(":")[0];
-        if (curProtocol === "https") {
-            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
-        } else {
-            bp.src = "http://push.zhanzhang.baidu.com/push.js";
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-</body>
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
 </html>

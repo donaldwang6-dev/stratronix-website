@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>OpenClaw — Kerangka Kerja Agen AI Open-Source | STRATRONIX</title>
+<meta name="description" content="OpenClaw: kerangka kerja agen AI open-source (Apache 2.0) untuk membangun dan menjalankan agen AI. Dibundel dengan STA-100 PAA Appliance. Multi-LLM, MCP-native, RAG-ready.">
+<meta name="keywords" content="OpenClaw, kerangka kerja agen AI, agen AI open-source, AI agent framework, MCP, RAG, multi-LLM, Apache 2.0, STRATRONIX, agen AI lokal">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta name="author" content="STRATRONIX (China AI Company)">
+<link rel="canonical" href="https://www.stratronix.ai/openclaw.html">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 50px 20px; }
+header h1 { font-size: 1.9rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.9rem; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.5rem; color: #E6417F; margin: 32px 0 12px; border-left: 4px solid #E6417F; padding-left: 12px; }
+h3 { font-size: 1.2rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+.kw { background: linear-gradient(180deg, transparent 60%, #fff5f9 60%); font-weight: 600; }
+.callout { background: #fff5f9; border-left: 4px solid #E6417F; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #E6417F; color: white; font-weight: 600; }
+.cta { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #E6417F; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+footer a { color: #E6417F; }
+code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+pre { background: #1a1a1a; color: #e0e0e0; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6; margin: 20px 0; }
+pre code { background: none; padding: 0; color: inherit; }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+<header>
+<h1>OpenClaw — Kerangka Kerja Agen AI Open-Source</h1>
+<p class="subtitle">OpenClaw: kerangka kerja agen AI open-source (Apache 2.0) · Multi-LLM · MCP-native · RAG-ready · Dibundel dengan STA-100</p>
+</header>
+
+<div class="container">
+<p class="meta">
+<span>📅 2026-07-18</span>
+<span>🏷️ OpenClaw · Kerangka Kerja AI</span>
+<span>📍 Dibuat oleh STRATRONIX, Shenzhen, China</span>
+</p>
+
+<h2>Apa Itu OpenClaw?</h2>
+
+<p><strong>OpenClaw</strong> adalah kerangka kerja <span class="kw">agen AI</span> open-source (Apache 2.0) yang memungkinkan perusahaan dan pengembang membangun, menggunakan, dan menerapkan <span class="kw">agen AI</span>. OpenClaw adalah fondasi perangkat lunak di dalam setiap <span class="kw">appliance agen AI</span> STRATRONIX STA-100 dan PAA.</p>
+
+<div class="callout">
+<strong>OpenClaw ≠ OpenAI</strong>: OpenClaw bukan produk cloud. Ini adalah perangkat lunak open-source yang berjalan di infrastruktur Anda sendiri. Tidak ada data yang dikirim ke server STRATRONIX atau pihak ketiga mana pun.
+</div>
+
+<h2>Fitur Utama OpenClaw</h2>
+
+<ul>
+<li>🤖 <strong>Arsitektur Agen Multi-Modal</strong>: agen visual, teks, audio, dan data</li>
+<li>🔗 <strong>MCP-Native</strong>: konektor bawaan untuk semua工具 yang digunakan perusahaan (Slack, Notion, Salesforce, dll.)</li>
+<li>🧠 <strong>RAG Terintegrasi</strong>: retrieval-augmented generation dengan Qdrant vector DB</li>
+<li>🌐 <strong>Multi-LLM</strong>: OpenAI, Anthropic Claude, Google Gemini, Qwen, DeepSeek, Ollama lokal</li>
+<li>📊 <strong>Pipeline Data</strong>: ETL, pembersihan, dan augmentasi data otomatis</li>
+<li>🔒 <strong>Keamanan Terpadu</strong>: redaksi PII, audit log, kontrol akses</li>
+<li>📈 <strong>Observabilitas</strong>: metrik, tracing, dan logging bawaan</li>
+<li>🧩 <strong>Plugin SDK</strong>: Python SDK untuk membangun agen kustom dan интеграции</li>
+</ul>
+
+<h2>Arsitektur OpenClaw</h2>
+
+<pre>
+┌─────────────────────────────────────────────────────┐
+│                   OpenClaw Agent                     │
+├─────────────────────────────────────────────────────┤
+│  ┌──────────┐  ┌──────────┐  ┌───────────────────┐ │
+│  │ Planner  │  │  Memory  │  │    Tool Registry  │ │
+│  │ (Reason) │  │(Context) │  │ (MCP Connectors)  │ │
+│  └────┬─────┘  └────┬─────┘  └─────────┬─────────┘ │
+│       │             │                  │           │
+│  ┌────▼─────────────▼──────────────────▼─────────┐ │
+│  │              Orchestration Layer               │ │
+│  │  (Task routing · Error recovery · Fallback)   │ │
+│  └────────────────────┬──────────────────────────┘ │
+│                       │                            │
+│  ┌────────────────────▼──────────────────────────┐ │
+│  │           LLM Gateway                          │ │
+│  │  OpenAI · Anthropic · Qwen · DeepSeek · Ollama│ │
+│  └────────────────────────────────────────────────┘ │
+│                                                     │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────┐ │
+│  │ Qdrant (RAG) │  │ File System  │  │  APIs    │ │
+│  └──────────────┘  └──────────────┘  └──────────┘ │
+└─────────────────────────────────────────────────────┘</pre>
+
+<h2>Mengapa Open-Source?</h2>
+
+<h3>Kepatuhan Enterprise</h3>
+<p>Perusahaan di UE (GDPR, AI Act), China (等保 2.0), dan AS (HIPAA) membutuhkan <span class="kw">agen AI</span> yang dapat diaudit. Kode terbuka berarti tim keamanan dapat memverifikasi apa yang dilakukan <span class="kw">agen AI</span> dengan data mereka.</p>
+
+<h3>Kustomisasi</h3>
+<p>Pengembang enterprise dapat fork OpenClaw dan menambahkan интеграции khusus industri atau alur kerja proprietary.</p>
+
+<h3>Tanpa Vendor Lock-in</h3>
+<p>OpenClaw berjalan di mana saja — perangkat edge (STA-100), server on-prem, atau cloud publik. Tidak ada kunci ke layanan STRATRONIX.</p>
+
+<h2>Cara Memulai dengan OpenClaw</h2>
+
+<ol>
+<li><strong>Baca dokumentasi</strong>: <a href="https://docs.openclaw.ai">docs.openclaw.ai</a></li>
+<li><strong>Clone repo</strong>: <code>git clone https://github.com/stratronix/openclaw</code></li>
+<li><strong>Instal</strong>: <code>pip install openclaw-sdk</code></li>
+<li><strong>Buat agen pertama</strong>: Python SDK + template</li>
+<li><strong>Jalankan</strong>: <code>openclaw run my-agent</code></li>
+</ol>
+
+<h2>Integrasi MCP</h2>
+
+<p>OpenClaw native mendukung <strong>Model Context Protocol (MCP)</strong> — standar terbuka dari Anthropic untuk koneksi antara <span class="kw">agen AI</span> dan инструменты. Integrasi siap pakai:</p>
+
+<table>
+<tr><th>Kategori</th><th>Integrasi</th></tr>
+<tr><td>💬 Pesan</td><td>WeChat Work, Feishu, Slack, Teams, WhatsApp Business</td></tr>
+<tr><td>📄 Dokumen</td><td>Notion, Google Docs, Confluence, SharePoint</td></tr>
+<tr><td>📊 CRM</td><td>Salesforce, HubSpot, Pipedrive</td></tr>
+<tr><td>📧 Email</td><td>Gmail, Outlook, SMTP</td></tr>
+<tr><td>🗄️ Database</td><td>PostgreSQL, MySQL, MongoDB, Qdrant</td></tr>
+<tr><td>🌐 Web</td><td>Web search, scraping, API REST</td></tr>
+</table>
+
+<h2>OpenClaw vs LangChain vs CrewAI</h2>
+
+<table>
+<tr><th>Fitur</th><th>OpenClaw</th><th>LangChain</th><th>CrewAI</th></tr>
+<tr><td>Jenis</td><td>Agen AI lengkap</td><td>Framework abstraksi LLM</td><td>Orchestration agen</td></tr>
+<tr><td>Lisensi</td><td>Apache 2.0</td><td>MIT</td><td>MIT</td></tr>
+<tr><td>MCP-native</td><td>✅ Ya</td><td>❌ Tidak</td><td>❌ Tidak</td></tr>
+<tr><td>RAG bawaan</td><td>✅ Qdrant</td><td>✅ Ya</td><td>❌ Tidak</td></tr>
+<tr><td>Redaksi PII</td><td>✅ Bawaan</td><td>❌ Tidak</td><td>❌ Tidak</td></tr>
+<tr><td>Mode offline</td><td>✅ Ya</td><td>❌ Tidak</td><td>❌ Tidak</td></tr>
+<tr><td>Appliance turnkey</td><td>✅ STA-100</td><td>❌ Tidak</td><td>❌ Tidak</td></tr>
+</table>
+
+<h2>Dapatkan OpenClaw</h2>
+
+<ul>
+<li>📦 <strong>STA-100</strong>: OpenClaw sudah terinstal — buka kotak, colokkan, selesai</li>
+<li>💻 <strong>GitHub</strong>: <a href="https://github.com/stratronix/openclaw">github.com/stratronix/openclaw</a></li>
+<li>📚 <strong>Dokumentasi</strong>: <a href="https://docs.openclaw.ai">docs.openclaw.ai</a></li>
+<li>🐦 <strong>PyPI</strong>: <code>pip install openclaw-sdk</code></li>
+</ul>
+
+<div class="cta">
+<h2 style="color: white; border: none; padding: 0;">Mulai dengan OpenClaw</h2>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin: 16px 0;">Open-source Apache 2.0 · Multi-LLM · MCP-native · RAG-ready · Kepatuhan GDPR/AI Act</p>
+<a href="https://github.com/stratronix/openclaw" class="primary">→ GitHub</a>
+<a href="https://docs.openclaw.ai">→ Dokumentasi</a>
+</div>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai">Situs Resmi STRATRONIX</a> · <a href="https://www.stratronix.ai/id/products.html">Produk</a> · <a href="https://www.stratronix.ai/id/contact.html">Hubungi</a></p>
+<p>OpenClaw · Kerangka Kerja Agen AI Open-Source · 2026-07-18</p>
+</footer>
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

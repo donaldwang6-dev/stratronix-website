@@ -34,7 +34,7 @@
             background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-solid);
         }
-        nav .logo-img { height: 36px; margin-right: 8px; }
+        nav .logo-img { height: 25px; margin-right: 8px; }
         nav .nav-links { display: flex; gap: 32px; align-items: center; }
         nav .nav-links li { list-style: none; }
         nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; cursor: pointer; }
@@ -76,7 +76,7 @@
             display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
             padding-bottom: 40px; border-bottom: 1px solid var(--border-solid);
         }
-        footer .footer-brand .logo-img { height: 36px; margin-bottom: 20px; }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
         footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
         footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
         footer ul li { margin-bottom: 10px; }
@@ -183,12 +183,25 @@
             background: var(--bg); color: var(--text); font-size: 14px; outline: none;
         }
         .newsletter-form input:focus { border-color: var(--brand); }
+
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
     </style>
 </head>
 <body>
     <!-- NAV -->
     <nav>
-        <a href="#" onclick="showPage('home'); return false;"><img src="images/stratronix-logo-pink.png" class="logo-img" alt="STRATRONIX"></a>
+        <a href="#" onclick="showPage('home'); return false;"><img src="/en/images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
         <ul class="nav-links">
             <li><a onclick="showPage('home')" class="active" data-page="home">Home</a></li>
             <li><a onclick="showPage('about')" data-page="about">About</a></li>
@@ -343,7 +356,7 @@
                             <li>🚀 Easy Deployment — 20 minutes to complete, no IT specialist needed</li>
                             <li>🏠 Wide Range of Applications — Education, healthcare, retail, home assistant</li>
                         </ul>
-                        <a href="products.html" class="read-more">🚀 Online shop now open → View product</a>
+                        <a href="/en/products.html" class="read-more">🚀 Online shop now open → View product</a>
                     </div>
                 </article>
 
@@ -357,7 +370,7 @@
                         <span class="tag category">Category</span>
                         <h3>STRATRONIX Defines the PAA Category — Personal AI Office Assistant</h3>
                         <p>We're announcing a new product category: the PAA — Personal AI Office Assistant. Unlike chatbots or mini PCs, PAA devices are local-first, always-on, and native to your existing messaging apps. They give IM an AI brain.</p>
-                        <a href="ai-use.html" class="read-more">📖 Category definition → Read announcement</a>
+                        <a href="/en/ai-use.html" class="read-more">📖 Category definition → Read announcement</a>
                     </div>
                 </article>
             </div>
@@ -451,7 +464,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="images/stratronix-logo-pink.png" class="logo-img" alt="STRATRONIX">
+                <img src="/en/images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
                 <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
                 <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
                 <p>86-755-2308 6689</p>
@@ -534,5 +547,6 @@
         }
     });
     </script>
+<script>function toggleLang(e){e.stopPropagation();const s=document.getElementById("langSelector");s.classList.toggle("open");const d=document.getElementById("langDropdown");d.style.display=s.classList.contains("open")?"block":"none"}document.addEventListener("click",()=>{const s=document.getElementById("langSelector");if(s){s.classList.remove("open");const d=document.getElementById("langDropdown");if(d)d.style.display="none"}});function initLang(){const c=document.cookie.match(/(?:^|; )lang=([^;]+)/);const p=window.location.pathname.match(/\/([^/]+)\//);const l=c?c[1]:(p?p[1]:"en");const m=document.getElementById("currentLangLabel");if(m)m.textContent=l.toUpperCase()}</script>
 </body>
 </html>

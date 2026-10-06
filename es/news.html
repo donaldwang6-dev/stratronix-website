@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias y Actualizaciones — STRATRONIX | Lanzamientos de Productos PAA e Información sobre Agentes IA</title>
+    <meta name="description" content="Últimas noticias de STRATRONIX: lanzamientos de productos, actualizaciones de desarrollo de Agentes IA, apariciones en exposiciones e información de la industria para la categoría Asistente de Inteligencia Artificial Personal para Oficina.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+        nav .shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-primary:hover { background: var(--brand-light); transform: translateY(-1px); }
+        .hero { padding: 140px 80px 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(36px, 4vw, 56px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 17px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .section { padding: 80px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 40px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        .news-grid { display: flex; flex-direction: column; gap: 24px; }
+        .news-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 32px;
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 24px;
+            align-items: start;
+            transition: border-color 0.3s;
+        }
+        .news-card:hover { border-color: var(--brand); }
+        .news-date { text-align: center; }
+        .news-date .day { font-size: 32px; font-weight: 900; color: var(--brand); line-height: 1; }
+        .news-date .month { font-size: 13px; font-weight: 600; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px; }
+        .news-date .year { font-size: 11px; color: var(--text-muted); }
+        .news-content .tag {
+            display: inline-block;
+            font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            padding: 4px 10px; border-radius: 20px; margin-bottom: 10px;
+        }
+        .tag.exhibition { background: rgba(100,200,255,0.15); color: #64C8FF; }
+        .tag.product { background: rgba(230,65,127,0.15); color: var(--brand); }
+        .tag.category { background: rgba(150,100,255,0.15); color: #9678FF; }
+        .tag.company { background: rgba(100,200,100,0.15); color: #64C864; }
+        .news-content h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; line-height: 1.3; }
+        .news-content p { font-size: 14px; color: var(--text-dim); line-height: 1.6; margin-bottom: 12px; }
+        .news-content .read-more { font-size: 13px; font-weight: 600; color: var(--brand); }
+        .news-content .read-more:hover { color: var(--brand-light); }
+
+        .newsletter-section {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            border-bottom: 1px solid var(--border-solid);
+            padding: 80px 80px;
+            text-align: center;
+        }
+        .newsletter-card {
+            max-width: 700px; margin: 0 auto;
+            background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.02) 100%);
+            border: 1px solid rgba(230,65,127,0.4);
+            border-radius: 24px;
+            padding: 50px 40px;
+        }
+        .newsletter-card h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; margin-bottom: 14px; }
+        .newsletter-card h2 .pink { color: var(--brand); }
+        .newsletter-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 24px; }
+        .newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+        .newsletter-form input {
+            flex: 1; padding: 13px 20px; border-radius: 50px; border: 1.5px solid var(--border-solid);
+            background: var(--bg); color: var(--text); font-size: 14px; outline: none;
+            transition: border-color 0.2s;
+        }
+        .newsletter-form input:focus { border-color: var(--brand); }
+        .newsletter-form input::placeholder { color: var(--text-muted); }
+
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            padding: 60px 80px 40px;
+        }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .social-links li a { display: flex; align-items: center; }
+        .social-links svg { flex-shrink: 0; }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted); text-align: center;
+        }
+        .footer-nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 12px; }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); }
+        .footer-bottom a:hover { color: var(--brand); }
+        .trust-foundation {
+            max-width: 1200px; margin: 0 auto; padding: 36px 0 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p { font-size: 11px; color: var(--text-dim); line-height: 1.7; max-width: 900px; margin: 0 auto 12px; }
+        .trust-foundation .trust-tagline { font-size: 11px; color: var(--brand); font-weight: 600; }
+
+        @media (max-width: 1024px) {
+            .hero, .section, .newsletter-section { padding-left: 40px; padding-right: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+            nav .nav-links { gap: 16px; }
+            .news-card { grid-template-columns: 60px 1fr; }
+        }
+        @media (max-width: 768px) {
+            .news-card { grid-template-columns: 1fr; }
+            .news-date { display: flex; align-items: baseline; gap: 8px; text-align: left; }
+            .newsletter-form { flex-direction: column; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/es/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+        <ul class="nav-links">
+            <li><a href="/es/index.html">Inicio</a></li>
+            <li><a href="/es/about.html">Acerca de</a></li>
+            <li><a href="/es/products.html">Productos</a></li>
+            <li><a href="/es/ai-use.html">Uso de IA</a></li>
+            <li><a href="/es/news.html" class="active">Noticias</a></li>
+            <li><a href="/es/contact.html">Contacto</a></li>
+        
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Comprar</a></li>
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">ES</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+    <section class="hero">
+        <div class="eyebrow">Noticias y Actualizaciones</div>
+        <h1>Mantente Adelante en el <span class="pink">Mundo PAA</span></h1>
+        <p>Lanzamientos de productos, resúmenes de exposiciones, información de categoría e hitos de la empresa de STRATRONIX.</p>
+    </section>
+
+    <section class="section">
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="news-date">
+                    <div class="day">28</div>
+                    <div class="month">Ago</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="news-content">
+                    <span class="tag exhibition">Exposición</span>
+                    <h3>STRATRONIX en IOTE 2026 — Stand 12B62-1, Shenzhen</h3>
+                    <p>Exhibimos el STA-100 Workie en la 25ª Exposición Internacional de Internet de las Cosas en Shenzhen. Cientos de visitantes experimentaron en vivo cómo Workie responde preguntas en WeChat, redacta informes en Feishu y funciona 24/7 en un dispositivo de 5 vatios.</p>
+                    <a href="#" class="read-more">📍 Centro de Convenciones y Exposiciones de Shenzhen → Leer resumen</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date">
+                    <div class="day">26</div>
+                    <div class="month">May</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="news-content">
+                    <span class="tag product">Lanzamiento de Producto</span>
+                    <h3>STRATRONIX Lanza el Primer Dispositivo de Agente IA Privado Ligero - STA-100</h3>
+                    <p>¡Nos complace anunciar que el primer dispositivo de Agente IA Privado ligero de STRATRONIX, el STA-100, ha entrado en pruebas finales y está a punto de lanzarse oficialmente!</p>
+                    <p style="margin-top:10px;"><strong>Características Principales:</strong></p>
+                    <ul style="font-size:13px;color:var(--text-dim);margin:8px 0;padding-left:20px;">
+                        <li>🖥️ SO XFCE Estable — Escritorio Linux ligero, estabilidad de nivel servidor</li>
+                        <li>⚡ Octa-core ARM — Ultra bajo consumo, solo ~15 kWh/mes funcionando 24/7</li>
+                        <li>🔧 OpenClaw Framework Integrado — Runtime de Agente IA listo para usar</li>
+                        <li>🚀 Despliegue Fácil — 20 minutos para completar, sin necesidad de especialista de TI</li>
+                        <li>🏠 Amplia Gama de Aplicaciones — Educación, salud, retail, asistente doméstico</li>
+                    </ul>
+                    <p style="margin-top:10px;">STA-100 es un dispositivo de Agente IA privado para individuos y pequeñas empresas. Todos los datos almacenados localmente, sin dependencia de la nube, privacidad y control completos. Factor de forma compacto de escritorio — simplemente conéctalo a cualquier monitor y listo.</p>
+                    <a href="/es/products.html" class="read-more">🚀 Tienda en línea ahora abierta → Ver producto</a>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-date">
+                    <div class="day">02</div>
+                    <div class="month">Jul</div>
+                    <div class="year">2026</div>
+                </div>
+                <div class="news-content">
+                    <span class="tag category">Categoría</span>
+                    <h3>STRATRONIX Define la Categoría PAA — Asistente de Inteligencia Artificial Personal para Oficina</h3>
+                    <p>Anunciamos una nueva categoría de producto: el PAA — Asistente de Inteligencia Artificial Personal para Oficina. A diferencia de los chatbots o mini PCs, los dispositivos PAA son primero locales, siempre activos y nativos de tus aplicaciones de mensajería existentes. Le dan un cerebro de IA a la IM.</p>
+                    <a href="/es/ai-use.html" class="read-more">📖 Definición de categoría → Leer anuncio</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-card">
+            <div class="section-label">Mantente Actualizado</div>
+            <h2>Recibe <span class="pink">STRATRONIX</span> en Tu Bandeja de Entrada</h2>
+            <p>Lanzamientos de productos, casos de estudio de Agentes IA e información de categoría. Sin spam — un correo al mes, cancelación en cualquier momento.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias! Nos pondremos en contacto.');">
+                <input type="email" placeholder="tu.email@empresa.com" required>
+                <button type="submit" class="btn-primary">Suscribirse</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+                <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+                <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+                <p>86-755-2308 6689</p>
+                <p>Lun-Vie 9:00-18:00</p>
+            </div>
+            <div>
+                <h4>Productos</h4>
+                <ul>
+                    <li><a href="/es/products.html">STA-100 Workie</a></li>
+                    <li><a href="/es/ai-use.html">Casos de Uso de IA</a></li>
+                    <li><a href="https://store.stratronix.ai" target="_blank">🛒 Tienda Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="/es/about.html">Sobre Nosotros</a></li>
+                    <li><a href="/es/news.html">Noticias</a></li>
+                    <li><a href="/es/contact.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="https://store.stratronix.ai" target="_blank">Comprar STA-100</a></li>
+                    <li><a href="/es/contact.html">Consulta Empresarial</a></li>
+                    <li><a href="/es/contact.html">Desarrollo de Agentes IA Personalizados</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Social</h4>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                    <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                    <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="trust-foundation">
+            <p>STRATRONIX es el pionero de PAA — Asistente de Inteligencia Artificial Personal para Oficina, creando una nueva categoría de productos de IA de Oficina diseñados para mejorar la productividad cotidiana. Construimos asistentes privados impulsados por IA y soluciones personalizadas de Agentes IA para individuos, empresas e industrias.</p>
+            <p class="trust-tagline">Construyendo la próxima generación de productividad impulsada por IA.</p>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Stratronix Technology. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></span>
+        </div>
+        <div class="footer-nav">
+            <a href="/es/index.html">Inicio</a>
+            <a href="/es/about.html">Acerca de</a>
+            <a href="/es/products.html">Productos</a>
+            <a href="/es/news.html">Noticias</a>
+            <a href="/es/contact.html">Contacto</a>
+        </div>
+    </footer>
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

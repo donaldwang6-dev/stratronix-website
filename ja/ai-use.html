@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI活用事例 — Workie | STRATRONIX</title>
+    <meta name="description" content="STA-100 Workieが日常業務をどのように変革するか：コンテンツ作成からデータ分析、プロジェクト管理、ECまで。6つの強力なAIエージェント活用事例。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --bg-card-hover: #111118;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --brand-dark: #C4305F;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --radius-sm: 8px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+
+        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .btn-primary { background: var(--brand); color: white; padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 15px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 15px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
+        .section { padding: 40px 80px; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(28px, 3.5vw, 48px); font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; line-height: 1.1; }
+        .section-subtitle { font-size: 16px; color: var(--text-dim); }
+
+        .def-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 80px; }
+        .def-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .def-text h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        .def-text h2 .pink { color: var(--brand); }
+        .def-text p { font-size: 16px; color: var(--text-dim); margin-bottom: 16px; line-height: 1.8; }
+        .def-text ul { list-style: none; margin-top: 24px; }
+        .def-text ul li { padding: 10px 0; font-size: 15px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .def-text ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; margin-right: 8px; }
+        .def-image { text-align: center; }
+        .def-image img { width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+
+        .cases-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .case-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius);
+            padding: 40px; transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .case-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .case-card::before {
+            content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(230,65,127,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .case-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            background: rgba(230,65,127,0.1); border: 1px solid rgba(230,65,127,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; margin-bottom: 24px;
+        }
+        .case-card .case-num {
+            position: absolute; top: 24px; right: 28px;
+            font-size: 56px; font-weight: 900; color: rgba(230,65,127,0.08);
+            line-height: 1;
+        }
+        .case-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; position: relative; }
+        .case-card .case-sub { font-size: 12px; color: var(--brand); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; position: relative; }
+        .case-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; position: relative; }
+        .case-card .case-tags { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; position: relative; }
+        .case-card .case-tags span { font-size: 11px; padding: 4px 10px; background: rgba(230,65,127,0.08); color: var(--brand); border-radius: 12px; font-weight: 600; }
+
+        .how-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .how-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .how-card {
+            background: var(--bg); border: 1px solid var(--border-solid); border-radius: var(--radius);
+            padding: 36px; text-align: center; position: relative;
+        }
+        .how-card .step-num {
+            position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+            background: var(--brand); color: white;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; font-weight: 800;
+        }
+        .how-card .step-icon { font-size: 40px; margin-bottom: 16px; }
+        .how-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .how-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+        .edu-section { padding: 40px 80px; max-width: 1200px; margin: 0 auto; }
+        .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .edu-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 40px;
+        }
+        .edu-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+        .edu-card .ec-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+        .edu-card .ec-tag.no { background: rgba(255,100,100,0.15); color: #FF6464; }
+        .edu-card .ec-tag.yes { background: rgba(230,65,127,0.15); color: var(--brand); }
+        .edu-card ul { list-style: none; }
+        .edu-card ul li { padding: 8px 0; font-size: 13px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .edu-card ul li:last-child { border-bottom: none; }
+        .edu-card ul li::before { content: '✗ '; color: #FF6464; font-weight: 700; margin-right: 8px; }
+        .edu-card.yes ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; }
+
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 900; margin-bottom: 16px; }
+        .cta-card p { font-size: 16px; color: var(--text-dim); margin-bottom: 36px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
+            text-align: center;
+        }
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        .trust-foundation {
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .case-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .case-card { transition: all 0.3s ease; }
+
+        @media (max-width: 1024px) {
+            .hero { padding: 120px 40px 60px; }
+            .section, .how-section, .edu-section, .cta-section { padding: 60px 40px; }
+            .def-section { padding: 60px 40px; }
+            .def-grid { grid-template-columns: 1fr; }
+            .cases-grid, .how-grid, .edu-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+            .trust-foundation { padding: 30px 40px 20px; }
+        }
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/ja/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/ja/index.html">ホーム</a></li>
+        <li><a href="/ja/about.html">会社概要</a></li>
+        <li><a href="/ja/ai-use.html" class="active">AI活用</a></li>
+        <li><a href="/ja/products.html">製品</a></li>
+        <li><a href="/ja/news.html">ニュース</a></li>
+        <li><a href="/ja/contact.html">お問い合わせ</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 オンラインストア</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">今すぐ購入</a></li>
+        
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">JA</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-cta" style="justify-content: center; margin-bottom: 20px;">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand);">AI活用事例 · Workie</span>
+    </div>
+    <h1>IMに<span class="pink">AI大脑</span>を配备</h1>
+    <p>STA-100 Workieは、PAA（パーソナルAIオフィスアシスタント）です。WhatsApp、Telegram、WeChat、Slack、Feishuなどのメッセージングアプリ上で動作します。調査、作成、整理、分析、業務実行をすべて 수행。アプリのダウンロードは不要です。</p>
+    <div class="hero-cta">
+        <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Workieを購入 — $399 USD</a>
+        <a href="/ja/products.html" class="btn-outline">产品规格を閲覧</a>
+    </div>
+</section>
+
+<section class="section">
+    <div class="section-header">
+        <div class="section-label">6つの強力な活用事例</div>
+        <h2 class="section-title">Workieで何ができる？</h2>
+        <p class="section-subtitle">日常のコンテンツ作成から複雑なデータ分析まで、Workieがあなたの時間を夺う業務を代わりに 수행します。</p>
+    </div>
+    <div class="cases-grid">
+
+        <div class="case-card">
+            <div class="case-num">01</div>
+            <div class="case-icon">📝</div>
+            <h3>パーソナルコンテンツ作成</h3>
+            <div class="case-sub">日常のクリエイティブ出力</div>
+            <p>ソーシャル投稿、博客記事、メール、マーケティングコピーをあなたの言葉で起草。あなたのスタイル、読者、ブランドガイドラインを学習。即座に公开可能な成果を产出します。</p>
+            <div class="case-tags">
+                <span>ブログ執筆</span><span>ソーシャルメディア</span><span>メール下書き</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">02</div>
+            <div class="case-icon">📄</div>
+            <h3>ドキュメント作成</h3>
+            <div class="case-sub">提案書 · レポート · 契約書</div>
+            <p>適切なフォーマット、引用、参考文献付きで構造化されたドキュメントを生成。ローカルナレッジベースから情報を引き出し、すべての成果物の一貫性を確保します。</p>
+            <div class="case-tags">
+                <span>提案書</span><span>レポート</span><span>契約書</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">03</div>
+            <div class="case-icon">💼</div>
+            <h3>日常業務</h3>
+            <div class="case-sub">24時間体制の同僚サポート</div>
+            <p>ミーティングのスケジュール調整、受信トレイ管理、タスク追跡、長いドキュメントの要約、返信の下書き。常にオン、準備完毕 — 決して眠らないパーソナルアシスタント 보유。</p>
+            <div class="case-tags">
+                <span>カレンダー</span><span>受信トレイ</span><span>要約</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">04</div>
+            <div class="case-icon">📊</div>
+            <h3>データ分析・調査</h3>
+            <div class="case-sub">生データからインサイトへ</div>
+            <p>CSV/Excelファイルを読み取り、分析を実行、チャートを生成、エグゼクティブサマリーを产出。需要に応じてウェブ検索で市場調査や競合インテリジェンスを収集します。</p>
+            <div class="case-tags">
+                <span>Excel/CSV</span><span>チャート</span><span>調査</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">05</div>
+            <div class="case-icon">🛒</div>
+            <h3>24時間AIカスタマーサービス</h3>
+            <div class="case-sub">EC対応</div>
+            <p>顧客からの問い合わせに対応 주문処理、配送追跡、返品対応を 수행。多言語サポートでグローバルビジネスに対応。顧客のメッセージを決して見逃しません。</p>
+            <div class="case-tags">
+                <span>Eコマース</span><span>多言語</span><span>自動返信</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">06</div>
+            <div class="case-icon">🤖</div>
+            <h3>営業・マーケティング自動化</h3>
+            <div class="case-sub">パイプライン＆コンテンツエンジン</div>
+            <p>営業パイプラインの追跡、アウトリーチメッセージの下書き、競合アクティビティの監視、リードレポートの生成。CRMと連携하여案件進行を維持します。</p>
+            <div class="case-tags">
+                <span>パイプライン</span><span>アウトリーチ</span><span>CRM同期</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section style="padding:40px 80px;max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:32px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand);margin-bottom:10px;">グローバルIMサポート</div>
+        <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;margin-bottom:8px;">チームのIMにAI大脑を配备</h2>
+        <p style="font-size:13px;color:var(--text-dim);">STA-100 Workieは、チームがすでに使用しているすべてのメッセージングプラットフォームに接続します</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;">
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🌎</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">北米</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fas fa-video" style="color:#2D8CFF;margin-right:10px;width:18px;text-align:center;"></i>Zoom<br>
+              <i class="fab fa-google" style="color:#0088CC;margin-right:10px;width:18px;text-align:center;"></i>Google Chat<br>
+              <i class="fab fa-discord" style="color:#5865F2;margin-right:10px;width:18px;text-align:center;"></i>Discord<br>
+              <i class="fas fa-video" style="color:#F0142F;margin-right:10px;width:18px;text-align:center;"></i>Webex
+            </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🇪🇺</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">ヨーロッパ</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fab fa-whatsapp" style="color:#25D366;margin-right:10px;width:18px;text-align:center;"></i>WhatsApp Business<br>
+              <i class="fas fa-comments" style="color:#005FF0;margin-right:10px;width:18px;text-align:center;"></i>Mattermost<br>
+              <i class="fas fa-lock" style="color:#3A76F0;margin-right:10px;width:18px;text-align:center;"></i>Signal<br>
+              <i class="fas fa-shield-alt" style="color:#007BFF;margin-right:10px;width:18px;text-align:center;"></i>Threema
+            </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🌏</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">アジア太平洋</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fas fa-comment-dots" style="color:#00B900;margin-right:10px;width:18px;text-align:center;"></i>LINE<br>
+              <i class="fas fa-comment" style="color:#FFEB00;margin-right:10px;width:18px;text-align:center;"></i>KakaoTalk<br>
+              <i class="fab fa-telegram" style="color:#0088CC;margin-right:10px;width:18px;text-align:center;"></i>Telegram<br>
+              <i class="fab fa-whatsapp" style="color:#25D366;margin-right:10px;width:18px;text-align:center;"></i>WhatsApp
+            </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🌐</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">グローバル</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-whatsapp" style="color:#25D366;margin-right:10px;width:18px;text-align:center;"></i>WhatsApp<br>
+              <i class="fab fa-telegram" style="color:#0088CC;margin-right:10px;width:18px;text-align:center;"></i>Telegram<br>
+              <i class="fab fa-discord" style="color:#5865F2;margin-right:10px;width:18px;text-align:center;"></i>Discord<br>
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fas fa-rocket" style="color:#147EEA;margin-right:10px;width:18px;text-align:center;"></i>Feishu
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+        <img src="images/sta100-im-demo.png" alt="STA-100 Workie IM Demo" style="max-width:700px;width:100%;border-radius:12px;">
+    </div>
+</section>
+
+<section style="padding:40px 80px;max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:32px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand);margin-bottom:10px;">オフィス役割</div>
+        <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;margin-bottom:8px;">1つの生産性ツールで複数の役割を担当</h2>
+        <p style="font-size:13px;color:var(--text-dim);">STA-100 Workieはすべてのチーム機能に适配 — 1つのAIエージェント、無限のワークフロー</p>
+    </div>
+    <div style="text-align:center;margin-bottom:24px;">
+        <img src="images/sta100-roles-demo.png" alt="STA-100 Workie Office Roles" style="max-width:500px;width:100%;border-radius:12px;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">💼</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">営業</div>
+            <div style="font-size:11px;color:var(--text-dim);">リード獲得 · パイプライン · CRM同期 · アウトリーチ</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">📣</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">マーケティング</div>
+            <div style="font-size:11px;color:var(--text-dim);">コンテンツ · ソーシャルメディア · キャンペーン · レポート</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">⚖️</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">法務</div>
+            <div style="font-size:11px;color:var(--text-dim);">契約書レビュー · コンプライアンス · _policy docs</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">📊</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">財務</div>
+            <div style="font-size:11px;color:var(--text-dim);">財務レポート · 市場データ · 投資分析</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">🏢</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">事務管理</div>
+            <div style="font-size:11px;color:var(--text-dim);">スケジュール · 受信トレイ · 旅行予約 · 要約</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">🛒</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">Eコマース</div>
+            <div style="font-size:11px;color:var(--text-dim);">製品掲載 · カスタマーサービス · 在庫管理</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">👥</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">人事</div>
+            <div style="font-size:11px;color:var(--text-dim);">履歴書スクリーニング · オンボーディング · トレーニング</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">📦</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">オペレーション</div>
+            <div style="font-size:11px;color:var(--text-dim);">プロセス自動化 · タスク追跡 · ワークフロー</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">💻</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">財務</div>
+            <div style="font-size:11px;color:var(--text-dim);">財務レポート · 市場データ · 投資分析</div>
+        </div>
+    </div>
+</section>
+
+<section class="edu-section">
+    <div class="section-header">
+        <div class="section-label">重要な違い</div>
+        <h2 class="section-title">AIエージェント ≠ チャットボット</h2>
+        <p class="section-subtitle">Workieは単なるチャットボットではなく、本当のデジタル同僚です</p>
+    </div>
+    <div class="edu-grid">
+        <div class="edu-card">
+            <h3>従来のチャットボット</h3>
+            <span class="ec-tag no">チャットのみ</span>
+            <ul>
+                <li>一度に1つのメッセージに返信</li>
+                <li>セッションをまたいだメモリがない</li>
+                <li>ファイルやデータへのアクセス不可</li>
+                <li>自律的にタスクを実行できない</li>
+                <li>常に人間のガイダンスが必要</li>
+                <li>データが外部クラウドサーバーに送信される</li>
+            </ul>
+        </div>
+        <div class="edu-card yes">
+            <h3>Workie AIエージェント</h3>
+            <span class="ec-tag yes">AIエージェント</span>
+            <ul>
+                <li>バックグラウンドで24時間365日継続的に作業</li>
+                <li>すべてを記憶し、文脈から學習</li>
+                <li>ファイル、メール、カレンダーに完全アクセス</li>
+                <li>コマンドで自律的にタスクを実行</li>
+                <li>反復的な作業を自動的に處理</li>
+                <li>すべてのデータはローカルに残り、デバイスから離れない</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>あなたの<span style="color:var(--brand)">AI同僚</span>に会う準備ができましたか？</h2>
+        <p>STA-100 Workieは<strong style="color:var(--brand)">$399 USD</strong>から。一度っきりのご購入。サブスクリプション不要。グローバル出荷対応。</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 今すぐ購入 — $399 USD</a>
+            <a href="/ja/products.html" class="btn-outline">产品规格を見る</a>
+            <a href="/ja/contact.html" class="btn-outline">企業向けお問い合わせ</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>月曜日〜金曜日 9:00-18:00</p>
+        </div>
+        <div>
+            <h4>製品</h4>
+            <ul>
+                <li><a href="/ja/products.html">STA-100 Workie</a></li>
+                <li><a href="/ja/ai-use.html">AI活用事例</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 オンラインストア</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>会社情報</h4>
+            <ul>
+                <li><a href="/ja/about.html">会社概要</a></li>
+                <li><a href="/ja/news.html">ニュース</a></li>
+                <li><a href="/ja/contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>リソース</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">STA-100を購入</a></li>
+                <li><a href="/ja/contact.html">企業向けお問い合わせ</a></li>
+                <li><a href="/ja/contact.html">カスタムAIエージェント開発</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>ソーシャル</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIXはPAA — パーソナルAIオフィスアシスタントのパイオニアです。日常生産性を高めるために設計されたオフィスAI製品の新しいカテゴリを切り拓いています。個人、ビジネス、産業向けのプライベートAI搭載アシスタントとカスタムAIエージェントソリューションを構築しています。</p>
+        <p class="trust-tagline">AI搭載生産性の次世代を構築しています。</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. All rights reserved. | <a href="#">プライバシーポリシー</a> | <a href="#">利用規約</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/ja/index.html">ホーム</a>
+        <a href="/ja/about.html">会社概要</a>
+        <a href="/ja/products.html">製品</a>
+        <a href="/ja/news.html">ニュース</a>
+        <a href="/ja/contact.html">お問い合わせ</a>
+    </div>
+</footer>
+
+<script>
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .section-header, .edu-section, .cta-section, .def-section, .case-card, .edu-card, .how-card');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+</script>
+
+
+<script>
+function toggleLang(e){e.stopPropagation();const s=document.getElementById('langSelector');s.classList.toggle('open');const d=document.getElementById('langDropdown');d.style.display=s.classList.contains('open')?'block':'none'}document.addEventListener('click',()=>{const s=document.getElementById('langSelector');if(s){s.classList.remove('open');const d=document.getElementById('langDropdown');if(d)d.style.display='none'}});function initLang(){const c=document.cookie.match(/(?:^|; )lang=([^;]+)/);const p=window.location.pathname.match(/\/([^/]+)\//);const l=c?c[1]:(p?p[1]:'en');const m=document.getElementById('currentLangLabel');if(m)m.textContent=l.toUpperCase()}
+</script>
+</body>
+</html>

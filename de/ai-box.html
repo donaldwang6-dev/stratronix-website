@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Box: Self-Hosted KI-Appliance | STRATRONIX PAA Europa</title>
+    <meta name="description" content="STRATRONIX PAA: Die KI-Box für europäische Unternehmen. 1U Hardware-Appliance mit Llama 3.3 70B + 10 KI-Agenten. DSGVO-konform. €339 Einmalzahlung. Kein Abonnement.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover { color: var(--text); }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+        nav .shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+
+        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
+        .section { padding: 100px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 44px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        .why-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .why-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .why-card { background: var(--bg); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
+        .why-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .why-card .why-num { font-size: 40px; font-weight: 900; color: var(--brand); margin-bottom: 12px; }
+        .why-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+        .why-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+        .specs-section { padding: 100px 80px; }
+        .specs-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+        .spec-item { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 24px; text-align: center; }
+        .spec-item .spec-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--brand); margin-bottom: 8px; }
+        .spec-item .spec-value { font-size: 16px; font-weight: 600; }
+
+        .compare-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .compare-table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; border: 1px solid var(--border-solid); border-radius: var(--radius); overflow: hidden; }
+        .compare-table th, .compare-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--border-solid); font-size: 14px; }
+        .compare-table th { background: var(--bg); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); }
+        .compare-table td:last-child { color: var(--brand); font-weight: 700; }
+        .compare-table tr:last-child td { border-bottom: none; }
+
+        .industries-section { padding: 100px 80px; }
+        .industries-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .industry-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 28px; text-align: center; transition: all 0.3s; }
+        .industry-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .industry-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+        .industry-card p { font-size: 12px; color: var(--text-dim); }
+
+        .pricing-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .bulk-table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; border: 1px solid var(--border-solid); border-radius: var(--radius); overflow: hidden; }
+        .bulk-table th, .bulk-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--border-solid); font-size: 14px; }
+        .bulk-table th { background: var(--bg); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); }
+        .bulk-table td:last-child { color: var(--brand); font-weight: 700; }
+        .bulk-table tr:last-child td { border-bottom: none; }
+
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 900; margin-bottom: 14px; }
+        .cta-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid var(--border-solid); }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom { max-width: 1200px; margin: 30px auto 0; display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 12px; color: var(--text-muted); text-align: center; }
+        .footer-nav { max-width: 1200px; margin: 0 auto; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 12px; }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); }
+        .footer-bottom a:hover { color: var(--brand); }
+        .trust-foundation { max-width: 1200px; margin: 0 auto; padding: 36px 0 24px; border-top: 1px solid var(--border-solid); text-align: center; }
+        .trust-foundation p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 900px; margin: 0 auto 12px; }
+        .trust-foundation .trust-tagline { font-size: 13px; color: var(--brand); font-weight: 600; }
+
+        @media (max-width: 1024px) {
+            .hero { padding: 120px 40px 60px; }
+            .section, .why-section, .compare-section, .industries-section, .pricing-section, .cta-section { padding: 60px 40px; }
+            .why-grid { grid-template-columns: 1fr; }
+            .specs-grid { grid-template-columns: repeat(2, 1fr); }
+            .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+        }
+        @media (max-width: 640px) {
+            .specs-grid, .industries-grid, .footer-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/de/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/de/index.html">Startseite</a></li>
+        <li><a href="/de/about.html">Über uns</a></li>
+        <li><a href="/de/ai-use.html">KI-Einsatz</a></li>
+        <li><a href="/de/products.html">Produkte</a></li>
+        <li><a href="/de/news.html">Neuigkeiten</a></li>
+        <li><a href="/de/contact.html">Kontakt</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 Online-Shop</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Jetzt kaufen</a></li>
+    
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">EN</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="eyebrow">KI-Box für Europa</div>
+    <h1>Die Self-Hosted <span class="pink">KI-Appliance</span></h1>
+    <p>STRATRONIX PAA ist die führende KI-Box für europäische Unternehmen. 1U Hardware-Appliance mit Llama 3.3 70B + 10 KI-Agenten. DSGVO-konform. €339 Einmalzahlung. Kein Abonnement.</p>
+    <div class="hero-btns">
+        <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Jetzt bestellen — ab €339</a>
+        <a href="/de/contact.html" class="btn-outline">Angebot anfordern</a>
+    </div>
+</section>
+
+<!-- WHY KI-BOX -->
+<section class="why-section">
+    <div class="section-header">
+        <div class="section-label">Warum KI-Box?</div>
+        <h2 class="section-title">Drei Kräfte treiben die KI-Box-Adoption in Europa an</h2>
+    </div>
+    <div class="why-grid">
+        <div class="why-card">
+            <div class="why-num">1</div>
+            <h3>DSGVO-Durchsetzung</h3>
+            <p>2025–2026 gab es €4,4 Milliarden an DSGVO-Bußgeldern. Kundendaten an ChatGPT senden = gleiches Risiko. KI-Box hält Daten on-premises.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-num">2</div>
+            <h3>EU-KI-Verordnung (August 2025)</h3>
+            <p>High-Risk-KI-Systeme erfordern auditable Infrastruktur. KI-Box = auditierbar.</p>
+        </div>
+        <div class="why-card">
+            <div class="why-num">3</div>
+            <h3>Kostendruck</h3>
+            <p>ChatGPT Team für 50 Mitarbeiter = €13.800/Jahr. KI-Box = €339 einmalig.</p>
+        </div>
+    </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs-section">
+    <div class="section-header">
+        <div class="section-label">Hardware-Spezifikationen</div>
+        <h2 class="section-title">STRATRONIX KI-Box — Technische Daten</h2>
+    </div>
+    <div class="specs-grid">
+        <div class="spec-item">
+            <div class="spec-label">CPU</div>
+            <div class="spec-value">Intel Core Ultra 7 + NPU (13 TOPS)</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">GPU</div>
+            <div class="spec-value">NVIDIA RTX 4000 Ada (20 TFLOPS)</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">RAM</div>
+            <div class="spec-value">32 GB DDR5</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Speicher</div>
+            <div class="spec-value">1 TB NVMe SSD</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Netzwerk</div>
+            <div class="spec-value">2 × 2,5 GbE</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Formfaktor</div>
+            <div class="spec-value">1U Rack (44,45 mm × 482 mm)</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Strom</div>
+            <div class="spec-value">200W typ. / 350W Spitze</div>
+        </div>
+        <div class="spec-item">
+            <div class="spec-label">Geräusch</div>
+            <div class="spec-value"><45 dB (Büro-freundlich)</div>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare-section">
+    <div class="section-header">
+        <div class="section-label">Vergleich</div>
+        <h2 class="section-title">KI-Box vs. Cloud-KI</h2>
+    </div>
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>Dimension</th>
+                <th>STRATRONIX KI-Box</th>
+                <th>Cloud-KI (ChatGPT Team)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kosten (50 MA, 3 Jahre)</td>
+                <td>€339</td>
+                <td>€41.400</td>
+            </tr>
+            <tr>
+                <td>Datenspeicherort</td>
+                <td>Ihr Server</td>
+                <td>US-Server</td>
+            </tr>
+            <tr>
+                <td>DSGVO</td>
+                <td>Nativ konform</td>
+                <td>Komplexes DPA</td>
+            </tr>
+            <tr>
+                <td>Latenz</td>
+                <td>0,5–1,5s</td>
+                <td>2–5s</td>
+            </tr>
+            <tr>
+                <td>Offline</td>
+                <td>Funktioniert</td>
+                <td>Versagt</td>
+            </tr>
+            <tr>
+                <td>Anpassbar</td>
+                <td>Vollständig</td>
+                <td>Eingeschränkt</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries-section">
+    <div class="section-header">
+        <div class="section-label">Branchen</div>
+        <h2 class="section-title">KI-Box-Einsatz in Europa</h2>
+    </div>
+    <div class="industries-grid">
+        <div class="industry-card">
+            <h4>🇩🇪 Deutsches verarbeitendes Gewerbe (Mittelstand)</h4>
+            <p>Industrie 4.0, Produktionsdaten-KI, DSGVO + Geschäftsgeheimnisschutz</p>
+        </div>
+        <div class="industry-card">
+            <h4>🇬🇧 UK-Finanzdienstleistungen</h4>
+            <p>FCA-Compliance, City of London-Firmen, On-Premises-Handels-KI</p>
+        </div>
+        <div class="industry-card">
+            <h4>🇫🇷 Französische Tech & SaaS</h4>
+            <p>CNIL-Compliance, DSGVO-Datenlokalisierung, europäische SaaS-Alternative</p>
+        </div>
+        <div class="industry-card">
+            <h4>🇳🇱 Niederländische Logistik & Handel</h4>
+            <p>Rotterdam-Hafenlogistik, mehrsprachiger Kundenservice, EU-Zoll-KI</p>
+        </div>
+        <div class="industry-card">
+            <h4>🇮🇹 Italienische Mode & Fertigung</h4>
+            <p>Design-KI, DSGVO-Kundendaten, Made-in-Italy-Branding</p>
+        </div>
+        <div class="industry-card">
+            <h4>🇪🇸 Spanisches Bank- & Energiewesen</h4>
+            <p>Bankinter/BBVA-Compliance, DSGVO + EU-Energieregulierung</p>
+        </div>
+        <div class="industry-card">
+            <h4>🇵🇱 Polnische IT-Dienstleistungen</h4>
+            <p>Outsourcing-Unternehmen, EU-Datenresidenz, kostenbewusste KMUs</p>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing-section">
+    <div class="section-header">
+        <div class="section-label">Preise & Stückzahl</div>
+        <h2 class="section-title">Volumenpreise für europäische Unternehmen</h2>
+    </div>
+    <table class="bulk-table">
+        <thead>
+            <tr>
+                <th>Menge</th>
+                <th>Preis/Einheit</th>
+                <th>Gesamt (50 MA)</th>
+                <th>Gesamt (200 MA)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>€339</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>€306</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>50</td>
+                <td>€271</td>
+                <td>€13.550</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>€237</td>
+                <td>—</td>
+                <td>€47.400</td>
+            </tr>
+            <tr>
+                <td>500</td>
+                <td>€204</td>
+                <td>—</td>
+                <td>€102.000</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>STRATRONIX <span style="color:var(--brand)">KI-Box</span> bestellen</h2>
+        <p>Einzelne KI-Box: <strong style="color:var(--brand)">€339</strong>. EU-Versand: 5–7 Werktage. EU-Support: 9–18 Uhr MEZ (Mo–Fr). Garantie: 2 Jahre Hardware + lebenslange Software-Updates.</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Jetzt bestellen — ab €339</a>
+            <a href="/de/contact.html" class="btn-outline">Angebot anfordern</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>Mo-Fr 9:00–18:00</p>
+        </div>
+        <div>
+            <h4>Produkte</h4>
+            <ul>
+                <li><a href="/de/products.html">STA-100 Workie</a></li>
+                <li><a href="/de/ai-use.html">KI-Einsatz</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 Online-Shop</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Unternehmen</h4>
+            <ul>
+                <li><a href="/de/about.html">Über uns</a></li>
+                <li><a href="/de/news.html">Neuigkeiten</a></li>
+                <li><a href="/de/contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Ressourcen</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">STA-100 kaufen</a></li>
+                <li><a href="/de/contact.html">Unternehmensanfrage</a></li>
+                <li><a href="/de/contact.html">Benutzerdefinierte KI-Agent-Entwicklung</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank">Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank">X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX ist der Pionier von PAA — Personal AI Office Assistant, schafft eine neue Kategorie von Büro-KI-Produkten.</p>
+        <p class="trust-tagline">Die nächste Generation KI-gestützter Produktivität aufbauen.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Stratronix Technology. Alle Rechte vorbehalten. | <a href="#">Datenschutzrichtlinie</a> | <a href="#">Nutzungsbedingungen</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/de/index.html">Startseite</a>
+        <a href="/de/about.html">Über uns</a>
+        <a href="/de/products.html">Produkte</a>
+        <a href="/de/news.html">Neuigkeiten</a>
+        <a href="/de/contact.html">Kontakt</a>
+    </div>
+</footer>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

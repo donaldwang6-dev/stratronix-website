@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI-Agent-Appliance: STRATRONIX Privater KI-Agent | €399 PAA</title>
+    <meta name="description" content="KI-Agent-Appliance: STRATRONIX STA-100 PAA ist ein privates KI-Agent-Hardwaregerät. Lokaler KI-Agent + Cloud-LLM. Open-source OpenClaw. DSGVO / EU-KI-Verordnung konform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover { color: var(--text); }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+        nav .shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+
+        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
+        .section { padding: 100px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 44px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        .what-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .what-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .what-text h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        .what-text h2 .pink { color: var(--brand); }
+        .what-text p { font-size: 16px; color: var(--text-dim); margin-bottom: 16px; line-height: 1.8; }
+        .what-text ul { list-style: none; margin-top: 20px; }
+        .what-text ul li { padding: 10px 0; font-size: 15px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .what-text ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; margin-right: 8px; }
+        .what-text ul li:last-child { border-bottom: none; }
+        .what-img img { width: 100%; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+
+        .specs-section { padding: 100px 80px; }
+        .specs-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .spec-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 32px; transition: all 0.3s; }
+        .spec-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .spec-card .spec-icon { font-size: 28px; margin-bottom: 14px; }
+        .spec-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+        .spec-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+        .compare-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .compare-table { width: 100%; max-width: 900px; margin: 0 auto; border-collapse: collapse; border: 1px solid var(--border-solid); border-radius: var(--radius); overflow: hidden; }
+        .compare-table th, .compare-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--border-solid); font-size: 14px; }
+        .compare-table th { background: var(--bg); font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: var(--text-dim); }
+        .compare-table td:last-child { color: var(--brand); font-weight: 700; }
+        .compare-table tr:last-child td { border-bottom: none; }
+
+        .industries-section { padding: 100px 80px; }
+        .industries-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .industry-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 28px; text-align: center; transition: all 0.3s; }
+        .industry-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .industry-card .ind-icon { font-size: 32px; margin-bottom: 12px; }
+        .industry-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+        .industry-card p { font-size: 12px; color: var(--text-dim); }
+
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 900; margin-bottom: 14px; }
+        .cta-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 40px; border-bottom: 1px solid var(--border-solid); }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom { max-width: 1200px; margin: 30px auto 0; display: flex; flex-direction: column; align-items: center; gap: 12px; font-size: 12px; color: var(--text-muted); text-align: center; }
+        .footer-nav { max-width: 1200px; margin: 0 auto; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 12px; }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); }
+        .footer-bottom a:hover { color: var(--brand); }
+        .trust-foundation { max-width: 1200px; margin: 0 auto; padding: 36px 0 24px; border-top: 1px solid var(--border-solid); text-align: center; }
+        .trust-foundation p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 900px; margin: 0 auto 12px; }
+        .trust-foundation .trust-tagline { font-size: 13px; color: var(--brand); font-weight: 600; }
+
+        @media (max-width: 1024px) {
+            .hero { padding: 120px 40px 60px; }
+            .section, .what-section, .compare-section, .industries-section, .cta-section { padding: 60px 40px; }
+            .what-grid { grid-template-columns: 1fr; }
+            .specs-grid, .industries-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+        }
+        @media (max-width: 640px) {
+            .specs-grid, .industries-grid, .footer-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/de/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/de/index.html">Startseite</a></li>
+        <li><a href="/de/about.html">Über uns</a></li>
+        <li><a href="/de/ai-use.html">KI-Einsatz</a></li>
+        <li><a href="/de/products.html">Produkte</a></li>
+        <li><a href="/de/news.html">Neuigkeiten</a></li>
+        <li><a href="/de/contact.html">Kontakt</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 Online-Shop</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Jetzt kaufen</a></li>
+    
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">EN</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="eyebrow">KI-Agent-Appliance</div>
+    <h1>Die erste kommerziell verfügbare <span class="pink">KI-Agent-Appliance</span></h1>
+    <p>STRATRONIX STA-100 ist ein privates KI-Agent-Hardwaregerät. Lokaler KI-Agent + Cloud-LLM. Open-source OpenClaw. DSGVO / EU-KI-Verordnung konform.</p>
+    <div class="hero-btns">
+        <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Jetzt kaufen — €399</a>
+        <a href="/de/products.html" class="btn-outline">Hardware-Spezifikationen</a>
+    </div>
+</section>
+
+<!-- WHAT IS -->
+<section class="what-section">
+    <div class="what-grid">
+        <div class="what-text">
+            <div class="section-label" style="text-align:left;margin-bottom:12px;">Was ist eine KI-Agent-Appliance?</div>
+            <h2>Mehr als ein Chatbot — ein echter <span class="pink">digitaler Mitarbeiter</span></h2>
+            <p>Eine KI-Agent-Appliance ist ein schlüsselfertiges Hardware-Gerät, das einen KI-Agenten lokal ausführt und bei Bedarf komplexe Reasoning-Aufgaben an Cloud-LLMs weiterleitet.</p>
+            <p>STRATRONIX's KI-Agent-Appliance (€399) macht dies für jedermann zugänglich — von Einzelpersonen bis zu Unternehmen.</p>
+            <ul>
+                <li>Datenschutz by Design — alle Daten bleiben auf dem Gerät</li>
+                <li>DSGVO, EU-KI-Verordnung, HIPAA, 等保 2.0 konform</li>
+                <li>OpenClaw (Apache 2.0, Open-Source)</li>
+                <li>12+ Sprachen: Deutsch, Englisch, Chinesisch, Japanisch, Arabisch uvm.</li>
+                <li>Chat-Integrationen: WeChat, Feishu, Slack, Teams, Webhooks</li>
+                <li>24/7 Offline-Betrieb — funktioniert ohne Internet</li>
+            </ul>
+        </div>
+        <div class="what-img">
+            <img src="images/sta100-product-shot-angle.png" alt="STA-100 Workie">
+        </div>
+    </div>
+</section>
+
+<!-- SPECS -->
+<section class="specs-section">
+    <div class="section-header">
+        <div class="section-label">Hardware-Spezifikationen</div>
+        <h2 class="section-title">Echte Leistung, keine Kompromisse</h2>
+        <p class="section-subtitle">Zweckgebaut für 24/7 KI-Workloads</p>
+    </div>
+    <div class="specs-grid">
+        <div class="spec-card">
+            <div class="spec-icon">🖥️</div>
+            <h3>Octa-Core-ARM-CPU</h3>
+            <p>Low-Power-ARM-Architektur, optimiert für KI-Workloads</p>
+        </div>
+        <div class="spec-card">
+            <div class="spec-icon">💾</div>
+            <h3>4 GB RAM + 32 GB Speicher</h3>
+            <p>4 GB LPDDR4 RAM + 32 GB eMMC (erweiterbar auf bis zu 16 TB)</p>
+        </div>
+        <div class="spec-card">
+            <div class="spec-icon">🌐</div>
+            <h3>Wi-Fi 6 + Gigabit-Ethernet</h3>
+            <p>Dualband-WLAN + Bluetooth 5.0 + Gigabit-Ethernet</p>
+        </div>
+        <div class="spec-card">
+            <div class="spec-icon">🔌</div>
+            <h3>USB-C-Stromversorgung</h3>
+            <p>15W typisch, energieeffizient — nur ~15 kWh/Monat</p>
+        </div>
+        <div class="spec-card">
+            <div class="spec-icon">🤖</div>
+            <h3>OpenClaw KI-Agent</h3>
+            <p>Apache 2.0 Open-Source, vollständig auditierbar</p>
+        </div>
+        <div class="spec-card">
+            <div class="spec-icon">☁️</div>
+            <h3>Cloud-LLM-Brücke</h3>
+            <p>OpenAI / Anthropic / Qwen / DeepSeek — Ihr API-Key</p>
+        </div>
+    </div>
+</section>
+
+<!-- COMPARE -->
+<section class="compare-section">
+    <div class="section-header">
+        <div class="section-label">Vergleich</div>
+        <h2 class="section-title">KI-Agent-Appliance vs. andere Optionen</h2>
+    </div>
+    <table class="compare-table">
+        <thead>
+            <tr>
+                <th>Option</th>
+                <th>KI-Agent</th>
+                <th>Datenspeicherort</th>
+                <th>Preis</th>
+                <th>Setup</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ChatGPT Team</td>
+                <td>Nur Cloud</td>
+                <td>OpenAI-Server</td>
+                <td>€23/Einheit/Monat</td>
+                <td>5 Min.</td>
+            </tr>
+            <tr>
+                <td>Azure OpenAI Enterprise</td>
+                <td>Nur Cloud</td>
+                <td>Azure EU/US</td>
+                <td>€4.600+/Monat</td>
+                <td>1–2 Wochen</td>
+            </tr>
+            <tr>
+                <td>Lokaler GPU-Server</td>
+                <td>DIY</td>
+                <td>Lokal</td>
+                <td>€46.000–€138.000</td>
+                <td>2–4 Wochen</td>
+            </tr>
+            <tr>
+                <td>Open-Source (Dify)</td>
+                <td>Self-hosted</td>
+                <td>Lokal</td>
+                <td>Kostenlos + Hardware</td>
+                <td>1–2 Wochen</td>
+            </tr>
+            <tr>
+                <td><strong>STRATRONIX PAA</strong></td>
+                <td><strong>Inklusive (OpenClaw)</strong></td>
+                <td><strong>Lokal</strong></td>
+                <td><strong>€399</strong></td>
+                <td><strong>8–10 Min.</strong></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="industries-section">
+    <div class="section-header">
+        <div class="section-label">Branchen</div>
+        <h2 class="section-title">Wer nutzt die KI-Agent-Appliance?</h2>
+    </div>
+    <div class="industries-grid">
+        <div class="industry-card">
+            <div class="ind-icon">⚖️</div>
+            <h4>Recht</h4>
+            <p>Vertragsprüfung, Rechtsprechungssuche</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">🏥</div>
+            <h4>Gesundheitswesen</h4>
+            <p>Patienten-Triage, EHR-Suche</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">🏭</div>
+            <h4>Industrie</h4>
+            <p>Vorausschauende Wartung, KI für Arbeiter</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">💰</div>
+            <h4>Finanzen</h4>
+            <p>Investitionsrecherche, Kundenservice</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">🎓</div>
+            <h4>Bildung</h4>
+            <p>KI-Tutoring, Studentensupport</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">🏛️</div>
+            <h4>Regierung</h4>
+            <p>Interner KI-Assistent</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">☁️</div>
+            <h4>SaaS</h4>
+            <p>White-Label-KI-Einbettung</p>
+        </div>
+        <div class="industry-card">
+            <div class="ind-icon">🌍</div>
+            <h4> grenzüberschreitender E-Commerce</h4>
+            <p>Mehrsprachiger KI-Kundenservice</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>Holen Sie sich die STRATRONIX <span style="color:var(--brand)">KI-Agent-Appliance</span></h2>
+        <p>€399 EUR · 8–10-minütiges Setup · Open-Source-KI-Agent · DSGVO / EU-KI-Verordnung / 等保 2.0 konform</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Jetzt kaufen — €399</a>
+            <a href="/de/products.html" class="btn-outline">STA-100 ansehen</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>Mo-Fr 9:00–18:00</p>
+        </div>
+        <div>
+            <h4>Produkte</h4>
+            <ul>
+                <li><a href="/de/products.html">STA-100 Workie</a></li>
+                <li><a href="/de/ai-use.html">KI-Einsatz</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 Online-Shop</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Unternehmen</h4>
+            <ul>
+                <li><a href="/de/about.html">Über uns</a></li>
+                <li><a href="/de/news.html">Neuigkeiten</a></li>
+                <li><a href="/de/contact.html">Kontakt</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Ressourcen</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">STA-100 kaufen</a></li>
+                <li><a href="/de/contact.html">Unternehmensanfrage</a></li>
+                <li><a href="/de/contact.html">Benutzerdefinierte KI-Agent-Entwicklung</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank">LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank">Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank">X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank">YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX ist der Pionier von PAA — Personal AI Office Assistant, schafft eine neue Kategorie von Büro-KI-Produkten, die die alltägliche Produktivität steigern.</p>
+        <p class="trust-tagline">Die nächste Generation KI-gestützter Produktivität aufbauen.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Stratronix Technology. Alle Rechte vorbehalten. | <a href="#">Datenschutzrichtlinie</a> | <a href="#">Nutzungsbedingungen</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/de/index.html">Startseite</a>
+        <a href="/de/about.html">Über uns</a>
+        <a href="/de/products.html">Produkte</a>
+        <a href="/de/news.html">Neuigkeiten</a>
+        <a href="/de/contact.html">Kontakt</a>
+    </div>
+</footer>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

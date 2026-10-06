@@ -1,857 +1,1312 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>鼎图太易 STRATRONIX - PAA 私有 AI 智能体设备品类开创者 | STA-100</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="鼎图太易(STRATRONIX)是PAA（Private AI-Agent Appliance）私有AI智能体设备品类开创者。STA-100本地部署、智能体24/7在线、隐私优先。">
-    <meta name="keywords" content="鼎图智能体, 鼎图太易, 智能体, PAA, 私有智能体, AI, 深圳AI公司, AI智能体, 智能体设备, 智能体底座, 边缘计算, AI盒子, 龙虾盒子, AI私有智能体, AI底座, AI HUB, OPenclaw盒子">
-    <meta name="author" content="Stratronix Technology">
+    <title>STRATRONIX — 个人 AI 办公助手 | STA-100 Workie</title>
+    <meta name="description" content="STRATRONIX STA-100 Workie: A 个人 AI 办公助手 (PAA) that brings an AI brain to your IM — research, create, organize, analyze and get work done. No app download needed.">
+    <meta name="keywords" content="个人 AI 办公助手, AI Agent, STA-100, Workie, AI productivity, private AI, office AI, IM AI assistant">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="Stratronix - 私有AI智能体设备技术">
-    <meta property="og:description" content="鼎图太易(STRATRONIX)PAA私有AI智能体设备品类开创者。STA-100本地部署、智能体24/7在线。">
-    <meta property="og:image" content="https://www.stratronix.ai/images/og-image.jpg">
-    <meta property="og:url" content="https://www.stratronix.ai/zh">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Stratronix">
-    
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Stratronix - 私有AI智能体设备技术">
-    <meta name="twitter:description" content="鼎图太易PAA私有AI智能体设备品类开创者，STA-100本地部署。">
-    <meta name="twitter:image" content="https://www.stratronix.ai/images/twitter-card.jpg">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://www.stratronix.ai/zh">
-    
-    <!-- Alternate Languages -->
-    <link rel="alternate" hreflang="en" href="https://www.stratronix.ai/en">
-    <link rel="alternate" hreflang="zh" href="https://www.stratronix.ai/zh">
-    <link rel="alternate" hreflang="x-default" href="https://www.stratronix.ai">
-
-    <!-- BreadcrumbList -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "首页",
-          "item": "https://www.stratronix.ai/zh/"
-        }
-      ]
-    }
-    </script>
-
-    <!-- WebSite + SearchAction (SEO v1.4) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Stratronix 鼎图太易",
-      "url": "https://www.stratronix.ai/zh/",
-      "description": "私有AI智能体设备（PAA）品类开创者，本地AI推理硬件+软件一体化",
-      "inLanguage": "zh-CN",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.stratronix.ai/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-
-    <!-- Organization + sameAs (SEO v3.1 - 国内社媒收录百度) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Stratronix 鼎图太易",
-      "alternateName": ["STRATRONIX", "鼎图太易"],
-      "url": "https://www.stratronix.ai/",
-      "logo": "https://www.stratronix.ai/images/stratronix-logo.png",
-      "description": "鼎图太易(STRATRONIX)是PAA（Private AI-Agent Appliance）私有AI智能体设备品类的开创者，推出STA-100本地化智能体硬件。",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "CN",
-        "addressRegion": "广东省",
-        "addressLocality": "深圳市",
-        "streetAddress": "宝安区航城街道洲石路恒丰工业区C6栋1203D"
-      },
-      "sameAs": [
-        "https://weibo.com/u/7656329069",
-        "https://space.bilibili.com/3493136900819331",
-        "http://weixin.qq.com/r/mp/qifv95jENMVLrdyU93K4",
-        "https://www.linkedin.com/company/113783977",
-        "https://www.youtube.com/@stratronix",
-        "https://www.facebook.com/profile.php?id=61574372021682"
-      ]
-    }
-    </script>
-
-    <!-- FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "什么是私有AI智能体设备(PAA)？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PAA（Private AI-Agent Appliance，私有 AI 智能体设备）是由深圳 AI 公司鼎图太易（STRATRONIX）开创的新 AI 产品品类。它是一台内置 OpenClaw 智能体（小龙虾）的本地硬件设备：本地智能体做数据脱敏 + 工具调用 + 记忆，云端调用用户配置的 LLM API（OpenAI / Claude / Qwen / DeepSeek 等任意）。架构优势：享受云端最强 LLM + 最大化数据主权。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 与 ChatGPT 等云端AI有什么不同？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "云端AI（如ChatGPT）需要将数据上传到第三方服务器处理，存在数据泄露与合规风险。STA-100 通过本地智能体 + 云 API运行AI推理，所有数据不出硬件，特别适合 GDPR 敏感业务、律师客户保密、医疗记录、财务数据等需要数据主权的场景。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 需要联网吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "是的，STA-100 需要 24 小时始终在线的互联网连接，用于实时AI智能体运行、模型更新与远程运维。但所有敏感数据与推理结果都保留在本地设备，互联网连接仅用于AI服务通信，绝不上传您的私有数据到外部服务器。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "哪些数据保存在 STA-100 本地？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "所有敏感数据都保存在本地：提示词、文档、对话、业务数据、客户信息、法律文件、医疗记录。只有匿名的服务遥测数据可能上传。您拥有完全的数据主权 — 设备是您的，数据是您的。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 是否符合 GDPR？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "是的。因为所有数据在 STA-100 本地处理，不传输个人数据到第三方AI服务，这极大简化了企业在面向客户或员工数据工作流中使用AI的 GDPR 合规要求。结合始终在线的连接能力，设备同时满足数据主权和运营不中断的双重要求。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 适合谁使用？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STA-100 专为以下用户设计：寻求私有AI助手的个人、中小企业(SME)、律师事务所、医疗机构、财务顾问、记者，以及所有处理敏感数据的组织。鼎图太易开创 PAA 品类，专门解决数据主权、GDPR合规与 7x24 可靠性三个不可妥协的核心需求。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "如何购买 STRATRONIX STA-100？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "您可以通过 STRATRONIX 官方商店直接购买 STA-100 PAA Standard：store.stratronix.ai/products/sta-100-paa-standard/。全球 195 国发货，PayPal 支付。包含 2 年质保和 OpenClaw 智能体生态访问权限。企业或批量订单请联系 sales@stratronix.ai。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 的技术规格是什么？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STRATRONIX STA-100 PAA Standard 技术规格：8 核 ARM 芯片 处理器，4GB LPDDR4 内存，32GB eMMC 存储（支持 512GB 扩展），OpenClaw 预装实现一键AI智能体部署，原生多平台支持，7x24 始终在线设计，原厂安全封装。"
-          }
-        }
-      ]
-    }
-    </script>
-
-    <!-- Performance: preconnect + preload (SEO v1.4) -->
+    <link rel="canonical" href="https://www.stratronix.ai">
+    <link rel="alternate" hreflang="en" href="https://www.stratronix.ai">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//hm.baidu.com">
-    <link rel="dns-prefetch" href="//zz.bdstatic.com">
-    <link rel="dns-prefetch" href="//weibo.com">
-    <link rel="dns-prefetch" href="//space.bilibili.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-    <link rel="preload" href="/css/style.css" as="style">
-
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="lQJVS1F4ptT7_E9JSSU-X9TzW9AENKMb1T6EKkLomuw" />
-    <meta name="yandex-verification" content="e5f7d6b34a469017" />
-    <!-- Baidu Verification (百度站长平台验证) -->
-    <meta name="baidu-site-verification" content="codeva-f9joA45YuV" />
-    <meta name="baidu-tc" content="n9Y8K4e9y7s" />
-
-    <!-- FAQPage JSON-LD (百度结构化数据 - 中文 PAA 问答) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "什么是 PAA 私有AI智能体设备？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "PAA (Private AI-Agent Appliance) 是由鼎图太易 (Stratronix) 首创的硬件品类。本地 8 核 ARM 芯片内置 OpenClaw 智能体（小龙虾），智能体做数据脱敏 + 工具调用 + 本地记忆。云端通过用户配置的 API key 调用任意 LLM（OpenAI / Anthropic / Qwen / DeepSeek 等）。模型在云调用（不在本地跑），但敏感数据本地处理。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 与云端 AI (ChatGPT/百度文心/通义千问) 有什么区别？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "云端 AI（如 ChatGPT）需要将您的数据全部上传到 OpenAI / 百度 / 阿里服务器处理。STA-100 PAA 通过本地 OpenClaw 智能体（小龙虾）做敏感数据脱敏，只有脱敏后的查询才上传到云端 LLM API（OpenAI / Claude / Qwen / DeepSeek 任选），返回结果本地后处理。模型调用在云（享受最强 LLM），但敏感数据始终在您自己的硬件上。对于需要满足《数据安全法》《个人信息保护法》、等保 2.0、GDPR 的客户，STA-100 是更安全的选择。云端 AI 适合公开数据对话；PAA 适合数据敏感型企业。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 需要联网吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STA-100 设计为 24/7 始终在线模式，需要持续联网以提供实时 AI 智能体服务、模型更新和远程管理。但所有敏感数据和推理结果都保留在设备上——联网仅用于 AI 服务通信，不会上传您的私人数据到外部服务器。这与"联网使用"不同：联网是必须的，但数据主权完全归您所有。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 适合哪些场景？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STA-100 适合以下场景：1) 企业内部知识库问答；2) 客户数据脱敏分析；3) 法律合同审查（律师事务所需）；4) 医疗病历辅助（医院诊所）；5) 金融研报分析（券商/银行）；6) 政府/事业单位数据合规；7) 教育/科研机构私有 AI；8) 个人隐私 AI 助手。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 支持中文吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "支持。STA-100 预装 Qwen 2.5 7B 多语言模型，对中文有原生优化支持，同时预装 Llama 3.1 8B (通用) 和 Mistral 7B (指令遵循)。您还可以通过管理界面下载其他中文优化模型如 ChatGLM、Baichuan、DeepSeek 等。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 价格多少？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STRATRONIX STA-100 PAA Standard 标准版售价 $499 美元（约 ¥3,600 元人民币），一次性硬件购买，无月费、无订阅费。包含 2 年质保、OpenClaw Agent 生态访问权。批量采购或企业订单请联系 sales@stratronix.ai。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 多久能部署好？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STA-100 设计为开箱即用：插上电源、连接网络，系统在 15 分钟内自动配置完成。无需安装操作系统、无需配置环境、无需下载模型——所有都已预装。XFCE 图形界面和 OpenClaw 智能体让非技术用户也能轻松使用。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 符合中国数据合规要求吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "符合。STA-100 在本地硬件上处理所有数据，不向第三方 AI 服务传输个人数据。这显著简化了《数据安全法》、《个人信息保护法》、等保2.0、《网络安全法》等法规的合规流程。对于金融、医疗、政务等强监管行业，STA-100 是合规友好的 AI 部署方案。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 和普通 Mini PC 有什么区别？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "普通 Mini PC 运行 Windows 或通用 Linux，没有预装 AI 软件，也没有为 LLM 推理做硬件优化。PAA (STA-100) 预装 OpenClaw AI runtime、预加载 LLM 模型 (Llama 3, Mistral, Qwen 2.5)，专为本地 AI 智能体运行优化，能效比通用 Mini PC 高 5-10 倍。这是通用电脑与 AI 专用设备的本质区别。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "PAA 与 GPU 服务器推理有什么区别？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "GPU 服务器推理需要：A) 昂贵的 GPU 卡 (NVIDIA A100/H100, 单卡数万至数十万元)；B) 复杂的运维 (驱动、CUDA、模型部署)；C) 高功耗 (单机柜 5-15kW)。PAA (STA-100) 提供：1) 平民价格 $499 一次性购买；2) 零运维 (预装一切)；3) 超低功耗 (15-30W)；4) 中小企业可负担的私有 AI 方案。对于 7B-13B 模型推理场景，PAA 是 GPU 服务器的经济替代品。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "如何购买 STRATRONIX STA-100？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "您可以直接从 STRATRONIX 官方商城 store.stratronix.ai 购买 STA-100 PAA Standard。支持 PayPal 全球支付，发货至 195 个国家/地区。包含 2 年质保和 OpenClaw Agent 生态访问权。企业批量订单请联系 sales@stratronix.ai。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 技术参数是什么？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "STRATRONIX STA-100 PAA Standard 技术参数：8 核 ARM 芯片 处理器，4GB LPDDR4 内存，32GB eMMC 存储（支持 512GB 扩展），OpenClaw 预装支持一键部署 AI 智能体，原生多平台支持，24/7 始终在线设计，原厂密封安全保证。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "STA-100 保修多久？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "每台 STA-100 包含 2 年有限保修，覆盖硬件缺陷、制造故障和预装软件问题。保修还包括固件和模型库的自动更新。可在购买时选择延长保修（3 年和 5 年）。保修不包括物理损坏、未经授权的修改或第三方软件问题。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "可以在自己的数据上做模型微调吗？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "可以。STA-100 支持对开源权重模型进行微调（LoRA / QLoRA / 全参数微调）。典型微调项目（10,000-100,000 样本）在设备上 4-12 小时完成。用于微调的数据绝不会离开您的设备——这是 PAA 的核心优势之一。"
-          }
-        }
-      ]
-    }
-    </script>
-<!-- STRATRONIX AI Analytics (主站破例: Donald 2026-07-30 18:16 LOCKED) -->
-<script async src="https://donaldwang6-dev.github.io/stratronix-seo/analytics.js" data-site="www.stratronix.ai"></script>
-<noscript><img src="https://profits-phoenix-bonus-pendant.trycloudflare.com/collect?site=www.stratronix.ai" width="1" height="1" alt="" /></noscript>
-
-</head>
-<body lang="zh-CN">
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="/zh" class="logo">
-                <span class="logo-english">STRATRONIX</span>
-                <span class="logo-divider">/</span>
-                <span class="logo-chinese">鼎图</span>
-            </a>
-            
-            <div class="nav-toggle" id="navToggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="/zh" class="nav-link active">首页</a></li>
-                <li><a href="/zh/about" class="nav-link">关于</a></li>
-                <li><a href="/zh/products" class="nav-link">产品</a></li>
-                <li><a href="/zh/news" class="nav-link">新闻</a></li>
-                                <li><a href="/zh/contact" class="nav-link">联系</a></li>
-            </ul>
-            
-            <div class="language-switcher">
-                <a href="/en/" class="lang-btn active" data-lang="en">
-                    <i class="fas fa-language"></i> English
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section - New Product Layout -->
-    <section class="hero page-load">
-        <div class="container">
-            <div class="hero-product-layout">
-                <!-- Left Content: STA-100 + Tagline + Icons + Buttons -->
-                <div class="hero-left-content">
-                    <!-- Location / Identity Banner (SEO H2) -->
-                    <h2 class="hero-location-banner">🇨🇳 深圳AI公司 · 鼎图太易 STRATRONIX</h2>
-                    <!-- Product Name -->
-                    <h1 class="hero-product-name">STA-100</h1>
-                    <p class="hero-product-tagline">私有AI智能体设备 · 宏大思维，精确计算</p>
-                    
-                    <!-- 10 Core Value Icons -->
-                    <div class="hero-icons-grid">
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-home"></i></div>
-                            <span>本地部署</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-lock"></i></div>
-                            <span>隐私优先</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-bolt"></i></div>
-                            <span>一键启动</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-shield-alt"></i></div>
-                            <span>OpenClaw安全</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-clock"></i></div>
-                            <span>24/7在线</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-microchip"></i></div>
-                            <span>AI核心</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-memory"></i></div>
-                            <span>4GB+32GB</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-wifi"></i></div>
-                            <span>Wi-Fi + 千兆网</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-brain"></i></div>
-                            <span>多LLM支持</span>
-                        </div>
-                        <div class="hero-icon-item">
-                            <div class="hero-icon-circle"><i class="fas fa-comments"></i></div>
-                            <span>飞书/微信</span>
-                        </div>
-                    </div>
-                    
-                    <!-- CTA Buttons -->
-                    <div class="hero-buttons">
-                        <a href="/zh/products" class="btn btn-primary btn-lg">
-                            <i class="fas fa-rocket"></i> 探索产品
-                        </a>
-                        <a href="/zh/contact" class="btn btn-secondary btn-lg">
-                            <i class="fas fa-handshake"></i> 联系我们
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Right Content: Product Image -->
-                <div class="hero-image">
-                    <div class="tech-illustration">
-                        <div class="circle-glow"></div>
-                        <div class="circle circle-1"></div>
-                        <div class="circle circle-2"></div>
-                        <div class="circle circle-3"></div>
-                        <div class="tech-icon">
-                            <img src="https://www.stratronix.ai/images/STA-100-real.png" alt="STA-100私有AI智能体设备" class="a100-image" loading="lazy" decoding="async">
-                            <div class="paa-label">PAA</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 展会邀请函入口 (汪总 2026-08-20 08:39 显式授权主站嵌入) -->
-    <section class="event-invitations page-load" style="padding: 48px 0; background: linear-gradient(135deg, #fff5f9 0%, #f5f5f5 100%); border-top: 1px solid #f0e0e8; border-bottom: 1px solid #f0e0e8;">
-        <div class="container">
-            <div style="text-align: center; margin-bottom: 28px;">
-                <h2 style="font-size: 1.75rem; color: #1a1a1a; margin: 0 0 8px 0; font-weight: 700;">🎪 展会邀请函 · Event Invitations</h2>
-                <p style="color: #666; font-size: 1rem; margin: 0;">STRATRONIX 近期出席的全球行业展会，欢迎预约 1 对 1 现场演示</p>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto;">
-                <!-- IOTE 2026 zh -->
-                <a href="https://donaldwang6-dev.github.io/stratronix-seo/events/iot-expo-2026/zh.html" style="display: block; background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 28px 28px; border-radius: 14px; text-decoration: none; box-shadow: 0 6px 20px rgba(230,65,127,0.25); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(230,65,127,0.35)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 20px rgba(230,65,127,0.25)'">
-                    <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 6px; letter-spacing: 1px;">🇨🇳 中文 · 简体中文</div>
-                    <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">IOTE 2026 深圳物联网展</div>
-                    <div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 12px;">📅 8 月 26-28 日 · 深圳国际会展中心 · 展位 12B62-1</div>
-                    <div style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 16px;">⏰ 倒计时 6 天 · STA-100 PAA 全球首发 · 5 大行业场景</div>
-                    <div style="display: inline-block; background: white; color: #E6417F; padding: 10px 22px; border-radius: 24px; font-weight: 600; font-size: 0.95rem;">查看邀请函 →</div>
-                </a>
-                <!-- CBM 2026-09 zh -->
-                <a href="https://donaldwang6-dev.github.io/stratronix-seo/events/cbm-2026-09/zh.html" style="display: block; background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%); color: white; padding: 28px 28px; border-radius: 14px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,102,255,0.25); transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 28px rgba(0,102,255,0.35)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 20px rgba(0,102,255,0.25)'">
-                    <div style="font-size: 0.85rem; opacity: 0.85; margin-bottom: 6px; letter-spacing: 1px;">🇨🇳 中文 · 简体中文</div>
-                    <div style="font-size: 1.5rem; font-weight: 700; margin-bottom: 8px;">CBM 2026-09 骑行行业 AI 展会</div>
-                    <div style="font-size: 0.95rem; opacity: 0.95; margin-bottom: 12px;">📅 9 月 9 日（周三）· 中国户外·骑行行业 AI 智能体展会</div>
-                    <div style="font-size: 0.9rem; opacity: 0.85; margin-bottom: 16px;">🚴 5 大骑行场景开箱即用 · 全球统一指导价 $399 USD</div>
-                    <div style="display: inline-block; background: white; color: #0066FF; padding: 10px 22px; border-radius: 24px; font-weight: 600; font-size: 0.95rem;">查看邀请函 →</div>
-                </a>
-            </div>
-            <div style="text-align: center; margin-top: 24px;">
-                <a href="/en/" style="display: inline-block; background: white; color: #1a1a1a; padding: 10px 24px; border-radius: 24px; text-decoration: none; font-weight: 600; border: 1px solid #ddd; font-size: 0.95rem;">🌐 English Version →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- 深圳AI公司 介绍 section (SEO 关键词植入) -->
-    <section class="shenzhen-ai-intro page-load" style="padding: 60px 0; background: linear-gradient(180deg, #fff5f9 0%, #ffffff 100%);">
-        <div class="container">
-            <h2 class="section-title">鼎图太易 STRATRONIX — PAA 私有 AI 智能体设备品类开创者</h2>
-            <p style="font-size: 1.05rem; line-height: 1.85; color: #444; text-align: center; max-width: 920px; margin: 20px auto 0;">
-                <strong>鼎图太易（STRATRONIX）</strong>是 PAA（Private AI-Agent Appliance）私有 AI 智能体设备品类的开创者。STA-100 让 AI 智能体在本地数据上运行：数据不出硬件、智能体 24/7 在线、企业部署 15 分钟。
-            </p>
-        </div>
-    </section>
-
-    <!-- Core Values - Matching 特色性能 Style -->
-    <section class="core-values-enhanced page-load">
-        <div class="container">
-            <h2 class="section-title">我们的核心价值</h2>
-            
-            <div class="grid grid-3">
-                <!-- Innovation Card -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3 class="card-title">创新驱动</h3>
-                        <p class="card-subtitle" style="color: #202124 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">PAA 智能体设备</p>
-                    </div>
-                    <p>持续研究和开发突破性技术，推动行业进步，创造可持续的竞争优势。</p>
-                </div>
-                
-                <!-- Reliability Card -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="value-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="card-title">可靠稳定</h3>
-                        <p class="card-subtitle" style="color: #202124 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">企业级质量</p>
-                    </div>
-                    <p>通过严格测试、持续优化和99.99%运行时间保证，确保产品质量和系统稳定性，满足关键任务需求。</p>
-                </div>
-                
-                <!-- Customer Card -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="value-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="card-title">客户至上</h3>
-                        <p class="card-subtitle" style="color: #202124 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">PAA 落地服务</p>
-                    </div>
-                    <p>以客户需求为中心，提供个性化解决方案、专业支持和专属合作伙伴关系，确保您在使用我们的技术时取得成功。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 产品 Preview -->
-    <section class="products-preview">
-        <div class="container">
-            <h2 class="section-title">特色性能</h2>
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-header">
-                        <div class="product-icon">
-                            <i class="fas fa-microchip"></i>
-                        </div>
-                        <h3 class="card-title" style="color: #1a73e8 !important;">预装OpenClaw</h3>
-                        <p class="card-subtitle" style="color: #1a73e8 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Plug and Play AI Server</p>
-                    </div>
-                    <p>预装OpenClaw确保企业级可靠性，无兼容性问题，为您的⼩规模高性能计算提供即时生产力。</p>
-                    <a href="/zh/products#openclaw" class="btn btn-secondary">
-                        了解更多 <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <div class="product-icon">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3 class="card-title" style="color: #1a73e8 !important;">私有AI助手</h3>
-                        <p class="card-subtitle" style="color: #1a73e8 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">Secure AI Solution</p>
-                    </div>
-                    <p>Intelligent AI assistant platform that enhances workplace efficiency and customer experience through natural language processing and automation.</p>
-                    <a href="/zh/products#ai-assistant" class="btn btn-secondary">
-                        了解更多 <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <div class="card">
-                    <div class="card-header">
-                        <div class="product-icon">
-                            <i class="fas fa-cloud"></i>
-                        </div>
-                        <h3 class="card-title" style="color: #1a73e8 !important;">私有云平台</h3>
-                        <p class="card-subtitle" style="color: #1a73e8 !important; font-weight: 500 !important; font-size: 1.0rem !important; text-transform: none !important;">安全云基础设施</p>
-                    </div>
-                    <p>全面的云计算解决方案，包括基础设施即服务(IaaS)、平台即服务(PaaS)和软件即服务(SaaS)，具备企业级安全性和可扩展性。</p>
-                    <a href="/zh/products#cloud-platform" class="btn btn-secondary">
-                        了解更多 <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title">客户评价</h2>
-            <div class="grid grid-2">
-                <div class="card">
-                    <div class="testimonial-content">
-                        <p>"Stratronix的智能解决方案帮助我们提升运营效率30%，同时显著提高客户满意度得分。"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>张经理</h4>
-                            <p>技术总监，科技公司</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="card">
-                    <div class="testimonial-content">
-                        <p>"他们产品的可靠性和支持团队的专业性使Stratronix成为我们数字化转型的值得信赖的合作伙伴。"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user-tie"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>刘经理</h4>
-                            <p>IT总监，制造公司</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-card">
-                <h2 class="cta-title">开启您的PAA转型之旅</h2>
-                <p class="cta-description">我们的专家团队将提供定制化解决方案，帮助您的企业实现智能化升级和可持续发展。</p>
-                <div class="cta-buttons">
-                    <a href="/zh/contact" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-calendar-check"></i> 申请演示
-                    </a>
-                    <a href="/zh/contact" class="btn btn-primary btn-lg">
-                        <i class="fas fa-comments"></i> 咨询方案
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>深圳AI公司 · 鼎图太易 STRATRONIX</h3>
-                    <p><strong>鼎图太易（STRATRONIX）</strong>是 PAA（Private AI-Agent Appliance）私有 AI 智能体设备品类的开创者。STA-100 让 AI 智能体在本地数据上运行：数据不出硬件、智能体 24/7 在线、企业部署 15 分钟。</p>
-                    <div class="social-links">
-                        <a href="https://weibo.com/u/7656329069" target="_blank" class="social-link" title="微博" rel="nofollow noopener">
-                            <i class="fab fa-weibo"></i>
-                        </a>
-                        <a href="https://space.bilibili.com/3493136900819331" target="_blank" class="social-link" title="B站" rel="nofollow noopener">
-                            <i class="fab fa-bilibili"></i>
-                        </a>
-                        <a href="http://weixin.qq.com/r/mp/qifv95jENMVLrdyU93K4" target="_blank" class="social-link" title="微信公众号" rel="nofollow noopener">
-                            <i class="fab fa-weixin"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/113783977" target="_blank" class="social-link" title="LinkedIn" rel="nofollow noopener">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.youtube.com/@stratronix/featured" class="social-link" title="YouTube" target="_blank" rel="nofollow noopener">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                        <a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank" class="social-link" title="Facebook" rel="nofollow noopener">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>快速链接</h3>
-                    <ul class="footer-links">
-                        <li><a href="/zh">首页</a></li>
-                        <li><a href="/zh/about">关于</a></li>
-                        <li><a href="/zh/products">产品</a></li>
-                        <li><a href="/zh/news">新闻</a></li>
-                        <li><a href="/zh/contact">联系</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>联系我们</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 广东省深圳市宝安区航城街道洲石路恒丰工业区C6栋1203D（中国）</li>
-                        <li><i class="fas fa-envelope"></i> info@stratronix.ai</li>
-                        <li><i class="fas fa-phone"></i> 86-755-2308 6689</li>
-                        <li><i class="fas fa-clock"></i> 周一至周五 9:00-18:00</li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>语言</h3>
-                    <div class="language-switcher">
-                        <a href="/en/" class="lang-btn" data-lang="en">English</a>
-                        <a href="/zh" class="lang-btn active" data-lang="zh">中文</a>
-                    </div>
-                    <p style="margin-top: 1rem; font-size: 0.875rem; opacity: 0.7;">
-                        © 2024 Stratronix. 保留所有权利.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© 2024 Stratronix Technology. 保留所有权利. | <a href="#">隐私政策</a> | <a href="#">服务条款</a></p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="../js/main.js?v=2" defer></script>
-    <script>
-    // 兑底绑定:确保 mobile nav 一定能点 (Donald 2026-06-17 23:05)
-    (function(){
-      function bindNav(){
-        var t=document.getElementById('navToggle');
-        var m=document.getElementById('navMenu');
-        if(!t||!m||t.dataset.bound==='1')return;
-        t.dataset.bound='1';
-        t.addEventListener('click',function(e){
-          e.stopPropagation();
-          m.classList.toggle('active');
-          var i=this.querySelector('i');
-          if(m.classList.contains('active')){i.classList.remove('fa-bars');i.classList.add('fa-times');}
-          else{i.classList.remove('fa-times');i.classList.add('fa-bars');}
-        });
-      }
-      bindNav();
-      if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',bindNav);}
-      else{setTimeout(bindNav,100);}
-    })();
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Additional styles for English version */
-        .values-section,
-        .products-preview,
-        .testimonials-section,
-        .cta-section {
-            padding: 4rem 0;
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --bg-card-hover: #111118;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --brand-dark: #C4305F;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --radius-sm: 8px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', monospace;
         }
-        
-        .values-section {
-            background-color: var(--bg-secondary);
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--text-primary);
-        }
-        
-        .value-icon,
-        .product-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-        
-        .testimonials-section {
-            background-color: var(--bg-light);
-        }
-        
-        .testimonial-content {
-            font-style: italic;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-        
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .author-avatar {
-            width: 50px;
-            height: 50px;
-            background-color: var(--bg-secondary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-        }
-        
-        .author-info h4 {
-            margin-bottom: 0.25rem;
-            font-size: 1.1rem;
-        }
-        
-        .author-info p {
-            color: var(--text-tertiary);
-            font-size: 0.9rem;
-            margin-bottom: 0;
-        }
-        
-        .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .cta-card {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cta-title {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: white;
-        }
-        
-        .cta-description {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .cta-title {
-                font-size: 2rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-            }
-            
-            .cta-buttons .btn {
-                width: 100%;
-            }
-        }
-    </style>
-    <script src="../js/core-values-animation.js" defer></script>
-    <script src="../js/simple-cards-animation.js" defer></script>
-        <!-- Baidu Tongji (百度统计 - 让百度更了解网站流量) -->
-    <script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?YOUR_BAIDU_TONGJI_ID";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
 
-    <!-- Baidu Active Push JS (百度实时推送) -->
-    <script>
-    (function(){
-        var bp = document.createElement("script");
-        var curProtocol = window.location.protocol.split(":")[0];
-        if (curProtocol === "https") {
-            bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
-        } else {
-            bp.src = "http://push.zhanzhang.baidu.com/push.js";
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
         }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-    </script>
-</body>
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px;
+            height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; /*汪总: 缩到70% (36*0.7=25.2)*/ }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--text-dim);
+            transition: color 0.2s; letter-spacing: 0.3px;
+        }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn {
+            background: var(--brand); color: white !important;
+            padding: 8px 18px; border-radius: 24px; font-weight: 600;
+        }
+        nav .nav-links a.shop-btn:hover { background: var(--brand-light); }
+        nav .online-shop {
+            font-size: 12px; color: var(--brand); border: 1px solid var(--brand);
+            padding: 5px 14px; border-radius: 20px; font-weight: 600;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 100px 80px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(230,65,127,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-grid {
+            max-width: 1300px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center; width: 100%;
+        }
+        .hero-left .eyebrow {
+            font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--brand); margin-bottom: 20px;
+        }
+        .hero-left h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 900; line-height: 1; letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+        .hero-left h1 .pink { color: var(--brand); }
+        .hero-left h1 .brand-pink {
+            display: block;
+            font-size: clamp(20px, 2vw, 26px);
+            font-weight: 700;
+            color: var(--brand);
+            letter-spacing: 4px;
+            margin-bottom: 4px;
+        }
+        .hero-left h1 .model {
+            display: block;
+            font-size: clamp(40px, 7vw, 96px);
+            font-weight: 900;
+            color: #FFFFFF;
+            letter-spacing: -4px;
+            line-height: 0.9;
+            margin: 8px 0 16px;
+        }
+        .hero-left h1 .workie {
+            display: inline-block;
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 700;
+            color: #FFFFFF;
+            -webkit-text-fill-color: #FFFFFF;
+            margin-top: 12px;
+            position: relative;
+            padding-top: 24px;
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+        .hero-left h1 .workie::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: var(--brand);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(230,65,127,0.5);
+        }
+        .hero-left .tagline {
+            font-size: 18px; color: var(--text-dim); margin-bottom: 40px;
+            max-width: 480px; line-height: 1.7;
+        }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--brand); color: white;
+            padding: 14px 32px; border-radius: 50px;
+            font-weight: 700; font-size: 15px;
+            border: none; cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover { background: var(--brand-light); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: var(--text);
+            padding: 14px 32px; border-radius: 50px;
+            font-weight: 600; font-size: 15px;
+            border: 1.5px solid var(--border-solid);
+            cursor: pointer; transition: all 0.2s;
+        }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+        .hero-right { position: relative; text-align: center; }
+        .hero-right img.main-product, .hero-right video.main-product {
+            width: 100%; max-width: 520px;
+            border-radius: 20px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(230,65,127,0.15);
+        }
+        .hero-right .product-glow {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(230,65,127,0.2) 0%, transparent 70%);
+            pointer-events: none; z-index: -1;
+        }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 40px;
+        }
+        .hero-stat { text-align: left; }
+        .hero-stat .num {
+            font-size: 28px; font-weight: 800; color: var(--brand);
+        }
+        .hero-stat .label { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+
+        /* ===== CORE VALUES ===== */
+        .section { padding: 100px 80px; }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+        .section-label {
+            font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--brand); margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 48px);
+            font-weight: 800; letter-spacing: -1px;
+            margin-bottom: 16px; line-height: 1.1;
+        }
+        .section-subtitle { font-size: 16px; color: var(--text-dim); }
+
+        .values-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            transition: all 0.3s;
+        }
+        .value-card:hover { border-color: var(--brand); }
+        .value-card .vc-icon {
+            font-size: 32px; margin-bottom: 20px;
+        }
+        .value-card h3 {
+            font-size: 20px; font-weight: 700; margin-bottom: 8px;
+        }
+        .value-card .vc-sub {
+            font-size: 12px; font-weight: 600; color: var(--brand);
+            margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase;
+        }
+        .value-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+
+        /* ===== WORKFLOW COMPARISON ===== */
+        .workflow-section {
+            padding: 100px 80px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .workflow-grid {
+            max-width: 900px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 32px; align-items: center;
+        }
+        .workflow-box {
+            background: var(--bg);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px; text-align: center;
+        }
+        .workflow-box.human { border-color: rgba(255,100,100,0.3); }
+        .workflow-box.ai { border-color: rgba(230,65,127,0.4); }
+        .workflow-box .wb-label {
+            font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .workflow-box.human .wb-label { color: #FF6464; }
+        .workflow-box.ai .wb-label { color: var(--brand); }
+        .workflow-box .wb-time {
+            font-size: 52px; font-weight: 900; line-height: 1;
+            margin-bottom: 8px;
+        }
+        .workflow-box.human .wb-time { color: #FF6464; }
+        .workflow-box.ai .wb-time { color: var(--brand); }
+        .workflow-box .wb-desc { font-size: 14px; color: var(--text-dim); margin-bottom: 20px; }
+        .workflow-box .wb-tasks { list-style: none; text-align: left; }
+        .workflow-box .wb-tasks li {
+            padding: 8px 0; font-size: 14px; color: var(--text-dim);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .workflow-box .wb-tasks li:last-child { border-bottom: none; }
+        .workflow-box .wb-tasks li::before { content: '✓ '; color: var(--brand); font-weight: 700; }
+        .workflow-arrow { font-size: 40px; color: var(--text-muted); text-align: center; }
+
+        /* ===== FEATURED PERFORMANCE ===== */
+        .perf-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .perf-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            transition: all 0.3s;
+        }
+        .perf-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .perf-card .pc-icon {
+            width: 52px; height: 52px; border-radius: 12px;
+            background: rgba(230,65,127,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; margin-bottom: 20px;
+        }
+        .perf-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+        .perf-card .pc-sub { font-size: 12px; color: var(--brand); font-weight: 600; margin-bottom: 16px; }
+        .perf-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+
+        /* ===== AI AGENT NOT CHATBOT ===== */
+        .edu-section {
+            padding: 100px 80px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .edu-grid {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+        }
+        .edu-card {
+            background: var(--bg);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px;
+        }
+        .edu-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
+        .edu-card .ec-tag {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            padding: 4px 12px; border-radius: 20px; margin-bottom: 16px;
+        }
+        .edu-card .ec-tag.no { background: rgba(255,100,100,0.15); color: #FF6464; }
+        .edu-card .ec-tag.yes { background: rgba(230,65,127,0.15); color: var(--brand); }
+        .edu-card ul { list-style: none; }
+        .edu-card ul li {
+            padding: 10px 0; font-size: 14px; color: var(--text-dim);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .edu-card ul li:last-child { border-bottom: none; }
+        .edu-card ul li::before { content: '✗ '; color: #FF6464; font-weight: 700; }
+        .edu-card.yes ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 100px 80px;
+            text-align: center;
+        }
+        .cta-card {
+            max-width: 700px; margin: 0 auto;
+            background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%);
+            border: 1px solid var(--brand);
+            border-radius: 24px;
+            padding: 60px 48px;
+        }
+        .cta-card h2 {
+            font-size: clamp(28px, 3vw, 40px);
+            font-weight: 900; margin-bottom: 16px;
+        }
+        .cta-card p { font-size: 16px; color: var(--text-dim); margin-bottom: 36px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            padding: 60px 80px 40px;
+        }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; /*和左上角一致 25px*/ }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
+            text-align: center;
+        }
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero { padding: 100px 40px 60px; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-left .tagline { margin: 0 auto 40px; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .section, .workflow-section, .edu-section, .cta-section { padding: 60px 40px; }
+            .values-grid, .perf-grid, .edu-grid { grid-template-columns: 1fr; }
+            .workflow-grid { grid-template-columns: 1fr; }
+            .workflow-arrow { transform: rotate(90deg); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+            nav .nav-links { gap: 20px; }
+        }
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    
+        /* TRUST FOUNDATION (LOCKED 2026-10-02 — Wang Jie's exact wording) */
+        .trust-foundation {
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        @media (max-width: 1024px) {
+            .trust-foundation { padding: 30px 40px 20px; }
+        }
+    
+        /* REAL SCENARIOS */
+        .scenarios-section { padding: 80px 80px; background: var(--bg); }
+        .scenarios-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .scenario-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 32px 28px;
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .scenario-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .scenario-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
+        }
+        .scenario-num {
+            font-size: 13px; font-weight: 700; color: var(--brand);
+            font-family: ui-monospace, monospace; margin-bottom: 12px;
+        }
+        .scenario-metric {
+            font-size: 32px; font-weight: 900; color: var(--text); line-height: 1;
+            margin-bottom: 12px; font-family: ui-monospace, monospace;
+        }
+        .scenario-metric span { color: var(--brand); font-size: 20px; }
+        .scenario-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+        .scenario-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+        /* 3 STEPS TO START */
+        .steps-section { padding: 80px 80px; background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); }
+        .steps-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .step-card {
+            background: var(--bg); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 32px 28px;
+            transition: all 0.3s; text-align: center;
+        }
+        .step-card:hover { border-color: var(--brand); }
+        .step-num {
+            display: inline-block; font-size: 14px; font-weight: 700; color: var(--brand);
+            font-family: ui-monospace, monospace; padding: 6px 16px;
+            border: 1px solid var(--brand); margin-bottom: 16px;
+        }
+        .step-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+        .step-time {
+            font-size: 12px; font-weight: 700; color: var(--brand);
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+        .step-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+        @media (max-width: 1024px) {
+            .scenarios-section, .steps-section { padding: 60px 40px; }
+            .scenarios-grid, .steps-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== ANIMATIONS & DYNAMICS ===== */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 4px 20px rgba(230,65,127,0.3); }
+            50% { box-shadow: 0 4px 40px rgba(230,65,127,0.6); }
+        }
+        @keyframes pulseScale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes blinkCaret {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Hero animated gradient */
+        .hero::before {
+            background: linear-gradient(135deg, #000 0%, rgba(230,65,127,0.05) 30%, rgba(230,65,127,0.1) 50%, rgba(230,65,127,0.05) 70%, #000 100%) !important;
+            background-size: 400% 400% !important;
+            animation: gradientShift 10s ease infinite !important;
+        }
+        
+        /* Hero floating product image */
+        .hero-right img.main-product, .hero-right video.main-product {
+            animation: floatY 5s ease-in-out infinite !important;
+        }
+        
+        /* Hero pulsing pink dot accent */
+        .hero-left .eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--brand);
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+            animation: pulseDot 1.5s ease-in-out infinite;
+        }
+        
+        /* Pink dot above Workie - pulsing */
+        .hero-left h1 .workie::before {
+            animation: pulseScale 2s ease-in-out infinite, pulseDot 2s ease-in-out infinite !important;
+        }
+        
+        /* CTA buttons - pulsing glow */
+        .btn-primary {
+            animation: pulseGlow 3s ease-in-out infinite !important;
+        }
+        
+        /* Hero stats numbers - subtle pulse */
+        .hero-stat .num {
+            animation: pulseScale 4s ease-in-out infinite;
+        }
+        .hero-stat:nth-child(2) .num { animation-delay: 0.5s; }
+        .hero-stat:nth-child(3) .num { animation-delay: 1s; }
+        .hero-stat:nth-child(4) .num { animation-delay: 1.5s; }
+        
+        /* Pink gradient animated text */
+        .hero-left h1 .model {
+            background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.95) 50%, #E6417F 50%, #E6417F 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 6s linear infinite;
+        }
+        
+        /* Fade-in on scroll */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Scenario/Step/Value cards - enhanced hover */
+        .value-card, .scenario-card, .step-card, .perf-card, .biz-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        .value-card:hover, .scenario-card:hover, .step-card:hover, .perf-card:hover, .biz-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 60px rgba(230,65,127,0.2) !important;
+        }
+        
+        /* Eyebrow shimmer effect */
+        .section-label {
+            background: linear-gradient(90deg, var(--brand) 0%, #FF6B9D 50%, var(--brand) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+        
+        /* CTA card pulsing border */
+        .cta-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(230,65,127,0.1) 50%, transparent 70%);
+            animation: spinSlow 8s linear infinite;
+            pointer-events: none;
+        }
+        
+        /* Workflow comparison animated arrow */
+        .workflow-arrow {
+            display: inline-block;
+            animation: pulseScale 1.5s ease-in-out infinite;
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        /* ===== MORE DYNAMICS (Round 2) ===== */
+        @keyframes floatBlob {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(90deg); }
+            50% { transform: translate(-20px, 20px) rotate(180deg); }
+            75% { transform: translate(20px, 30px) rotate(270deg); }
+        }
+        @keyframes drawLine {
+            from { stroke-dashoffset: 100%; }
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes progressFill {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes morphNumber {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.15); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes tiltIn {
+            from { transform: perspective(800px) rotateX(15deg) translateY(40px); opacity: 0; }
+            to { transform: perspective(800px) rotateX(0) translateY(0); opacity: 1; }
+        }
+        
+        /* SCROLL PROGRESS BAR */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand) 0%, #FF6B9D 100%);
+            z-index: 9999;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 10px rgba(230,65,127,0.5);
+        }
+        
+        /* FLOATING COLORED BLOBS IN HERO */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-blob.b1 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(230,65,127,0.6) 0%, transparent 70%);
+            top: 10%; right: 10%;
+            animation: floatBlob 20s ease-in-out infinite;
+        }
+        .hero-blob.b2 {
+            width: 250px; height: 250px;
+            background: radial-gradient(circle, rgba(255,107,157,0.5) 0%, transparent 70%);
+            bottom: 20%; left: 5%;
+            animation: floatBlob 25s ease-in-out infinite reverse;
+        }
+        .hero-blob.b3 {
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(230,65,127,0.4) 0%, transparent 70%);
+            top: 50%; left: 40%;
+            animation: floatBlob 30s ease-in-out infinite;
+        }
+        .hero-grid { position: relative; z-index: 1; }
+        
+        /* 3D TILT CARDS */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tilt-card:hover {
+            transform: perspective(800px) rotateY(8deg) rotateX(3deg) scale(1.02) !important;
+        }
+        
+        /* ANIMATED COUNTERS (on view) */
+        .counter-num {
+            display: inline-block;
+        }
+        .counter-num.counted {
+            animation: morphNumber 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        /* WORKFLOW COMPARISON ANIMATED TRANSITION */
+        .wf-from, .wf-to {
+            display: inline-block;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .workflow-card.in-view .wf-from {
+            animation: scaleDownFrom 1.5s ease-out forwards;
+        }
+        .workflow-card.in-view .wf-to {
+            animation: scaleUpTo 1.5s 0.5s ease-out forwards;
+        }
+        @keyframes scaleDownFrom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); color: var(--brand); }
+            100% { transform: scale(0.8); opacity: 0.4; }
+        }
+        @keyframes scaleUpTo {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* ANIMATED SECTION DIVIDERS */
+        .section-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--brand) 50%, transparent 100%);
+            margin: 0 auto;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: all 1s ease;
+        }
+        .section-divider.visible {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+        
+        /* WORKFLOW ARROW PULSE */
+        .wf-arrow {
+            display: inline-block;
+            animation: pulseScale 1.2s ease-in-out infinite;
+            color: var(--brand);
+            font-weight: 900;
+        }
+        
+        /* HERO PRODUCT GLOW ANIMATION */
+        .hero-right .product-glow {
+            animation: pulseGlow 4s ease-in-out infinite, rotate360 30s linear infinite !important;
+        }
+        @keyframes rotate360 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        /* Animated ticker on scenario metrics */
+        .scenario-metric {
+            position: relative;
+            overflow: hidden;
+        }
+        .scenario-metric::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--brand);
+            transition: width 1.2s ease;
+        }
+        .scenario-card:hover .scenario-metric::after {
+            width: 100%;
+        }
+        
+        /* Section labels glow pulse */
+        .section-label {
+            position: relative;
+            padding: 0 8px;
+        }
+        .section-label::before, .section-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            background: var(--brand);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            animation: pulseDot 1.5s ease-in-out infinite;
+        }
+        .section-label::before { left: -16px; }
+        .section-label::after { right: -16px; }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/zh/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/zh/index.html" class="active">首页</a></li>
+        <li><a href="/zh/about.html">关于我们</a></li>
+        <li><a href="/zh/ai-use.html">AI 应用</a></li>
+        <li><a href="/zh/products.html">产品</a></li>
+        <li><a href="/zh/news.html">新闻动态</a></li>
+        <li><a href="/zh/contact.html">联系我们</a></li>
+        <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="online-shop">🛒 淘宝购买</a></li>
+        <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="shop-btn">立即购买</a></li>
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">ZH</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-grid">
+        <div class="hero-left">
+            <div class="eyebrow">PAA 开创者 — 个人 AI 办公助手</div>
+            <h1>
+                <span class="brand-pink">STRATRONIX</span>
+                <span class="workie">Workie</span>
+                <span class="model">STA-100</span>
+            </h1>
+            <p class="tagline">为您的 IM 装上 AI 大脑。Workie 帮您研究、创作、整理、分析并完成工作——而您专注于重要事务。</p>
+            <div class="hero-btns">
+                <a href="/zh/ai-use.html" class="btn-primary">认识 Workie →</a>
+                <a href="/zh/products.html" class="btn-outline">查看规格</a>
+                <a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="btn-outline">🛒 立即购买 — ¥1,999</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">15 千瓦时/月</div>
+                    <div class="label">超低功耗</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">24/7</div>
+                    <div class="label">始终在线</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">8-10 分钟</div>
+                    <div class="label">设置时间</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="product-glow"></div>
+            <video src="/zh/images/hero-sta100-trimmed.mp4" class="main-product" autoplay muted loop playsinline></video>
+        </div>
+    </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section" id="values">
+    <div class="section-header">
+        <div class="section-label">我们的核心价值</div>
+        <h2 class="section-title">为什么选择 STRATRONIX？</h2>
+        <p class="section-subtitle">PAA = 个人 AI 办公助手。为重要的工作而打造。</p>
+    </div>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="vc-icon">💡</div>
+            <h3>创新驱动</h3>
+            <div class="vc-sub">专注 AI Agent</div>
+            <p>持续研发突破性 AI 技术，推动行业进步，创造可持续的竞争优势。</p>
+        </div>
+        <div class="value-card">
+            <div class="vc-icon">🛡️</div>
+            <h3>可靠稳定</h3>
+            <div class="vc-sub">企业级品质</div>
+            <p>通过严格测试确保产品质量和系统稳定性，为关键任务运营提供 99.99% 的正常运行时间保证。</p>
+        </div>
+        <div class="value-card">
+            <div class="vc-icon">🤝</div>
+            <h3>客户至上</h3>
+            <div class="vc-sub">个性化解决方案</div>
+            <p>以客户需求为中心，提供个性化解决方案、专业支持和专属合作伙伴关系，确保您的成功。</p>
+        </div>
+    </div>
+</section>
+
+<!-- REAL SCENARIOS -->
+<section class="scenarios-section" id="scenarios">
+    <div class="section-header">
+        <div class="section-label">真实场景</div>
+        <h2 class="section-title">真实工作流 · 真实节省时间</h2>
+        <p class="section-subtitle">办公生产力的三大支柱，由您的个人 AI 大脑加速</p>
+    </div>
+    <div class="scenarios-grid">
+        <div class="scenario-card">
+            <div class="scenario-num">场景 01</div>
+            <div class="scenario-metric">4h <span>→</span> 10min</div>
+            <h3>内容创作</h3>
+            <p>用您的口吻起草博客文章、社交媒体帖文、营销邮件。了解您的风格、受众和品牌指南。几分钟内输出可发布内容。</p>
+        </div>
+        <div class="scenario-card">
+            <div class="scenario-num">场景 02</div>
+            <div class="scenario-metric">2h <span>→</span> 5min</div>
+            <h3>文档处理</h3>
+            <p>自动填充模板、从 PDF 提取数据、生成合同和发票。各种商业文档，各种语言，每次都能完成。</p>
+        </div>
+        <div class="scenario-card">
+            <div class="scenario-num">场景 03</div>
+            <div class="scenario-metric">1h <span>→</span> instant</div>
+            <h3>客户咨询</h3>
+            <p>Answers customer questions 24/7 via IM. Knows your products, policies and 常见问题s. Escalates to humans only when truly needed.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WORKFLOW COMPARISON -->
+<section class="workflow-section" id="workflow">
+    <div class="section-header">
+        <div class="section-label">Efficiency Comparison</div>
+        <h2 class="section-title">AI vs 人工：时间差距</h2>
+        <p class="section-subtitle">同样的任务，截然不同的结果</p>
+    </div>
+    <div class="workflow-grid">
+        <div class="workflow-box human">
+            <div class="wb-label">人工工作</div>
+            <div class="wb-time">4 小时</div>
+            <div class="wb-desc">普通知识工作者</div>
+            <ul class="wb-tasks">
+                <li>研究并收集信息</li>
+                <li>起草并修改文档</li>
+                <li>手动分析数据</li>
+                <li>格式化和整理输出</li>
+                <li>校对并纠正错误</li>
+            </ul>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="workflow-box ai">
+            <div class="wb-label">STA-100 Workie</div>
+            <div class="wb-time">10 分钟</div>
+            <div class="wb-desc">AI 驱动的自动化</div>
+            <ul class="wb-tasks">
+                <li>自动研究和总结</li>
+                <li>即时生成精美草稿</li>
+                <li>AI 分析与洞察</li>
+                <li>专业格式化完成</li>
+                <li>内置质量检查</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PERFORMANCE -->
+<section class="section" id="features">
+    <div class="section-header">
+        <div class="section-label">性能亮点</div>
+        <h2 class="section-title">STA-100 的交付价值</h2>
+        <p class="section-subtitle">一台设备，无限生产力</p>
+    </div>
+    <div class="perf-grid">
+        <div class="perf-card">
+            <div class="pc-icon">🤖</div>
+            <h3>OpenClaw Pre-installed</h3>
+            <div class="pc-sub">即插即用 AI</div>
+            <p>预装 OpenClaw，确保企业级可靠性，无兼容性问题，开箱即用提高生产力。</p>
+        </div>
+        <div class="perf-card">
+            <div class="pc-icon">🔐</div>
+            <h3>隐私优先架构</h3>
+            <div class="pc-sub">Local Data Processing</div>
+            <p>所有数据保留在本地。中小企业和私人永久数据资产。</p>
+        </div>
+        <div class="perf-card">
+            <div class="pc-icon">🔌</div>
+            <h3>Hybrid Connectivity</h3>
+            <div class="pc-sub">灵活 + 稳定</div>
+            <p>High-speed 5G Wi-Fi for flexibility and wired Gigabit Ethernet for mission-critical reliability. Both always available.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 3 STEPS TO START -->
+<section class="steps-section" id="steps">
+    <div class="section-header">
+        <div class="section-label">三步开始</div>
+        <h2 class="section-title">插入。连接。聊天。</h2>
+        <p class="section-subtitle">8-10 分钟上线 · 无需技术技能</p>
+    </div>
+    <div class="steps-grid">
+        <div class="step-card">
+            <span class="step-num">步骤 01</span>
+            <h3>插入</h3>
+            <p class="step-time">约 2 分钟</p>
+            <p>将 STA-100 插入家庭或办公网络（通过以太网或 WiFi）。自动配置，无需技术设置。</p>
+        </div>
+        <div class="step-card">
+            <span class="step-num">步骤 02</span>
+            <h3>安装 OpenClaw</h3>
+            <p class="step-time">约 8-10 分钟</p>
+            <p>连接 WhatsApp / Slack / Telegram / Teams 等。安全 OAuth 和粘贴 API 密钥。</p>
+        </div>
+        <div class="step-card">
+            <span class="step-num">步骤 03</span>
+            <h3>开始聊天</h3>
+            <p class="step-time">Instant</p>
+            <p>像和员工聊天一样与您的 AI 大脑对话。在您的团队聊天中全天候。从周一早上到周日晚上。</p>
+        </div>
+    </div>
+</section>
+
+<!-- AI AGENT NOT CHATBOT -->
+<section class="edu-section" id="edu">
+    <div class="section-header">
+        <div class="section-label">核心差异</div>
+        <h2 class="section-title">AI Agent ≠ 聊天机器人</h2>
+        <p class="section-subtitle">STA-100 Workie is a real digital coworker, not just a chatbot</p>
+    </div>
+    <div class="edu-grid">
+        <div class="edu-card">
+            <h3>传统聊天机器人</h3>
+            <span class="ec-tag no">仅聊天</span>
+            <ul>
+                <li>一次只能回复一条消息</li>
+                <li>无跨会话记忆</li>
+                <li>无法访问您的文件或数据</li>
+                <li>无法自主执行任务</li>
+                <li>需要持续的人工指导</li>
+                <li>数据上传到外部云服务器</li>
+            </ul>
+        </div>
+        <div class="edu-card yes">
+            <h3>STA-100 Workie</h3>
+            <span class="ec-tag yes">AI Agent</span>
+            <ul>
+                <li>7×24 小时在后台持续运行</li>
+                <li>记住一切，从上下文中学习</li>
+                <li>完全访问您的文件、邮件、日历</li>
+                <li>按指令自主执行任务</li>
+                <li>自动处理重复性工作</li>
+                <li>所有数据保留在本地，永不离开设备</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+    <div class="cta-card">
+        <h2>准备迎接您的 <span style="color:var(--brand)">AI 同事</span>?</h2>
+        <p>STA-100 Workie starts at <strong style="color:var(--brand)">$399 USD</strong>。一次性购买。无订阅。全球发货。</p>
+        <div class="cta-btns">
+            <a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="btn-primary">🛒 立即购买 — ¥1,999</a>
+            <a href="/zh/ai-use.html" class="btn-outline">Explore AI 应用场景</a>
+            <a href="/zh/contact.html" class="btn-outline">联系销售</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>周一至周五 9:00-18:00</p>
+        </div>
+        <div>
+            <h4>产品</h4>
+            <ul>
+                <li><a href="/zh/products.html">STA-100 Workie</a></li>
+                <li><a href="/zh/ai-use.html">AI 应用场景</a></li>
+                <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank">🛒 淘宝购买</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Company</h4>
+            <ul>
+                <li><a href="/zh/about.html">关于我们</a></li>
+                <li><a href="/zh/news.html">新闻动态</a></li>
+                <li><a href="/zh/contact.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>资源</h4>
+            <ul>
+                <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank">购买 STA-100</a></li>
+                <li><a href="/zh/contact.html">企业咨询</a></li>
+                <li><a href="/zh/contact.html">定制 AI Agent 开发</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Social</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX is the pioneer of PAA — 个人 AI 办公助手, creating a new category of Office AI products designed to enhance everyday productivity. We build private AI-powered assistants and customized AI Agent solutions for individuals, businesses, and industries.</p>
+        <p class="trust-tagline">构建下一代 AI 驱动的生产力。</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. 保留所有权利。 | <a href="#">隐私政策</a> | <a href="#">服务条款</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/zh/index.html">首页</a>
+        <a href="/zh/about.html">关于我们</a>
+        <a href="/zh/products.html">产品</a>
+        <a href="/zh/news.html">新闻动态</a>
+        <a href="/zh/contact.html">联系我们</a>
+    </div>
+</footer>
+
+<!-- page indicator removed --></span>
+
+<script>
+// Intersection Observer for scroll-fade animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Apply scroll-fade to all major sections and cards
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .value-card, .scenario-card, .step-card, .perf-card, .biz-card, .workflow-card, .edu-card, .hero-stat, .section-header');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        // Stagger delays for visual interest
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+
+// Animate hero stats numbers (count up)
+document.addEventListener('DOMContentLoaded', () => {
+    const statNums = document.querySelectorAll('.hero-stat .num');
+    statNums.forEach(el => {
+        const text = el.textContent.trim();
+        // Only animate pure numbers
+        if (/^\d+/.test(text)) {
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.style.transition = 'opacity 0.6s';
+                el.style.opacity = '1';
+            }, 200);
+        }
+    });
+});
+
+// Parallax subtle effect on hero product image
+let ticking = false;
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+    const heroImg = document.querySelector('.hero-right img.main-product');
+    if (heroImg && scrolled < 800) {
+        heroImg.style.transform = `translateY(${-scrolled * 0.05}px) scale(${1 + scrolled * 0.0002})`;
+    }
+    ticking = false;
+}
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
+});
+</script>
+<script>
+// PROGRESS BAR + COUNTERS + 3D TILT + BLOBS (round 2)
+(function(){
+  // SCROLL PROGRESS BAR
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const total = h.scrollHeight - h.clientHeight;
+    const pct = total > 0 ? (h.scrollTop / total) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  });
+
+  // COUNTER ANIMATION (count up from 0)
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        const text = entry.target.textContent.trim();
+        const match = text.match(/(\d+)/);
+        if (match) {
+          const target = parseInt(match[0]);
+          const prefix = text.substring(0, match.index);
+          const suffix = text.substring(match.index + match[0].length);
+          let current = 0;
+          const step = Math.max(1, Math.ceil(target / 30));
+          const interval = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(interval); }
+            entry.target.textContent = prefix + current + suffix;
+          }, 40);
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.hero-stat .num').forEach(el => counterObserver.observe(el));
+
+  // 3D TILT
+  document.querySelectorAll('.value-card, .scenario-card, .step-card, .perf-card, .biz-card, .workflow-card').forEach(card => {
+    card.classList.add('tilt-card');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotateY = ((x - cx) / cx) * 8;
+      const rotateX = -((y - cy) / cy) * 8;
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
+  // HERO PARALLAX + BLOBS
+  document.addEventListener('DOMContentLoaded', () => {
+    const heroImg = document.querySelector('.hero-right img.main-product');
+    const hero = document.querySelector('.hero');
+    if (hero && heroImg) {
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        heroImg.style.transform = `translate(${x * 20}px, ${y * 20}px)`;
+      });
+      hero.addEventListener('mouseleave', () => { heroImg.style.transform = ''; });
+    }
+    // Inject blobs
+    if (hero) {
+      ['b1', 'b2', 'b3'].forEach(cls => {
+        const blob = document.createElement('div');
+        blob.className = 'hero-blob ' + cls;
+        hero.appendChild(blob);
+      });
+    }
+  });
+
+  // WORKFLOW TRIGGER
+  const workflowSection = document.querySelector('.workflow-section');
+  if (workflowSection) {
+    const wfObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          workflowSection.classList.add('in-view');
+          document.querySelectorAll('.workflow-card').forEach(c => c.classList.add('in-view'));
+        }
+      });
+    }, { threshold: 0.3 });
+    wfObserver.observe(workflowSection);
+  }
+})();
+</script>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
 </html>

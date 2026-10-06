@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>OpenClaw OS：STRATRONIX PAA向けAIエージェントオペレーティングシステム</title>
+<meta name="description" content="OpenClaw OSは、STRATRONIX PAAに搭載されているオープンソースAIエージェントオペレーティングシステムです。BSD-3ライセンス。Llama 3.3 70B、Qwen、Mistralをサポート。MCP互換。Python SDK。">
+<meta name="keywords" content="OpenClaw,OpenClaw OS,OpenClaw AI,STRATRONIX OpenClaw,オープンソースAI OS,AIエージェントOS,オープンソースLLM,OpenClaw PAA">
+<meta name="baidu-site-verification" content="codeva-f9joA45YuV" />
+<meta name="yandex-verification" content="e5f7d6b34a469017" />
+<link rel="canonical" href="https://www.stratronix.ai/eu/openclaw" />
+<meta property="og:title" content="OpenClaw OS：AIエージェントオペレーティングシステム">
+<meta property="og:description" content="オープンソースAIエージェントOS。BSD-3。STRATRONIX PAA搭載。">
+<script>
+(function(){
+  var bp = document.createElement("script");
+  var curProtocol = window.location.protocol.split(":")[0];
+  if (curProtocol === "https") {
+    bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+  } else {
+    bp.src = "http://push.zhanzhang.baidu.com/push.js";
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+<nav><a href="/">ホーム</a> > <a href="/eu">EU</a> > OpenClaw</nav>
+
+<h1>OpenClaw OS：AIエージェントオペレーティングシステム</h1>
+<p><a href="https://www.stratronix.ai">STRATRONIX</a> | 更新日 2026-07-14</p>
+
+<h2>OpenClawとは？</h2>
+
+<p><strong>OpenClaw OS</strong>は、STRATRONIX PAAに搭載されているオープンソースAIエージェントオペレーティングシステムです。BSD-3-Clauseライセンスで公開されているOpenClawは、自己ホスト型AIエージェント展開の基盤です。</p>
+
+<p>OpenClawは、AIエージェントにとってのLinuxのような存在です：</p>
+
+<ul>
+<li>Linux → サーバー（1991年）→ 革命</li>
+<li>OpenClaw → AIエージェント（2025年）→ 革命</li>
+</ul>
+
+<h2>OpenClaw機能</h2>
+
+<h3>1. マルチLLMサポート</h3>
+<p>OpenClawは10以上のLLMを箱から出してすぐにサポートしています：</p>
+<ul>
+<li>Llama 3.3 70B / 8B（Meta）</li>
+<li>Qwen 2.5 72B（Alibaba）</li>
+<li>Mistral 7B / 22B / Mixtral</li>
+<li>DeepSeek V2 / R1</li>
+<li>GLM-4（Zhipu）</li>
+<li>Aquila（BAAI）</li>
+<li>Yi（01.AI）</li>
+<li>InternLM（Shanghai AI Lab）</li>
+<li>ユーザー微調整モデル</li>
+</ul>
+
+<h3>2. 10のプレビルドAIエージェント</h3>
+<ol>
+<li>営業エージェント（CRM統合）</li>
+<li>カスタマーサービスエージェント（24時間多言語）</li>
+<li>法務エージェント（契約書レビュー）</li>
+<li>人事エージェント（履歴書スクリーニング）</li>
+<li>財務エージェント（請求書OCR）</li>
+<li>マーケティングエージェント（多言語コンテンツ）</li>
+<li>コードエージェント（PRレビュー）</li>
+<li>調査エージェント（市場分析）</li>
+<li>パーソナルアシスタント（カレンダー/メール）</li>
+<li>カスタムエージェント（Python SDK）</li>
+</ol>
+
+<h3>3. RAGエンジン</h3>
+<ul>
+<li>ベクトルデータベース（Qdrant組み込み）</li>
+<li>ドキュメント取り込み（PDF、DOCX、XLSX、MD、HTML）</li>
+<li>マルチモーダルサポート（テキスト + 画像）</li>
+<li>ハイブリッド検索（ベクトル + キーワード）</li>
+</ul>
+
+<h3>4. MCP互換性</h3>
+<p>OpenClawはModel Context Protocol（Anthropicの標準）を実装しており、より広範なMCPエコシステムとの互換性を可能です。</p>
+
+<h3>5. Python Agent SDK</h3>
+<p>カスタムエージェントを構築：</p>
+
+<pre><code>from openclaw import Agent, Tool
+
+class ComplianceAgent(Agent):
+    name = "Compliance Checker"
+    description = "Reviews documents for GDPR violations"
+
+    def setup(self):
+        self.add_tool(Tool(
+            name="check_gdpr",
+            handler=self.check_gdpr_handler
+        ))
+
+    def check_gdpr_handler(self, document):
+        # カスタムロジック
+        return violations
+</code></pre>
+
+<h3>6. REST API</h3>
+<p>システム統合のためのプログラムアクセス：</p>
+
+<pre><code>POST /api/v1/agents/sales/query
+{
+  "input": "Draft an email to my team about Q3 results",
+  "context": {"user_id": "donald@stratronix.ai"}
+}
+</code></pre>
+
+<h2>OpenClawアーキテクチャ</h2>
+
+<pre>
+┌─────────────────────────────────────┐
+│         OpenClaw OS                  │
+├─────────────────────────────────────┤
+│  10 Pre-Built Agents + Custom SDK   │
+├─────────────────────────────────────┤
+│  Agent Orchestrator                 │
+├─────────────────────────────────────┤
+│  RAG Engine + Qdrant Vector DB      │
+├─────────────────────────────────────┤
+│  LLM Runtime (Llama/Qwen/Mistral)   │
+├─────────────────────────────────────┤
+│  MCP Server                         │
+├─────────────────────────────────────┤
+│  REST API + Web Admin               │
+├─────────────────────────────────────┤
+│  Rocky Linux 9                      │
+└─────────────────────────────────────┘
+```
+
+<h2>OpenClawオープンソースの詳細</h2>
+
+<ul>
+<li><strong>ライセンス</strong>：BSD-3-Clause（パーミッシブ、商用フレンドリー）</li>
+<li><strong>GitHub</strong>：github.com/donaldwang6-dev/openclaw</li>
+<li><strong>バージョン</strong>：v2026.07.14</li>
+<li><strong>リリース</strong>：毎月（セキュリティパッチは48時間以内）</li>
+<li><strong>コミュニティ</strong>：Discord + フォーラム</li>
+<li><strong>コントリビューター</strong>：25人以上（Huawei元エンジニア + STRATRONIXチーム）</li>
+</ul>
+
+<h2>なぜオープンソースなのか？</h2>
+
+<p>STRATRONIXは欧州市場向けにOpenClawにBSD-3-Clauseを選択しました：</p>
+
+<ol>
+<li><strong>欧州の要望</strong>：EU公共部門は多くの場合オープンソースを要求</li>
+<li><strong>信頼</strong>：監査可能なコード = バックドアなし</li>
+<li><strong>コンプライアンス</strong>：NIS2 + GDPRはオープンソースと整合</li>
+<li><strong>イノベーション</strong>：コミュニティの貢献が加速</li>
+<li><strong>ベンダーロックインなし</strong>：STRATRONIXが消失了場合でも顧客はフォーク可能</li>
+</ol>
+
+<h2>OpenClaw活用事例</h2>
+
+<h3>1. エンタープライズAIエージェント展開</h3>
+<p>企業はOpenClaw + STRATRONIX PAAを展開して、AIエージェントをクラウドベースで実行。GDPRコンプライアンス保証。</p>
+
+<h3>2. カスタムAIエージェント開発</h3>
+<p>開発者はOpenClaw SDK + Pythonを使用して、ドメイン固有のエージェント（ヘルスケア、法務、財務）を構築。</p>
+
+<h3>3. LLM研究</h3>
+<p>研究者は、本番ハードウェアで新しいLLM（Qwen、DeepSeek、カスタム微調整）をテストするためにOpenClawを使用。</p>
+
+<h3>4. AI教育</h3>
+<p>大学はOpenClawでAIエージェント開発を教える（BSD-3商用フレンドリー）。</p>
+
+<h2>OpenClaw vs LangChain / LlamaIndex</h2>
+
+<table border="1" cellpadding="8">
+<tr><th>次元</th><th>OpenClaw</th><th>LangChain</th><th>LlamaIndex</th></tr>
+<tr><td>タイプ</td><td>完全なOS</td><td>ライブラリ</td><td>ライブラリ</td></tr>
+<tr><td>ハードウェア統合</td><td>ネイティブ</td><td>なし</td><td>なし</td></tr>
+<tr><td>プレビルドエージェント</td><td>10</td><td>0</td><td>0</td></tr>
+<tr><td>ライセンス</td><td>BSD-3</td><td>MIT</td><td>MIT</td></tr>
+<tr><td>本番対応</td><td>はい</td><td>DIY</td><td>DIY</td></tr>
+<tr><td>UI/管理</td><td>Webパネル</td><td>なし</td><td>なし</td></tr>
+</table>
+
+<h2>OpenClaw + STRATRONIX PAA</h2>
+
+<p>OpenClaw OSはすべてのSTRATRONIX PAAアプライアンスにプリインストールされています：</p>
+
+<ul>
+<li>PAAを購入 → OpenClaw OS準備完毕</li>
+<li>8〜10分セットアップ → AIエージェント実行中</li>
+<li>10のプレビルドエージェント activated</li>
+<li>OpenClawアップデートが自動適用</li>
+</ul>
+
+<h2>OpenClaw GitHub統計</h2>
+
+<ul>
+<li>スター：4,200以上（2026-07時点）</li>
+<li>フォーク：380以上</li>
+<li>コントリビューター：25人以上</li>
+<li>リリース：12以上</li>
+<li>Discordメンバー：1,500人以上</li>
+<li>本番展開：200社以上</li>
+</ul>
+
+<h2>ロードマップ（2026-2027）</h2>
+
+<h3>2026年Q3</h3>
+<ul>
+<li>マルチモーダルサポート（画像 + 音声）</li>
+<li>プレビルドエージェントの強化（合計15）</li>
+<li>OpenClaw Cloud（オプション）</li>
+</ul>
+
+<h3>2026年Q4</h3>
+<ul>
+<li>OpenClaw Agentマーケットプレイス</li>
+<li>多言語エージェントプロンプト（10言語）</li>
+</ul>
+
+<h3>2027年</h3>
+<ul>
+<li>OpenClaw Enterprise Edition（商用）</li>
+<li>OpenClaw Federation（マルチPAAクラスター）</li>
+</ul>
+
+<h2>OpenClawを始める</h2>
+
+<h3>オプション1：STRATRONIX PAA（最も簡単）</h3>
+<p>PAAアプライアンスを購入。OpenClaw OSプリインストール。€339。</p>
+
+<h3>オプション2：自己ホスト</h3>
+<p>GitHubからOpenClawをダウンロード。独自のハードウェアにインストール。Linux/Docker知識が必要。</p>
+
+<h3>オプション3：クラウド（2026年Q4予定）</h3>
+<p>OpenClaw Cloud — 同じUXのホストバージョン。</p>
+
+<h2>OpenClawの欧州コンプライアンス</h2>
+
+<ul>
+<li>✅ GDPR — データはオンプレミスに残存</li>
+<li>✅ EU AI Act — 監査可能なコード</li>
+<li>✅ NIS2 — ネットワークセキュリティ組み込み</li>
+<li>✅ オープンソース義務 — フランス/イタリア/ドイツ政策と整合</li>
+<li>✅ Schrems II — 米国データ転送なし</li>
+</ul>
+
+<h2>STRATRONIX PAA（OpenClaw OS搭載）を注文</h2>
+
+<ul>
+<li><a href="https://www.stratronix.ai">stratronix.ai</a></li>
+<li>€339一回払い</li>
+<li>ロッдалムからのEU出荷</li>
+</ul>
+
+<hr>
+<p><a href="/eu/ai-agent">AIエージェント</a> | <a href="/eu/ai-company">AI企業</a> | <a href="/eu/shenzhen-ai">深センAI</a> | <a href="/eu/ai-box">AI Box</a> | <a href="/eu/ai-china">中国AI</a></p>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script><script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

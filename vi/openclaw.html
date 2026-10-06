@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>OpenClaw OS: Hệ Điều Hành AI Agent Cho STRATRONIX PAA</title>
+<meta name="description" content="OpenClaw OS là hệ điều hành AI Agent nguồn mở powering STRATRONIX PAA. Cấp phép BSD-3. Hỗ trợ Llama 3.3 70B, Qwen, Mistral. Tương thích MCP. Python SDK.">
+<meta name="keywords" content="OpenClaw,OpenClaw OS,OpenClaw AI,STRATRONIX OpenClaw,open source AI OS,AI Agent OS,open source LLM,OpenClaw PAA">
+<meta name="baidu-site-verification" content="codeva-f9joA45YuV" />
+<meta name="yandex-verification" content="e5f7d6b34a469017" />
+<link rel="canonical" href="https://www.stratronix.ai/eu/openclaw" />
+<meta property="og:title" content="OpenClaw OS: Hệ Điều Hành AI Agent">
+<meta property="og:description" content="AI Agent OS nguồn mở. BSD-3. Powers STRATRONIX PAA.">
+<!-- Baidu Auto Push (铁律 9 LOCKED — 无 quota, 蜘蛛每次访问触发) -->
+<script>
+(function(){
+  var bp = document.createElement("script");
+  var curProtocol = window.location.protocol.split(":")[0];
+  if (curProtocol === "https") {
+    bp.src = "https://zz.bdstatic.com/linksubmit/push.js";
+  } else {
+    bp.src = "http://push.zhanzhang.baidu.com/push.js";
+  }
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+<nav><a href="/">Trang chủ</a> > <a href="/eu">EU</a> > OpenClaw</nav>
+
+<h1>OpenClaw OS: Hệ Điều Hành AI Agent</h1>
+<p>Bởi <a href="https://www.stratronix.ai">STRATRONIX</a> | Cập nhật 2026-07-14</p>
+
+<h2>OpenClaw là gì?</h2>
+
+<p><strong>OpenClaw OS</strong> là hệ điều hành AI Agent nguồn mở powering STRATRONIX PAA. Được phát hành theo giấy phép BSD-3-Clause, OpenClaw là nền tảng cho triển khai AI Agent tự lưu trữ.</p>
+
+<p>OpenClaw với AI Agents giống như Linux với máy chủ:</p>
+
+<ul>
+<li>Linux → máy chủ (1991) → cách mạng</li>
+<li>OpenClaw → AI Agents (2025) → cách mạng</li>
+</ul>
+
+<h2>Tính Năng OpenClaw</h2>
+
+<h3>1. Hỗ Trợ Multi-LLM</h3>
+<p>OpenClaw hỗ trợ 10+ LLM có sẵn:</p>
+<ul>
+<li>Llama 3.3 70B / 8B (Meta)</li>
+<li>Qwen 2.5 72B (Alibaba)</li>
+<li>Mistral 7B / 22B / Mixtral</li>
+<li>DeepSeek V2 / R1</li>
+<li>GLM-4 (Zhipu)</li>
+<li>Aquila (BAAI)</li>
+<li>Yi (01.AI)</li>
+<li>InternLM (Shanghai AI Lab)</li>
+<li>Các mô hình tự fine-tune của người dùng</li>
+</ul>
+
+<h3>2. 10 AI Agents Đã Xây Dựng Sẵn</h3>
+<ol>
+<li>Sales Agent (tích hợp CRM)</li>
+<li>Customer Service Agent (24/7 đa ngôn ngữ)</li>
+<li>Legal Agent (xem xét hợp đồng)</li>
+<li>HR Agent (sàng lọc sơ yếu lý lịch)</li>
+<li>Finance Agent (OCR hóa đơn)</li>
+<li>Marketing Agent (nội dung đa ngôn ngữ)</li>
+<li>Code Agent (PR review)</li>
+<li>Research Agent (phân tích thị trường)</li>
+<li>Personal Assistant (lịch/email)</li>
+<li>Custom Agent (Python SDK)</li>
+</ol>
+
+<h3>3. RAG Engine</h3>
+<ul>
+<li>Vector database (Qdrant tích hợp)</li>
+<li>Ingest tài liệu (PDF, DOCX, XLSX, MD, HTML)</li>
+<li>Hỗ trợ multi-modal (văn bản + hình ảnh)</li>
+<li>Tìm kiếm hybrid (vector + từ khóa)</li>
+</ul>
+
+<h3>4. Tương Thích MCP</h3>
+<p>OpenClaw triển khai Model Context Protocol (tiêu chuẩn của Anthropic), cho phép tương thích với hệ sinh thái MCP rộng hơn.</p>
+
+<h3>5. Python Agent SDK</h3>
+<p>Xây dựng agents tùy chỉnh:</p>
+
+<pre><code>from openclaw import Agent, Tool
+
+class ComplianceAgent(Agent):
+    name = "Compliance Checker"
+    description = "Reviews documents for GDPR violations"
+
+    def setup(self):
+        self.add_tool(Tool(
+            name="check_gdpr",
+            handler=self.check_gdpr_handler
+        ))
+
+    def check_gdpr_handler(self, document):
+        # Custom logic
+        return violations
+</code></pre>
+
+<h3>6. REST API</h3>
+<p>Truy cập lập trình cho tích hợp hệ thống:</p>
+
+<pre><code>POST /api/v1/agents/sales/query
+{
+  "input": "Draft an email to my team about Q3 results",
+  "context": {"user_id": "donald@stratronix.ai"}
+}
+</code></pre>
+
+<h2>Kiến Trúc OpenClaw</h2>
+
+<pre>
+┌─────────────────────────────────────┐
+│         OpenClaw OS                  │
+├─────────────────────────────────────┤
+│  10 Pre-Built Agents + Custom SDK   │
+├─────────────────────────────────────┤
+│  Agent Orchestrator                 │
+├─────────────────────────────────────┤
+│  RAG Engine + Qdrant Vector DB      │
+├─────────────────────────────────────┤
+│  LLM Runtime (Llama/Qwen/Mistral)   │
+├─────────────────────────────────────┤
+│  MCP Server                         │
+├─────────────────────────────────────┤
+│  REST API + Web Admin               │
+├─────────────────────────────────────┤
+│  Rocky Linux 9                      │
+└─────────────────────────────────────┘
+```
+
+<h2>Chi Tiết Nguồn Mở OpenClaw</h2>
+
+<ul>
+<li><strong>Giấy phép</strong>: BSD-3-Clause (permissive, thân thiện với thương mại)</li>
+<li><strong>GitHub</strong>: github.com/donaldwang6-dev/openclaw</li>
+<li><strong>Phiên bản</strong>: v2026.07.14</li>
+<li><strong>Phát hành</strong>: Hàng tháng (vá bảo mật trong 48 giờ)</li>
+<li><strong>Cộng đồng</strong>: Discord + Diễn đàn</li>
+<li><strong>Cộng tác viên</strong>: 25+ (cựu kỹ sư Huawei + đội STRATRONIX)</li>
+</ul>
+
+<h2>Tại Sao Nguồn Mở?</h2>
+
+<p>STRATRONIX chọn BSD-3-Clause cho OpenClaw cho thị trường Châu Âu:</p>
+
+<ol>
+<li><strong>Ưu tiên Châu Âu</strong>: khu vực công cộng EU thường yêu cầu nguồn mở</li>
+<li><strong>Tin cậy</strong>: mã có thể kiểm toán = không có backdoors</li>
+<li><strong>Tuân thủ</strong>: NIS2 + GDPR phù hợp với nguồn mở</li>
+<li><strong>Đổi mới</strong>: đóng góp cộng đồng tăng tốc</li>
+<li><strong>Không khóa nhà cung cấp</strong>: khách hàng có thể fork nếu STRATRONIX biến mất</li>
+</ol>
+
+<h2>Trường Hợp Sử Dụng OpenClaw</h2>
+
+<h3>1. Triển Khai AI Agent Doanh Nghiệp</h3>
+<p>Các công ty triển khai OpenClaw + STRATRONIX PAA để chạy AI Agents cloud-based. Đảm bảo tuân thủ GDPR.</p>
+
+<h3>2. Phát Triển AI Agent Tùy Chỉnh</h3>
+<p>Nhà phát triển sử dụng OpenClaw SDK + Python để xây dựng agents theo domain cụ thể (y tế, pháp lý, tài chính).</p>
+
+<h3>3. Nghiên Cứu LLM</h3>
+<p>Các nhà nghiên cứu sử dụng OpenClaw để test LLM mới (Qwen, DeepSeek, custom fine-tunes) trên phần cứng sản xuất.</p>
+
+<h3>4. Giáo Dục AI</h3>
+<p>Các trường đại học dạy phát triển AI Agent với OpenClaw (BSD-3 thân thiện với thương mại).</p>
+
+<h2>OpenClaw vs LangChain / LlamaIndex</h2>
+
+<table border="1" cellpadding="8">
+<tr><th>Khía Cạnh</th><th>OpenClaw</th><th>LangChain</th><th>LlamaIndex</th></tr>
+<tr><td>Loại</td><td>OS đầy đủ</td><td>Thư viện</td><td>Thư viện</td></tr>
+<tr><td>Tích hợp phần cứng</td><td>Native</td><td>Không</td><td>Không</td></tr>
+<tr><td>Agents đã xây dựng sẵn</td><td>10</td><td>0</td><td>0</td></tr>
+<tr><td>Giấy phép</td><td>BSD-3</td><td>MIT</td><td>MIT</td></tr>
+<tr><td>Sẵn sàng sản xuất</td><td>Có</td><td>DIY</td><td>DIY</td></tr>
+<tr><td>UI/Admin</td><td>Bảng web</td><td>Không</td><td>Không</td></tr>
+</table>
+
+<h2>OpenClaw + STRATRONIX PAA</h2>
+
+<p>OpenClaw OS được cài sẵn trên mọi thiết bị STRATRONIX PAA:</p>
+
+<ul>
+<li>Mua PAA → OpenClaw OS sẵn sàng</li>
+<li>Thiết lập 8-10 phút → AI Agents đang chạy</li>
+<li>10 agents đã xây dựng sẵn được kích hoạt</li>
+<li>Cập nhật OpenClaw được áp dụng tự động</li>
+</ul>
+
+<h2>Số Liệu GitHub OpenClaw</h2>
+
+<ul>
+<li>Stars: 4.200+ (tính đến 2026-07)</li>
+<li>Forks: 380+</li>
+<li>Cộng tác viên: 25+</li>
+<li>Phát hành: 12+</li>
+<li>Thành viên Discord: 1.500+</li>
+<li>Triển khai sản xuất: 200+ công ty</li>
+</ul>
+
+<h2>Lộ Trình (2026-2027)</h2>
+
+<h3>Q3 2026</h3>
+<ul>
+<li>Hỗ trợ multi-modal (hình ảnh + giọng nói)</li>
+<li>Thêm agents đã xây dựng sẵn (15 tổng)</li>
+<li>OpenClaw Cloud (tùy chọn)</li>
+</ul>
+
+<h3>Q4 2026</h3>
+<ul>
+<li>OpenClaw Agent Marketplace</li>
+<li>Agent prompts đa ngôn ngữ (10 ngôn ngữ)</li>
+</ul>
+
+<h3>2027</h3>
+<ul>
+<li>OpenClaw Enterprise Edition (thương mại)</li>
+<li>OpenClaw Federation (multi-PAA cluster)</li>
+</ul>
+
+<h2>Bắt Đầu Với OpenClaw</h2>
+
+<h3>Tùy Chọn 1: STRATRONIX PAA (dễ nhất)</h3>
+<p>Mua thiết bị PAA. OpenClaw OS đã cài sẵn. €339.</p>
+
+<h3>Tùy Chọn 2: Tự Lưu Trữ</h3>
+<p>Tải OpenClaw từ GitHub. Cài đặt trên phần cứng của riêng bạn. Yêu cầu kiến thức Linux/Docker.</p>
+
+<h3>Tùy Chọn 3: Cloud (Ra mắt Q4 2026)</h3>
+<p>OpenClaw Cloud — phiên bản được lưu trữ với cùng UX.</p>
+
+<h2>Tuân Thủ Châu Âu Với OpenClaw</h2>
+
+<ul>
+<li>✅ GDPR — dữ liệu ở on-prem</li>
+<li>✅ EU AI Act — mã có thể kiểm toán</li>
+<li>✅ NIS2 — bảo mật mạng tích hợp</li>
+<li>✅ Yêu cầu nguồn mở — chính sách Pháp/Ý/Đức phù hợp</li>
+<li>✅ Schrems II — không chuyển dữ liệu Hoa Kỳ</li>
+</ul>
+
+<h2>Đặt Hàng STRATRONIX PAA (với OpenClaw OS)</h2>
+
+<ul>
+<li><a href="https://www.stratronix.ai">stratronix.ai</a></li>
+<li>€339 một lần</li>
+<li>Vận chuyển EU từ Rotterdam</li>
+</ul>
+
+<hr>
+<p><a href="/eu/ai-agent">AI Agent</a> | <a href="/eu/ai-company">AI Company</a> | <a href="/eu/shenzhen-ai">Shenzhen AI</a> | <a href="/eu/ai-box">AI Box</a> | <a href="/eu/ai-china">AI China</a></p>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script><script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

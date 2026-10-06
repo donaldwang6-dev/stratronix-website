@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 应用场景 — Workie | STRATRONIX</title>
+    <meta name="description" content="了解 STA-100 Workie 如何改变您的工作方式：从内容创作到数据分析，从项目管理到电商运营。六大强大 AI Agent 应用场景。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --bg-card-hover: #111118;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --brand-dark: #C4305F;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --radius-sm: 8px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; /*汪总: 缩到70% (36*0.7=25.2)*/ }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+
+        /* HERO */
+        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(36px, 5vw, 64px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+        .btn-primary { background: var(--brand); color: white; padding: 14px 32px; border-radius: 50px; font-weight: 700; font-size: 15px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 14px 32px; border-radius: 50px; font-weight: 600; font-size: 15px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
+        /* SECTION */
+        .section { padding: 40px 80px; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(28px, 3.5vw, 48px); font-weight: 800; letter-spacing: -1px; margin-bottom: 16px; line-height: 1.1; }
+        .section-subtitle { font-size: 16px; color: var(--text-dim); }
+
+        /* DEFINITION */
+        .def-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 80px; }
+        .def-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .def-text h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 800; margin-bottom: 20px; line-height: 1.2; }
+        .def-text h2 .pink { color: var(--brand); }
+        .def-text p { font-size: 16px; color: var(--text-dim); margin-bottom: 16px; line-height: 1.8; }
+        .def-text ul { list-style: none; margin-top: 24px; }
+        .def-text ul li { padding: 10px 0; font-size: 15px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .def-text ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; margin-right: 8px; }
+        .def-image { text-align: center; }
+        .def-image img { width: 100%; max-width: 500px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+
+        /* USE CASES GRID */
+        .cases-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+        .case-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius);
+            padding: 40px; transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .case-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .case-card::before {
+            content: ''; position: absolute; top: 0; right: 0; width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(230,65,127,0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .case-icon {
+            width: 56px; height: 56px; border-radius: 14px;
+            background: rgba(230,65,127,0.1); border: 1px solid rgba(230,65,127,0.3);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; margin-bottom: 24px;
+        }
+        .case-card .case-num {
+            position: absolute; top: 24px; right: 28px;
+            font-size: 56px; font-weight: 900; color: rgba(230,65,127,0.08);
+            line-height: 1;
+        }
+        .case-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; position: relative; }
+        .case-card .case-sub { font-size: 12px; color: var(--brand); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; position: relative; }
+        .case-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; position: relative; }
+        .case-card .case-tags { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; position: relative; }
+        .case-card .case-tags span { font-size: 11px; padding: 4px 10px; background: rgba(230,65,127,0.08); color: var(--brand); border-radius: 12px; font-weight: 600; }
+
+        /* HOW IT WORKS */
+        .how-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .how-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+        .how-card {
+            background: var(--bg); border: 1px solid var(--border-solid); border-radius: var(--radius);
+            padding: 36px; text-align: center; position: relative;
+        }
+        .how-card .step-num {
+            position: absolute; top: -16px; left: 50%; transform: translateX(-50%);
+            background: var(--brand); color: white;
+            width: 32px; height: 32px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px; font-weight: 800;
+        }
+        .how-card .step-icon { font-size: 40px; margin-bottom: 16px; }
+        .how-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+        .how-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+        /* EDU */
+        .edu-section { padding: 40px 80px; max-width: 1200px; margin: 0 auto; }
+        .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .edu-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 40px;
+        }
+        .edu-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
+        .edu-card .ec-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 12px; }
+        .edu-card .ec-tag.no { background: rgba(255,100,100,0.15); color: #FF6464; }
+        .edu-card .ec-tag.yes { background: rgba(230,65,127,0.15); color: var(--brand); }
+        .edu-card ul { list-style: none; }
+        .edu-card ul li { padding: 8px 0; font-size: 13px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .edu-card ul li:last-child { border-bottom: none; }
+        .edu-card ul li::before { content: '✗ '; color: #FF6464; font-weight: 700; margin-right: 8px; }
+        .edu-card.yes ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; }
+
+        /* CTA */
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(28px, 3vw, 40px); font-weight: 900; margin-bottom: 16px; }
+        .cta-card p { font-size: 16px; color: var(--text-dim); margin-bottom: 36px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* FOOTER */
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; /*和左上角一致 25px*/ }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
+            text-align: center;
+        }
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        /* ===== RESPONSIVE ===== */
+
+        @media (max-width: 1024px) {
+            .hero { padding: 120px 40px 60px; }
+            .section, .how-section, .edu-section, .cta-section { padding: 60px 40px; }
+            .def-section { padding: 60px 40px; }
+            .def-grid { grid-template-columns: 1fr; }
+            .cases-grid, .how-grid, .edu-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+        }
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* TRUST FOUNDATION (LOCKED 2026-10-02 — Wang Jie's exact wording) */
+        .trust-foundation {
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        /* Fade-in on scroll */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card hover effects */
+        .case-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .case-card {
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 1024px) {
+            .trust-foundation { padding: 30px 40px 20px; }
+        }
+
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/zh/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/zh/index.html">首页</a></li>
+        <li><a href="/zh/about.html">关于我们</a></li>
+        <li><a href="/zh/ai-use.html" class="active">AI 应用</a></li>
+        <li><a href="/zh/products.html">产品</a></li>
+        <li><a href="/zh/news.html">新闻动态</a></li>
+        <li><a href="/zh/contact.html">联系我们</a></li>
+        <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="online-shop">🛒 淘宝购买</a></li>
+        <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="shop-btn">立即购买</a></li>
+        
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">ZH</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-cta" style="justify-content: center; margin-bottom: 20px;">
+        <span style="font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand);">AI 应用场景 · Workie</span>
+    </div>
+    <h1>为您的 IM 装上 <span class="pink">AI Brain</span></h1>
+    <p>STA-100 Workie 是一款个人 AI 办公助手（PAA），内置于您的即时通讯应用中——WhatsApp、Telegram、WeChat、Slack、飞书。它能进行研究、创作、整理、分析并完成各项工作。无需下载任何应用。</p>
+    <div class="hero-cta">
+        <a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="btn-primary">🛒 购买 Workie — $399</a>
+        <a href="/zh/products.html" class="btn-outline">查看硬件规格</a>
+    </div>
+</section>
+
+<!-- DEFINITION -->
+<!-- 6 USE CASES -->
+<section class="section">
+    <div class="section-header">
+        <div class="section-label">六大强大应用场景</div>
+        <h2 class="section-title">Workie 能为您做什么？</h2>
+        <p class="section-subtitle">从日常内容创作到复杂数据分析——Workie 处理消耗您时间的繁琐工作。</p>
+    </div>
+    <div class="cases-grid">
+
+        <div class="case-card">
+            <div class="case-num">01</div>
+            <div class="case-icon">📝</div>
+            <h3>个人内容创作</h3>
+            <div class="case-sub">每日创意产出</div>
+            <p>以您的风格撰写社交帖子、博客文章、邮件和营销文案。了解您的受众和品牌规范。几秒钟内生成可发布的成品。</p>
+            <div class="case-tags">
+                <span>博客写作</span><span>社交媒体</span><span>邮件撰写</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">02</div>
+            <div class="case-icon">📄</div>
+            <h3>文档创建</h3>
+            <div class="case-sub">方案 · 报告 · 合同</div>
+            <p>生成格式规范、引用完整的结构化文档。从您的本地知识库中提取内容，确保所有交付物的一致性。</p>
+            <div class="case-tags">
+                <span>方案</span><span>报告</span><span>合同</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">03</div>
+            <div class="case-icon">💼</div>
+            <h3>日常办公工作</h3>
+            <div class="case-sub">24/7 同事支持</div>
+            <p>安排会议、管理收件箱、跟踪任务、总结长文、起草回复。全天候在线，随时待命——如同拥有一位永不疲倦的个人助理。</p>
+            <div class="case-tags">
+                <span>日程</span><span>收件箱</span><span>摘要</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">04</div>
+            <div class="case-icon">📊</div>
+            <h3>数据分析与研究</h3>
+            <div class="case-sub">从原始数据到洞察</div>
+            <p>读取 CSV/Excel 文件，进行分析，生成图表并输出高管摘要。按需搜索网络获取市场研究和竞品情报。</p>
+            <div class="case-tags">
+                <span>Excel/CSV</span><span>图表</span><span>研究</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">05</div>
+            <div class="case-icon">🛒</div>
+            <h3>24/7 AI 客服</h3>
+            <div class="case-sub">电商就绪</div>
+            <p>回复客户咨询、处理订单、跟踪物流并处理退换货。多语言支持助力全球业务。绝不漏接任何客户消息。</p>
+            <div class="case-tags">
+                <span>电商</span><span>多语言</span><span>自动回复</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-num">06</div>
+            <div class="case-icon">🤖</div>
+            <h3>销售与营销自动化</h3>
+            <div class="case-sub">管线与内容引擎</div>
+            <p>跟踪销售管线、起草外联信息、监控竞品动态、生成潜客报告。与您的 CRM 协同工作，推动交易进展。</p>
+            <div class="case-tags">
+                <span>管线</span><span>外联</span><span>CRM 同步</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- IM CONNECTIONS -->
+<section style="padding:40px 80px;max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:32px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand);margin-bottom:10px;">全球 IM 支持</div>
+        <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;margin-bottom:8px;">用 AI 大脑赋能您团队的 IM</h2>
+        <p style="font-size:13px;color:var(--text-dim);">STA-100 Workie 连接您团队正在使用的每一个即时通讯平台</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center;">
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🌎</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">北美</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fas fa-video" style="color:#2D8CFF;margin-right:10px;width:18px;text-align:center;"></i>Zoom<br>
+              <i class="fab fa-google" style="color:#0088CC;margin-right:10px;width:18px;text-align:center;"></i>Google Chat<br>
+              <i class="fab fa-discord" style="color:#5865F2;margin-right:10px;width:18px;text-align:center;"></i>Discord<br>
+              <i class="fas fa-video" style="color:#F0142F;margin-right:10px;width:18px;text-align:center;"></i>Webex
+            </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🇪🇺</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">欧洲</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fab fa-whatsapp" style="color:#25D366;margin-right:10px;width:18px;text-align:center;"></i>WhatsApp Business<br>
+              <i class="fas fa-comments" style="color:#005FF0;margin-right:10px;width:18px;text-align:center;"></i>Mattermost<br>
+              <i class="fas fa-lock" style="color:#3A76F0;margin-right:10px;width:18px;text-align:center;"></i>Signal<br>
+              <i class="fas fa-shield-alt" style="color:#007BFF;margin-right:10px;width:18px;text-align:center;"></i>Threema
+            </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🌏</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">亚太</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fas fa-comment-dots" style="color:#00B900;margin-right:10px;width:18px;text-align:center;"></i>LINE<br>
+              <i class="fas fa-comment" style="color:#FFEB00;margin-right:10px;width:18px;text-align:center;"></i>KakaoTalk<br>
+              <i class="fab fa-telegram" style="color:#0088CC;margin-right:10px;width:18px;text-align:center;"></i>Telegram<br>
+              <i class="fab fa-whatsapp" style="color:#25D366;margin-right:10px;width:18px;text-align:center;"></i>WhatsApp
+            </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;padding:22px 18px;">
+            <div style="font-size:22px;margin-bottom:10px;">🌐</div>
+            <div style="font-size:13px;font-weight:700;color:var(--brand);margin-bottom:12px;">全球</div>
+            <div style="font-size:12px;color:var(--text-dim);line-height:2.4;text-align:left;padding-left:8px;">
+              <i class="fab fa-whatsapp" style="color:#25D366;margin-right:10px;width:18px;text-align:center;"></i>WhatsApp<br>
+              <i class="fab fa-telegram" style="color:#0088CC;margin-right:10px;width:18px;text-align:center;"></i>Telegram<br>
+              <i class="fab fa-discord" style="color:#5865F2;margin-right:10px;width:18px;text-align:center;"></i>Discord<br>
+              <i class="fab fa-microsoft" style="color:#5059C9;margin-right:10px;width:18px;text-align:center;"></i>Microsoft Teams<br>
+              <i class="fab fa-slack" style="color:#4A154B;margin-right:10px;width:18px;text-align:center;"></i>Slack<br>
+              <i class="fas fa-rocket" style="color:#147EEA;margin-right:10px;width:18px;text-align:center;"></i>飞书
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:24px;">
+        <img src="images/sta100-im-demo.png" alt="STA-100 Workie IM 演示" style="max-width:700px;width:100%;border-radius:12px;">
+    </div>
+</section>
+
+<!-- ROLES / INDUSTRIES -->
+<section style="padding:40px 80px;max-width:1100px;margin:0 auto;">
+    <div style="text-align:center;margin-bottom:32px;">
+        <div style="font-size:12px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--brand);margin-bottom:10px;">办公角色</div>
+        <h2 style="font-size:clamp(20px,2.5vw,28px);font-weight:800;margin-bottom:8px;">一个 AI Agent，多种办公角色</h2>
+        <p style="font-size:13px;color:var(--text-dim);">STA-100 Workie 适配每一个团队职能——一个 AI agent，无限工作流</p>
+    </div>
+    <div style="text-align:center;margin-bottom:24px;">
+        <img src="images/sta100-roles-demo.png" alt="STA-100 Workie 办公角色" style="max-width:500px;width:100%;border-radius:12px;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">💼</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">销售</div>
+            <div style="font-size:11px;color:var(--text-dim);">潜客开发 · 管线 · CRM 同步 · 外联</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">📣</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">市场</div>
+            <div style="font-size:11px;color:var(--text-dim);">内容 · 社交媒体 · 活动 · 报告</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">⚖️</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">法务</div>
+            <div style="font-size:11px;color:var(--text-dim);">合同审核 · 合规 · 政策文档</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">📊</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">金融 / 股票</div>
+            <div style="font-size:11px;color:var(--text-dim);">财务报告 · 市场数据 · 投资分析</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">🏢</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">行政</div>
+            <div style="font-size:11px;color:var(--text-dim);">日程 · 收件箱 · 差旅预订 · 摘要</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">🛒</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">电商</div>
+            <div style="font-size:11px;color:var(--text-dim);">商品上架 · 客服 · 库存</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">👥</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">人力资源</div>
+            <div style="font-size:11px;color:var(--text-dim);">简历筛选 · 入职 · 培训</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">📦</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">运营</div>
+            <div style="font-size:11px;color:var(--text-dim);">流程自动化 · 任务跟踪 · 工作流</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border-solid);border-radius:10px;padding:18px;text-align:center;">
+            <div style="font-size:20px;margin-bottom:8px;">💻</div>
+            <div style="font-size:12px;font-weight:700;color:var(--brand);margin-bottom:4px;">财务</div>
+            <div style="font-size:11px;color:var(--text-dim);">财务报告 · 市场数据 · 投资分析</div>
+        </div>
+    </div>
+</section>
+
+<!-- AI AGENT ≠ CHATBOT -->
+<section class="edu-section">
+    <div class="section-header">
+        <div class="section-label">核心差异</div>
+        <h2 class="section-title">AI Agent ≠ 聊天机器人</h2>
+        <p class="section-subtitle">Workie 是真正的数字同事，而不仅仅是一个聊天机器人</p>
+    </div>
+    <div class="edu-grid">
+        <div class="edu-card">
+            <h3>传统聊天机器人</h3>
+            <span class="ec-tag no">仅聊天</span>
+            <ul>
+                <li>一次只能回复一条消息</li>
+                <li>无跨会话记忆</li>
+                <li>无法访问您的文件或数据</li>
+                <li>无法自主执行任务</li>
+                <li>需要持续的人工指导</li>
+                <li>数据上传到外部云服务器</li>
+            </ul>
+        </div>
+        <div class="edu-card yes">
+            <h3>Workie AI Agent</h3>
+            <span class="ec-tag yes">AI Agent</span>
+            <ul>
+                <li>7×24 小时在后台持续运行</li>
+                <li>记住一切，从上下文中学习</li>
+                <li>完全访问您的文件、邮件、日历</li>
+                <li>按指令自主执行任务</li>
+                <li>自动处理重复性工作</li>
+                <li>所有数据保留在本地，永不离开设备</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>准备迎接您的 <span style="color:var(--brand)">AI 同事</span>了吗？</h2>
+        <p>STA-100 Workie 起售价 <strong style="color:var(--brand)">$399 美元</strong>。一次性购买。无订阅。全球发货。</p>
+        <div class="cta-btns">
+            <a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank" class="btn-primary">🛒 立即购买 — ¥1,999</a>
+            <a href="/zh/products.html" class="btn-outline">查看规格</a>
+            <a href="/zh/contact.html" class="btn-outline">企业咨询</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>中国广东省深圳市宝安区航城街道九围社区航程大道东侧综合楼（航嘉工业厂区）C6栋1203D</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>周一至周五 9:00-18:00</p>
+        </div>
+        <div>
+            <h4>产品</h4>
+            <ul>
+                <li><a href="/zh/products.html">STA-100 Workie</a></li>
+                <li><a href="/zh/ai-use.html">AI 应用场景</a></li>
+                <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank">🛒 淘宝购买</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>公司</h4>
+            <ul>
+                <li><a href="/zh/about.html">关于我们</a></li>
+                <li><a href="/zh/news.html">新闻动态</a></li>
+                <li><a href="/zh/contact.html">联系我们</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>资源</h4>
+            <ul>
+                <li><a href="https://item.taobao.com/item.htm?abbucket=0&id=1061672053581&mi_id=0000KqAKrgBVaZL2u_DbbwoyuXhV7dEm4-2P5zLCiMtillM&ns=1&skuId=6271077942872&spm=a21xtw.29178619.product_shelf.1.622326cdoZjChp&xxc=taobaoSearch" target="_blank">购买 STA-100</a></li>
+                <li><a href="/zh/contact.html">企业咨询</a></li>
+                <li><a href="/zh/contact.html">定制 AI Agent 开发</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>社交媒体</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX 是 PAA（个人 AI 办公助手）的先驱，开创了全新的办公 AI 产品品类，致力于提升日常工作效率。我们为个人、企业和行业打造私有 AI 助手及定制化 AI Agent 解决方案。</p>
+        <p class="trust-tagline">构建下一代 AI 驱动的生产力。</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. 保留所有权利。 | <a href="#">隐私政策</a> | <a href="#">服务条款</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/zh/index.html">首页</a>
+        <a href="/zh/about.html">关于我们</a>
+        <a href="/zh/products.html">产品</a>
+        <a href="/zh/news.html">新闻动态</a>
+        <a href="/zh/contact.html">联系我们</a>
+    </div>
+</footer>
+
+<script>
+// Intersection Observer for scroll-fade animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Apply scroll-fade to all major sections and cards
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .section-header, .edu-section, .cta-section, .def-section, .case-card, .edu-card, .how-card');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+</script>
+
+
+<script>
+function toggleLang(e){e.stopPropagation();const s=document.getElementById('langSelector');s.classList.toggle('open');const d=document.getElementById('langDropdown');d.style.display=s.classList.contains('open')?'block':'none'}document.addEventListener('click',()=>{const s=document.getElementById('langSelector');if(s){s.classList.remove('open');const d=document.getElementById('langDropdown');if(d)d.style.display='none'}});function initLang(){const c=document.cookie.match(/(?:^|; )lang=([^;]+)/);const p=window.location.pathname.match(/\/([^/]+)\//);const l=c?c[1]:(p?p[1]:'en');const m=document.getElementById('currentLangLabel');if(m)m.textContent=l.toUpperCase()}
+</script>
+</body>
+</html>

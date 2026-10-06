@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STRATRONIX — Trợ Lý Văn Phòng AI Cá Nhân | STA-100 Workie</title>
+    <meta name="description" content="STRATRONIX STA-100 Workie: Trợ Lý Văn Phòng AI Cá Nhân (PAA) mang đến trí tuệ AI cho IM của bạn — nghiên cứu, tạo, sắp xếp, phân tích và hoàn thành công việc. Không cần tải ứng dụng.">
+    <meta name="keywords" content="Trợ lý văn phòng AI cá nhân, Đại lý AI, STA-100, Workie, Năng suất AI, AI riêng tư, AI văn phòng, trợ lý AI IM">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.stratronix.ai">
+    <link rel="alternate" hreflang="en" href="https://www.stratronix.ai">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --bg-card-hover: #111118;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --brand-dark: #C4305F;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --radius-sm: 8px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --font-mono: 'SF Mono', 'Fira Code', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a { color: inherit; text-decoration: none; }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px;
+            height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a {
+            font-size: 14px; font-weight: 500; color: var(--text-dim);
+            transition: color 0.2s; letter-spacing: 0.3px;
+        }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn {
+            background: var(--brand); color: white !important;
+            padding: 8px 18px; border-radius: 24px; font-weight: 600;
+        }
+        nav .nav-links a.shop-btn:hover { background: var(--brand-light); }
+        nav .online-shop {
+            font-size: 12px; color: var(--brand); border: 1px solid var(--brand);
+            padding: 5px 14px; border-radius: 20px; font-weight: 600;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex; align-items: center;
+            padding: 100px 80px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(230,65,127,0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-grid {
+            max-width: 1300px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+            align-items: center; width: 100%;
+        }
+        .hero-left .eyebrow {
+            font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--brand); margin-bottom: 20px;
+        }
+        .hero-left h1 {
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 900; line-height: 1; letter-spacing: -1.5px;
+            margin-bottom: 24px;
+        }
+        .hero-left h1 .pink { color: var(--brand); }
+        .hero-left h1 .brand-pink {
+            display: block;
+            font-size: clamp(20px, 2vw, 26px);
+            font-weight: 700;
+            color: var(--brand);
+            letter-spacing: 4px;
+            margin-bottom: 4px;
+        }
+        .hero-left h1 .model {
+            display: block;
+            font-size: clamp(40px, 7vw, 96px);
+            font-weight: 900;
+            color: #FFFFFF;
+            letter-spacing: -4px;
+            line-height: 0.9;
+            margin: 8px 0 16px;
+        }
+        .hero-left h1 .workie {
+            display: inline-block;
+            font-size: clamp(40px, 5vw, 64px);
+            font-weight: 700;
+            color: #FFFFFF;
+            -webkit-text-fill-color: #FFFFFF;
+            margin-top: 12px;
+            position: relative;
+            padding-top: 24px;
+        }
+        @keyframes gradient-shift {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+        .hero-left h1 .workie::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 14px;
+            height: 14px;
+            background: var(--brand);
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(230,65,127,0.5);
+        }
+        .hero-left .tagline {
+            font-size: 18px; color: var(--text-dim); margin-bottom: 40px;
+            max-width: 480px; line-height: 1.7;
+        }
+        .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--brand); color: white;
+            padding: 14px 32px; border-radius: 50px;
+            font-weight: 700; font-size: 15px;
+            border: none; cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-primary:hover { background: var(--brand-light); transform: translateY(-1px); }
+        .btn-outline {
+            background: transparent; color: var(--text);
+            padding: 14px 32px; border-radius: 50px;
+            font-weight: 600; font-size: 15px;
+            border: 1.5px solid var(--border-solid);
+            cursor: pointer; transition: all 0.2s;
+        }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+        .hero-right { position: relative; text-align: center; }
+        .hero-right img.main-product, .hero-right video.main-product {
+            width: 100%; max-width: 520px;
+            border-radius: 20px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 60px rgba(230,65,127,0.15);
+        }
+        .hero-right .product-glow {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(230,65,127,0.2) 0%, transparent 70%);
+            pointer-events: none; z-index: -1;
+        }
+        .hero-stats {
+            display: flex; gap: 40px; margin-top: 40px;
+        }
+        .hero-stat { text-align: left; }
+        .hero-stat .num {
+            font-size: 28px; font-weight: 800; color: var(--brand);
+        }
+        .hero-stat .label { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+
+        /* ===== CORE VALUES ===== */
+        .section { padding: 100px 80px; }
+        .section-header { text-align: center; max-width: 600px; margin: 0 auto 60px; }
+        .section-label {
+            font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--brand); margin-bottom: 16px;
+        }
+        .section-title {
+            font-size: clamp(28px, 3.5vw, 48px);
+            font-weight: 800; letter-spacing: -1px;
+            margin-bottom: 16px; line-height: 1.1;
+        }
+        .section-subtitle { font-size: 16px; color: var(--text-dim); }
+
+        .values-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .value-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            transition: all 0.3s;
+        }
+        .value-card:hover { border-color: var(--brand); }
+        .value-card .vc-icon {
+            font-size: 32px; margin-bottom: 20px;
+        }
+        .value-card h3 {
+            font-size: 20px; font-weight: 700; margin-bottom: 8px;
+        }
+        .value-card .vc-sub {
+            font-size: 12px; font-weight: 600; color: var(--brand);
+            margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase;
+        }
+        .value-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+
+        /* ===== WORKFLOW COMPARISON ===== */
+        .workflow-section {
+            padding: 100px 80px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .workflow-grid {
+            max-width: 900px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr auto 1fr; gap: 32px; align-items: center;
+        }
+        .workflow-box {
+            background: var(--bg);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px; text-align: center;
+        }
+        .workflow-box.human { border-color: rgba(255,100,100,0.3); }
+        .workflow-box.ai { border-color: rgba(230,65,127,0.4); }
+        .workflow-box .wb-label {
+            font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .workflow-box.human .wb-label { color: #FF6464; }
+        .workflow-box.ai .wb-label { color: var(--brand); }
+        .workflow-box .wb-time {
+            font-size: 52px; font-weight: 900; line-height: 1;
+            margin-bottom: 8px;
+        }
+        .workflow-box.human .wb-time { color: #FF6464; }
+        .workflow-box.ai .wb-time { color: var(--brand); }
+        .workflow-box .wb-desc { font-size: 14px; color: var(--text-dim); margin-bottom: 20px; }
+        .workflow-box .wb-tasks { list-style: none; text-align: left; }
+        .workflow-box .wb-tasks li {
+            padding: 8px 0; font-size: 14px; color: var(--text-dim);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .workflow-box .wb-tasks li:last-child { border-bottom: none; }
+        .workflow-box .wb-tasks li::before { content: '✓ '; color: var(--brand); font-weight: 700; }
+        .workflow-arrow { font-size: 40px; color: var(--text-muted); text-align: center; }
+
+        /* ===== FEATURED PERFORMANCE ===== */
+        .perf-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+        }
+        .perf-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px 32px;
+            transition: all 0.3s;
+        }
+        .perf-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .perf-card .pc-icon {
+            width: 52px; height: 52px; border-radius: 12px;
+            background: rgba(230,65,127,0.1);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; margin-bottom: 20px;
+        }
+        .perf-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+        .perf-card .pc-sub { font-size: 12px; color: var(--brand); font-weight: 600; margin-bottom: 16px; }
+        .perf-card p { font-size: 14px; color: var(--text-dim); line-height: 1.7; }
+
+        /* ===== AI AGENT NOT CHATBOT ===== */
+        .edu-section {
+            padding: 100px 80px;
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .edu-grid {
+            max-width: 1100px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+        }
+        .edu-card {
+            background: var(--bg);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 40px;
+        }
+        .edu-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
+        .edu-card .ec-tag {
+            display: inline-block; font-size: 11px; font-weight: 700;
+            letter-spacing: 2px; text-transform: uppercase;
+            padding: 4px 12px; border-radius: 20px; margin-bottom: 16px;
+        }
+        .edu-card .ec-tag.no { background: rgba(255,100,100,0.15); color: #FF6464; }
+        .edu-card .ec-tag.yes { background: rgba(230,65,127,0.15); color: var(--brand); }
+        .edu-card ul { list-style: none; }
+        .edu-card ul li {
+            padding: 10px 0; font-size: 14px; color: var(--text-dim);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        .edu-card ul li:last-child { border-bottom: none; }
+        .edu-card ul li::before { content: '✗ '; color: #FF6464; font-weight: 700; }
+        .edu-card.yes ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; }
+
+        /* ===== CTA ===== */
+        .cta-section {
+            padding: 100px 80px;
+            text-align: center;
+        }
+        .cta-card {
+            max-width: 700px; margin: 0 auto;
+            background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%);
+            border: 1px solid var(--brand);
+            border-radius: 24px;
+            padding: 60px 48px;
+        }
+        .cta-card h2 {
+            font-size: clamp(28px, 3vw, 40px);
+            font-weight: 900; margin-bottom: 16px;
+        }
+        .cta-card p { font-size: 16px; color: var(--text-dim); margin-bottom: 36px; }
+        .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            padding: 60px 80px 40px;
+        }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
+            text-align: center;
+        }
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .hero { padding: 100px 40px 60px; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-left .tagline { margin: 0 auto 40px; }
+            .hero-btns { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .section, .workflow-section, .edu-section, .cta-section { padding: 60px 40px; }
+            .values-grid, .perf-grid, .edu-grid { grid-template-columns: 1fr; }
+            .workflow-grid { grid-template-columns: 1fr; }
+            .workflow-arrow { transform: rotate(90deg); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+            nav .nav-links { gap: 20px; }
+        }
+        @media (max-width: 640px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+        }
+    
+        /* TRUST FOUNDATION */
+        .trust-foundation {
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        @media (max-width: 1024px) {
+            .trust-foundation { padding: 30px 40px 20px; }
+        }
+    
+        /* REAL SCENARIOS */
+        .scenarios-section { padding: 80px 80px; background: var(--bg); }
+        .scenarios-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .scenario-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 32px 28px;
+            transition: all 0.3s; position: relative; overflow: hidden;
+        }
+        .scenario-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .scenario-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
+        }
+        .scenario-num {
+            font-size: 13px; font-weight: 700; color: var(--brand);
+            font-family: ui-monospace, monospace; margin-bottom: 12px;
+        }
+        .scenario-metric {
+            font-size: 32px; font-weight: 900; color: var(--text); line-height: 1;
+            margin-bottom: 12px; font-family: ui-monospace, monospace;
+        }
+        .scenario-metric span { color: var(--brand); font-size: 20px; }
+        .scenario-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+        .scenario-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+        /* 3 STEPS TO START */
+        .steps-section { padding: 80px 80px; background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); }
+        .steps-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .step-card {
+            background: var(--bg); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 32px 28px;
+            transition: all 0.3s; text-align: center;
+        }
+        .step-card:hover { border-color: var(--brand); }
+        .step-num {
+            display: inline-block; font-size: 14px; font-weight: 700; color: var(--brand);
+            font-family: ui-monospace, monospace; padding: 6px 16px;
+            border: 1px solid var(--brand); margin-bottom: 16px;
+        }
+        .step-card h3 { font-size: 22px; font-weight: 800; margin-bottom: 8px; }
+        .step-time {
+            font-size: 12px; font-weight: 700; color: var(--brand);
+            text-transform: uppercase; letter-spacing: 1px;
+            margin-bottom: 14px;
+        }
+        .step-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+
+        @media (max-width: 1024px) {
+            .scenarios-section, .steps-section { padding: 60px 40px; }
+            .scenarios-grid, .steps-grid { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== ANIMATIONS & DYNAMICS ===== */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        @keyframes floatY {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 4px 20px rgba(230,65,127,0.3); }
+            50% { box-shadow: 0 4px 40px rgba(230,65,127,0.6); }
+        }
+        @keyframes pulseScale {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.06); }
+        }
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.85); }
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes spinSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        @keyframes blinkCaret {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        /* Hero animated gradient */
+        .hero::before {
+            background: linear-gradient(135deg, #000 0%, rgba(230,65,127,0.05) 30%, rgba(230,65,127,0.1) 50%, rgba(230,65,127,0.05) 70%, #000 100%) !important;
+            background-size: 400% 400% !important;
+            animation: gradientShift 10s ease infinite !important;
+        }
+        
+        /* Hero floating product image */
+        .hero-right img.main-product, .hero-right video.main-product {
+            animation: floatY 5s ease-in-out infinite !important;
+        }
+        
+        /* Hero pulsing pink dot accent */
+        .hero-left .eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--brand);
+            border-radius: 50%;
+            margin-right: 10px;
+            vertical-align: middle;
+            animation: pulseDot 1.5s ease-in-out infinite;
+        }
+        
+        /* Pink dot above Workie - pulsing */
+        .hero-left h1 .workie::before {
+            animation: pulseScale 2s ease-in-out infinite, pulseDot 2s ease-in-out infinite !important;
+        }
+        
+        /* CTA buttons - pulsing glow */
+        .btn-primary {
+            animation: pulseGlow 3s ease-in-out infinite !important;
+        }
+        
+        /* Hero stats numbers - subtle pulse */
+        .hero-stat .num {
+            animation: pulseScale 4s ease-in-out infinite;
+        }
+        .hero-stat:nth-child(2) .num { animation-delay: 0.5s; }
+        .hero-stat:nth-child(3) .num { animation-delay: 1s; }
+        .hero-stat:nth-child(4) .num { animation-delay: 1.5s; }
+        
+        /* Pink gradient animated text */
+        .hero-left h1 .model {
+            background: linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.95) 50%, #E6417F 50%, #E6417F 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 6s linear infinite;
+        }
+        
+        /* Fade-in on scroll */
+        .scroll-fade {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .scroll-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Scenario/Step/Value cards - enhanced hover */
+        .value-card, .scenario-card, .step-card, .perf-card, .biz-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+        .value-card:hover, .scenario-card:hover, .step-card:hover, .perf-card:hover, .biz-card:hover {
+            transform: translateY(-8px) !important;
+            box-shadow: 0 20px 60px rgba(230,65,127,0.2) !important;
+        }
+        
+        /* Eyebrow shimmer effect */
+        .section-label {
+            background: linear-gradient(90deg, var(--brand) 0%, #FF6B9D 50%, var(--brand) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s linear infinite;
+        }
+        
+        /* CTA card pulsing border */
+        .cta-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent 30%, rgba(230,65,127,0.1) 50%, transparent 70%);
+            animation: spinSlow 8s linear infinite;
+            pointer-events: none;
+        }
+        
+        /* Workflow comparison animated arrow */
+        .workflow-arrow {
+            display: inline-block;
+            animation: pulseScale 1.5s ease-in-out infinite;
+        }
+        
+        /* Reduced motion support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        /* ===== MORE DYNAMICS (Round 2) ===== */
+        @keyframes floatBlob {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(90deg); }
+            50% { transform: translate(-20px, 20px) rotate(180deg); }
+            75% { transform: translate(20px, 30px) rotate(270deg); }
+        }
+        @keyframes drawLine {
+            from { stroke-dashoffset: 100%; }
+            to { stroke-dashoffset: 0; }
+        }
+        @keyframes progressFill {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes morphNumber {
+            0% { transform: scale(0.5); opacity: 0; }
+            60% { transform: scale(1.15); opacity: 1; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        @keyframes tiltIn {
+            from { transform: perspective(800px) rotateX(15deg) translateY(40px); opacity: 0; }
+            to { transform: perspective(800px) rotateX(0) translateY(0); opacity: 1; }
+        }
+        
+        /* SCROLL PROGRESS BAR */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand) 0%, #FF6B9D 100%);
+            z-index: 9999;
+            transition: width 0.1s linear;
+            box-shadow: 0 0 10px rgba(230,65,127,0.5);
+        }
+        
+        /* FLOATING COLORED BLOBS IN HERO */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.4;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-blob.b1 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(230,65,127,0.6) 0%, transparent 70%);
+            top: 10%; right: 10%;
+            animation: floatBlob 20s ease-in-out infinite;
+        }
+        .hero-blob.b2 {
+            width: 250px; height: 250px;
+            background: radial-gradient(circle, rgba(255,107,157,0.5) 0%, transparent 70%);
+            bottom: 20%; left: 5%;
+            animation: floatBlob 25s ease-in-out infinite reverse;
+        }
+        .hero-blob.b3 {
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, rgba(230,65,127,0.4) 0%, transparent 70%);
+            top: 50%; left: 40%;
+            animation: floatBlob 30s ease-in-out infinite;
+        }
+        .hero-grid { position: relative; z-index: 1; }
+        
+        /* 3D TILT CARDS */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tilt-card:hover {
+            transform: perspective(800px) rotateY(8deg) rotateX(3deg) scale(1.02) !important;
+        }
+        
+        /* ANIMATED COUNTERS (on view) */
+        .counter-num {
+            display: inline-block;
+        }
+        .counter-num.counted {
+            animation: morphNumber 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        /* WORKFLOW COMPARISON ANIMATED TRANSITION */
+        .wf-from, .wf-to {
+            display: inline-block;
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .workflow-card.in-view .wf-from {
+            animation: scaleDownFrom 1.5s ease-out forwards;
+        }
+        .workflow-card.in-view .wf-to {
+            animation: scaleUpTo 1.5s 0.5s ease-out forwards;
+        }
+        @keyframes scaleDownFrom {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.3); color: var(--brand); }
+            100% { transform: scale(0.8); opacity: 0.4; }
+        }
+        @keyframes scaleUpTo {
+            0% { transform: scale(0.5); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        /* ANIMATED SECTION DIVIDERS */
+        .section-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, var(--brand) 50%, transparent 100%);
+            margin: 0 auto;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: all 1s ease;
+        }
+        .section-divider.visible {
+            opacity: 1;
+            transform: scaleX(1);
+        }
+        
+        /* WORKFLOW ARROW PULSE */
+        .wf-arrow {
+            display: inline-block;
+            animation: pulseScale 1.2s ease-in-out infinite;
+            color: var(--brand);
+            font-weight: 900;
+        }
+        
+        /* HERO PRODUCT GLOW ANIMATION */
+        .hero-right .product-glow {
+            animation: pulseGlow 4s ease-in-out infinite, rotate360 30s linear infinite !important;
+        }
+        @keyframes rotate360 {
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        
+        /* Animated ticker on scenario metrics */
+        .scenario-metric {
+            position: relative;
+            overflow: hidden;
+        }
+        .scenario-metric::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--brand);
+            transition: width 1.2s ease;
+        }
+        .scenario-card:hover .scenario-metric::after {
+            width: 100%;
+        }
+        
+        /* Section labels glow pulse */
+        .section-label {
+            position: relative;
+            padding: 0 8px;
+        }
+        .section-label::before, .section-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 8px;
+            height: 8px;
+            background: var(--brand);
+            border-radius: 50%;
+            transform: translateY(-50%);
+            animation: pulseDot 1.5s ease-in-out infinite;
+        }
+        .section-label::before { left: -16px; }
+        .section-label::after { right: -16px; }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/vi/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/vi/index.html" class="active">Trang chủ</a></li>
+        <li><a href="/vi/about.html">Giới thiệu</a></li>
+        <li><a href="/vi/ai-use.html">Ứng dụng AI</a></li>
+        <li><a href="/vi/products.html">Sản phẩm</a></li>
+        <li><a href="/vi/news.html">Tin tức</a></li>
+        <li><a href="/vi/contact.html">Liên hệ</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 Cửa hàng trực tuyến</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Mua ngay</a></li>
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">VI</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+    <div class="hero-grid">
+        <div class="hero-left">
+            <div class="eyebrow">TIÊN PHONG PAA — TRỢ LÝ VĂN PHÒNG AI CÁ NHÂN</div>
+            <h1>
+                <span class="brand-pink">STRATRONIX</span>
+                <span class="workie">Workie</span>
+                <span class="model">STA-100</span>
+            </h1>
+            <p class="tagline">Mang đến cho IM của bạn trí tuệ AI. Workie nghiên cứu, tạo, sắp xếp, phân tích và hoàn thành công việc — trong khi bạn tập trung vào điều quan trọng.</p>
+            <div class="hero-btns">
+                <a href="/vi/ai-use.html" class="btn-primary">Khám phá Workie →</a>
+                <a href="/vi/products.html" class="btn-outline">Xem thông số kỹ thuật</a>
+                <a href="https://store.stratronix.ai" target="_blank" class="btn-outline">🛒 Mua — $399</a>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="num">15KWH/Month</div>
+                    <div class="label">Tiêu thụ năng lượng cực thấp</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">24/7</div>
+                    <div class="label">Luôn trực tuyến</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="num">8-10 min</div>
+                    <div class="label">Thời gian thiết lập</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="product-glow"></div>
+            <img src="images/sta100-24-7-gateway.png?v=20261003final" alt="STRATRONIX STA-100 Workie - 24/7 AI Agent Gateway" class="main-product" id="heroProductImg" style="display:block; width:100%; max-width:520px; border-radius:20px; box-shadow:0 40px 80px rgba(0,0,0,0.6),0 0 60px rgba(230,65,127,0.15);">
+            <video src="/vi/images/hero-sta100-trimmed.mp4?v=20261003final" class="main-product" autoplay muted loop playsinline preload="auto" poster="images/sta100-24-7-gateway.png?v=20261003final" id="heroProductVideo" style="position:absolute; top:0; left:50%; transform:translateX(-50%); width:100%; max-width:520px; border-radius:20px; box-shadow:0 40px 80px rgba(0,0,0,0.6),0 0 60px rgba(230,65,127,0.15);"></video>
+        </div>
+        <script>
+        // Video fallback: show poster if video unavailable (汪总: guarantee always display)
+        (function(){
+            var v = document.getElementById('heroProductVideo');
+            var img = document.getElementById('heroProductImg');
+            if(!v || !img) return;
+            v.addEventListener('playing', function(){ img.style.display='none'; });
+            v.addEventListener('error', function(){ v.style.display='none'; });
+            setTimeout(function(){
+                if(v.paused && v.readyState < 2){ v.style.display='none'; }
+            }, 3000);
+        })();
+        </script>
+    </div>
+</section>
+
+<!-- CORE VALUES -->
+<section class="section" id="values">
+    <div class="section-header">
+        <div class="section-label">Giá trị cốt lõi</div>
+        <h2 class="section-title">Tại sao chọn STRATRONIX?</h2>
+        <p class="section-subtitle">PAA = Personal AI Office Assistant. Được xây dựng cho công việc có ý nghĩa.</p>
+    </div>
+    <div class="values-grid">
+        <div class="value-card">
+            <div class="vc-icon">💡</div>
+            <h3>Được thúc đẩy bởi Đổi mới</h3>
+            <div class="vc-sub">Tập trung vào Đại lý AI</div>
+            <p>Không ngừng phát triển công nghệ AI đột phá để thúc đẩy tiến bộ ngành và tạo ra lợi thế cạnh tranh bền vững.</p>
+        </div>
+        <div class="value-card">
+            <div class="vc-icon">🛡️</div>
+            <h3>Đáng tin cậy & Ổn định</h3>
+            <div class="vc-sub">Chất lượng Doanh nghiệp</div>
+            <p>Đảm bảo chất lượng sản phẩm và sự ổn định của hệ thống thông qua kiểm tra nghiêm ngặt, với cam kết uptime 99,99% cho các hoạt động quan trọng.</p>
+        </div>
+        <div class="value-card">
+            <div class="vc-icon">🤝</div>
+            <h3>Khách hàng là Ưu tiên</h3>
+            <div class="vc-sub">Giải pháp Cá nhân hóa</div>
+            <p>Lấy khách hàng làm trung tâm, cung cấp giải pháp cá nhân hóa, hỗ trợ chuyên nghiệp và đối tác tận tâm để đảm bảo thành công của bạn.</p>
+        </div>
+    </div>
+</section>
+
+<!-- REAL SCENARIOS -->
+<section class="scenarios-section" id="scenarios">
+    <div class="section-header">
+        <div class="section-label">Kịch bản thực tế</div>
+        <h2 class="section-title">Quy trình làm việc thực · tiết kiệm thời gian thực</h2>
+        <p class="section-subtitle">Ba trụ cột năng suất văn phòng, được tăng tốc bởi Trí tuệ AI Cá nhân của bạn</p>
+    </div>
+    <div class="scenarios-grid">
+        <div class="scenario-card">
+            <div class="scenario-num">Kịch bản 01</div>
+            <div class="scenario-metric">4h <span>→</span> 10phút</div>
+            <h3>Tạo nội dung</h3>
+            <p>Soạn bài đăng blog, mạng xã hội, email marketing theo phong cách của bạn. Nhận diện phong cách, đối tượng và hướng dẫn thương hiệu của bạn. Output sẵn sàng xuất bản chỉ trong vài phút.</p>
+        </div>
+        <div class="scenario-card">
+            <div class="scenario-num">Kịch bản 02</div>
+            <div class="scenario-metric">2h <span>→</span> 5phút</div>
+            <h3>Xử lý tài liệu</h3>
+            <p>Tự động điền template, trích xuất dữ liệu từ PDF, tạo hợp đồng và hóa đơn. Mọi tài liệu kinh doanh, mọi ngôn ngữ, mọi lúc.</p>
+        </div>
+        <div class="scenario-card">
+            <div class="scenario-num">Kịch bản 03</div>
+            <div class="scenario-metric">1h <span>→</span> tức thì</div>
+            <h3>Trả lời khách hàng</h3>
+            <p>Trả lời câu hỏi khách hàng 24/7 qua IM. Nhận diện sản phẩm, chính sách và FAQ của bạn. Chỉ chuyển cho con người khi thực sự cần thiết.</p>
+        </div>
+    </div>
+</section>
+
+<!-- WORKFLOW COMPARISON -->
+<section class="workflow-section" id="workflow">
+    <div class="section-header">
+        <div class="section-label">So sánh Hiệu suất</div>
+        <h2 class="section-title">AI vs. Thủ công: Chênh lệch Thời gian</h2>
+        <p class="section-subtitle">Cùng một công việc, kết quả hoàn toàn khác biệt</p>
+    </div>
+    <div class="workflow-grid">
+        <div class="workflow-box human">
+            <div class="wb-label">Làm thủ công</div>
+            <div class="wb-time">4 giờ</div>
+            <div class="wb-desc">Nhân viên tri thức trung bình</div>
+            <ul class="wb-tasks">
+                <li>Nghiên cứu và thu thập thông tin</li>
+                <li>Soạn thảo và viết lại tài liệu</li>
+                <li>Phân tích dữ liệu thủ công</li>
+                <li>Định dạng và sắp xếp kết quả</li>
+                <li>Đọc lại và sửa lỗi</li>
+            </ul>
+        </div>
+        <div class="workflow-arrow">→</div>
+        <div class="workflow-box ai">
+            <div class="wb-label">STA-100 Workie</div>
+            <div class="wb-time">10 phút</div>
+            <div class="wb-desc">Tự động hóa dựa trên AI</div>
+            <ul class="wb-tasks">
+                <li>Tự động nghiên cứu và tóm tắt</li>
+                <li>Tạo bản nháp chất lượng ngay</li>
+                <li>Phân tích AI kèm insight</li>
+                <li>Định dạng chuyên nghiệp xong</li>
+                <li>Kiểm tra chất lượng tích hợp</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PERFORMANCE -->
+<section class="section" id="features">
+    <div class="section-header">
+        <div class="section-label">Hiệu suất nổi bật</div>
+        <h2 class="section-title">Những gì STA-100 Mang lại</h2>
+        <p class="section-subtitle">Một thiết bị, năng suất không giới hạn</p>
+    </div>
+    <div class="perf-grid">
+        <div class="perf-card">
+            <div class="pc-icon">🤖</div>
+            <h3>Tích hợp OpenClaw</h3>
+            <div class="pc-sub">AI Plug and Play</div>
+            <p>OpenClaw được cài sẵn đảm bảo độ tin cậy cấp doanh nghiệp, không vấn đề tương thích, và năng suất ngay lập tức không cần thiết lập thêm.</p>
+        </div>
+        <div class="perf-card">
+            <div class="pc-icon">🔐</div>
+            <h3>Kiến trúc Ưu tiên Quyền riêng tư</h3>
+            <div class="pc-sub">Xử lý dữ liệu cục bộ</div>
+            <p>Tất cả dữ liệu của bạn được lưu cục bộ. Tài sản Dữ liệu Vĩnh viễn cho doanh nghiệp vừa và nhỏ và người dùng riêng tư.</p>
+        </div>
+        <div class="perf-card">
+            <div class="pc-icon">🔌</div>
+            <h3>Kết nối Lai (Hybrid)</h3>
+            <div class="pc-sub">Linh hoạt + Ổn định</div>
+            <p>Wi-Fi 5G tốc độ cao cho sự linh hoạt và Ethernet Gigabit có dây cho độ tin cậy quan trọng. Cả hai luôn sẵn sàng.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 3 STEPS TO START -->
+<section class="steps-section" id="steps">
+    <div class="section-header">
+        <div class="section-label">Ba bước để bắt đầu</div>
+        <h2 class="section-title">Cắm vào. Kết nối. Trò chuyện.</h2>
+        <p class="section-subtitle">Hoạt động trong 8-10 phút · không cần chuyên môn kỹ thuật</p>
+    </div>
+    <div class="steps-grid">
+        <div class="step-card">
+            <span class="step-num">BƯỚC 01</span>
+            <h3>Cắm vào</h3>
+            <p class="step-time">~2 phút</p>
+            <p>Cắm STA-100 vào mạng nhà hoặc văn phòng của bạn qua Ethernet hoặc WiFi. Cấu hình tự động. Không cần thiết lập kỹ thuật.</p>
+        </div>
+        <div class="step-card">
+            <span class="step-num">BƯỚC 02</span>
+            <h3>Cài đặt OpenClaw</h3>
+            <p class="step-time">~8-10 phút</p>
+            <p>Kết nối WhatsApp / Slack / Telegram / Teams của bạn. OAuth bảo mật và Dán API Key.</p>
+        </div>
+        <div class="step-card">
+            <span class="step-num">BƯỚC 03</span>
+            <h3>Bắt đầu trò chuyện</h3>
+            <p class="step-time">Tức thì</p>
+            <p>Gửi tin nhắn cho Trí tuệ AI của bạn như gửi cho nhân viên. Tất cả trong chat nhóm của bạn, 24 giờ. Từ thứ Hai sáng đến Chủ Nhật tối.</p>
+        </div>
+    </div>
+</section>
+
+<!-- AI AGENT NOT CHATBOT -->
+<section class="edu-section" id="edu">
+    <div class="section-header">
+        <div class="section-label">Sự khác biệt chính</div>
+        <h2 class="section-title">Đại lý AI ≠ Chatbot</h2>
+        <p class="section-subtitle">STA-100 Workie là đồng nghiệp kỹ thuật số thực sự, không chỉ là chatbot</p>
+    </div>
+    <div class="edu-grid">
+        <div class="edu-card">
+            <h3>Chatbot Truyền thống</h3>
+            <span class="ec-tag no">Chỉ Chat</span>
+            <ul>
+                <li>Phản hồi một tin nhắn tại một thời điểm</li>
+                <li>Không có trí nhớ giữa các phiên</li>
+                <li>Không truy cập file hoặc dữ liệu của bạn</li>
+                <li>Không thể hoàn thành công việc độc lập</li>
+                <li>Cần hướng dẫn của con người liên tục</li>
+                <li>Dữ liệu được gửi đến máy chủ đám mây bên ngoài</li>
+            </ul>
+        </div>
+        <div class="edu-card yes">
+            <h3>STA-100 Workie</h3>
+            <span class="ec-tag yes">Đại lý AI</span>
+            <ul>
+                <li>Làm việc liên tục 24/7 ở chế độ nền</li>
+                <li>Ghi nhớ mọi thứ, học từ ngữ cảnh</li>
+                <li>Truy cập đầy đủ file, email, lịch của bạn</li>
+                <li>Thực hiện công việc độc lập theo lệnh</li>
+                <li>Xử lý công việc lặp đi lặp lại tự động</li>
+                <li>Tất cả dữ liệu được lưu cục bộ, không bao giờ rời khỏi thiết bị</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+    <div class="cta-card">
+        <h2>Sẵn sàng gặp <span style="color:var(--brand)">đồng nghiệp AI</span> của bạn?</h2>
+        <p>STA-100 Workie từ <strong style="color:var(--brand)">$399 USD</strong>. Thanh toán một lần. Không đăng ký. Giao hàng toàn cầu.</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Mua ngay — $399</a>
+            <a href="/vi/ai-use.html" class="btn-outline">Khám phá ứng dụng AI</a>
+            <a href="/vi/contact.html" class="btn-outline">Liên hệ bán hàng</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Thành phố Công nghiệp Henfeng, Đường Zhoushi, Phố Hangcheng, Quận Bao'an, Thành phố Shenzhen, Tỉnh Quảng Đông, Trung Quốc</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>T2-T6 09:00-18:00</p>
+        </div>
+        <div>
+            <h4>Sản phẩm</h4>
+            <ul>
+                <li><a href="/vi/products.html">STA-100 Workie</a></li>
+                <li><a href="/vi/ai-use.html">Ứng dụng AI</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 Cửa hàng trực tuyến</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Công ty</h4>
+            <ul>
+                <li><a href="/vi/about.html">Về chúng tôi</a></li>
+                <li><a href="/vi/news.html">Tin tức</a></li>
+                <li><a href="/vi/contact.html">Liên hệ</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Tài nguyên</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">Mua STA-100</a></li>
+                <li><a href="/vi/contact.html">Tư vấn Doanh nghiệp</a></li>
+                <li><a href="/vi/contact.html">Phát triển Đại lý AI Tùy chỉnh</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Mạng xã hội</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX là nhà sáng tạo PAA — Trợ lý Văn phòng AI Cá nhân, tạo ra danh mục sản phẩm AI Văn phòng hoàn toàn mới được thiết kế để nâng cao năng suất hàng ngày. Chúng tôi xây dựng trợ lý AI riêng tư và giải pháp Đại lý AI tùy chỉnh cho cá nhân, doanh nghiệp và ngành công nghiệp.</p>
+        <p class="trust-tagline">Xây dựng thế hệ tiếp theo của năng suất dựa trên AI.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. Bản quyền được bảo vệ. | <a href="#">Chính sách Bảo mật</a> | <a href="#">Điều khoản Dịch vụ</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/vi/index.html">Trang chủ</a>
+        <a href="/vi/about.html">Giới thiệu</a>
+        <a href="/vi/products.html">Sản phẩm</a>
+        <a href="/vi/news.html">Tin tức</a>
+        <a href="/vi/contact.html">Liên hệ</a>
+    </div>
+</footer>
+
+<script>
+// Intersection Observer for scroll-fade animations
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .value-card, .scenario-card, .step-card, .perf-card, .biz-card, .workflow-card, .edu-card, .hero-stat, .section-header');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const statNums = document.querySelectorAll('.hero-stat .num');
+    statNums.forEach(el => {
+        const text = el.textContent.trim();
+        if (/^\d+/.test(text)) {
+            el.style.opacity = '0';
+            setTimeout(() => {
+                el.style.transition = 'opacity 0.6s';
+                el.style.opacity = '1';
+            }, 200);
+        }
+    });
+});
+
+let ticking = false;
+function updateParallax() {
+    const scrolled = window.pageYOffset;
+    const heroImg = document.querySelector('.hero-right img.main-product');
+    if (heroImg && scrolled < 800) {
+        heroImg.style.transform = `translateY(${-scrolled * 0.05}px) scale(${1 + scrolled * 0.0002})`;
+    }
+    ticking = false;
+}
+window.addEventListener('scroll', () => {
+    if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+    }
+});
+</script>
+
+<script>
+(function(){
+  // SCROLL PROGRESS BAR
+  const progressBar = document.createElement('div');
+  progressBar.className = 'scroll-progress';
+  document.body.appendChild(progressBar);
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const total = h.scrollHeight - h.clientHeight;
+    const pct = total > 0 ? (h.scrollTop / total) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  });
+
+  // COUNTER ANIMATION
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+        entry.target.classList.add('counted');
+        const text = entry.target.textContent.trim();
+        const match = text.match(/(\d+)/);
+        if (match) {
+          const target = parseInt(match[0]);
+          const prefix = text.substring(0, match.index);
+          const suffix = text.substring(match.index + match[0].length);
+          let current = 0;
+          const step = Math.max(1, Math.ceil(target / 30));
+          const interval = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(interval); }
+            entry.target.textContent = prefix + current + suffix;
+          }, 40);
+        }
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('.hero-stat .num').forEach(el => counterObserver.observe(el));
+
+  // 3D TILT
+  document.querySelectorAll('.value-card, .scenario-card, .step-card, .perf-card, .biz-card, .workflow-card').forEach(card => {
+    card.classList.add('tilt-card');
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const cx = rect.width / 2;
+      const cy = rect.height / 2;
+      const rotateY = ((x - cx) / cx) * 8;
+      const rotateX = -((y - cy) / cy) * 8;
+      card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+    });
+    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+  });
+
+  // HERO PARALLAX + BLOBS
+  document.addEventListener('DOMContentLoaded', () => {
+    const heroImg = document.querySelector('.hero-right img.main-product');
+    const hero = document.querySelector('.hero');
+    if (hero && heroImg) {
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5;
+        const y = (e.clientY - rect.top) / rect.height - 0.5;
+        heroImg.style.transform = `translate(${x * 20}px, ${y * 20}px)`;
+      });
+      hero.addEventListener('mouseleave', () => { heroImg.style.transform = ''; });
+    }
+    if (hero) {
+      ['b1', 'b2', 'b3'].forEach(cls => {
+        const blob = document.createElement('div');
+        blob.className = 'hero-blob ' + cls;
+        hero.appendChild(blob);
+      });
+    }
+  });
+
+  // WORKFLOW TRIGGER
+  const workflowSection = document.querySelector('.workflow-section');
+  if (workflowSection) {
+    const wfObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          workflowSection.classList.add('in-view');
+          document.querySelectorAll('.workflow-card').forEach(c => c.classList.add('in-view'));
+        }
+      });
+    }, { threshold: 0.3 });
+    wfObserver.observe(workflowSection);
+  }
+})();
+</script>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

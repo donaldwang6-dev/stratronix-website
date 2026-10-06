@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡 STRATRONIX — 與 PAA 團隊對話 | 企業與自訂 AI 代理</title>
+    <meta name="description" content="聯絡 STRATRONIX 了解更多關於 PAA 產品、自訂 AI 代理開發、合作或技術支援。Email sales@stratronix.ai。總部位於中國深圳。全球配送。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; /*汪总: 缩到70% (36*0.7=25.2)*/ }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+        nav .shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; display: inline-block; }
+        .btn-primary:hover { background: var(--brand-light); transform: translateY(-1px); }
+        .hero { padding: 140px 80px 60px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(36px, 4vw, 56px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 17px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .section { padding: 80px 80px; max-width: 1200px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 40px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        /* Contact Grid */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-info { display: flex; flex-direction: column; gap: 24px; }
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: border-color 0.3s;
+        }
+        .contact-card:hover { border-color: var(--brand); }
+        .contact-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+        .contact-card h3 .icon { font-size: 20px; }
+        .contact-card p { font-size: 14px; color: var(--text-dim); line-height: 1.6; }
+        .contact-card a { color: var(--brand); font-weight: 600; }
+        .contact-card a:hover { color: var(--brand-light); }
+
+        /* Contact Form */
+        .contact-form-section { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 40px; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 8px; color: var(--text-dim); }
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%; padding: 13px 16px; border-radius: 12px; border: 1.5px solid var(--border-solid);
+            background: var(--bg); color: var(--text); font-size: 14px; font-family: var(--font-body); outline: none;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--brand); }
+        .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-muted); }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+        /* Map Section */
+        .map-section { padding: 60px 80px; text-align: center; }
+        .map-section h2 { font-size: 24px; font-weight: 800; margin-bottom: 30px; }
+        .map-placeholder {
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: var(--radius);
+            padding: 60px;
+            display: flex; align-items: center; justify-content: center;
+            flex-direction: column; gap: 16px;
+        }
+        .map-placeholder .icon { font-size: 48px; }
+        .map-placeholder p { font-size: 14px; color: var(--text-dim); }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border-solid);
+            padding: 60px 80px 40px;
+        }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; /*和左上角一致 25px*/ }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .social-links li a { display: flex; align-items: center; }
+        .social-links svg { flex-shrink: 0; }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted); text-align: center;
+        }
+        .footer-nav { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; font-size: 12px; }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); }
+        .footer-bottom a:hover { color: var(--brand); }
+        .trust-foundation {
+            max-width: 1200px; margin: 0 auto; padding: 36px 0 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p { font-size: 11px; color: var(--text-dim); line-height: 1.7; max-width: 900px; margin: 0 auto 12px; }
+        .trust-foundation .trust-tagline { font-size: 11px; color: var(--brand); font-weight: 600; }
+
+        @media (max-width: 1024px) {
+            .hero, .section, .map-section { padding-left: 40px; padding-right: 40px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            nav { padding: 0 24px; }
+            nav .nav-links { gap: 16px; }
+        }
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/zh-Hant/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+        <ul class="nav-links">
+            <li><a href="/zh-Hant/index.html">首頁</a></li>
+            <li><a href="/zh-Hant/about.html">關於我們</a></li>
+            <li><a href="/zh-Hant/products.html">產品</a></li>
+            <li><a href="/zh-Hant/ai-use.html">AI 應用</a></li>
+            <li><a href="/zh-Hant/news.html">新聞</a></li>
+            <li><a href="/zh-Hant/contact.html" class="active">聯絡</a></li>
+        
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">立即購買</a></li>
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">ZH-HANT</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+    <section class="hero">
+        <div class="eyebrow">聯絡我們</div>
+        <h1>來聊聊 <span class="pink">PAA</span></h1>
+        <p>無論您對 STA-100 Workie 感興趣、尋求企業解決方案，還是有關於自訂 AI 代理開發的問題——我們隨時為您提供幫助。</p>
+    </section>
+
+    <section class="section">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3><span class="icon">📧</span> 電子郵件</h3>
+                    <p><a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a><br>產品諮詢、報價和一般問題</p>
+                </div>
+                <div class="contact-card">
+                    <h3><span class="icon">💬</span> WeChat / WhatsApp</h3>
+                    <p>掃描 QR 碼或添加：<br><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+                </div>
+                <div class="contact-card">
+                    <h3><span class="icon">📍</span> 辦公室地址</h3>
+                    <p>1203D, C6, Henfeng Industrial City<br>Zhoushi Road, Hangcheng Street<br>Bao'an Zone, Shenzhen City<br>Guangdong Province, China</p>
+                </div>
+                <div class="contact-card">
+                    <h3><span class="icon">🕐</span> 營業時間</h3>
+                    <p>週一至週五：09:00 – 18:00 (GMT+8)<br>週末：休息</p>
+                </div>
+                <div class="contact-card">
+                    <h3><span class="icon">🌍</span> 全球配送</h3>
+                    <p>我們配送至 195+ 個國家。 <a href="https://store.stratronix.ai" target="_blank">查看配送費用 →</a></p>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 24px;">發送訊息給我們</h2>
+                <form onsubmit="event.preventDefault(); alert('謝謝！我們將在 24 小時內回覆。');">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>名 *</label>
+                            <input type="text" placeholder="志明" required>
+                        </div>
+                        <div class="form-group">
+                            <label>姓 *</label>
+                            <input type="text" placeholder="小明" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>電子郵件 *</label>
+                        <input type="email" placeholder="ming@company.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>公司</label>
+                        <input type="text" placeholder="您的公司名稱">
+                    </div>
+                    <div class="form-group">
+                        <label>諮詢類型</label>
+                        <select>
+                            <option>產品諮詢</option>
+                            <option>企業解決方案</option>
+                            <option>自訂 AI 代理開發</option>
+                            <option>技術支援</option>
+                            <option>合作</option>
+                            <option>媒體 / 新聞</option>
+                            <option>其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>訊息 *</label>
+                        <textarea placeholder="告訴我們您的專案或問題..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width: 100%;">發送訊息</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <h2>在我們位於 <span style="color: var(--brand);">深圳</span> 的位置找到我們</h2>
+        <div class="map-placeholder">
+            <span class="icon">📍</span>
+            <p>中國廣東省深圳市寶安區</p>
+            <p style="font-size: 12px;">距離深圳寶安國際機場 (SZX) 不遠</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+                <p>中國廣東省深圳市寶安區航程街道 zhoushi Road，Hangcheng Street，Henfeng Industrial City，C6，1203D</p>
+                <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+                <p>86-755-2308 6689</p>
+                <p>週一至週五 09:00-18:00</p>
+            </div>
+            <div>
+                <h4>產品</h4>
+                <ul>
+                    <li><a href="/zh-Hant/products.html">STA-100 Workie</a></li>
+                    <li><a href="/zh-Hant/ai-use.html">AI 應用場景</a></li>
+                    <li><a href="https://store.stratronix.ai" target="_blank">🛒 線上商店</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>公司</h4>
+                <ul>
+                    <li><a href="/zh-Hant/about.html">關於我們</a></li>
+                    <li><a href="/zh-Hant/news.html">新聞</a></li>
+                    <li><a href="/zh-Hant/contact.html">聯絡</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>資源</h4>
+                <ul>
+                    <li><a href="https://store.stratronix.ai" target="_blank">購買 STA-100</a></li>
+                    <li><a href="/zh-Hant/contact.html">企業諮詢</a></li>
+                    <li><a href="/zh-Hant/contact.html">自訂 AI 代理開發</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>社群</h4>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                    <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                    <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="trust-foundation">
+            <p>STRATRONIX 是 PAA（個人 AI 辦公室助理）的先驅，創造了旨在提升日常生產力的全新辦公室 AI 產品類別。我們為個人、企業和行業打造私有 AI 助理和自訂 AI 代理解決方案。</p>
+            <p class="trust-tagline">建構下一代 AI 驅動的生產力。</p>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Stratronix Technology. 版權所有。 | <a href="#">隱私政策</a> | <a href="#">服務條款</a></span>
+        </div>
+        <div class="footer-nav">
+            <a href="/zh-Hant/index.html">首頁</a>
+            <a href="/zh-Hant/about.html">關於</a>
+            <a href="/zh-Hant/products.html">產品</a>
+            <a href="/zh-Hant/news.html">新聞</a>
+            <a href="/zh-Hant/contact.html">聯絡</a>
+        </div>
+    </footer>
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

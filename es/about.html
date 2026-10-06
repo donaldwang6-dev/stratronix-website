@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de STRATRONIX — Creador de PAA y Constructor de Agentes IA | Asistente de Inteligencia Artificial Personal para Oficina</title>
+    <meta name="description" content="STRATRONIX crea la categoría Asistente de Inteligencia Artificial Personal para Oficina (PAA). Construimos dos negocios: (1) hardware STA-100 para usuarios globales, (2) servicio de desarrollo de Agentes IA personalizados.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+
+        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero h1 .pink { color: var(--brand); }
+        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+
+        .section { padding: 100px 80px; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 44px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        .mission-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .mission-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .mission-text h2 { font-size: clamp(20px, 2.5vw, 28px); font-weight: 800; margin-bottom: 16px; line-height: 1.3; }
+        .mission-text h2 .pink { color: var(--brand); }
+        .mission-text p { font-size: 14px; color: var(--text-dim); margin-bottom: 10px; line-height: 1.6; }
+        .mission-img img { width: 100%; border-radius: 20px; box-shadow: 0 30px 70px rgba(0,0,0,0.5); }
+
+        .biz-section { padding: 40px 80px; }
+        .biz-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        .biz-card {
+            background: var(--bg-card); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 48px 40px; position: relative;
+            transition: all 0.3s; overflow: hidden;
+        }
+        .biz-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--brand) 0%, transparent 100%);
+        }
+        .biz-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .biz-num { font-size: 48px; font-weight: 900; color: rgba(230,65,127,0.12); line-height: 1; margin-bottom: 6px; }
+        .biz-tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; background: rgba(230,65,127,0.15); color: var(--brand); }
+        .biz-card h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; }
+        .biz-card .biz-sub { font-size: 13px; color: var(--brand); font-weight: 600; margin-bottom: 14px; }
+        .biz-card p { font-size: 13px; color: var(--text-dim); line-height: 1.6; margin-bottom: 12px; }
+        .biz-card ul { list-style: none; }
+        .biz-card ul li { padding: 6px 0; font-size: 13px; color: var(--text-dim); }
+        .biz-card ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; margin-right: 8px; }
+
+        .dev-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 30px 80px; }
+        .dev-flow { max-width: 1100px; margin: 0 auto; position: relative; }
+        .dev-flow::before {
+            content: ''; position: absolute; left: 28px; top: 30px; bottom: 30px; width: 2px;
+            background: linear-gradient(to bottom, var(--brand) 0%, rgba(230,65,127,0.2) 100%);
+        }
+        .dev-step { display: grid; grid-template-columns: 40px 1fr; gap: 12px; margin-bottom: 14px; align-items: flex-start; }
+        .dev-step:last-child { margin-bottom: 0; }
+        .step-circle {
+            width: 60px; height: 60px; border-radius: 50%; background: var(--brand); color: white;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 22px; font-weight: 800; flex-shrink: 0;
+            box-shadow: 0 4px 20px rgba(230,65,127,0.4); position: relative; z-index: 1;
+        }
+        .step-content {
+            background: var(--bg); border: 1px solid var(--border-solid);
+            border-radius: var(--radius); padding: 24px 28px;
+            transition: all 0.3s;
+        }
+        .step-content:hover { border-color: var(--brand); }
+        .step-content h3 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+        .step-content p { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+        .step-content .step-tag { display: inline-block; font-size: 11px; font-weight: 600; color: var(--brand); margin-top: 6px; padding: 2px 8px; background: rgba(230,65,127,0.1); border-radius: 12px; }
+
+        .paa-section { padding: 100px 80px; max-width: 1200px; margin: 0 auto; }
+        .paa-card {
+            background: linear-gradient(135deg, rgba(230,65,127,0.1) 0%, rgba(230,65,127,0.02) 100%);
+            border: 1px solid rgba(230,65,127,0.4); border-radius: 24px;
+            padding: 60px 48px; max-width: 900px; margin: 0 auto;
+        }
+        .paa-card h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 800; margin-bottom: 16px; }
+        .paa-card h2 .pink { color: var(--brand); }
+        .paa-card p { font-size: 16px; color: var(--text-dim); line-height: 1.8; margin-bottom: 16px; }
+        .paa-card .paa-quote { font-size: 18px; font-style: italic; color: var(--text); padding: 16px 20px; border-left: 3px solid var(--brand); margin: 24px 0; background: rgba(230,65,127,0.05); }
+
+        .stats-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 60px 80px; }
+        .stats-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; text-align: center; }
+        .stat-item .stat-num { font-size: 40px; font-weight: 900; color: var(--brand); line-height: 1; margin-bottom: 8px; }
+        .stat-item .stat-label { font-size: 13px; color: var(--text-dim); }
+
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 900; margin-bottom: 14px; }
+        .cta-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
+            text-align: center;
+        }
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        .trust-foundation {
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        .scroll-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .scroll-fade.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1024px) {
+            .hero { padding: 120px 40px 60px; }
+            .section, .mission-section, .dev-section, .biz-section, .paa-section, .stats-section, .cta-section { padding: 60px 40px; }
+            .mission-grid, .biz-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+        }
+        @media (max-width: 640px) {
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 1024px) {
+            .trust-foundation { padding: 30px 40px 20px; }
+        }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/es/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/es/index.html">Inicio</a></li>
+        <li><a href="/es/about.html" class="active">Acerca de</a></li>
+        <li><a href="/es/ai-use.html">Uso de IA</a></li>
+        <li><a href="/es/products.html">Productos</a></li>
+        <li><a href="/es/news.html">Noticias</a></li>
+        <li><a href="/es/contact.html">Contacto</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 Tienda Online</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Comprar Ahora</a></li>
+    
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">EN</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="eyebrow">Acerca de STRATRONIX</div>
+    <h1>Creando la categoría <span class="pink">Asistente de Inteligencia Artificial Personal para Oficina</span></h1>
+    <p>STRATRONIX Technology (Shenzhen) Company, Limited es el creador de la categoría PAA — construyendo hardware de IA dedicado que pone un compañero de trabajo IA 24/7 dentro de tus aplicaciones de mensajería. También construimos Agentes IA personalizados sobre nuestro hardware para empresas globales.</p>
+    <div>
+        <a href="#business" class="btn-primary" style="margin: 0 6px;">Nuestros Dos Negocios</a>
+        <a href="#development" class="btn-outline" style="margin: 0 6px;">Desarrollo de Agentes IA</a>
+        <a href="/es/contact.html" class="btn-outline" style="margin: 0 6px;">Contactar Ventas</a>
+    </div>
+</section>
+
+<section class="mission-section">
+    <div class="mission-grid">
+        <div class="mission-text">
+            <div class="section-label" style="text-align:left;margin-bottom:12px;">Nuestra Misión</div>
+            <h2>Mejorar la productividad de individuos, empresas e industrias.</h2>
+            <p>Con nuestro dispositivo PAA, puedes transformar rápidamente flujos de trabajo y mejorar significativamente la eficiencia.</p>
+            <div class="values-grid" style="margin-top: 20px; grid-template-columns: 1fr;">
+                <div class="value-card" style="text-align:left; padding: 20px 0; border: none; border-bottom: 1px solid var(--border-solid); border-radius: 0;">
+                    <h3 style="font-size:14px; margin-bottom:4px;">⚡ Acelerar la Transformación</h3>
+                    <p style="font-size:12px; margin:0;">Actualizar rápidamente flujos de trabajo tradicionales a automatización impulsada por IA</p>
+                </div>
+                <div class="value-card" style="text-align:left; padding: 14px 0; border: none; border-bottom: 1px solid var(--border-solid); border-radius: 0;">
+                    <h3 style="font-size:14px; margin-bottom:4px;">📈 Mejorar la Eficiencia</h3>
+                    <p style="font-size:12px; margin:0;">Mejorar significativamente la eficiencia operativa en todos los procesos de negocio</p>
+                </div>
+                <div class="value-card" style="text-align:left; padding: 14px 0; border: none; border-radius: 0;">
+                    <h3 style="font-size:14px; margin-bottom:6px;">🚀 Empoderar Equipos Pymes y Privados</h3>
+                    <p style="font-size:12px; margin:0;">Permitir que individuos y equipos logren más con asistencia inteligente</p>
+                </div>
+            </div>
+        </div>
+        <div class="mission-img">
+            <img src="images/mission-hero.png" alt="STA-100 Workie">
+        </div>
+    </div>
+</section>
+
+<section class="biz-section" id="business">
+    <div class="section-header">
+        <div class="section-label">Lo Que Hacemos</div>
+        <h2 class="section-title">Dos Negocios Principales, Una Misión</h2>
+        <p class="section-subtitle">Hardware para individuos + Desarrollo de Agentes IA personalizados para empresas</p>
+    </div>
+    <div class="biz-grid">
+
+        <div class="biz-card">
+            <div class="biz-num">01</div>
+            <span class="biz-tag">Negocio de Producto</span>
+            <h3>Hardware STA-100 Workie</h3>
+            <div class="biz-sub">Asistente de Inteligencia Artificial Personal para Oficina · B2C + B2B</div>
+            <p>Diseñamos, fabricamos y vendemos el STA-100 Workie — un dispositivo PAA plug-and-play para usuarios globales que quieren su propio compañero de trabajo IA privado sin tarifas de suscripción en la nube.</p>
+            <ul>
+                <li>Venta directa al consumidor en línea a $399 USD (pago único)</li>
+                <li>Pre-instalado con OpenClaw + Linux Ubuntu</li>
+                <li>Agente IA 24/7 vinculado a WhatsApp / WeChat / Slack / Feishu</li>
+                <li>Procesamiento local con privacidad primero</li>
+                <li>Envío global · Garantía de 2 años</li>
+            </ul>
+            <p style="margin-top: 20px;"><a href="/es/products.html" style="color: var(--brand); font-weight: 600;">Ver Especificaciones de Hardware →</a> &nbsp; <a href="https://store.stratronix.ai" target="_blank" style="color: var(--brand); font-weight: 600;">🛒 Comprar Ahora</a></p>
+        </div>
+
+        <div class="biz-card">
+            <div class="biz-num">02</div>
+            <span class="biz-tag">Negocio de Servicios</span>
+            <h3>Desarrollo de Agentes IA Personalizados</h3>
+            <div class="biz-sub">Soluciones de IA Empresarial · Servicio B2B</div>
+            <p>Más allá del hardware, construimos Agentes IA personalizados adaptados a los flujos de trabajo de tu negocio — ejecutándose en tu propio hardware STA-100 o integrados con tus sistemas existentes.</p>
+            <ul>
+                <li>Agentes IA específicos por industria (legal, ventas, finanzas, operaciones)</li>
+                <li>Integración con tus herramientas internas y bases de datos</li>
+                <li>Base de conocimientos personalizada y capacitación SOP</li>
+                <li>Optimización y ajuste continuo del modelo</li>
+                <li>De requisitos a producción en 6-8 semanas</li>
+            </ul>
+            <p style="margin-top: 20px;"><a href="#development" style="color: var(--brand); font-weight: 600;">Ver Proceso de Desarrollo →</a> &nbsp; <a href="/es/contact.html" style="color: var(--brand); font-weight: 600;">Solicitar Cotización</a></p>
+        </div>
+
+    </div>
+</section>
+
+<section class="biz-section" style="padding:40px 80px;">
+    <div class="section-header" style="margin-bottom:30px;">
+        <div class="section-label">Visión y Estrategia</div>
+        <h2 class="section-title" style="font-size:clamp(18px,2.5vw,26px);margin-bottom:8px;">Construyendo desde la base</h2>
+    </div>
+    <div class="biz-grid" style="gap:24px;">
+        <div class="biz-card" style="padding:24px;">
+            <div class="biz-tag">Visión a Largo Plazo</div>
+            <p style="font-size:13px;color:var(--text-dim);line-height:1.6;margin-bottom:14px;">Stratronix se construye sobre una visión a largo plazo:</p>
+            <ul style="list-style:none;padding:0;">
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);"><span style="color:var(--brand);font-weight:700;">01</span> Construir una base PAA — Establecer la capa de infraestructura fundamental para agentes IA</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);"><span style="color:var(--brand);font-weight:700;">02</span> Establecer fortalza — Asegurar el liderazgo del mercado en la categoría PAA</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);"><span style="color:var(--brand);font-weight:700;">03</span> Expandir sistemáticamente — Crecer metódicamente en mercados y aplicaciones adyacentes</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);"><span style="color:var(--brand);font-weight:700;">04</span> Aprovechar la productividad desde la capa inferior del mundo — Aprovechar la infraestructura de IA fundamental para impulsar la productividad global</li>
+            </ul>
+        </div>
+        <div class="biz-card" style="padding:24px;">
+            <div class="biz-tag">Nuestra Filosofía</div>
+            <p style="font-size:13px;color:var(--text-dim);line-height:1.6;">El nombre Stratronix deriva de "Stratum" (estructura en capas) — representando nuestra creencia: Todos los sistemas inteligentes deben construirse desde capas fundamentales hacia arriba.</p>
+            <p style="font-size:13px;color:var(--brand);font-weight:600;margin-top:14px;">Nuestro objetivo es convertirnos en la capa de infraestructura de la economía de Agentes IA.</p>
+        </div>
+    </div>
+</section>
+
+<section class="dev-section" id="development">
+    <div class="section-header">
+        <div class="section-label">Nuestro Proceso</div>
+        <h2 class="section-title">De la Idea a la Producción — 7 Pasos</h2>
+        <p class="section-subtitle">Nuestro proceso probado de desarrollo de Agentes IA</p>
+    </div>
+    <div class="dev-flow">
+
+        <div class="dev-step">
+            <div class="step-circle">1</div>
+            <div class="step-content">
+                <h3>Entrar al Sistema</h3>
+                <p>Comenzamos entendiendo profundamente tu entorno empresarial, flujos de trabajo y las personas que los usan. Investigación de campo, entrevistas y mapeo de procesos.</p>
+                <span class="step-tag">Descubrimiento · 1 semana</span>
+            </div>
+        </div>
+
+        <div class="dev-step">
+            <div class="step-circle">2</div>
+            <div class="step-content">
+                <h3>Entrenar a la IA</h3>
+                <p>Alimentar a la IA con datos específicos de tu empresa, SOPs, catálogos de productos, perfiles de clientes e interacciones históricas. Construir experiencia en el dominio.</p>
+                <span class="step-tag">Base de Conocimientos · 1-2 semanas</span>
+            </div>
+        </div>
+
+        <div class="dev-step">
+            <div class="step-circle">3</div>
+            <div class="step-content">
+                <h3>Construir Necessidades</h3>
+                <p>Traducir requisitos de negocio en capacidades de IA. Definir disparadores, acciones, reglas de escalamiento y umbrales de calidad para cada caso de uso.</p>
+                <span class="step-tag">Diseño de Especificaciones · 1 semana</span>
+            </div>
+        </div>
+
+        <div class="dev-step">
+            <div class="step-circle">4</div>
+            <div class="step-content">
+                <h3>Actualizar Sistema</h3>
+                <p>Construir el Agente IA en la plataforma STA-100 con integraciones personalizadas, ingeniería de prompts y barreras de seguridad. Listo para híbrido nube + borde.</p>
+                <span class="step-tag">Construcción · 2-3 semanas</span>
+            </div>
+        </div>
+
+        <div class="dev-step">
+            <div class="step-circle">5</div>
+            <div class="step-content">
+                <h3>Probar Aplicación</h3>
+                <p>Pruebas rigurosas: pruebas unitarias, pruebas de escenarios, casos extremos, benchmarks de rendimiento. Piloto con usuarios reales con bucles de retroalimentación e iteración.</p>
+                <span class="step-tag">QA · 1-2 semanas</span>
+            </div>
+        </div>
+
+        <div class="dev-step">
+            <div class="step-circle">6</div>
+            <div class="step-content">
+                <h3>Seguridad</h3>
+                <p>Auditoría de seguridad completa: cifrado de datos, control de acceso, registros de auditoría, cumplimiento de GDPR/soberanía de datos, pruebas de penetración.</p>
+                <span class="step-tag">Endurecimiento · 1 semana</span>
+            </div>
+        </div>
+
+        <div class="dev-step">
+            <div class="step-circle">7</div>
+            <div class="step-content">
+                <h3>Listo para Producto</h3>
+                <p>Despliegue en producción con dashboards de monitoreo, seguimiento de SLA, actualizaciones de base de conocimientos y ciclo de mejora continua.</p>
+                <span class="step-tag">Lanzamiento + Soporte · Continuo</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="dev-section">
+    <div class="section-header" style="margin-bottom:20px;">
+        <div class="section-label">Cambio de Industria</div>
+        <h2 class="section-title" style="font-size:clamp(18px,2.5vw,26px);">IA 2.0 — La Era de los Agentes</h2>
+    </div>
+    <div class="biz-grid" style="gap:24px;">
+        <div class="biz-card" style="padding:20px;">
+            <div class="biz-tag">IA 1.0 — Era del Modelo</div>
+            <ul style="list-style:none;padding:0;margin-top:12px;">
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">❌ IA basada en chat (LLMs)</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">❌ Interacción pasiva</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">❌ Impulsada por humanos</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">❌ Enfocada en tarea única</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);">❌ Dependiente de la nube</li>
+            </ul>
+        </div>
+        <div class="biz-card" style="padding:20px;">
+            <div class="biz-tag">IA 2.0 — Era de los Agentes <span style="color:var(--brand);">★ Nuestro Enfoque</span></div>
+            <ul style="list-style:none;padding:0;margin-top:12px;">
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">✓ Agentes IA Autónomos</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">✓ Ejecución de tareas</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">✓ Operación continua</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);border-bottom:1px solid var(--border-solid);">✓ Inteligencia a nivel de sistema</li>
+                <li style="padding:6px 0;font-size:13px;color:var(--text-dim);">✓ Capaz de computación en el borde</li>
+            </ul>
+        </div>
+    </div>
+    <div style="max-width:1100px;margin:20px auto 0;">
+        <div class="section-label" style="text-align:center;margin-bottom:12px;">Los Agentes Se Convertirán en</div>
+        <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;text-align:center;">
+            <div style="padding:14px 8px;background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;">
+                <div style="font-size:20px;margin-bottom:6px;">👥</div>
+                <div style="font-size:13px;font-weight:600;">Empleados digitales</div>
+            </div>
+            <div style="padding:14px 8px;background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;">
+                <div style="font-size:20px;margin-bottom:6px;">⚙️</div>
+                <div style="font-size:13px;font-weight:600;">Sistemas operativos</div>
+            </div>
+            <div style="padding:14px 8px;background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;">
+                <div style="font-size:20px;margin-bottom:6px;">🧠</div>
+                <div style="font-size:13px;font-weight:600;">Motores de decisión</div>
+            </div>
+            <div style="padding:14px 8px;background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;">
+                <div style="font-size:20px;margin-bottom:6px;">📈</div>
+                <div style="font-size:13px;font-weight:600;">Multiplicadores de productividad</div>
+            </div>
+            <div style="padding:14px 8px;background:var(--bg-card);border:1px solid var(--border-solid);border-radius:12px;">
+                <div style="font-size:20px;margin-bottom:6px;">🏗️</div>
+                <div style="font-size:13px;font-weight:600;">Infraestructura de negocio</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>Comienza con un <span style="color:var(--brand)">Workie</span>, O Construye uno <span style="color:var(--brand)">Personalizado</span></h2>
+        <p>Compra un STA-100 por $399, o contáctanos para desarrollo empresarial de Agentes IA personalizados.</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 Comprar Workie — $399</a>
+            <a href="/es/contact.html" class="btn-outline">Solicitar Cotización de Desarrollo Personalizado</a>
+            <a href="/es/products.html" class="btn-outline">Ver Especificaciones</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>Lun-Vie 9:00-18:00</p>
+        </div>
+        <div>
+            <h4>Productos</h4>
+            <ul>
+                <li><a href="/es/products.html">STA-100 Workie</a></li>
+                <li><a href="/es/ai-use.html">Casos de Uso de IA</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 Tienda Online</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Empresa</h4>
+            <ul>
+                <li><a href="/es/about.html">Sobre Nosotros</a></li>
+                <li><a href="/es/news.html">Noticias</a></li>
+                <li><a href="/es/contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Recursos</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">Comprar STA-100</a></li>
+                <li><a href="/es/contact.html">Consulta Empresarial</a></li>
+                <li><a href="/es/contact.html">Desarrollo de Agentes IA Personalizados</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Social</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX es el pionero de PAA — Asistente de Inteligencia Artificial Personal para Oficina, creando una nueva categoría de productos de IA de Oficina diseñados para mejorar la productividad cotidiana. Construimos asistentes privados impulsados por IA y soluciones personalizadas de Agentes IA para individuos, empresas e industrias.</p>
+        <p class="trust-tagline">Construyendo la próxima generación de productividad impulsada por IA.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. Todos los derechos reservados. | <a href="#">Política de Privacidad</a> | <a href="#">Términos de Servicio</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/es/index.html">Inicio</a>
+        <a href="/es/about.html">Acerca de</a>
+        <a href="/es/products.html">Productos</a>
+        <a href="/es/news.html">Noticias</a>
+        <a href="/es/contact.html">Contacto</a>
+    </div>
+</footer>
+
+<script>
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .section-header, .mission-section, .biz-section, .dev-section, .paa-section, .stats-section, .cta-section, .mission-grid > div, .biz-grid > div, .dev-grid > div, .paa-grid > div, .stats-grid > div, .step-card, .biz-card, .dev-card, .stat-card, .cta-section > div');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+</script>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>

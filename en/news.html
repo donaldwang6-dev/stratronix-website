@@ -32,7 +32,7 @@
             background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-solid);
         }
-        nav .logo-img { height: 36px; margin-right: 8px; }
+        nav .logo-img { height: 25px; margin-right: 8px; }
         nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
         nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
         nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
@@ -122,7 +122,7 @@
             padding-bottom: 40px;
             border-bottom: 1px solid var(--border-solid);
         }
-        footer .footer-brand .logo-img { height: 36px; margin-bottom: 20px; }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
         footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
         footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
         footer ul { list-style: none; }
@@ -162,20 +162,54 @@
             .newsletter-form { flex-direction: column; }
             .footer-grid { grid-template-columns: 1fr; }
         }
+
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
     </style>
 </head>
 <body>
     <nav>
-        <a href="index.html"><img src="images/stratronix-logo-pink.png" class="logo-img" alt="STRATRONIX"></a>
+        <a href="/en/index.html"><img src="/en/images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="ai-use.html">AI Use</a></li>
-            <li><a href="news.html" class="active">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/en/index.html">Home</a></li>
+            <li><a href="/en/about.html">About</a></li>
+            <li><a href="/en/products.html">Products</a></li>
+            <li><a href="/en/ai-use.html">AI Use</a></li>
+            <li><a href="/en/news.html" class="active">News</a></li>
+            <li><a href="/en/contact.html">Contact</a></li>
         </ul>
         <a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Online Shop</a>
+    
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">EN</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
     </nav>
 
     <section class="hero">
@@ -219,7 +253,7 @@
                         <li>🏠 Wide Range of Applications — Education, healthcare, retail, home assistant</li>
                     </ul>
                     <p style="margin-top:10px;">STA-100 is a private AI Agent device for individuals and small businesses. All data stored locally, no cloud dependency, complete privacy and control. Compact desktop form factor — just connect to any monitor and go.</p>
-                    <a href="products.html" class="read-more">🚀 Online shop now open → View product</a>
+                    <a href="/en/products.html" class="read-more">🚀 Online shop now open → View product</a>
                 </div>
             </article>
 
@@ -233,7 +267,7 @@
                     <span class="tag category">Category</span>
                     <h3>STRATRONIX Defines the PAA Category — Personal AI Office Assistant</h3>
                     <p>We're announcing a new product category: the PAA — Personal AI Office Assistant. Unlike chatbots or mini PCs, PAA devices are local-first, always-on, and native to your existing messaging apps. They give IM an AI brain.</p>
-                    <a href="ai-use.html" class="read-more">📖 Category definition → Read announcement</a>
+                    <a href="/en/ai-use.html" class="read-more">📖 Category definition → Read announcement</a>
                 </div>
             </article>
 
@@ -256,7 +290,7 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="images/stratronix-logo-pink.png" class="logo-img" alt="STRATRONIX">
+                <img src="/en/images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
                 <p>1203D, C6, Henfeng Industrial City, Zhoushi Road, Hangcheng Street, Bao'an Zone, Shenzhen City, Guangdong Province, China</p>
                 <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
                 <p>86-755-2308 6689</p>
@@ -265,25 +299,25 @@
             <div>
                 <h4>Products</h4>
                 <ul>
-                    <li><a href="products.html">STA-100 Workie</a></li>
-                    <li><a href="ai-use.html">AI Use Cases</a></li>
+                    <li><a href="/en/products.html">STA-100 Workie</a></li>
+                    <li><a href="/en/ai-use.html">AI Use Cases</a></li>
                     <li><a href="https://store.stratronix.ai" target="_blank">🛒 Online Shop</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Company</h4>
                 <ul>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="news.html">News</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/en/about.html">About Us</a></li>
+                    <li><a href="/en/news.html">News</a></li>
+                    <li><a href="/en/contact.html">Contact</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Resources</h4>
                 <ul>
                     <li><a href="https://store.stratronix.ai" target="_blank">Buy STA-100</a></li>
-                    <li><a href="contact.html">Enterprise Inquiry</a></li>
-                    <li><a href="contact.html">Custom AI Agent Dev</a></li>
+                    <li><a href="/en/contact.html">Enterprise Inquiry</a></li>
+                    <li><a href="/en/contact.html">Custom AI Agent Dev</a></li>
                 </ul>
             </div>
             <div>
@@ -304,12 +338,13 @@
             <span>© 2026 Stratronix Technology. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></span>
         </div>
         <div class="footer-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="products.html">Products</a>
-            <a href="news.html">News</a>
-            <a href="contact.html">Contact</a>
+            <a href="/en/index.html">Home</a>
+            <a href="/en/about.html">About</a>
+            <a href="/en/products.html">Products</a>
+            <a href="/en/news.html">News</a>
+            <a href="/en/contact.html">Contact</a>
         </div>
     </footer>
+<script>function toggleLang(e){e.stopPropagation();const s=document.getElementById("langSelector");s.classList.toggle("open");const d=document.getElementById("langDropdown");d.style.display=s.classList.contains("open")?"block":"none"}document.addEventListener("click",()=>{const s=document.getElementById("langSelector");if(s){s.classList.remove("open");const d=document.getElementById("langDropdown");if(d)d.style.display="none"}});function initLang(){const c=document.cookie.match(/(?:^|; )lang=([^;]+)/);const p=window.location.pathname.match(/\/([^/]+)\//);const l=c?c[1]:(p?p[1]:"en");const m=document.getElementById("currentLangLabel");if(m)m.textContent=l.toUpperCase()}</script>
 </body>
 </html>

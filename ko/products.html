@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STA-100 Workie — 하드웨어 사양 | STRATRONIX</title>
+    <meta name="description" content="STA-100 Workie 하드웨어 사양: Octa-core ARM, 4GB DDR4, 32GB eMMC, 15W/월, 3.5 터치스크린, 최대 16TB 스토리지. 사전 설치된 OpenClaw OS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #000000;
+            --bg-card: #0a0a0f;
+            --brand: #E6417F;
+            --brand-light: #FF6B9D;
+            --text: #FFFFFF;
+            --text-dim: #888899;
+            --text-muted: #555566;
+            --border: rgba(230,65,127,0.15);
+            --border-solid: #1a1a22;
+            --radius: 16px;
+            --font-body: 'Inter', -apple-system, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 40px; height: 64px;
+            display: flex; align-items: center; justify-content: space-between;
+            background: rgba(0,0,0,0.85); backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-solid);
+        }
+        nav .logo-img { height: 25px; margin-right: 8px; }
+        nav .nav-links { display: flex; gap: 32px; align-items: center; list-style: none; }
+        nav .nav-links a { font-size: 14px; font-weight: 500; color: var(--text-dim); transition: color 0.2s; }
+        nav .nav-links a:hover, nav .nav-links a.active { color: var(--text); }
+        nav .nav-links a.shop-btn { background: var(--brand); color: white !important; padding: 8px 18px; border-radius: 24px; font-weight: 600; }
+        nav .online-shop { font-size: 12px; color: var(--brand); border: 1px solid var(--brand); padding: 5px 14px; border-radius: 20px; font-weight: 600; }
+
+        .hero { padding: 130px 80px 80px; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-left .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .hero-left h1 { font-size: clamp(32px, 4vw, 56px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 20px; }
+        .hero-left h1 .pink { color: var(--brand); }
+        .hero-left .tagline { font-size: 16px; color: var(--text-dim); margin-bottom: 32px; line-height: 1.7; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .btn-primary { background: var(--brand); color: white; padding: 13px 28px; border-radius: 50px; font-weight: 700; font-size: 14px; border: none; cursor: pointer; transition: all 0.2s; }
+        .btn-primary:hover { background: var(--brand-light); }
+        .btn-outline { background: transparent; color: var(--text); padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; }
+        .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
+        .hero-right { position: relative; text-align: center; }
+        .hero-right img.main-product { width: 100%; max-width: 480px; border-radius: 20px; box-shadow: 0 30px 70px rgba(0,0,0,0.6); animation: floatY 5s ease-in-out infinite; }
+        .hero-right .product-glow { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 400px; height: 400px; background: radial-gradient(circle, rgba(230,65,127,0.2) 0%, transparent 70%); pointer-events: none; z-index: -1; animation: pulseGlow 3s ease-in-out infinite; }
+        @keyframes floatY { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+        @keyframes pulseGlow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+        .price-badge { display: inline-block; background: rgba(230,65,127,0.12); border: 1px solid var(--brand); border-radius: 12px; padding: 12px 24px; margin-bottom: 24px; }
+        .price-badge .price { font-size: 28px; font-weight: 900; color: var(--brand); }
+        .price-badge .period { font-size: 13px; color: var(--text-dim); margin-left: 8px; }
+        .price-badge .note { font-size: 11px; color: var(--text-muted); display: block; margin-top: 2px; }
+
+        .section { padding: 100px 80px; max-width: 1300px; margin: 0 auto; }
+        .section-header { text-align: center; max-width: 650px; margin: 0 auto 60px; }
+        .section-label { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; }
+        .section-title { font-size: clamp(26px, 3vw, 44px); font-weight: 800; letter-spacing: -1px; margin-bottom: 14px; line-height: 1.1; }
+        .section-subtitle { font-size: 15px; color: var(--text-dim); }
+
+        .specs-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .specs-container { max-width: 1100px; margin: 0 auto; }
+        .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+        .spec-group { padding: 32px; border: 1px solid var(--border-solid); margin: -0.5px; }
+        .spec-group .sg-title { font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--border-solid); }
+        .spec-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.04); gap: 20px; }
+        .spec-row:last-child { border-bottom: none; }
+        .spec-row .s-label { font-size: 13px; color: var(--text-dim); flex-shrink: 0; }
+        .spec-row .s-value { font-size: 13px; font-weight: 600; color: var(--text); text-align: right; }
+
+        .gallery-section { padding: 100px 80px; }
+        .gallery-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .gallery-item { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); overflow: hidden; transition: all 0.3s; }
+        .gallery-item:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .gallery-item .gi-label { padding: 14px 18px; font-size: 13px; font-weight: 600; color: var(--text-dim); }
+
+        .perf-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .perf-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 36px 28px; text-align: center; transition: all 0.3s; }
+        .perf-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .perf-card .pc-num { font-size: 52px; font-weight: 900; color: var(--brand); line-height: 1; margin-bottom: 8px; }
+        .perf-card .pc-unit { font-size: 16px; font-weight: 600; color: var(--text-dim); }
+        .perf-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+        .perf-card p { font-size: 13px; color: var(--text-dim); }
+
+        .build-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 100px 80px; }
+        .build-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+        .build-img img { width: 100%; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .build-text h2 { font-size: clamp(24px, 2.5vw, 36px); font-weight: 800; margin-bottom: 20px; }
+        .build-text h2 .pink { color: var(--brand); }
+        .build-text ul { list-style: none; }
+        .build-text ul li { padding: 12px 0; font-size: 15px; color: var(--text-dim); border-bottom: 1px solid var(--border-solid); }
+        .build-text ul li::before { content: '✓ '; color: var(--brand); font-weight: 700; margin-right: 10px; }
+        .build-text ul li:last-child { border-bottom: none; }
+
+        .industry-section { padding: 100px 80px; }
+        .industry-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .ind-card { background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 32px 20px; text-align: center; transition: all 0.3s; }
+        .ind-card:hover { border-color: var(--brand); transform: translateY(-4px); }
+        .ind-card .ind-icon { font-size: 36px; margin-bottom: 14px; }
+        .ind-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+        .ind-card p { font-size: 12px; color: var(--text-dim); line-height: 1.5; }
+
+        .package-section { background: var(--bg-card); border-top: 1px solid var(--border-solid); border-bottom: 1px solid var(--border-solid); padding: 80px; }
+        .package-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
+        .pkg-item { background: var(--bg); border: 1px solid var(--border-solid); border-radius: var(--radius); padding: 28px 16px; }
+        .pkg-item .pkg-icon { font-size: 36px; margin-bottom: 12px; }
+        .pkg-icon svg { width: 36px; height: 36px; stroke: var(--brand); }
+        .pkg-item h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+        .pkg-item p { font-size: 12px; color: var(--text-dim); }
+
+        .cta-section { padding: 100px 80px; text-align: center; }
+        .cta-card { max-width: 700px; margin: 0 auto; background: linear-gradient(135deg, rgba(230,65,127,0.15) 0%, rgba(230,65,127,0.05) 100%); border: 1px solid var(--brand); border-radius: 24px; padding: 60px 48px; }
+        .cta-card h2 { font-size: clamp(26px, 3vw, 38px); font-weight: 900; margin-bottom: 14px; }
+        .cta-card p { font-size: 15px; color: var(--text-dim); margin-bottom: 32px; }
+        .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+        footer { background: var(--bg-card); border-top: 1px solid var(--border-solid); padding: 60px 80px 40px; }
+        .footer-grid {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr; gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid var(--border-solid);
+        }
+        footer .footer-brand .logo-img { height: 25px; margin-bottom: 20px; }
+        footer .footer-brand p { font-size: 13px; color: var(--text-dim); line-height: 1.7; max-width: 300px; }
+        footer h4 { font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; color: var(--text); }
+        footer ul { list-style: none; }
+        .social-links li { margin-bottom: 12px; }
+        .social-links li a { display: flex; align-items: center; font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        .social-links li a:hover { color: var(--brand); }
+        footer ul li { margin-bottom: 10px; }
+        footer ul li a { font-size: 13px; color: var(--text-dim); transition: color 0.2s; }
+        footer ul li a:hover { color: var(--brand); }
+        .footer-bottom {
+            max-width: 1200px; margin: 30px auto 0;
+            display: flex; flex-direction: column; align-items: center; gap: 12px;
+            font-size: 12px; color: var(--text-muted);
+            text-align: center;
+        }
+        .footer-nav {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;
+            font-size: 12px;
+        }
+        .footer-nav a { color: var(--text-dim); }
+        .footer-nav a:hover { color: var(--brand); }
+        .footer-bottom a { color: var(--text-dim); margin-left: 24px; }
+        .footer-bottom a:hover { color: var(--brand); }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 120px 40px 60px; text-align: center; }
+            .hero-btns { justify-content: center; }
+            .section, .specs-section, .build-section, .industry-section, .package-section, .cta-section { padding: 60px 40px; }
+            .specs-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .perf-grid { grid-template-columns: 1fr; }
+            .build-grid { grid-template-columns: 1fr; }
+            .industry-grid { grid-template-columns: repeat(2, 1fr); }
+            .package-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            nav { padding: 0 24px; }
+        }
+        @media (max-width: 640px) {
+            .gallery-grid, .industry-grid, .package-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        .trust-foundation {
+            max-width: 1200px;
+            margin: 0 auto 0;
+            padding: 36px 80px 24px;
+            border-top: 1px solid var(--border-solid);
+            text-align: center;
+        }
+        .trust-foundation p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 0 auto 12px;
+        }
+        .trust-foundation .trust-tagline {
+            font-size: 13px;
+            color: var(--brand);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        @media (max-width: 1024px) {
+            .trust-foundation { padding: 30px 40px 20px; }
+        }
+
+        .icons-section {
+            padding: 80px 80px;
+            background: var(--bg);
+        }
+        .icons-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+        .icon-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 20px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-solid);
+            border-radius: 12px;
+            transition: all 0.3s;
+        }
+        .icon-card:hover { border-color: var(--brand); }
+        .icon-circle {
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            background: rgba(230,65,127,0.1);
+            border-radius: 50%;
+        }
+        .icon-card span {
+            font-size: 13px; font-weight: 600; color: var(--text);
+            text-align: center;
+        }
+        @media (max-width: 1024px) {
+            .icons-section { padding: 60px 40px; }
+            .icons-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .scroll-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .scroll-fade.visible { opacity: 1; transform: translateY(0); }
+        .section, .section-header, .specs-section, .specs-grid, .perf-section, .perf-grid, .spec-group, .spec-row, .biz-card, .edu-card, .perf-card, .gallery-section, .gallery-grid, .specs-container { transition: all 0.4s ease; }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <a href="/ko/index.html"><img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX"></a>
+    <ul class="nav-links">
+        <li><a href="/ko/index.html">홈</a></li>
+        <li><a href="/ko/about.html">회사 소개</a></li>
+        <li><a href="/ko/ai-use.html">AI 활용</a></li>
+        <li><a href="/ko/products.html" class="active">제품</a></li>
+        <li><a href="/ko/news.html">뉴스</a></li>
+        <li><a href="/ko/contact.html">문의</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 온라인 쇼핑</a></li>
+        <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">구매하기</a></li>
+    
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">EN</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-left">
+        <div class="eyebrow">STA-100 Workie · 하드웨어</div>
+        <h1>AI 오피스 운영의 <span class="pink">하드웨어</span></h1>
+        <p class="tagline">Workie는 STA-100 하드웨어에서 24시간 실행되는 전용 AI Agent로, 좋아하는 메시징 앱에 연결됩니다. 클라우드 기반 챗봇과 달리 Workie는 로컬 네트워크에서 작동합니다 — 데이터가 기기에 남아 영구적인 데이터 자산이 됩니다.</p>
+        <ul style="list-style:none;padding:0;margin:0 0 24px 0;">
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ WhatsApp / Telegram / WeChat / Slack / Feishu에서 작동</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ 앱 다운로드 불필요 — 동료에게 메시지를 보내듯이 사용</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ Multi-LLM Cloud API Keys: Claude, GPT, Gemini, DeepSeek, Mistral 등</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ 로컬 메모리 — 프로젝트 및 선호도 기억</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ 전체 시스템 액세스: 이메일, 캘린더, 파일, 터미널</li>
+            <li style="padding:5px 0;font-size:13px;color:var(--text-dim);">✓ GDPR 및 데이터 주권 준수</li>
+        </ul>
+        <div class="hero-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 구매하기 — $399</a>
+        </div>
+    </div>
+    <div class="hero-right">
+        <div class="product-glow"></div>
+        <img src="images/sta100-product-shot-angle.png" class="main-product" alt="STA-100 Workie">
+    </div>
+</section>
+
+<!-- STA-100 FEATURE IMAGE -->
+<section style="padding:30px 80px;text-align:center;">
+    <img src="images/sta100-feature-4icons.png" alt="STA-100 Workie 기능" style="max-width:100%;border-radius:12px;">
+</section>
+
+<!-- STA-100 EASY INSTALL -->
+<section style="padding:0 80px 30px;text-align:center;">
+    <img src="images/sta100-easy-install.png" alt="간편 설치 및 빠른 시작" style="max-width:100%;border-radius:12px;">
+</section>
+
+<!-- STA-100 24/7 GATEWAY -->
+<section style="padding:0 80px 30px;text-align:center;">
+    <img src="images/sta100-24-7-gateway.png" alt="24시간 게이트웨이" style="max-width:100%;border-radius:12px;">
+</section>
+
+<!-- HARDWARE SPECS TABLE -->
+<section class="specs-section">
+    <div class="specs-container">
+        <div class="section-header">
+            <div class="section-label">전체 사양</div>
+            <h2 class="section-title">AI 워크로드용 설계</h2>
+            <p class="section-subtitle">6층 PCBA의 입증된 기업 하드웨어 표준 기반</p>
+        </div>
+        <div class="specs-grid">
+
+            <div class="spec-group">
+                <div class="sg-title">프로세서 및 메모리</div>
+                <div class="spec-row"><span class="s-label">CPU</span><span class="s-value">Octa-core ARM</span></div>
+                <div class="spec-row"><span class="s-label">RAM</span><span class="s-value">4GB DDR4</span></div>
+                <div class="spec-row"><span class="s-label">스토리지 (내장)</span><span class="s-value">32GB eMMC</span></div>
+                <div class="spec-row"><span class="s-label">스토리지 확장</span><span class="s-value">최대 512GB (확장 micro SD 슬롯)</span></div>
+            </div>
+
+            <div class="spec-group">
+                <div class="sg-title">전력 및 열</div>
+                <div class="spec-row"><span class="s-label">전력 소비</span><span class="s-value">15W/월</span></div>
+                <div class="spec-row"><span class="s-label">전원 공급장치</span><span class="s-value">DC 12V / 2A</span></div>
+                <div class="spec-row"><span class="s-label">열 설계</span><span class="s-value">내장 팬</span></div>
+                <div class="spec-row"><span class="s-label">PCB 레이어</span><span class="s-value">6층 PCBA (방EMI)</span></div>
+            </div>
+
+            <div class="spec-group">
+                <div class="sg-title">Agent 및 크기</div>
+                <div class="spec-row"><span class="s-label">내장 Agent</span><span class="s-value">OpenClaw (테스트 버전)</span></div>
+                <div class="spec-row"><span class="s-label">치수</span><span class="s-value">100 × 88 × 35 MM</span></div>
+                <div class="spec-row"><span class="s-label">무게</span><span class="s-value">150 G</span></div>
+                <div class="spec-row"><span class="s-label">사전 설치 OS</span><span class="s-value">Linux Ubuntu</span></div>
+                <div class="spec-row"><span class="s-label">GUI</span><span class="s-value">XFCE 데스크탑 환경</span></div>
+            </div>
+
+            <div class="spec-group">
+                <div class="sg-title">연결성</div>
+                <div class="spec-row"><span class="s-label">Wi-Fi</span><span class="s-value">듀얼 밴드 5G / 2.4G</span></div>
+                <div class="spec-row"><span class="s-label">이더넷</span><span class="s-value">RJ45 기가비트 이더넷</span></div>
+                <div class="spec-row"><span class="s-label">USB</span><span class="s-value">USB 3.0 × 1 / USB 2.0 × 2</span></div>
+                <div class="spec-row"><span class="s-label">비디오 출력</span><span class="s-value">HDMI</span></div>
+                <div class="spec-row"><span class="s-label">카드 슬롯</span><span class="s-value">TF 카드 슬롯</span></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 10 CORE ICONS -->
+<section class="icons-section" id="icons">
+    <div class="section-header">
+        <div class="section-label">10가지 핵심 기능</div>
+        <h2 class="section-title">왜 STA-100인가?</h2>
+        <p class="section-subtitle">Personal AI Office Assistant의 10가지 기둥</p>
+    </div>
+    <div class="icons-grid">
+        <div class="icon-card">
+            <div class="icon-circle">🏠</div>
+            <span>로컬 데이터</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🔒</div>
+            <span>영구 데이터 자산</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">⚡</div>
+            <span>원클릭 시작</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🛡️</div>
+            <span>OpenClaw 보안</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🕐</div>
+            <span>24시간 온라인</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🤖</div>
+            <span>AI 코어</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">⚙️</div>
+            <span>4GB DDR4 + 32GB</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">📶</div>
+            <span>Wi-Fi + GbE</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">🧠</div>
+            <span>Multi-LLM API Key</span>
+        </div>
+        <div class="icon-card">
+            <div class="icon-circle">💬</div>
+            <span>Slack/Teams/Whatsapp 등</span>
+        </div>
+    </div>
+</section>
+
+<!-- PRODUCT IMAGE GALLERY -->
+<section class="gallery-section">
+    <div class="section-header">
+        <div class="section-label">제품 갤러리</div>
+        <h2 class="section-title">모든 각도, 모든 디테일</h2>
+    </div>
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="images/sta100-gallery-1.jpg" alt="STA-100 정면 보기">
+            <div class="gi-label">정면 보기</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-gallery-2.png" alt="STA-100 측면 보기">
+            <div class="gi-label">측면 보기</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-gallery-3.png" alt="STA-100 포트">
+            <div class="gi-label">포트 디테일</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-desk-product.png" alt="STA-100 책상 위">
+            <div class="gi-label">데스크탑 세팅</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/sta100-multiview.png" alt="STA-100 다중 보기">
+            <div class="gi-label">5각도 보기</div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT'S BUILT -->
+<section class="build-section">
+    <div class="build-grid">
+        <div class="build-img">
+            <img src="images/sta100-holo-3d.png" alt="STA-100 3D 홀로그램">
+        </div>
+        <div class="build-text">
+            <div class="section-label" style="text-align:left;">차별화된 설계</div>
+            <h2>기업급 <span class="pink">하드웨어 표준</span></h2>
+            <ul>
+                <li><strong>6층 PCBA</strong> — 우수한 신호 무결성 및 전자기干扰 방지</li>
+                <li><strong>사전 설치된 OpenClaw</strong> — 즉시 AI 사용, OS 설치 불필요</li>
+                <li><strong>XFCE GUI OS</strong> — 가벼운 Linux 데스크탑, 익숙하고 사용便捷</li>
+                <li><strong>Multi-LLM API Key</strong> — Anthropic, OpenAI, Google, Mistral, xAI, DeepSeek</li>
+                <li><strong>주요 IM 전부 지원</strong> — WhatsApp, Telegram, Discord, Slack, WeChat, Feishu</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- PACKAGE -->
+<section class="package-section">
+    <div class="section-header">
+        <div class="section-label">박스 내용물</div>
+        <h2 class="section-title">박스 안의 모든 것</h2>
+    </div>
+    <div class="package-grid">
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                  <rect x="3" y="4" width="18" height="12" rx="1"/>
+                  <line x1="8" y1="20" x2="16" y2="20"/>
+                  <line x1="12" y1="16" x2="12" y2="20"/>
+                  <circle cx="12" cy="10" r="1.5" fill="#E6417F" stroke="none"/>
+                </svg></div>
+            <h4>STA-100</h4>
+            <p>메인 유닛</p>
+        </div>
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                <path d="M2 8 L22 8 L20 16 L4 16 Z"/>
+                <line x1="7" y1="11" x2="7" y2="13"/>
+                <line x1="10" y1="11" x2="10" y2="13"/>
+                <line x1="13" y1="11" x2="13" y2="13"/>
+                <line x1="16" y1="11" x2="16" y2="13"/>
+                <line x1="19" y1="11" x2="19" y2="13"/>
+                <path d="M7 6 L7 4 M12 6 L12 4 M17 6 L17 4"/>
+              </svg></div>
+            <h4>HDMI 케이블</h4>
+            <p>비디오 출력</p>
+        </div>
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                      <path d="M4 4 L4 20 L20 20 L20 8 L16 4 Z"/>
+                      <path d="M16 4 L16 8 L20 8"/>
+                      <line x1="7" y1="13" x2="17" y2="13"/>
+                      <line x1="7" y1="16" x2="14" y2="16"/>
+                      <circle cx="9" cy="6" r="1" fill="#E6417F" stroke="none"/>
+                      <path d="M11.5 5.5 L13.5 6.5 L11.5 7.5 Z" fill="#E6417F" stroke="none"/>
+                    </svg></div>
+            <h4>빠른 시작 가이드</h4>
+            <p>8~10분 설정 메뉴얼</p>
+        </div>
+        <div class="pkg-item">
+            <div class="pkg-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="36" height="36">
+                  <rect x="6" y="3" width="12" height="16" rx="1.5"/>
+                  <line x1="9" y1="6.5" x2="15" y2="6.5"/>
+                  <circle cx="12" cy="14" r="1.8"/>
+                  <path d="M12 16 L12 18"/>
+                  <path d="M2 12 L5.5 9.5 L5.5 14.5 Z" fill="currentColor" opacity="0.3"/>
+                  <path d="M22 12 L18.5 9.5 L18.5 14.5 Z" fill="currentColor" opacity="0.3"/>
+                </svg></div>
+            <h4>DC 전원 어댑터</h4>
+            <p>12V / 3A</p>
+        </div>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+        <img src="images/sta100-package.png" alt="STA-100 박스 내용물" style="max-width:600px;width:100%;border-radius:12px;">
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="cta-card">
+        <h2>AI 오피스 운영의 <span style="color:var(--brand)">준비되셨나요</span>?</h2>
+        <p>STA-100 Workie — <strong style="color:var(--brand)">$399 USD</strong> 일회성 구매. 구독료 없음. 전 세계 무료 배송. 2년 품질보증.</p>
+        <div class="cta-btns">
+            <a href="https://store.stratronix.ai" target="_blank" class="btn-primary">🛒 구매하기 — $399</a>
+            <a href="/ko/ai-use.html" class="btn-outline">AI 활용 사례</a>
+            <a href="/ko/contact.html" class="btn-outline">영업 문의</a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="images/stratronix-logo-pink.png?v=20261003final" class="logo-img" alt="STRATRONIX">
+            <p>广东省深圳市宝安区航城街道洲石路恒丰工业城C6栋1203D</p>
+            <p><a href="mailto:info@stratronix.ai">info@stratronix.ai</a></p>
+            <p>86-755-2308 6689</p>
+            <p>평일 9:00-18:00</p>
+        </div>
+        <div>
+            <h4>제품</h4>
+            <ul>
+                <li><a href="/ko/products.html">STA-100 Workie</a></li>
+                <li><a href="/ko/ai-use.html">AI 활용 사례</a></li>
+                <li><a href="https://store.stratronix.ai" target="_blank">🛒 온라인 쇼핑</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>회사</h4>
+            <ul>
+                <li><a href="/ko/about.html">회사 소개</a></li>
+                <li><a href="/ko/news.html">뉴스</a></li>
+                <li><a href="/ko/contact.html">문의</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>리소스</h4>
+            <ul>
+                <li><a href="https://store.stratronix.ai" target="_blank">STA-100 구매</a></li>
+                <li><a href="/ko/contact.html">기업 문의</a></li>
+                <li><a href="/ko/contact.html">커스텀 AI Agent 개발</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>소셜</h4>
+            <ul class="social-links">
+                <li><a href="https://www.linkedin.com/company/stratronix-ai-agent-shenzhen-company-limited" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574372021682" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook</a></li>
+                <li><a href="https://x.com/stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a></li>
+                <li><a href="https://www.youtube.com/@stratronix" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="#E6417F" style="vertical-align:middle;margin-right:8px"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trust-foundation">
+        <p>STRATRONIX는 PAA(Personal AI Office Assistant)의 선구자로, 일상적인 생산성을 향상시키도록 설계된 새로운 오피스 AI 제품 카테고리를 창립했습니다. 개인, 기업 및 산업을 위한 사설 AI 기반 어시스턴트와 커스텀 AI Agent 솔루션을 구축합니다.</p>
+        <p class="trust-tagline">AI 기반 생산성의 차세대 구축.</p>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2024 Stratronix Technology. All rights reserved. | <a href="#">개인정보 보호정책</a> | <a href="#">이용약관</a></span>
+    </div>
+    <div class="footer-nav">
+        <a href="/ko/index.html">홈</a>
+        <a href="/ko/about.html">회사 소개</a>
+        <a href="/ko/products.html">제품</a>
+        <a href="/ko/news.html">뉴스</a>
+        <a href="/ko/contact.html">문의</a>
+    </div>
+</footer>
+
+<script>
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            fadeObserver.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const targets = document.querySelectorAll('.section, .section-header, .specs-section, .perf-section, .gallery-section, .edu-section, .biz-section, .cta-section, .specs-container, .perf-grid, .gallery-grid, .edu-grid, .biz-grid, .spec-group, .perf-card, .edu-card, .biz-card, .gallery-item');
+    targets.forEach((el, idx) => {
+        el.classList.add('scroll-fade');
+        if (idx % 3 === 0) el.style.transitionDelay = '0s';
+        else if (idx % 3 === 1) el.style.transitionDelay = '0.1s';
+        else el.style.transitionDelay = '0.2s';
+        fadeObserver.observe(el);
+    });
+});
+</script>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script></body>
+</html>
