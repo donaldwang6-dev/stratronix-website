@@ -73,6 +73,36 @@
             padding: 5px 14px; border-radius: 20px; font-weight: 600;
         }
 
+        /* ===== LANGUAGE SELECTOR ===== */
+        .lang-selector { position: relative; display: inline-block; }
+        .lang-btn {
+            display: flex; align-items: center; gap: 6px;
+            font-size: 14px; font-weight: 500; color: var(--text-dim);
+            padding: 6px 12px; border-radius: 8px;
+            cursor: pointer; transition: all 0.2s;
+            border: 1px solid transparent; background: transparent;
+            font-family: var(--font-body);
+        }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown {
+            display: none; position: absolute; top: calc(100% + 8px); right: 0;
+            background: var(--bg-card); border: 1px solid var(--border-solid);
+            border-radius: 12px; padding: 8px 0; min-width: 180px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000;
+        }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim);
+            transition: all 0.15s;
+        }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a.current { color: var(--brand); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+
         /* ===== HERO ===== */
         .hero {
             min-height: 100vh;
@@ -826,6 +856,26 @@
         <li><a href="contact.html">Contact</a></li>
         <li><a href="https://store.stratronix.ai" target="_blank" class="online-shop">🛒 Online Shop</a></li>
         <li><a href="https://store.stratronix.ai" target="_blank" class="shop-btn">Buy Now</a></li>
+        <li class="lang-selector" id="langSelector">
+            <button class="lang-btn" onclick="toggleLang(event)" aria-label="Select language">
+                <span>🌐</span>
+                <span id="currentLangLabel">EN</span>
+                <span class="arrow">▾</span>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+                <a href="/en/"><span class="flag">🇺🇸</span> English <span class="lang-code">EN</span></a>
+                <a href="/fr/"><span class="flag">🇫🇷</span> Français <span class="lang-code">FR</span></a>
+                <a href="/de/"><span class="flag">🇩🇪</span> Deutsch <span class="lang-code">DE</span></a>
+                <a href="/es/"><span class="flag">🇪🇸</span> Español <span class="lang-code">ES</span></a>
+                <a href="/ko/"><span class="flag">🇰🇷</span> 한국어 <span class="lang-code">KO</span></a>
+                <a href="/ja/"><span class="flag">🇯🇵</span> 日本語 <span class="lang-code">JA</span></a>
+                <a href="/id/"><span class="flag">🇮🇩</span> Indonesia <span class="lang-code">ID</span></a>
+                <a href="/vi/"><span class="flag">🇻🇳</span> Tiếng Việt <span class="lang-code">VI</span></a>
+                <a href="/ru/"><span class="flag">🇷🇺</span> Русский <span class="lang-code">RU</span></a>
+                <a href="/zh/"><span class="flag">🇨🇳</span> 简体中文 <span class="lang-code">ZH</span></a>
+                <a href="/zh-Hant/"><span class="flag">🇹🇼</span> 中文繁体 <span class="lang-code">ZH-TW</span></a>
+            </div>
+        </li>
     </ul>
 </nav>
 
@@ -847,7 +897,7 @@
             </div>
             <div class="hero-stats">
                 <div class="hero-stat">
-                    <div class="num">15W/Month</div>
+                    <div class="num">15KWH/Month</div>
                     <div class="label">Ultra Low Power</div>
                 </div>
                 <div class="hero-stat">
@@ -1282,5 +1332,10 @@ window.addEventListener('scroll', () => {
 })();
 </script>
 
-</body>
+
+<script>
+function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}
+function selectLang(label,code){document.getElementById("currentLangLabel").textContent=label;document.getElementById("langSelector").classList.remove("open");}
+document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});
+</script></body>
 </html>
