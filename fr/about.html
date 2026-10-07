@@ -46,11 +46,11 @@
         .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
 
         /* HERO */
-        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
-        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
-        .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero { padding: 100px 80px 80px; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; text-align: left; }
+        .hero h1 { font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; text-align: left; }
         .hero h1 .pink { color: var(--brand); }
-        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .hero p { font-size: 17px; color: var(--text-dim); margin-bottom: 30px; line-height: 1.75; text-align: left; }
 
         .section { padding: 100px 80px; max-width: 1300px; margin: 0 auto; }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
@@ -174,6 +174,11 @@
 
         /* ===== RESPONSIVE ===== */
 
+        @media (max-width: 900px) {
+            .hero { padding: 100px 40px 60px; grid-template-columns: 1fr; gap: 30px; }
+            .hero .eyebrow, .hero h1, .hero p { text-align: center; }
+            .hero > div:last-child { display: flex; justify-content: center; }
+        }
         @media (max-width: 1024px) {
             .hero { padding: 120px 40px 60px; }
             .section, .mission-section, .dev-section, .biz-section, .paa-section, .stats-section, .cta-section { padding: 60px 40px; }
@@ -207,6 +212,11 @@
             color: var(--brand);
             font-weight: 600;
             margin-top: 8px;
+        }
+        @media (max-width: 900px) {
+            .hero { padding: 100px 40px 60px; grid-template-columns: 1fr; gap: 30px; }
+            .hero .eyebrow, .hero h1, .hero p { text-align: center; }
+            .hero > div:last-child { display: flex; justify-content: center; }
         }
         @media (max-width: 1024px) {
             .trust-foundation { padding: 30px 40px 20px; }
@@ -270,17 +280,21 @@
 
 <!-- HERO -->
 <section class="hero">
-    <div class="eyebrow">À propos de STRATRONIX</div>
-    <h1>Créer la catégorie <span class="pink">Assistant IA Personnel de Bureau</span></h1>
-    <p>STRATRONIX Technology (Shenzhen) Company, Limited est le créateur de la catégorie PAA — construisant du matériel IA dédié qui place un collègue IA 24h/24 dans vos applications de messagerie. Nous construisons également des AI Agents personnalisés sur notre matériel pour les entreprises mondiales.</p>
     <div>
-        <a href="#business" class="btn-primary" style="margin: 0 6px;">Nos deux activités</a>
-        <a href="#development" class="btn-outline" style="margin: 0 6px;">Développement d'AI Agent</a>
-        <a href="/fr/contact.html" class="btn-outline" style="margin: 0 6px;">Contacter les ventes</a>
+        <div class="eyebrow">À propos de STRATRONIX</div>
+        <h1>Créer la catégorie <span class="pink">Assistant IA Personnel de Bureau</span></h1>
+        <p>STRATRONIX Technology (Shenzhen) Company, Limited est le créateur de la catégorie PAA — construisant du matériel IA dédié qui place un collègue IA 24h/24 dans vos applications de messagerie. Nous construisons également des AI Agents personnalisés sur notre matériel pour les entreprises mondiales.</p>
+        <div>
+            <a href="#business" class="btn-primary" style="margin: 0 6px;">Nos deux activités</a>
+            <a href="#development" class="btn-outline" style="margin: 0 6px;">Développement d'AI Agent</a>
+            <a href="/fr/contact.html" class="btn-outline" style="margin: 0 6px;">Contacter les ventes</a>
+        </div>
+    </div>
+    <div>
+        <img src="images/about-hero-sta100.png" alt="STA-100" style="width:100%;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.4);">
     </div>
 </section>
 
-<!-- MISSION -->
 <section class="mission-section">
     <div class="mission-grid">
         <div class="mission-text">

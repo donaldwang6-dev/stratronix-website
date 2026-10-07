@@ -45,11 +45,11 @@
         .btn-outline { background: transparent; color: var(--text); padding: 13px 28px; border-radius: 50px; font-weight: 600; font-size: 14px; border: 1.5px solid var(--border-solid); cursor: pointer; transition: all 0.2s; }
         .btn-outline:hover { border-color: var(--brand); color: var(--brand); }
 
-        .hero { padding: 140px 80px 80px; text-align: center; max-width: 900px; margin: 0 auto; }
-        .hero .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 20px; }
-        .hero h1 { font-size: clamp(36px, 5vw, 60px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 24px; }
+        .hero { padding: 100px 80px 80px; max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--brand); margin-bottom: 16px; text-align: left; }
+        .hero h1 { font-size: clamp(30px, 4vw, 52px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 20px; text-align: left; }
         .hero h1 .pink { color: var(--brand); }
-        .hero p { font-size: 18px; color: var(--text-dim); margin-bottom: 36px; max-width: 720px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .hero p { font-size: 17px; color: var(--text-dim); margin-bottom: 30px; line-height: 1.75; text-align: left; }
 
         .section { padding: 100px 80px; max-width: 1300px; margin: 0 auto; }
         .section-header { text-align: center; max-width: 700px; margin: 0 auto 30px; }
@@ -187,6 +187,11 @@
         .scroll-fade { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .scroll-fade.visible { opacity: 1; transform: translateY(0); }
 
+        @media (max-width: 900px) {
+            .hero { padding: 100px 40px 60px; grid-template-columns: 1fr; gap: 30px; }
+            .hero .eyebrow, .hero h1, .hero p { text-align: center; }
+            .hero > div:last-child { display: flex; justify-content: center; }
+        }
         @media (max-width: 1024px) {
             .hero { padding: 120px 40px 60px; }
             .section, .mission-section, .dev-section, .biz-section, .paa-section, .stats-section, .cta-section { padding: 60px 40px; }
@@ -198,6 +203,11 @@
         @media (max-width: 640px) {
             .stats-grid { grid-template-columns: 1fr 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 900px) {
+            .hero { padding: 100px 40px 60px; grid-template-columns: 1fr; gap: 30px; }
+            .hero .eyebrow, .hero h1, .hero p { text-align: center; }
+            .hero > div:last-child { display: flex; justify-content: center; }
         }
         @media (max-width: 1024px) {
             .trust-foundation { padding: 30px 40px 20px; }
@@ -255,13 +265,18 @@
 </nav>
 
 <section class="hero">
-    <div class="eyebrow">Acerca de STRATRONIX</div>
-    <h1>Creando la categoría <span class="pink">Asistente de Inteligencia Artificial Personal para Oficina</span></h1>
-    <p>STRATRONIX Technology (Shenzhen) Company, Limited es el creador de la categoría PAA — construyendo hardware de IA dedicado que pone un compañero de trabajo IA 24/7 dentro de tus aplicaciones de mensajería. También construimos Agentes IA personalizados sobre nuestro hardware para empresas globales.</p>
     <div>
-        <a href="#business" class="btn-primary" style="margin: 0 6px;">Nuestros Dos Negocios</a>
-        <a href="#development" class="btn-outline" style="margin: 0 6px;">Desarrollo de Agentes IA</a>
-        <a href="/es/contact.html" class="btn-outline" style="margin: 0 6px;">Contactar Ventas</a>
+        <div class="eyebrow">Acerca de STRATRONIX</div>
+        <h1>Creando la categoría <span class="pink">Asistente de Inteligencia Artificial Personal para Oficina</span></h1>
+        <p>STRATRONIX Technology (Shenzhen) Company, Limited es el creador de la categoría PAA — construyendo hardware de IA dedicado que pone un compañero de trabajo IA 24/7 dentro de tus aplicaciones de mensajería. También construimos Agentes IA personalizados sobre nuestro hardware para empresas globales.</p>
+        <div>
+            <a href="#business" class="btn-primary" style="margin: 0 6px;">Nuestros Dos Negocios</a>
+            <a href="#development" class="btn-outline" style="margin: 0 6px;">Desarrollo de Agentes IA</a>
+            <a href="/es/contact.html" class="btn-outline" style="margin: 0 6px;">Contactar Ventas</a>
+        </div>
+    </div>
+    <div>
+        <img src="images/about-hero-sta100.png" alt="STA-100" style="width:100%;border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,0.4);">
     </div>
 </section>
 
