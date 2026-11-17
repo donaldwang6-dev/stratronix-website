@@ -446,7 +446,7 @@ def translate_line(text):
     text = re.sub(r"Cloud API Keys from Multi-LLM:", "多 LLM 云端 API Key：", text)
     text = re.sub(r"Local memory — remembers your projects and preferences", "本地记忆 — 记住您的项目和偏好", text)
     text = re.sub(r"Full system access: email, calendar, files, terminal", "完整系统访问：邮件、日历、文件、终端", text)
-    text = re.sub(r"GDPR & data sovereignty compliant", "符合 GDPR 和数据主权要求", text)
+    text = re.sub(r"Open-source Linux-based Ubuntu OS, XFCE GUI and AI Agent", "基于开源 Linux 的 Ubuntu 操作系统、XFCE 图形界面与 AI Agent", text)
 
     text = re.sub(r'Full Specifications', '完整规格', text)
     text = re.sub(r'Engineered for AI Workloads', '为 AI 工作负载而生', text)
