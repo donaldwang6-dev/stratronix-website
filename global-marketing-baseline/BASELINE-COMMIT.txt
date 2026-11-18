@@ -2,11 +2,23 @@ STRATRONIX 全球市场推广根基 · 基线 commit
 =========================================
 基线版本   : v1.0
 基线日期   : 2026-11-18
-Commit     : e36e7bce58820db2126f4cec5ec25fc8d1f4b7df
-短哈希     : e36e7bce
+Commit     : 097cfb20fe00e49fa615f4851c804b8d73dcdc6b
+短哈希     : 097cfb20
 提交说明   : 🌍 全球市场推广根基基线 v1.0 · 2026-11-18 LOCKED
-归档文件数 : 477（另本文件与 MANIFEST.md 不计入）
+归档文件数 : 478
 归档体积   : 9.3 MB
+
+📍 存放位置
+远端分支   : git@github.com:donaldwang6-dev/stratronix-website.git
+             refs/heads/global-marketing-baseline/v1.0
+远端仓库   : https://github.com/donaldwang6-dev/stratronix-website
+             (tree URL: /tree/global-marketing-baseline/v1.0/global-marketing-baseline)
+本地分支   : global-marketing-baseline/v1.0（同一 commit）
+推送方式   : SSH（https PAT 已失效 401）
+
+⚠️ 关于 main 分支
+本次基线以远端 main (fa878b8e) 为父提交，仅新增 global-marketing-baseline/ 目录，
+未修改主站任何文件。远端 main 未被触碰。
 
 🔒 本基线状态：永久冻结
 - 已提交内容禁止修改 / 删除
@@ -14,5 +26,7 @@ Commit     : e36e7bce58820db2126f4cec5ec25fc8d1f4b7df
 - 与主站 www.stratronix.ai 物理隔离
 
 恢复基线方法：
-  git checkout e36e7bce58820db2126f4cec5ec25fc8d1f4b7df -- global-marketing-baseline/
-  git log --oneline -- global-marketing-baseline/
+  git fetch origin global-marketing-baseline/v1.0
+  git checkout 097cfb20fe00e49fa615f4851c804b8d73dcdc6b -- global-marketing-baseline/
+  # 或直接浏览：
+  # https://github.com/donaldwang6-dev/stratronix-website/tree/global-marketing-baseline/v1.0/global-marketing-baseline
