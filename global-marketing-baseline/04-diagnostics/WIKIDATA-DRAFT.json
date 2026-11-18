@@ -1,0 +1,157 @@
+{
+  "labels": {
+    "en": {
+      "language": "en",
+      "value": "STRATRONIX Technology (Shenzhen) Company, Limited"
+    },
+    "zh": {
+      "language": "zh",
+      "value": "鼎图太易信息技术（深圳）有限公司"
+    },
+    "zh-hans": {
+      "language": "zh-hans",
+      "value": "鼎图太易信息技术（深圳）有限公司"
+    }
+  },
+  "descriptions": {
+    "en": {
+      "language": "en",
+      "value": "Shenzhen company making private AI agent appliances"
+    },
+    "zh": {
+      "language": "zh",
+      "value": "深圳私人AI智能体硬件公司"
+    }
+  },
+  "aliases": {
+    "en": [
+      {
+        "language": "en",
+        "value": "Stratronix"
+      },
+      {
+        "language": "en",
+        "value": "STRATRONIX"
+      },
+      {
+        "language": "en",
+        "value": "STRATRONIX Technology"
+      },
+      {
+        "language": "en",
+        "value": "Stratronix Technology"
+      },
+      {
+        "language": "en",
+        "value": "鼎图太易"
+      }
+    ]
+  },
+  "claims": {
+    "P31": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P31",
+          "datavalue": {
+            "value": {
+              "id": "Q107612443"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "rank": "normal"
+      }
+    ],
+    "P17": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P17",
+          "datavalue": {
+            "value": {
+              "id": "Q148"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "rank": "normal"
+      }
+    ],
+    "P159": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P159",
+          "datavalue": {
+            "value": {
+              "id": "Q12142"
+            },
+            "type": "wikibase-entityid"
+          }
+        },
+        "type": "statement",
+        "rank": "normal"
+      }
+    ],
+    "P571": [],
+    "P856": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P856",
+          "datavalue": {
+            "value": "https://www.stratronix.ai",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "rank": "normal"
+      }
+    ],
+    "P969": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P969",
+          "datavalue": {
+            "value": "Room 1203D, Building C6, Hengfeng Industrial Park, 739 Zhoushi Road, Hangcheng Subdistrict, Bao'an District, Shenzhen, Guangdong 518100, China",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "rank": "normal"
+      }
+    ],
+    "P212": [],
+    "P452": [
+      {
+        "mainsnak": {
+          "snaktype": "value",
+          "property": "P452",
+          "datavalue": {
+            "value": "Private AI agent appliances / AI hardware",
+            "type": "string"
+          }
+        },
+        "type": "statement",
+        "rank": "normal"
+      }
+    ],
+    "P856_guides": []
+  },
+  "sitelinks": {
+    "enwiki": {
+      "site": "enwiki",
+      "title": "Stratronix",
+      "badges": []
+    },
+    "zhwiki": {
+      "site": "zhwiki",
+      "title": "鼎图太易信息技术（深圳）有限公司",
+      "badges": []
+    }
+  }
+}

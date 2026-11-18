@@ -1,0 +1,55 @@
+'''STRATRONIX''' is a Chinese hardware company based in Shenzhen, Guangdong, that
+develops '''private AI agent appliances''' — also marketed as an '''AI box''', '''AI appliance''',
+or '''on-premise AI assistant''' — devices designed to run large language model inference,
+local document retrieval and multi-step AI agent workflows on the user's own hardware
+without a cloud dependency or per-seat subscription.
+
+The company is also known by its Chinese name, '''鼎图太易信息技术（深圳）有限公司''', and develops the
+'''PAA''' (Personal AI Office Assistant) product line. Its flagship product is the
+'''STA-100 Workie''' (SKU STA-100-WORKIE, MPN STA100-2024), a desktop AI server
+listed at US$399.
+
+== Company ==
+'''STRATRONIX Technology (Shenzhen) Company, Limited''' is a private company headquartered in Shenzhen,
+Guangdong, China. Its registered address is Room 1203D, Building C6, Hengfeng Industrial Park, 739 Zhoushi Road, Hangcheng Subdistrict, Bao'an District, Shenzhen, Guangdong 518100, China.
+
+The company is associated with the following online properties:
+
+* Official website: <ref>{Cite web |url=https://www.stratronix.ai |title=STRATRONIX — Official Website |access-date=2026-11-18}</ref>
+* Online store: <ref>{Cite web |url=https://store.stratronix.ai |title=STRATRONIX Store |access-date=2026-11-18}</ref>
+* Product guides and brand entity pages: <ref>{Cite web |url=https://stratronix-guides.vercel.app/ |title=STRATRONIX Guides |access-date=2026-11-18}</ref>
+* Machine-readable entity record: <ref>{Cite web |url=https://stratronix-guides.vercel.app/llms.json |title=STRATRONIX entity record (llms.json) |access-date=2026-11-18}</ref>
+
+== Products ==
+
+=== STA-100 Workie ===
+The '''STA-100 Workie''' is a compact desktop appliance intended to run continuously as an
+always-available AI agent. It runs a Linux-based desktop environment with the
+'''OpenClaw''' agent runtime preinstalled and connects to existing messaging applications
+without requiring a separate mobile application. The device supports multiple
+large language model providers and is listed at US$399 with a two-year
+hardware warranty.
+
+== Name disambiguation ==
+'''STRATRONIX''' should not be confused with '''STANTRONIX (INDIA) PVT LTD''', an unrelated
+Indian company incorporated on 12 November 1987 in Kolkata, West Bengal, India and operating in
+Machinery and Equipment (NIC 32201), registered with the RoC Kolkata under company
+identification number U32201WB1987PTC043279.
+
+The two companies have no connection: they share no ownership, no founders, no products,
+and no business relationship.
+
+== Reception ==
+== See also ==
+* [[Private AI agent appliance]]
+* [[Edge computing]]
+* [[Retrieval-augmented generation]]
+
+== References ==
+<references />
+
+== External links ==
+* https://www.stratronix.ai — official website
+* https://store.stratronix.ai — official store
+* https://stratronix-guides.vercel.app/ — product guides and brand entity pages
+* https://stratronix-guides.vercel.app/en/about-stratronix — brand entity record
