@@ -1,0 +1,879 @@
+{
+  "timestamp": "2026-09-10T18:01:11.834276",
+  "results": {
+    "Tier-1 核心（高价值）": {
+      "private AI agent appliance": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "PAA private AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "on-device AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI appliance": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "edge AI agent device": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "AI agent hardware": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private LLM appliance": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "self-hosted AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "air-gapped AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "GDPR AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "HIPAA AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "local AI agent": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      }
+    },
+    "Tier-2 品牌": {
+      "STRATRONIX": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX STA-100": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX PAA": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX OpenClaw": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "鼎图太易": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "鼎图太易 AI 智能体": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX Shenzhen": {
+        "Google": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "深圳 AI 智能体公司": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      }
+    },
+    "Tier-3 行业长尾": {
+      "private AI agent for healthcare": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI agent for legal": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI agent for finance": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI agent for manufacturing": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI agent for education": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "AI agent for cross-border e-commerce": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "AI agent for SMEs": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI for GDPR compliance": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI for HIPAA": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI for SOC2": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI for MLPS 2.0": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI for data sovereignty": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      }
+    },
+    "Tier-4 展会相关": {
+      "IOTE 2026 STRATRONIX": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "IOTE 2026 booth 12B62-1": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX IOTE 2026": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "CBM 2026-09 STRATRONIX": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "CBM 2026 cycling AI": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX booth 12B62-1": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "STRATRONIX cycling AI agent": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "private AI agent exhibition": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      }
+    },
+    "Tier-5 中文长尾": {
+      "私有 AI 智能体": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "私有 AI 设备": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "本地化 AI 智能体": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "深圳 AI 公司": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "深圳 AI 智能体公司": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "PAA 私有 AI": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "OpenClaw 开源": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      },
+      "开源 AI 智能体框架": {
+        "Google": {
+          "stratronix.ai": "ERR: HTTP Error 429: Too Many Requests",
+          "donaldwang6-dev.github.io/stratronix-seo": "ERR: HTTP Error 429: Too Many Requests"
+        },
+        "Bing": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "Yandex": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        },
+        "百度": {
+          "stratronix.ai": null,
+          "donaldwang6-dev.github.io/stratronix-seo": null
+        }
+      }
+    }
+  }
+}

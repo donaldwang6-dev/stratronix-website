@@ -1,0 +1,57 @@
+# 2026-09-17 SEO 推广日报 · Day 4
+**主题**: 自托管 AI + Healthcare AI 实战
+**生成时间**: 2026-09-17 20:05 (Asia/Shanghai)
+
+---
+
+## ⚠️ 今日执行 Gap（全天零产出）
+
+| 计划内容 | 状态 |
+|---------|------|
+| Reddit r/selfhosted 草稿 | ❌ 未生成 |
+| Reddit r/MachineLearning 草稿 | ❌ 未生成 |
+| LinkedIn 帖 | ❌ 未发 |
+| Twitter thread | ❌ 未发 |
+| DEV.to 文章 | ❌ 未发 |
+
+**根本原因**：自动发布链路仍未就绪（auto-publish/ 目录空），DEV.to API 未配置，Zoho Social LinkedIn/Twitter 自动发布状态未确认，Reddit 草稿仍需汪总手动提交。
+
+---
+
+## 📊 7 天进度快照（Day 1-4）
+
+| 指标 | Day 1 | Day 2 | Day 3 | Day 4 | 7天目标 |
+|------|-------|-------|-------|-------|---------|
+| DEV.to 文章 | 1 ✅ | 1 ✅ | 0 ❌ | 0 ❌ | 7 |
+| LinkedIn 帖 | 3 ✅ | 3 ✅ | 0 ❌ | 0 ❌ | 21 |
+| Twitter thread | 1 ✅ | 1 ✅ | 0 ❌ | 0 ❌ | 7 |
+| Reddit 草稿 | 9 ❌ | 0 ❌ | 0 ❌ | 0 ❌ | 14 |
+| HN Show HN | 0 ❌ | 0 ❌ | 0 ❌ | 0 ❌ | 7 |
+| 反向链接 | 待统计 | 待统计 | 待统计 | 待统计 | 50+ |
+
+---
+
+## 🚨 阻塞清单（P0 — 持续 Day 1 起）
+
+1. **DEV.to API key** — 汪总提供后 JERRY 可自动发布
+2. **LinkedIn/Twitter 自动发布** — Zoho Social 状态待确认（汪总验收）
+3. **Reddit 草稿提交** — 今天完全空白，7 天目标严重落后
+4. **磁盘 95%** — 系统健康风险
+
+---
+
+## 📅 Day 5 计划（2026-09-18 周五）
+
+**主题**: Legal AI + 混合 LLM 架构
+
+| 平台 | 内容 |
+|------|------|
+| Reddit r/singularity | "Hybrid LLM architecture: when cloud beats local" |
+| Reddit r/AI_Agents | "AI agents in legal: attorney-client privilege preservation" |
+| LinkedIn | "Legal AI without compromising privilege" |
+| Twitter thread | "5 LLM deployment patterns compared" |
+| DEV.to | "Hybrid LLM architecture: a production case study" |
+
+---
+
+*JERRY 🤖 自动生成 · 2026-09-17 20:05 Asia/Shanghai*

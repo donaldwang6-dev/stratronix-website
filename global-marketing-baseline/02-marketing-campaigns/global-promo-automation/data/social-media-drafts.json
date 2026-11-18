@@ -1,0 +1,37 @@
+[
+  {
+    "platform": "X (Twitter)",
+    "endpoint": "https://api.twitter.com/2/tweets",
+    "content_preview": "🎪 STRATRONIX @ IOTE 2026 Shenzhen\n📅 Aug 26-28 · Booth 12B62-1\n🤖 STA-100 PAA Private AI-Agent Appliance\n💰 Global Unified $399 USD\n🔒 GDPR/HIPAA/SOC2 Compliant\n📍 https://donaldwang6-dev.github.io/stratro..."
+  },
+  {
+    "platform": "LinkedIn",
+    "endpoint": "https://api.linkedin.com/v2/ugcPosts",
+    "content_preview": "🚀 STRATRONIX launches STA-100 PAA Private AI-Agent Appliance at IOTE 2026 Shenzhen (Aug 26-28, Booth 12B62-1).\n\nKey highlights:\n• 8-10 minute deployment (vs 1-3 months traditional)\n• On-device LLM inf..."
+  },
+  {
+    "platform": "Reddit r/IOT",
+    "endpoint": "https://oauth.reddit.com/api/submit",
+    "content_preview": "Title: STRATRONIX launches Private AI-Agent Appliance at IOTE 2026 Shenzhen - $399 USD\n\nBody: We're showcasing our STA-100 PAA at IOTE 2026 Shenzhen (Aug 26-28). \n\nKey tech:\n- On-device LLM (Qwen 72B ..."
+  },
+  {
+    "platform": "Hacker News (Show HN)",
+    "endpoint": "https://hn.algolia.com/api/v1/submit",
+    "content_preview": "Title: Show HN: OpenClaw – Open-Source AI Agent Framework powering Private AI Appliances\n\nText: We built OpenClaw (BSD-3 licensed) to power our STA-100 PAA Private AI-Agent Appliance. It's the first o..."
+  },
+  {
+    "platform": "Dev.to",
+    "endpoint": "https://dev.to/api/articles",
+    "content_preview": "Title: Building a Private AI-Agent Appliance for 7 Industries\n\nBody:\nHow we built STRATRONIX STA-100 PAA — a $399 USD hardware device that runs AI agents locally for healthcare, legal, finance, manufa..."
+  },
+  {
+    "platform": "Medium",
+    "endpoint": "https://api.medium.com/v1/posts",
+    "content_preview": "Title: Why We Built a $399 USD Private AI-Agent Appliance (Not a SaaS)\n\nBody:\nMost AI startups build SaaS. We built hardware. Here's why.\n\n[Long-form article - 1500 words]\n\nThe 5 reasons we built PAA:..."
+  },
+  {
+    "platform": "Facebook Page",
+    "endpoint": "https://graph.facebook.com/v18.0/me/feed",
+    "content_preview": "🚀 STRATRONIX launches STA-100 PAA at IOTE 2026 Shenzhen!\n\n📅 Aug 26-28, 2026\n📍 Shenzhen World Exhibition & Convention Center\n🎪 Booth 12B62-1 (Hall 12, Zone B)\n\n🤖 World's first Private AI-Agent Applianc..."
+  }
+]

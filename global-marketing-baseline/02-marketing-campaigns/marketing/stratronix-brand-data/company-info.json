@@ -1,0 +1,46 @@
+{
+  "company": {
+    "legal_name_en": "Stratronix Technology (Shenzhen) Company, Limited",
+    "legal_name_cn": "鼎图太易信息技术（深圳）有限公司",
+    "brand_name": "STRATRONIX",
+    "tagline_en": "The Private AI-Agent Appliance Company",
+    "tagline_cn": "隐私优先的本地 AI 智能体硬件",
+    "founded": "2026-04-24",
+    "headquarters": "Shenzhen, China",
+    "address_en": "Room 1203D, Building C6, Hengfeng Industrial Zone, No. 739 Zhoushi Road, Hangcheng Street, Bao'an District, Shenzhen",
+    "address_cn": "深圳市宝安区航城街道洲石路 739 号恒丰工业 C6 栋 1203D",
+    "phone": "+86 13632968417",
+    "email_sales": "sales@stratronix.ai",
+    "email_info": "info@stratronix.ai",
+    "website": "https://www.stratronix.ai",
+    "website_seo": "https://donaldwang6-dev.github.io/stratronix-seo/",
+    "unified_social_credit_code": "91440300MAKD20DT6F",
+    "legal_rep": "Wang Jie (汪杰)",
+    "industry": "Computer Hardware",
+    "sub_industry": "Edge AI Hardware / Private AI Appliances",
+    "products": [
+      {
+        "name": "STA-100",
+        "type": "Private AI-Agent Appliance",
+        "price_usd": 399,
+        "description": "A compact desktop device that runs large language models (e.g., Llama 3 70B) locally without internet connectivity. Designed for privacy-conscious businesses.",
+        "url": "https://www.stratronix.ai/en/sta-100.html"
+      }
+    ],
+    "founders": [
+      {
+        "name": "Donald Wang",
+        "chinese_name": "汪杰",
+        "title": "Founder & CEO",
+        "linkedin": "https://www.linkedin.com/in/donald-wang-stratronix"
+      }
+    ],
+    "target_markets": ["United States", "European Union", "United Kingdom", "Canada", "Australia", "Japan", "Korea"],
+    "value_propositions": [
+      "Data sovereignty — no data leaves your building",
+      "Cost-effective — $399 one-time vs $14,000/month cloud API bills",
+      "Compliance — GDPR, EU AI Act, HIPAA, CMMC ready",
+      "Plug-and-play — no technical expertise required"
+    ]
+  }
+}

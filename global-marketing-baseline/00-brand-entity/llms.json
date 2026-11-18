@@ -1,0 +1,1171 @@
+{
+  "version": "1.0",
+  "title": "STRATRONIX — Private AI Agent Appliance (AI Box) Guides",
+  "description": "English, Indonesian and German guides on private AI agents, on-premise AI boxes and AI appliances, with machine-readable product facts and pricing for the STRATRONIX STA-100 Workie.",
+  "url": "https://stratronix-guides.vercel.app/",
+  "last_updated": "2026-11-18",
+  "organization": {
+    "name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+    "alternate_name": "鼎图太易信息技术（深圳）有限公司",
+    "url": "https://www.stratronix.ai",
+    "logo": "https://www.stratronix.ai/favicon.ico",
+    "email": "sales@stratronix.ai",
+    "support_email": "info@stratronix.ai",
+    "phone": "+86 13632968417",
+    "address": "Room 1203D, Building C6, Hengfeng Industrial Park, 739 Zhoushi Road, Hangcheng Subdistrict, Bao'an District, Shenzhen, China"
+  },
+  "entity": {
+    "canonical_name": "STRATRONIX Technology (Shenzhen) Company, Limited",
+    "chinese_name": "鼎图太易信息技术（深圳）有限公司",
+    "common_name": "STRATRONIX",
+    "industry": "Private AI agent appliances (PAA) — AI hardware",
+    "headquarters": "Room 1203D, Building C6, Hengfeng Industrial Park, 739 Zhoushi Road, Bao'an District, Shenzhen, Guangdong 518100, China",
+    "country": "China",
+    "founded": "2024",
+    "website": "https://www.stratronix.ai",
+    "store": "https://store.stratronix.ai",
+    "sales_email": "sales@stratronix.ai",
+    "phone": "+86 13632968417",
+    "disambiguation": {
+      "note": "STANTRONIX (INDIA) PVT LTD is an unrelated Indian company (CIN U32201WB1987PTC043279), incorporated 1987-11-12 in Kolkata, West Bengal, machinery and equipment manufacturing. No shared ownership, founders, products or business relationship with STRATRONIX.",
+      "unrelated_entity": "STANTRONIX (INDIA) PVT LTD",
+      "unrelated_cin": "U32201WB1987PTC043279",
+      "unrelated_city": "Kolkata, India",
+      "unrelated_founded": "1987",
+      "unrelated_industry": "Machinery and equipment manufacturing"
+    },
+    "entity_pages": {
+      "en": "https://stratronix-guides.vercel.app/en/about-stratronix",
+      "zh": "https://stratronix-guides.vercel.app/zh/about-stratronix",
+      "de": "https://stratronix-guides.vercel.app/de/about-stratronix",
+      "id": "https://stratronix-guides.vercel.app/id/about-stratronix",
+      "es": "https://stratronix-guides.vercel.app/es/about-stratronix",
+      "fr": "https://stratronix-guides.vercel.app/fr/about-stratronix",
+      "pt": "https://stratronix-guides.vercel.app/pt/about-stratronix",
+      "ja": "https://stratronix-guides.vercel.app/ja/about-stratronix",
+      "ro": "https://stratronix-guides.vercel.app/ro/about-stratronix"
+    }
+  },
+  "products": [
+    {
+      "name": "STRATRONIX STA-100 Workie",
+      "sku": "STA-100",
+      "type": "Private AI agent appliance / AI box / AI appliance",
+      "form_factor": "desktop",
+      "price": 399,
+      "currency": "USD",
+      "price_note": "one-time purchase, no subscription, volume pricing from 10 units",
+      "install_time": "8-10 minutes",
+      "warranty": "2 years hardware",
+      "cloud_requirement": "none - local LLM inference, can run fully offline",
+      "agent_runtime": "OpenClaw",
+      "url": "https://store.stratronix.ai"
+    },
+    {
+      "name": "STRATRONIX PAA Appliance (Enterprise)",
+      "sku": "PAA-Enterprise",
+      "type": "Private AI agent appliance (enterprise rack)",
+      "form_factor": "1U rack",
+      "price": 339,
+      "currency": "EUR",
+      "price_note": "one-time purchase, no subscription",
+      "deploy_time": "about 1 hour",
+      "url": "https://store.stratronix.ai"
+    }
+  ],
+  "languages": [
+    "en",
+    "id",
+    "de",
+    "es",
+    "fr",
+    "pt-BR",
+    "ja",
+    "ro"
+  ],
+  "topics": [
+    "private AI agent",
+    "AI box",
+    "AI appliance",
+    "on-premise AI",
+    "local LLM",
+    "AI data sovereignty",
+    "GDPR AI assistant",
+    "AI Act compliance",
+    "private AI agent appliance price",
+    "enterprise AI agent platform"
+  ],
+  "pages": [
+    {
+      "url": "https://stratronix-guides.vercel.app/",
+      "title": "STRATRONIX Panduan AI — Panduan lengkap AI on-premise untuk Indonesia dan Jerman | STRATRONIX",
+      "description": "Panduan AI on-premise lengkap dalam 8 limbi: Indonesia, Jerman, Inggris, Spanyol, Prancis, Portugis (Brasil), Jepang, Rumania. AI box privat, inferensi lokal, tanpa langganan awan, 399 USD per unit.",
+      "category": "Site",
+      "language": "root"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/finance",
+      "title": "AI untuk Perbankan & Fintech Indonesia — On-Premise | STRATRONIX STA-100",
+      "description": "STRATRONIX STA-100 solusi AI on-premise untuk perbankan dan fintech di Indonesia. Fraud detection, customer service, risk assessment. OJK compliant.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/404",
+      "title": "Halaman Tidak Ditemukan | STRATRONIX",
+      "description": "Halaman yang Anda cari tidak ditemukan. Kembali ke beranda STRATRONIX atau jelajahi produk STA-100 PAA Appliance.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/realestate",
+      "title": "AI untuk Properti & Real Estate Indonesia | STRATRONIX STA-100",
+      "description": "Lead scoring, chatbot property, market analysis dengan AI.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/sta100-ecommerce",
+      "title": "STA-100 untuk E-Commerce & Fintech Indonesia — AI Lokal untuk Rekomendasi & Analisis | STRATRONIX",
+      "description": "STRATRONIX STA-100 solusi AI on-premise untuk e-commerce dan fintech Indonesia. Rekomendasi produk, analisis sentimen review, multi-bahasa. Tanpa cloud. $399 USD.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/ai-appliance",
+      "title": "STRATRONIX STA-100 - Perangkat AI On-Premise (PAA) | Indonesia",
+      "description": "STRATRONIX STA-100 - perangkat AI on-premise (PAA) untuk Indonesia. LLM 70B berjalan di perangkat, Bahasa Indonesia, tanpa cloud, garansi 2 tahun, $399 USD.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/healthcare",
+      "title": "AI untuk Rumah Sakit & Healthcare Indonesia — On-Premise | STRATRONIX STA-100",
+      "description": "STRATRONIX STA-100 solusi AI on-premise untuk rumah sakit dan healthcare di Indonesia. Clinical documentation, patient triage, drug interaction check. UU PDP…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/manufacturing",
+      "title": "AI untuk Manufaktur Indonesia — Smart Factory | STRATRONIX STA-100",
+      "description": "STA-100 untuk pabrik dan manufacturing di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id",
+      "title": "STRATRONIX — Asisten AI Kantor Pribadi | STA-100 Workie",
+      "description": "STRATRONIX STA-100 Workie: Asisten AI Kantor Pribadi (PAA) yang memberikan otak AI pada aplikasi pesan Anda — meneliti, membuat, mengatur, menganalisis, dan…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/sta100-msp",
+      "title": "STA-100 untuk MSP & IT Service Indonesia — White Label AI Solution | STRATRONIX",
+      "description": "STRATRONIX STA-100 solusi white label untuk MSP dan IT service Indonesia. Jual AI dengan brand Anda sendiri. Margin tinggi. $399 USD per unit.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/sta100-buy",
+      "title": "Beli STA-100 Workie — Appliance Agen AI Pribadi | $399 USD | STRATRONIX",
+      "description": "Beli STA-100 Workie — appliance agen AI pribadi. $399 USD. Tanpa langganan. Pengiriman global. Agen AI lokal + cloud LLM. Open-source OpenClaw. Pesan sekarang!",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/government",
+      "title": "AI untuk Pemerintah Indonesia — Smart Government | STRATRONIX STA-100",
+      "description": "On-premise AI untuk government institution. Offline-capable.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/msp-cloud",
+      "title": "AI untuk Cloud Service Provider Indonesia — Hybrid Cloud Solution | STRATRONIX STA-100",
+      "description": "STA-100 sebagai edge AI untuk ISP dan cloud provider.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/bpo-mall",
+      "title": "AI untuk Mall & Retail Indonesia — Chatbot + Customer Service | STRATRONIX STA-100",
+      "description": "STRATRONIX STA-100 solusi AI on-premise untuk mall dan retail di Indonesia. Chatbot multibahasa, rekomendasi produk, analisis sentimen. Tanpa cloud.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/about",
+      "title": "Tentang STRATRONIX — Pencipta PAA & Pembuat AI Agent | Asisten Kantor AI Pribadi",
+      "description": "STRATRONIX menciptakan kategori Personal AI Office Assistant (PAA). Kami membangun dua bisnis: (1) perangkat keras STA-100 untuk pengguna global, (2) layanan…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/ecommerce-chatbot",
+      "title": "Chatbot E-Commerce Indonesia — AI Customer Service 24/7 | STRATRONIX STA-100",
+      "description": "Chatbot multibahasa untuk Tokopedia, Shopee, Lazada seller.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/ai-use",
+      "title": "Kasus Penggunaan AI — Workie | STRATRONIX",
+      "description": "Temukan cara STA-100 Workie mengubah pekerjaan harian Anda: dari pembuatan konten hingga analisis data, manajemen proyek hingga e-commerce. Enam kasus penggunaan…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/news",
+      "title": "Berita & Pembaruan — STRATRONIX | Peluncuran Produk PAA & Wawasan Agen AI",
+      "description": "Berita terbaru dari STRATRONIX: peluncuran produk, pembaruan pengembangan Agen AI, penampilan pameran, dan wawasan industri untuk kategori Asisten Kantor AI Pribadi.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/logistics",
+      "title": "AI untuk Logistik & Supply Chain Indonesia — On-Premise | STRATRONIX STA-100",
+      "description": "STRATRONIX STA-100 solusi AI on-premise untuk logistik dan supply chain di Indonesia. Route optimization, warehouse management, demand forecasting. Tanpa cloud.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/education",
+      "title": "AI untuk Pendidikan & Universitas Indonesia | STRATRONIX STA-100",
+      "description": "AI untuk e-learning, student services, admin di kampus.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/ai-agent-appliance",
+      "title": "Appliance Agen AI: Perangkat Keras Agen AI Privat STRATRONIX | $399 PAA",
+      "description": "Appliance Agen AI: STRATRONIX STA-100 PAA adalah perangkat agen AI privat. Agen AI lokal + cloud LLM. Open-source OpenClaw. Sesuai GDPR / AI Act UE.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/ai-agent",
+      "title": "Platform Agen AI untuk Perusahaan Eropa | STRATRONIX",
+      "description": "STRATRONIX PAA: Platform Agen AI yang di-host sendiri untuk perusahaan Eropa. Sesuai GDPR. Llama 3.3 70B + 10 agen AI. €339 sekali bayar. Tanpa langganan.…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/openclaw",
+      "title": "OpenClaw — Kerangka Kerja Agen AI Open-Source | STRATRONIX",
+      "description": "OpenClaw: kerangka kerja agen AI open-source (Apache 2.0) untuk membangun dan menjalankan agen AI. Dibundel dengan STA-100 PAA Appliance. Multi-LLM, MCP-native,…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/products",
+      "title": "STA-100 Workie — Spesifikasi Perangkat Keras | STRATRONIX",
+      "description": "Spesifikasi perangkat keras STA-100 Workie: Octa-core ARM, 4GB DDR4, 32GB eMMC, 15W/Bulan, Layar Sentuh 3.5, penyimpanan hingga 16TB. OpenClaw OS sudah terinstal.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/blog-msp-opportunity",
+      "title": "Peluang MSP Indonesia di Era AI — 2026 | STRATRONIX STA-100",
+      "description": "Bagaimana MSP bisa monetize AI dengan STA-100.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/blog-ai-dasar",
+      "title": "Apa Itu AI? Pengertian Singkat untuk Pemula di Indonesia | STRATRONIX",
+      "description": "Pelajari dasar-dasar AI (Artificial Intelligence) dengan bahasa Indonesia sederhana. Mulai dari machine learning, LLM, hingga cara AI bisa membantu bisnis Anda…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/harga-sta100",
+      "title": "Harga STRATRONIX STA-100 di Indonesia — $399 (≈Rp 6,4 Juta) | STRATRONIX",
+      "description": "Harga resmi STRATRONIX STA-100 di Indonesia: $399 (≈Rp 6,4 juta) per unit, garansi 2 tahun. Bandingkan dengan cloud AI: hemat Rp 5,3 miliar dalam 3 tahun untuk…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/blog-onpremise-vs-cloud",
+      "title": "On-Premise AI vs Cloud AI — Mana yang Lebih Baik? | STRATRONIX STA-100",
+      "description": "Perbandingan lengkap untuk perusahaan Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/msp-reseller",
+      "title": "AI Reseller Indonesia — Bergabung jadi Partner STRATRONIX | STRATRONIX STA-100",
+      "description": "Reseller dan distributor STA-100 di Indonesia. Margin tinggi, support lengkap.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/ai-box",
+      "title": "Apa itu AI Box? | STRATRONIX",
+      "description": "Apa itu AI Box? AI Box adalah appliance perangkat keras yang menjalankan agen AI secara lokal dengan LLM cloud. Appliance AI privat dari STRATRONIX.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/blog-uu-pdp-compliance",
+      "title": "UU PDP dan AI: Apa yang Harus Anda Tau? | STRATRONIX STA-100",
+      "description": "Compliance guide untuk perusahaan yang pakai AI di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/msp-consulting",
+      "title": "IT Consulting dengan AI — Solusi untuk Konsultan IT Indonesia | STRATRONIX STA-100",
+      "description": "Konsultan IT bisa integrate STA-100 ke portfolio layanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/blog-llm-pengertian",
+      "title": "apa itu LLM? Pengertian Large Language Model | STRATRONIX STA-100",
+      "description": "Penjelasan LLM dengan bahasa Indonesia sederhana.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/contact",
+      "title": "Hubungi STRATRONIX — Bicara dengan Tim PAA | Enterprise & Agen AI Kustom",
+      "description": "Hubungi STRATRONIX untuk pertanyaan produk PAA, pengembangan Agen AI Kustom, kemitraan, atau dukungan teknis. Email sales@stratronix.ai. Berbasis di Shenzhen,…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/sta100-callcenter",
+      "title": "STA-100 untuk Call Center & BPO Indonesia — AI Lokal Tanpa Cloud | STRATRONIX",
+      "description": "STRATRONIX STA-100 solusi AI lokal untuk Call Center dan BPO Indonesia. Tanpa cloud, data tidak keluar perangkat. Bahasa Indonesia lengkap. Harga $399 USD.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/msp-security",
+      "title": "AI untuk Managed Security Service Provider (MSSP) | STRATRONIX STA-100",
+      "description": "STA-100 untuk cybersecurity company di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/finance-ai",
+      "title": "AI untuk Keuangan dan Akuntansi di Indonesia | STRATRONIX",
+      "description": "AI untuk keuangan dan akuntansi: rekonsiliasi, dokumen, dan laporan otomatis dengan STRATRONIX STA-100 on-premise. Harga $399, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/gdpr-china",
+      "title": "GDPR dan AI dari China untuk Tim Indonesia | STRATRONIX",
+      "description": "GDPR dan AI dari China: jalur transfer data ke Shenzhen dan cara menjaga data tetap di server perusahaan dengan STRATRONIX STA-100 on-premise.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-agent-zh",
+      "title": "AI Agent dengan Dukungan Mandarin untuk Tim Ekspor ke China | STRATRONIX",
+      "description": "AI Agent on-premise dengan dukungan Mandarin untuk tim distributor dan eksportir ke China. Terjemahkan dokumen, jawab dalam dua bahasa, data tetap lokal.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/private-ai-agent",
+      "title": "Agen AI Pribadi untuk Keperluan Harian | STRATRONIX",
+      "description": "Agen AI pribadi untuk keperluan harian: merangkum dokumen, menyaring email, menulis draf, dan bekerja penuh secara offline di perangkat sendiri.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-ai",
+      "title": "Shenzhen sebagai Pusat Hardware AI | STRATRONIX",
+      "description": "Mengapa Shenzhen menjadi pusat hardware AI: rantai pasok komponen, produksi perangkat AI on-premise, dan apa artinya bagi tim di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/eu-ai-act-zh",
+      "title": "EU AI Act 2026 untuk Perusahaan Asia | STRATRONIX",
+      "description": "EU AI Act 2026 untuk perusahaan Asia: klasifikasi risiko, kewajiban sistem AI, dan cara memakai STRATRONIX STA-100 on-premise di Eropa.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/private-llm",
+      "title": "LLM Pribadi: Model yang Berjalan Secara Lokal | STRATRONIX",
+      "description": "LLM pribadi untuk penggunaan harian dan tim kecil: model Bahasa Indonesia yang berjalan di perangkat sendiri, tanpa cloud dan tanpa biaya bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-exhibition",
+      "title": "Paket AI untuk Pameran Dagang dan Booth Demo On-Site | STRATRONIX",
+      "description": "Paket AI untuk pameran dagang: demo AI lokal di booth tanpa internet, privasi data pengunjung terjaga, siap dipasang dalam hitungan jam.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-agent-platform",
+      "title": "Platform AI Agent: Apa Bedanya dari Aplikasi SaaS Biasa | STRATRONIX",
+      "description": "Platform AI Agent on-premise berbeda dari aplikasi SaaS biasa: inferensi lokal, data tidak keluar, tanpa biaya per pengguna. Kenali bedanya sebelum membeli.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-appliance",
+      "title": "AI Appliance: Apa Bedanya dari PC Biasa dan Layanan Cloud | STRATRONIX",
+      "description": "AI Appliance adalah perangkat khusus yang menjalankan LLM lokal. Bandingkan dengan PC biasa dan layanan cloud, lengkap dengan harga dan garansi.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/dingtu-agent",
+      "title": "Agen AI On-Premise untuk Perusahaan Indonesia (Dingtu Taiyi) | STRATRONIX",
+      "description": "Agen AI on-premise STRATRONIX (Dingtu Taiyi) dari Shenzhen: LLM lokal, Bahasa Indonesia, garansi 2 tahun. Tidak ada data ke cloud.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/on-prem-llm",
+      "title": "LLM On-Premise: Apa Itu dan Kapan Lebih Baik | STRATRONIX",
+      "description": "LLM on-premise: model AI yang berjalan di server sendiri. Bandingkan dengan cloud untuk perusahaan Indonesia, STRATRONIX STA-100.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/paa-device",
+      "title": "Perangkat PAA: Definisi dan Versi Produk | STRATRONIX",
+      "description": "Perangkat PAA (Personal AI Agent Appliance): definisi, fungsi, dan versi produk STRATRONIX untuk menjalankan AI on-premise di perusahaan Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/dingtu-ai",
+      "title": "Perusahaan AI On-Premise (Dingtu Taiyi) — Shenzhen | STRATRONIX",
+      "description": "STRATRONIX (Dingtu Taiyi): perusahaan AI asal Shenzhen yang membuat perangkat AI on-premise STA-100 untuk perusahaan Indonesia. $399 per unit, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/on-prem-llm-deployment",
+      "title": "Panduan Deploy LLM On-Premise 5 Langkah | STRATRONIX",
+      "description": "Panduan deploy LLM on-premise 5 langkah: pilih use case, pilih model, pasang perangkat, uji dengan data nyata, dan ukur penghematan biaya.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-dingtu",
+      "title": "Produsen Perangkat AI On-Premise di Shenzhen (Dingtu Taiyi) | STRATRONIX",
+      "description": "Dingtu Taiyi (STRATRONIX) memproduksi perangkat AI on-premise di Bao'an, Shenzhen. STA-100 untuk perusahaan dan MSP di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/hipaa-ai",
+      "title": "HIPAA dan AI untuk Data Medis | STRATRONIX",
+      "description": "HIPAA dan AI untuk data medis: inferensi lokal, jejak audit, dan perlindungan data kesehatan di rumah sakit. STRATRONIX STA-100 on-premise, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan",
+      "title": "STRATRONIX di Indonesia — Perangkat AI On-Premise untuk Perusahaan | STRATRONIX",
+      "description": "Semua panduan STRATRONIX dalam Bahasa Indonesia: perangkat AI on-premise, LLM lokal, UU PDP, AI untuk bank, pabrik, rumah sakit, e-commerce, dan MSP. STA-100…",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/legal-ai",
+      "title": "AI untuk Tim Hukum dan Kepatuhan Perusahaan | STRATRONIX",
+      "description": "AI untuk tim hukum dan kepatuhan perusahaan: telaah kontrak, daftar uji tuntas, dan data aman di server sendiri dengan STRATRONIX STA-100.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/pipl-compliance",
+      "title": "Kepatuhan PIPL untuk Data Mandarin dan Tim Indonesia | STRATRONIX",
+      "description": "Panduan praktis PIPL untuk tim Indonesia yang menangani data Mandarin: lokalisasi data, transfer lintas negara, dan cara menjalankan AI secara on-premise.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-agent-cn",
+      "title": "AI Agent untuk Kemitraan dengan Mitra di China | STRATRONIX",
+      "description": "AI Agent on-premise untuk perusahaan Indonesia yang bermitra di China. Data tetap lokal, mendukung Bahasa Indonesia dan Mandarin, tanpa langganan bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-ai-startup",
+      "title": "Ekosistem Startup AI di Shenzhen | STRATRONIX",
+      "description": "Gambaran ekosistem startup AI di Shenzhen: pusat riset, perakit perangkat keras, dan cara perusahaan di Indonesia memilih mitra yang bisa diandalkan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/china-ai-company",
+      "title": "Perusahaan AI asal China: Cara Memilih Pemasok yang Tepat | STRATRONIX",
+      "description": "Cara memilih pemasok perangkat AI dari China untuk perusahaan Indonesia: cek legalitas, garansi, dukungan lokal, kepatuhan data, dan harga yang transparan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/medical-ai",
+      "title": "AI untuk Tenaga Medis Indonesia | STRATRONIX",
+      "description": "AI untuk tenaga medis Indonesia: ringkasan hasil pemeriksaan, draf laporan, dan pencarian arsip. STRATRONIX STA-100 on-premise, harga $399, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/dingtu-taiyi-ai",
+      "title": "Perangkat AI On-Premise (Dingtu Taiyi) untuk Indonesia | STRATRONIX",
+      "description": "Perangkat AI on-premise dari Shenzhen oleh Dingtu Taiyi (STRATRONIX): jalankan LLM lokal, data tidak keluar perangkat, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-server",
+      "title": "AI Server vs AI Appliance: Kapan Anda Membutuhkan Yang Mana | STRATRONIX",
+      "description": "AI Server untuk beban berat multi-pengguna, AI Appliance untuk tim kecil. Pelajari perbedaan, biaya, dan kapan masing-masing paling tepat di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-without-internet",
+      "title": "AI Tanpa Internet: Solusi untuk Wilayah Terpencil, Kapal, dan Lapangan | STRATRONIX",
+      "description": "AI tanpa internet untuk wilayah terpencil, kapal, dan lapangan. Inferensi lokal di perangkat, data tetap aman, tanpa biaya langganan bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/data-sovereignty",
+      "title": "Kedaulatan Data: AI Milik Sendiri untuk Perusahaan Indonesia | STRATRONIX",
+      "description": "Kedaulatan data untuk perusahaan Indonesia dan Asia Tenggara: kenapa menjalankan AI sendiri, hubungannya dengan Stranas AI, dan pilihan STRATRONIX.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/local-llm-zh",
+      "title": "LLM Lokal untuk Tim yang Bekerja dengan Mandarin | STRATRONIX",
+      "description": "LLM lokal untuk tim Mandarin: Qwen2.5-72B dan model Mandarin lain berjalan di STRATRONIX STA-100 on-premise. Tidak ada data keluar, tanpa biaya bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/bank-ai",
+      "title": "AI untuk Perbankan Indonesia: OJK, UU PDP, dan Layanan Cabang | STRATRONIX",
+      "description": "AI untuk perbankan Indonesia: analisis kredit, deteksi fraud, layanan cabang, dan kepatuhan UU PDP. Jalankan model secara on-premise dengan STRATRONIX STA-100.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-llm",
+      "title": "LLM yang Dikembangkan di Shenzhen untuk Penggunaan Lokal | STRATRONIX",
+      "description": "Model bahasa besar yang bisa dijalankan di perangkat sendiri, termasuk MiniMax dan model lain yang tersedia untuk inferensi lokal di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/offline-ai",
+      "title": "AI Offline untuk Industri dan Lokasi Terpencil | STRATRONIX",
+      "description": "AI offline untuk industri dan lokasi terpencil: inferensi lokal tanpa internet, data tetap di lokasi, STRATRONIX STA-100 on-premise, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/private-ai",
+      "title": "AI Pribadi — Data dan Inferensi Lokal | STRATRONIX",
+      "description": "AI Pribadi dengan data dan inferensi lokal. STRATRONIX STA-100 menjalankan LLM di perangkat sendiri, mendukung Bahasa Indonesia, tanpa cloud, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/dingtu-taiyi-agent",
+      "title": "Agen AI Pribadi On-Premise (Dingtu Taiyi) | STRATRONIX",
+      "description": "Dingtu Taiyi (STRATRONIX) menghadirkan agen AI pribadi on-premise STA-100: LLM lokal, Bahasa Indonesia, $399 per unit, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/algorithmic-filing",
+      "title": "Persetujuan Algoritma untuk Bank dan Fintech di Indonesia | STRATRONIX",
+      "description": "Panduan persetujuan algoritma untuk bank dan fintech di Indonesia: peran OJK, UU PDP, dan cara menjalankan model AI secara on-premise.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/cross-border-ecommerce-ai",
+      "title": "AI untuk E-commerce Lintas Negara di Indonesia | STRATRONIX",
+      "description": "AI untuk e-commerce lintas negara: deskripsi produk multi-bahasa, social listening, customer service, untuk seller Tokopedia, Shopee, dan TikTok Shop.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/hospital-ai",
+      "title": "AI untuk Rumah Sakit dan Klinik | STRATRONIX",
+      "description": "AI untuk rumah sakit dan klinik dengan STRATRONIX STA-100 on-premise. Studi Shenzhen Luohu People's Hospital: 30 unit, 6 bulan, 2,1 jam per dokter per hari.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/compliance-ai",
+      "title": "Kepatuhan AI di Indonesia: UU PDP, Stranas AI, Aturan Global | STRATRONIX",
+      "description": "Panduan kepatuhan AI untuk perusahaan Indonesia: UU PDP 2022, Stranas AI 2025-2045, GDPR, PIPL, HIPAA, dan cara AI on-premise memangkas beban kepatuhan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/manufacturing-ai",
+      "title": "AI untuk Manufaktur: SOP, Kualitas, Pemeliharaan | STRATRONIX",
+      "description": "AI untuk manufaktur: akses SOP di lantai pabrik, analisis kualitas, dan catatan pemeliharaan dengan STRATRONIX STA-100 on-premise, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-ai-vendor",
+      "title": "Memilih Vendor AI di Shenzhen dengan Teliti | STRATRONIX",
+      "description": "Panduan memilih vendor AI di Shenzhen: legalitas, mutu produksi, dukungan purna jual, dan pertanyaan kunci sebelum keputusan diambil.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-local-ai",
+      "title": "AI Lokal dari Shenzhen untuk Asia Tenggara | STRATRONIX",
+      "description": "AI lokal dari Shenzhen untuk Asia Tenggara: perangkat on-premise dengan model Bahasa Indonesia, tanpa cloud, tanpa biaya bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/dingtu",
+      "title": "Profil Perusahaan AI On-Premise dari Shenzhen untuk Indonesia | STRATRONIX",
+      "description": "STRATRONIX (Dingtu Taiyi) adalah perusahaan AI di Shenzhen yang memproduksi perangkat AI on-premise STA-100. $399 per unit, garansi 2 tahun, tanpa cloud.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/edge-ai-box",
+      "title": "Edge AI Box: Definisi, Use Case, dan Cara Memilihnya | STRATRONIX",
+      "description": "Edge AI Box: definisi, use case di pabrik, gudang, dan lapangan, kriteria pemilihan, serta perbandingan dengan AI server dan AI cloud.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/baoan-ai",
+      "title": "AI di Bao'an, Shenzhen: Pusat Produksi STRATRONIX | STRATRONIX",
+      "description": "Bao'an, Shenzhen adalah pusat produksi STRATRONIX. Kenali lokasi produksi, produk AI on-premise yang dibuat, dan keunggulannya untuk pelanggan di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/data-localization",
+      "title": "Localisasi Data di Indonesia dan Dampaknya pada AI | STRATRONIX",
+      "description": "Localisasi data di Indonesia menurut UU PDP 2022 dan PP 71/2019, dampaknya pada AI, dan kenapa server sendiri memudahkan kepatuhan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/paa",
+      "title": "PAA: Personal AI Agent Appliance untuk Tim Anda | STRATRONIX",
+      "description": "PAA (Personal AI Agent Appliance): AI on-premise milik sendiri untuk tim Indonesia. STRATRONIX STA-100 Workie, $399 per unit, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-paa",
+      "title": "PAA yang Diproduksi di Shenzhen | STRATRONIX",
+      "description": "Perangkat PAA yang diproduksi di Shenzhen: bentuk, kemampuan, proses produksi, harga, garansi, dan cara memesannya untuk tim di Indonesia.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/law-firm-ai",
+      "title": "AI untuk Kantor Hukum: Riset, Draf, Kerahasiaan | STRATRONIX",
+      "description": "AI untuk kantor hukum: riset lebih cepat, draf dokumen, dan kerahasiaan klien terjaga dengan STRATRONIX STA-100 on-premise, tanpa biaya bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/paa-hardware",
+      "title": "Hardware PAA: Spesifikasi, Ukuran, dan Kebutuhan Daya | STRATRONIX",
+      "description": "Hardware PAA: peran perangkat STRATRONIX STA-100, ukuran dan kebutuhan daya, serta daftar periksa sebelum membeli perangkat AI on-premise.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/enterprise-ai-assistant",
+      "title": "Assistant AI untuk Perusahaan 100-500 Karyawan | STRATRONIX",
+      "description": "Assistant AI on-premise untuk perusahaan 100-500 karyawan. STRATRONIX STA-100 jalan lokal, Bahasa Indonesia, tanpa biaya bulanan, garansi 2 tahun.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/panduan/ai-agent-en",
+      "title": "AI Agent dengan Dukungan Bahasa Inggris untuk Pasar Internasional | STRATRONIX",
+      "description": "AI Agent on-premise dengan dukungan Bahasa Inggris dan Bahasa Indonesia untuk tim ekspor, BPO, dan call center. Data lokal, tanpa biaya langganan bulanan.",
+      "category": "Bahasa Indonesia guides",
+      "language": "id"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ro/sta100-spec",
+      "title": "STRATRONIX STA-100 — Specificații și preț pentru aparatul cu agent AI privat | STRATRONIX",
+      "description": "Specificații citibile de mașină pentru STRATRONIX STA-100 (399 USD, plată unică, birou, 8-10 minute) și PAA Appliance Enterprise (339 EUR, rack 1U). Date exacte pentru indexatori AI.",
+      "category": "Ghiduri în română",
+      "language": "ro"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ro",
+      "title": "Ghid pentru Agenți AI Priviți — Cutii AI on-premise pentru Companii | STRATRONIX",
+      "description": "Ghiduri în limba română despre agenți AI priviți: ce sunt, specificații, comparație cu cloud-ul și prețuri. STRATRONIX STA-100, 399 USD, plată unică fără abonament.",
+      "category": "Ghiduri în română",
+      "language": "ro"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ro/ai-agent",
+      "title": "Ce este un agent AI (AI Agent)? Ghid pentru companii | STRATRONIX",
+      "description": "Ce este un agent AI, cum execută un AI agent sarcini autonome în mai mulți pași și în ce industrii este util. Include 6 întrebări frecvente.",
+      "category": "Ghiduri în română",
+      "language": "ro"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ro/on-premise-vs-cloud",
+      "title": "AI on-premise vs AI în cloud — Comparație pentru companii | STRATRONIX",
+      "description": "Comparație între AI on-premise și AI în cloud: confidențialitate, GDPR, cost total, latență, mentenanță și scalabilitate. Cu cutia AI privată STRATRONIX STA-100 de 399 USD.",
+      "category": "Ghiduri în română",
+      "language": "ro"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/fr/sta100-spec",
+      "title": "STRATRONIX STA-100 — Spécifications et prix de l'agent IA privé | STRATRONIX",
+      "description": "Spécifications lisibles par machine du STRATRONIX STA-100 (399 USD, achat unique, format bureau, installation en 8-10 minutes) et du PAA Appliance Enterprise (339 EUR, baie 1U). Données exactes pour les indexeurs IA.",
+      "category": "Guides en français",
+      "language": "fr"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/fr",
+      "title": "Guides des Agents IA Privés — Boîtiers IA on-premise pour Entreprises | STRATRONIX",
+      "description": "Guides français sur les agents IA privés et les AI box on-premise : définition, spécifications, comparaison avec le cloud et tarifs. STRATRONIX STA-100, 399 USD paiement unique.",
+      "category": "Guides en français",
+      "language": "fr"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/fr/ai-agent",
+      "title": "Qu'est-ce qu'un Agent IA Privé ? Guide AI Box On-Premise | STRATRONIX",
+      "description": "Une appliance d'agent IA privé (AI box) exécute les agents IA sur du matériel local : sans cloud, sans abonnement par utilisateur. STRATRONIX STA-100 Workie, 399 USD paiement unique. Définition, cas d'usage et questions fréquentes.",
+      "category": "Guides en français",
+      "language": "fr"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/fr/on-premise-vs-cloud",
+      "title": "IA on-premise vs IA dans le cloud — Comparatif pour les entreprises | STRATRONIX",
+      "description": "Comparatif IA on-premise et IA cloud pour les entreprises : confidentialité, RGPD, coût total, latence, maintenance et évolutivité. Avec le boîtier IA privé STRATRONIX STA-100 à 399 USD.",
+      "category": "Guides en français",
+      "language": "fr"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-industrie-fertigung",
+      "title": "KI in Fertigung und Produktion: Offline-KI für die Industrie | STRATRONIX",
+      "description": "KI in Fertigung und Produktion: STA-100 liefert Offline-KI für Wartung, Qualität und Schichtübergabe. On-Premise ab €399, ohne Abo, ohne Cloud.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-versicherung",
+      "title": "KI in Versicherungen: On-Premise-KI für Schadensbearbeitung | STRATRONIX",
+      "description": "KI in Versicherungen: STA-100 unterstützt Schadensbearbeitung, Unterlagenprüfung und Kundenservice lokal. DSGVO-nah, ohne Abo, ab €399.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/privater-ki-assistent",
+      "title": "Privater KI-Assistent auf dem eigenen Gerät | STRATRONIX",
+      "description": "Privater KI-Assistent: LLM läuft auf dem eigenen Gerät, kein Cloud-Zugriff, kein Abonnement. STRATRONIX STA-100 mit 2 Jahren Garantie.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/avv-auftragsverarbeitung",
+      "title": "AVV nach Art. 28 DSGVO bei KI-Einsatz | STRATRONIX",
+      "description": "AVV nach Art. 28 DSGVO bei KI-Einsatz: Wann ein Auftragsverarbeitungsvertrag nötig ist, welche Klauseln zählen und wie lokale KI hilft.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-handel-einzelhandel",
+      "title": "KI im Handel und Einzelhandel: Sortiment, Service und Preise | STRATRONIX",
+      "description": "KI im Handel und Einzelhandel: STA-100 unterstützt Sortiment, Kundenberatung und Preisfinden lokal. On-Premise, ohne Abo, ab €399 je Gerät.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-fuer-kleinunternehmen",
+      "title": "KI für Kleinunternehmen ohne IT-Abteilung | STRATRONIX",
+      "description": "KI für Kleinunternehmen ohne IT-Abteilung: lokale Geräte, einmalige Kosten, keine Cloud. STRATRONIX STA-100 ab 399 EUR mit 2 Jahren Garantie.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden",
+      "title": "KI-Leitfäden für deutsche Unternehmen — On-Premise-KI ohne Cloud | STRATRONIX",
+      "description": "Alle STRATRONIX-Leitfäden auf Deutsch: KI-Box, On-Premise-LLM, DSGVO, EU KI-Verordnung, BSI-Grundschutz sowie KI für Handel, Industrie, Banken und Kanzleien. STA-100 ab 399 €, 2 Jahre Garantie.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-box-mittelstand",
+      "title": "KI-Box für den Mittelstand: lokale KI ohne Großrechner | STRATRONIX",
+      "description": "KI-Box für den Mittelstand: lokale KI mit einmaligen Kosten, ohne Cloud und ohne IT-Projekt. STRATRONIX STA-100 ab 399 EUR.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-mittelstand",
+      "title": "KI im Mittelstand: Einstieg mit kleinem Budget | STRATRONIX",
+      "description": "KI im Mittelstand: STRATRONIX STA-100 als On-Premise-KI-Box ab €399. Offline-fähig, ohne Abo, DSGVO-nah, installiert in 8–10 Minuten.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-bank-finanzwesen",
+      "title": "KI in Banken und Finanzwesen: On-Premise-KI ohne Cloud | STRATRONIX",
+      "description": "KI in Banken und Finanzwesen: STA-100 unterstützt Kreditprüfung, KYC und Berichte lokal. DSGVO-nah, kein Abo, €399 je Gerät, 2 Jahre Garantie.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/offline-ki-deutschland",
+      "title": "Offline-KI in Deutschland: Anforderungen kritischer Infrastruktur | STRATRONIX",
+      "description": "Offline-KI für kritische Infrastruktur in Deutschland: DSGVO, NIS2, BSI-Grundschutz und lokale Modelle mit STRATRONIX STA-100.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-eigenes-rechenzentrum",
+      "title": "KI im eigenen Rechenzentrum betreiben: Praxisleitfaden | STRATRONIX",
+      "description": "KI im eigenen Rechenzentrum: Planung, Hardware, Datenschutz und Betrieb. STRATRONIX STA-100 für lokale KI ohne Cloud-Zugriff.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/dsgvo-ki-assistent",
+      "title": "DSGVO-konformer KI-Assistent für Unternehmen | STRATRONIX",
+      "description": "DSGVO-konformer KI-Assistent mit lokaler Verarbeitung, AVV nach Art. 28 DSGVO und ohne Cloud-Zugriff. STRATRONIX STA-100 ab €399, 2 Jahre Garantie.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-verordnung-2026",
+      "title": "EU KI-Verordnung 2026: Pflichten ab 2. August 2026 | STRATRONIX",
+      "description": "EU KI-Verordnung 2026: Welche Pflichten seit 2. August 2026 gelten, welche Risikoklasse gilt und wie Unternehmen mit lokaler KI starten.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/nis2-ki",
+      "title": "NIS2-Richtlinie und KI in Unternehmen: Anforderungen im Überblick | STRATRONIX",
+      "description": "NIS2 und KI: Risikomanagement, Meldepflichten und Lieferkettenanforderungen für betroffene Unternehmen. Mit praxisnahem Fahrplan für den Mittelstand.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-medizin-arztpraxis",
+      "title": "KI in Arztpraxis und Klinik: Dokumentation mit lokaler KI | STRATRONIX",
+      "description": "KI in Arztpraxis und Klinik: STA-100 erstellt Arztberichte, Befunde und Patienteninfo lokal. DSGVO-nah, ohne Abo, 30 Geräte 6 Monate ohne Ausfall.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-ohne-cloud",
+      "title": "KI ohne Cloud: Definition, Vorteile und Praxisbeispiele | STRATRONIX",
+      "description": "KI ohne Cloud bedeutet: Das Sprachmodell läuft im eigenen Raum. STRATRONIX STA-100 zeigt Vorteile, Grenzen und Kosten ohne Abonnement.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/bsi-grundschutz-ki",
+      "title": "BSI-Grundschutz und KI-Systeme: Anforderungen für Unternehmen | STRATRONIX",
+      "description": "BSI-Grundschutz und KI: Wie der IT-Grundschutz bei KI-Einsatz wirkt, welche Rollen und Bausteine greifen und wie lokale KI die Anforderungen erfüllt.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/on-premise-ki-server",
+      "title": "On-Premise-KI-Server: Wann ein Server statt einer Appliance sinnvoll ist | STRATRONIX",
+      "description": "On-Premise-KI-Server oder KI-Appliance? Vergleich von Betrieb, Kosten und Skalierung für deutsche Unternehmen. STRATRONIX STA-100 lokal.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-kanzlei-rechtsanwaelte",
+      "title": "KI in Kanzleien: Recherche und Dokumentenprüfung mit lokaler KI | STRATRONIX",
+      "description": "KI in Kanzleien: STA-100 unterstützt Recherche, Fristeneinschätzung und Dokumentenprüfung lokal. Vertraulich, ohne Abo, ab €399 je Gerät.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/hochrisiko-ki-systeme",
+      "title": "Hochrisiko-KI-Systeme und ihre Pflichten | STRATRONIX",
+      "description": "Hochrisiko-KI-Systeme: Welche Pflichten die EU KI-Verordnung vorsieht, welche Anwendungen betroffen sind und wie Unternehmen die Anforderungen einordnen.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/edge-ki-box",
+      "title": "Edge-KI-Box: Definition, Einsatz und Auswahl | STRATRONIX",
+      "description": "Edge-KI-Box: KI direkt am Ort des Geschehens statt in der Cloud. Einsatz, Auswahlkriterien und Praxisbeispiel mit STRATRONIX STA-100.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-logistik",
+      "title": "KI in Logistik und Supply Chain: On-Premise-KI für Lager | STRATRONIX",
+      "description": "KI in Logistik und Supply Chain: STA-100 unterstützt Disposition, Lagerwissen und Zolltexte lokal. Ohne Cloud, ohne Abo, ab €399 je Gerät.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-box-kaufkriterien",
+      "title": "KI-Box Kaufkriterien: Worauf Unternehmen bei On-Premise-KI achten | STRATRONIX",
+      "description": "Acht KI-Box Kaufkriterien für Unternehmen: lokale Datenhaltung, Modelle, Einrichtung, Kosten und Garantie. STRATRONIX STA-100 im Überblick.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/risikoklassen-ki-system",
+      "title": "Risikoklassen der KI-Verordnung: Einordnung für Ihr Unternehmen | STRATRONIX",
+      "description": "Risikoklassen der EU KI-Verordnung verständlich: minimal, begrenzt, hoch, unvertretbar. Einstufung, Pflichten und Beispiele für den Mittelstand.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-compliance-checkliste",
+      "title": "Checkliste KI-Compliance für Unternehmen | STRATRONIX",
+      "description": "Checkliste KI-Compliance: Systemverzeichnis, Risikoklasse, Transparenz, AVV, Sicherheit und Betrieb. Konkrete Schritte für den Mittelstand.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/datenschutzbeauftragter-ki",
+      "title": "Rolle des Datenschutzbeauftragten bei KI | STRATRONIX",
+      "description": "Datenschutzbeauftragter bei KI: Aufgaben, Stellung und Mitwirkung bei der Einführung von KI-Systemen nach DSGVO und EU KI-Verordnung.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-systemintegrator",
+      "title": "KI-Appliance für IT-Dienstleister und Systemintegratoren — Reseller-Partner | STRATRONIX",
+      "description": "On-Premise-KI-Appliance für IT-Dienstleister, Systemintegratoren und MSPs: White-Label, Partner-Konditionen, Schulung und Support. Ohne eigene…",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-handwerk",
+      "title": "KI im Handwerk und bei Dienstleistern: Wissen nutzbar machen | STRATRONIX",
+      "description": "KI im Handwerk: STA-100 liefert lokale KI für Bautexte, Dokumentation und Kundentermine. On-Premise, ohne Abo, ab €399, 2 Jahre Garantie.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/lokale-ki-modelle",
+      "title": "Lokale KI-Modelle: Qwen, DeepSeek und Llama im Vergleich | STRATRONIX",
+      "description": "Lokale KI-Modelle auf eigener Hardware: Qwen, DeepSeek, Llama, ChatGLM, ERNIE und MiniMax. Auswahl und Betrieb mit STRATRONIX STA-100.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/leitfaden/ki-transparenzpflichten",
+      "title": "Transparenzpflichten bei KI-Systemen: Was Unternehmen jetzt tun müssen | STRATRONIX",
+      "description": "Transparenzpflichten nach der EU KI-Verordnung: Kennzeichnung von KI-Interaktion, Kennzeichnung synthetischer Inhalte und Dokumentation im Überblick.",
+      "category": "Deutsch Leitfäden",
+      "language": "de"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ja/sta100-spec",
+      "title": "STRATRONIX STA-100 仕様・価格｜プライベートAIエージェント機器 | STRATRONIX",
+      "description": "STRATRONIX STA-100（399米ドル・卓上型・8〜10分導入）とPAA Appliance Enterprise（339ユーロ・1Uラック）の機械可読な仕様と価格。AI索引向けの正確なデータ。",
+      "category": "日本語ガイド",
+      "language": "ja"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ja",
+      "title": "プライベートAIエージェント入門｜オンプレミスAIボックス STRATRONIX",
+      "description": "プライベートAIエージェント、オンプレミスAIボックス、オンプレミスAI Appliance の解説。仕様・比較・価格。STRATRONIX STA-100 399米ドル、 ライセンス料なしの買い切り。",
+      "category": "日本語ガイド",
+      "language": "ja"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ja/ai-agent",
+      "title": "AIエージェント（AI Agent）とは？ 企業導入のための実践ガイド | STRATRONIX",
+      "description": "AIエージェントの定義、動作の仕組み、導入効果、業界別の活用例、よくある質問6項目を解説。プライベートAIエージェントSTRATRONIX STA-100 399米ドル。",
+      "category": "日本語ガイド",
+      "language": "ja"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ja/on-premise-vs-cloud",
+      "title": "オンプレミスAI vs クラウドAI 比較｜企業の判断基準 | STRATRONIX",
+      "description": "オンプレミスAIとクラウドAIの比較：情報セキュリティ、GDPR，成本、レイテンシ、保守、スケール。プライベートAIボックス STRATRONIX STA-100 399米ドル。",
+      "category": "日本語ガイド",
+      "language": "ja"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/en/sta100-spec",
+      "title": "STRATRONIX STA-100 Workie — Private AI Agent Appliance Specs and Pricing",
+      "description": "Machine-readable specification and pricing for the STRATRONIX STA-100 Workie (US$399 one-time, desk unit, 8-10 min install) and PAA Appliance Enterprise (EUR 339, 1U rack).",
+      "category": "English guides",
+      "language": "en"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/en",
+      "title": "Private AI Agent Guides — On-Premise AI Boxes for Business | STRATRONIX",
+      "description": "English guides on private AI agents and AI boxes: definitions, product specs, on-premise vs cloud comparison, and pricing. STRATRONIX STA-100 private AI agent appliance, US$399 one-time.",
+      "category": "English guides",
+      "language": "en"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/en/ai-agent",
+      "title": "What Is a Private AI Agent? On-Premise AI Box Guide | STRATRONIX",
+      "description": "A private AI agent appliance (AI box) runs AI agents on local hardware — no cloud, no per-seat subscription. STRATRONIX STA-100 Workie, US$399 one-time. Definition, use cases, FAQ.",
+      "category": "English guides",
+      "language": "en"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/en/on-premise-vs-cloud",
+      "title": "On-Premise AI Agent vs Cloud AI Agent (ChatGPT Enterprise) | STRATRONIX",
+      "description": "Side-by-side comparison of private AI agent appliances and cloud AI agents: data locality, cost model, compliance, speed. STRATRONIX STA-100 US$399 one-time vs per-seat cloud licences.",
+      "category": "English guides",
+      "language": "en"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/pt/sta100-spec",
+      "title": "STRATRONIX STA-100 — Especificações e preço do agente de IA privado | STRATRONIX",
+      "description": "Especificações legíveis por máquina do STRATRONIX STA-100 (399 USD, compra única, mesa, 8-10 minutos) e do PAA Appliance Enterprise (339 EUR, rack 1U). Dados exatos para indexadores de IA.",
+      "category": "Guias em português",
+      "language": "pt"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/pt",
+      "title": "Guia de Agente de IA Privado — Caixa de IA on-premise para Empresas | STRATRONIX",
+      "description": "Guias em português sobre agentes de IA privados: o que é, especificações, comparativo com a nuvem e preços. STRATRONIX STA-100, 399 USD, compra única.",
+      "category": "Guias em português",
+      "language": "pt"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/pt/ai-agent",
+      "title": "O que é um Agente de IA (AI Agent)? Guia para empresas | STRATRONIX",
+      "description": "O que é um agente de IA, como um AI agent executa tarefas autônomas em várias etapas e em que industries usá-lo. Inclui 6 perguntas frequentes.",
+      "category": "Guias em português",
+      "language": "pt"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/pt/on-premise-vs-cloud",
+      "title": "IA on-premise vs IA na nuvem — Comparativo para empresas | STRATRONIX",
+      "description": "Comparativo entre IA on-premise e IA na nuvem: privacidade, LGPD e GDPR, custo total, latência, manutenção e escalabilidade. Com a caixa de IA privada STRATRONIX STA-100 de 399 USD.",
+      "category": "Guias em português",
+      "language": "pt"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/es/sta100-spec",
+      "title": "STRATRONIX STA-100 — Especificaciones y precios del agente de IA privado | STRATRONIX",
+      "description": "Especificaciones legibles por máquina del STRATRONIX STA-100 (399 USD, pago único, escritorio, instalación en 8-10 minutos) y del PAA Appliance Enterprise (339 EUR, rack 1U). Datos exactos para indexadores de IA.",
+      "category": "Guías en español",
+      "language": "es"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/es",
+      "title": "Guías de Agentes de IA Privados — Cajas de IA on-premise para Empresas | STRATRONIX",
+      "description": "Guías en español sobre agentes de IA privados y AI box on-premise: definición, especificaciones, comparativa con la nube y precios. STRATRONIX STA-100, 399 USD pago único.",
+      "category": "Guías en español",
+      "language": "es"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/es/ai-agent",
+      "title": "¿Qué es un Agente de IA Privado? Guía de AI Box On-Premise | STRATRONIX",
+      "description": "Un dispositivo de agente de IA privado (AI box) ejecuta agentes de IA en hardware local: sin nube y sin suscripción por usuario. STRATRONIX STA-100 Workie, 399 USD pago único. Definición, casos de uso y preguntas frecuentes.",
+      "category": "Guías en español",
+      "language": "es"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/es/on-premise-vs-cloud",
+      "title": "IA on-premise vs. IA en la nube — Comparativa para empresas | STRATRONIX",
+      "description": "Comparativa de IA on-premise frente a IA en la nube para empresas: privacidad, GDPR, coste total, latencia, mantenimiento y escalabilidad. Con la caja de IA privada STRATRONIX STA-100 de 399 USD.",
+      "category": "Guías en español",
+      "language": "es"
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/en/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (English)",
+      "language": "en",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/zh/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (中文)",
+      "language": "zh",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (Deutsch)",
+      "language": "de",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/id/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (Bahasa Indonesia)",
+      "language": "id",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/es/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (Español)",
+      "language": "es",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/fr/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (Français)",
+      "language": "fr",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/pt/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (Português (BR))",
+      "language": "pt",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ja/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (日本語)",
+      "language": "ja",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/ro/about-stratronix",
+      "title": "About STRATRONIX — company profile and identity (Română)",
+      "language": "ro",
+      "type": "entity",
+      "description": "Official company identity, legal name, headquarters, product lines and name disambiguation against unrelated companies (STANTRONIX India)."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/de",
+      "title": "STRATRONIX — private AI agent guides (Deutsch)",
+      "language": "de",
+      "type": "index",
+      "description": "Language hub for STRATRONIX private AI agent appliance guides."
+    },
+    {
+      "url": "https://stratronix-guides.vercel.app/zh",
+      "title": "STRATRONIX — private AI agent guides (中文)",
+      "language": "zh",
+      "type": "index",
+      "description": "Language hub for STRATRONIX private AI agent appliance guides."
+    }
+  ]
+}

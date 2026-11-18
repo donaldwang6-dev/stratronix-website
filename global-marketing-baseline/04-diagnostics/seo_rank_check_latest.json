@@ -1,0 +1,636 @@
+{
+ "checked_at": "2026-11-18T16:17:30",
+ "results": [
+  {
+   "query_name": "brand",
+   "query": "STRATRONIX",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "STRATRONIX",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 2,
+     "status": 202,
+     "bytes": 14236
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "STRATRONIX",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "dxzhgl.miit.gov.cn",
+      "beian.miit.gov.cn",
+      "beian.mps.gov.cn",
+      "go.microsoft.com",
+      "storage.live.com",
+      "s.bingparachute.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 23,
+     "status": 200,
+     "bytes": 87612
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "STRATRONIX",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14578
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "STRATRONIX",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5368
+    },
+    "google": {
+     "engine": "google",
+     "query": "STRATRONIX",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "brand_long",
+   "query": "\"Stratronix Technology (Shenzhen)\"",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "\"Stratronix Technology (Shenzhen)\"",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 2,
+     "status": 202,
+     "bytes": 14316
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "\"Stratronix Technology (Shenzhen)\"",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "north-standard.com",
+      "ts1.tc.mm.bing.net",
+      "northstandard.com",
+      "baike.baidu.com",
+      "www.sohu.com",
+      "www.csoa.cn"
+     ],
+     "suggested": [],
+     "brand_mentions": 26,
+     "status": 200,
+     "bytes": 103061
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "\"Stratronix Technology (Shenzhen)\"",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14674
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "\"Stratronix Technology (Shenzhen)\"",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5404
+    },
+    "google": {
+     "engine": "google",
+     "query": "\"Stratronix Technology (Shenzhen)\"",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "product",
+   "query": "STRATRONIX STA-100",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "STRATRONIX STA-100",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 2,
+     "status": 202,
+     "bytes": 14264
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "STRATRONIX STA-100",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "dxzhgl.miit.gov.cn",
+      "beian.miit.gov.cn",
+      "beian.mps.gov.cn",
+      "go.microsoft.com",
+      "storage.live.com",
+      "s.bingparachute.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 23,
+     "status": 200,
+     "bytes": 87953
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "STRATRONIX STA-100",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14595
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "STRATRONIX STA-100",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5378
+    },
+    "google": {
+     "engine": "google",
+     "query": "STRATRONIX STA-100",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "category",
+   "query": "private AI agent appliance",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "private AI agent appliance",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 202,
+     "bytes": 14274
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "private AI agent appliance",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "go.microsoft.com",
+      "dxzhgl.miit.gov.cn",
+      "beian.miit.gov.cn",
+      "beian.mps.gov.cn",
+      "storage.live.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 82150
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "private AI agent appliance",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14629
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "private AI agent appliance",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5390
+    },
+    "google": {
+     "engine": "google",
+     "query": "private AI agent appliance",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "geo",
+   "query": "Shenzhen AI hardware company STRATRONIX",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "Shenzhen AI hardware company STRATRONIX",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 2,
+     "status": 202,
+     "bytes": 14324
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "Shenzhen AI hardware company STRATRONIX",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "dxzhgl.miit.gov.cn",
+      "beian.miit.gov.cn",
+      "beian.mps.gov.cn",
+      "go.microsoft.com",
+      "storage.live.com",
+      "s.bingparachute.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 23,
+     "status": 200,
+     "bytes": 88399
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "Shenzhen AI hardware company STRATRONIX",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14666
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "Shenzhen AI hardware company STRATRONIX",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5405
+    },
+    "google": {
+     "engine": "google",
+     "query": "Shenzhen AI hardware company STRATRONIX",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "geo_id",
+   "query": "perangkat AI agent",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "perangkat AI agent",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 202,
+     "bytes": 14270
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "perangkat AI agent",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "dxzhgl.miit.gov.cn",
+      "beian.miit.gov.cn",
+      "beian.mps.gov.cn",
+      "go.microsoft.com",
+      "storage.live.com",
+      "s.bingparachute.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 88007
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "perangkat AI agent",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14609
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "perangkat AI agent",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5380
+    },
+    "google": {
+     "engine": "google",
+     "query": "perangkat AI agent",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "geo_ar",
+   "query": "جهاز الذكاء الاصطناعي",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "جهاز الذكاء الاصطناعي",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 202,
+     "bytes": 14282
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "جهاز الذكاء الاصطناعي",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "drillingequipmentresources.com",
+      "ts1.tc.mm.bing.net",
+      "www.grayfordindustrial.com",
+      "www.sanyglobal.com",
+      "drillingequip.com",
+      "www.drillmec.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 106110
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "جهاز الذكاء الاصطناعي",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14872
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "جهاز الذكاء الاصطناعي",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5478
+    },
+    "google": {
+     "engine": "google",
+     "query": "جهاز الذكاء الاصطناعي",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  },
+  {
+   "query_name": "geo_ru",
+   "query": "Shenzhen AI agent hardware manufacturer",
+   "engines": {
+    "duckduckgo": {
+     "engine": "duckduckgo",
+     "query": "Shenzhen AI agent hardware manufacturer",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 202,
+     "bytes": 14288
+    },
+    "bing": {
+     "engine": "bing",
+     "query": "Shenzhen AI agent hardware manufacturer",
+     "ok": true,
+     "blocked": false,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [
+      "www.w3.org",
+      "schemas.live.com",
+      "cn.bing.com",
+      "r.bing.com",
+      "th.bing.com",
+      "business.bing.com",
+      "dxzhgl.miit.gov.cn",
+      "beian.miit.gov.cn",
+      "beian.mps.gov.cn",
+      "go.microsoft.com",
+      "storage.live.com",
+      "s.bingparachute.com"
+     ],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 88882
+    },
+    "yandex": {
+     "engine": "yandex",
+     "query": "Shenzhen AI agent hardware manufacturer",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 14666
+    },
+    "mojeek": {
+     "engine": "mojeek",
+     "query": "Shenzhen AI agent hardware manufacturer",
+     "ok": false,
+     "blocked": true,
+     "our_rank": null,
+     "our_hits": 0,
+     "competitors": [],
+     "suggested": [],
+     "brand_mentions": 0,
+     "status": 200,
+     "bytes": 5405
+    },
+    "google": {
+     "engine": "google",
+     "query": "Shenzhen AI agent hardware manufacturer",
+     "ok": false,
+     "error": "HTTPError: HTTP Error 429: Too Many Requests"
+    }
+   }
+  }
+ ]
+}

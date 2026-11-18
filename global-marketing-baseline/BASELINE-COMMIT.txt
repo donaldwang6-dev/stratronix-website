@@ -1,0 +1,18 @@
+STRATRONIX 全球市场推广根基 · 基线 commit
+=========================================
+基线版本   : v1.0
+基线日期   : 2026-11-18
+Commit     : e36e7bce58820db2126f4cec5ec25fc8d1f4b7df
+短哈希     : e36e7bce
+提交说明   : 🌍 全球市场推广根基基线 v1.0 · 2026-11-18 LOCKED
+归档文件数 : 477（另本文件与 MANIFEST.md 不计入）
+归档体积   : 9.3 MB
+
+🔒 本基线状态：永久冻结
+- 已提交内容禁止修改 / 删除
+- 后续增量走 05-patches/，原基线保持原样
+- 与主站 www.stratronix.ai 物理隔离
+
+恢复基线方法：
+  git checkout e36e7bce58820db2126f4cec5ec25fc8d1f4b7df -- global-marketing-baseline/
+  git log --oneline -- global-marketing-baseline/

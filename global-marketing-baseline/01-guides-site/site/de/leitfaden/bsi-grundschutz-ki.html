@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BSI-Grundschutz und KI-Systeme: Anforderungen für Unternehmen | STRATRONIX</title>
+<meta name="description" content="BSI-Grundschutz und KI: Wie der IT-Grundschutz bei KI-Einsatz wirkt, welche Rollen und Bausteine greifen und wie lokale KI die Anforderungen erfüllt.">
+<meta name="keywords" content="BSI-Grundschutz KI, IT-Grundschutz KI-Systeme, BSI C5, Informationssicherheit KI, NIS2 KI, STRATRONIX STA-100">
+<meta name="author" content="STRATRONIX">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="geo.region" content="DE">
+<link rel="canonical" href="https://stratronix-guides.vercel.app/de/leitfaden/bsi-grundschutz-ki">
+<link rel="alternate" hreflang="de" href="https://stratronix-guides.vercel.app/de/leitfaden/bsi-grundschutz-ki">
+<link rel="alternate" hreflang="x-default" href="https://stratronix-guides.vercel.app/en">
+<meta property="og:title" content="BSI-Grundschutz und KI-Systeme: Anforderungen für Unternehmen | STRATRONIX">
+<meta property="og:description" content="BSI-Grundschutz und KI: Wie der IT-Grundschutz bei KI-Einsatz wirkt, welche Rollen und Bausteine greifen und wie lokale KI die Anforderungen erfüllt.">
+<meta property="og:locale" content="de_DE">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://stratronix-guides.vercel.app/de/leitfaden/bsi-grundschutz-ki">
+<meta property="og:image" content="https://www.stratronix.ai/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "STRATRONIX",
+  "legalName": "Stratronix Technology (Shenzhen) Company, Limited",
+  "url": "https://www.stratronix.ai",
+  "logo": "https://www.stratronix.ai/logo.png",
+  "email": "sales@stratronix.ai",
+  "telephone": "+86-136-3296-8417",
+  "foundingDate": "2026-04-24",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Shenzhen, China"
+  },
+  "areaServed": [
+    "Germany",
+    "DACH",
+    "European Union",
+    "Worldwide"
+  ],
+  "knowsLanguage": [
+    "de",
+    "en",
+    "zh"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 1203D, Building C6, Hengfeng Industrial, No. 739 Zhoushi Road, Hangcheng Street, Bao'an District",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "postalCode": "518101",
+    "addressCountry": "CN"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "BSI-Grundschutz und KI-Systeme: Sicherheit als Betriebsanforderung",
+  "description": "BSI-Grundschutz und KI: Wie der IT-Grundschutz bei KI-Einsatz wirkt, welche Rollen und Bausteine greifen und wie lokale KI die Anforderungen erfüllt.",
+  "inLanguage": "de",
+  "url": "https://stratronix-guides.vercel.app/de/leitfaden/bsi-grundschutz-ki",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://stratronix-guides.vercel.app/de/leitfaden/bsi-grundschutz-ki"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "STRATRONIX",
+    "url": "https://www.stratronix.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "STRATRONIX",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.stratronix.ai/logo.png"
+    }
+  },
+  "image": "https://www.stratronix.ai/logo.png",
+  "about": {
+    "@type": "Product",
+    "name": "STRATRONIX STA-100 Workie",
+    "offers": {
+      "@type": "Offer",
+      "price": "399",
+      "priceCurrency": "EUR"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Gilt der BSI-Grundschutz auch für private Unternehmen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Grundschutz ist für den öffentlichen Bereich geschaffen, wird aber breit als Orientierungsrahmen genutzt. Unternehmen nutzen die Bausteine, um die Vollständigkeit ihrer Maßnahmen zu prüfen. Entscheidend ist nicht das Etikett, sondern dass Anforderungen wie Zugriffsschutz, Protokollierung und Notfallmanagement nachvollziehbar beschrieben und regelmäßig überprüft werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist beim Betrieb von KI-Systemen sicherheitskritisch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vor allem drei Punkte: die Daten, die das System erhält, der Ort, an dem die Verarbeitung stattfindet, und die Nachvollziehbarkeit der Ausgaben. Ein lokaler Betrieb adressiert alle drei, weil Daten im eigenen Raum bleiben, die Protokolle intern vorliegen und keine externen Freigaben für jede Anfrage nötig sind. Das vereinfacht zudem die Vorbereitung auf audits erheblich."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie verhält sich eine lokale Appliance zur NIS2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lokaler Betrieb reduziert das Risiko, ersetzt aber die Anforderungen der NIS2-Richtlinie nicht. Betroffene Einrichtungen müssen weiterhin Risikomanagement, Zugriffskontrolle, Meldepflichten und ein Lieferkettenmanagement organisieren. Der Vorteil liegt darin, dass weniger externe Dienstleister in die Lieferkette einbezogen werden müssen und die Bewertung einfacher wird."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was kostet die Anschaffung und wie lange hält die Hardware?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der STRATRONIX STA-100 kostet €399 pro Stück, im Zehnerpaket €3.990 (10 Stück), ohne laufende Abo-Kosten. Die Installation dauert 8–10 Minuten, und die Hardware-Garantie beträgt zwei Jahre. Der Preis wird bei der Bestellung verbindlich bestätigt. Weitere technische Details finden Sie auf der Produktseite und im Beratungsangebot."
+      }
+    }
+  ]
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.75; max-width: 880px; margin: 0 auto; padding: 30px 22px 80px 22px; color: #1a1a2e; background: #fcfcfc; }
+h1 { color: #E6417F; font-size: 1.95rem; border-bottom: 4px solid #E6417F; padding-bottom: 14px; margin-bottom: 20px; }
+h2 { color: #E6417F; font-size: 1.3rem; margin-top: 34px; border-left: 5px solid #E6417F; padding-left: 14px; }
+h3 { font-size: 1.05rem; margin-top: 22px; }
+a { color: #E6417F; text-decoration: none; font-weight: 500; }
+a:hover { text-decoration: underline; }
+table { width: 100%; border-collapse: collapse; margin: 22px 0; }
+th, td { padding: 10px 14px; border: 1px solid #e2e2e8; text-align: left; vertical-align: top; }
+th { background: #E6417F; color: #fff; font-weight: 600; }
+.meta { color: #666; font-size: 0.9em; padding: 14px 18px; background: #fff; border: 1px solid #e2e2e8; border-radius: 6px; margin-bottom: 22px; }
+.cta-box { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: #fff; padding: 28px; border-radius: 10px; margin: 30px 0; text-align: center; }
+.cta-box h2 { color: #fff; border: none; padding: 0; margin: 0 0 10px 0; }
+.cta-box a { color: #fff; background: rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 6px; display: inline-block; margin: 6px; }
+.faq-item { border: 1px solid #e2e2e8; background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+.faq-item b { color: #E6417F; }
+.backlink { font-size: 0.95em; margin-bottom: 18px; }
+footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
+</style>
+</head>
+<body>
+<div class="meta"><strong>STRATRONIX</strong> · <strong>Deutschland</strong> · <strong>Deutsch</strong> · Thema: <strong>BSI-Grundschutz und KI-Systeme: Anforderungen für Unternehmen</strong> · On-Premise-KI ohne Cloud</div>
+<p class="backlink"><a href="https://www.stratronix.ai/de/leitfaden">&larr; Alle Leitfäden</a> · <a href="https://www.stratronix.ai/de">Zur deutschen Startseite</a></p>
+<article>
+<h1>BSI-Grundschutz und KI-Systeme: Sicherheit als Betriebsanforderung</h1>
+<p>Der IT-Grundschutz des Bundesamtes für Sicherheit in der Informationstechnik (BSI) beschreibt, wie Organisationen ihre Informationstechnik absichern. Er gilt nicht nur für Behörden, sondern wird in Wirtschaft und Verwaltung vielfach als Referenzrahmen verwendet.</p><p>KI-Systeme verändern Anforderungen an der Informationssicherheit, weil sie Daten verarbeiten, Muster erkennen und Entscheidungen vorbereiten. Wie der Grundschutz darauf reagiert, lässt sich konkret zeigen.</p><h2>Was der Grundschutz für KI leistet</h2><p>Der IT-Grundschutz gliedert Sicherheitsanforderungen in Bausteine, Rollen und Anwendungsbereiche. Für KI bedeutet das vor allem: Bedrohungen wie Datenabfluss, Manipulation von Modellen oder unerlaubte Einsicht in Eingaben werden systematisch adressiert.</p><p>Wer den Grundschutz ernst nimmt, behandelt KI nicht als Add-on, sondern als zusätzlichen Baustein in der Sicherheitsarchitektur. Besonders wichtig sind dabei die Rollentrennung, die Protokollierung und die nachvollziehbare Datenzuführung zum System.</p><ul><li>Bausteine für den Betrieb von KI-Systemen ergänzen</li><li>Datenschutz und Informationssicherheit gemeinsam betrachten</li><li>Rollen und Verantwortlichkeiten sauber trennen</li><li>Protokollierung und Zugriffsschutz festlegen</li><li>Lieferkette und Lieferanten bewerten</li></ul><h2>Die größten Risiken im KI-Betrieb</h2><p>Das zentrale Risiko ist der unkontrollierte Abfluss von Daten. Wenn Eingaben zur Auswertung an externe Dienste gehen, verlieren Unternehmen die Kontrolle über Umfang, Speicherdauer und Empfänger. Schutzvorkehrungen auf Netzwerkebene greifen dann nur noch teilweise.</p><p>Ein zweites Risiko ist die Undurchsichtigkeit von Modellentscheidungen. Ohne Protokollierung von Eingabe, Modellauswahl und Ausgabe lässt sich im Nachhinein nicht klären, warum ein Ergebnis zustande kam. Für audits und Streitfälle ist das der entscheidende Punkt.</p><ol><li>Eingabedaten und Empfängerliste je System erfassen.</li><li>Netztrennung oder Allowlisting für KI-Dienste festlegen.</li><li>Protokollierung von Eingaben und Ausgaben einrichten.</li><li>Patch- und Update-Prozess für das System beschreiben.</li><li>Zugriffsrechte nach Rollen vergeben und jährlich prüfen.</li></ol><h2>Lokale KI als Unterstützung der Sicherheitsziele</h2><p>Der Grundschutz bewertet Technik und Organisation gemeinsam. Eine Appliance, die ohne Cloud-Zugriff arbeitet, verkleinert die Angriffsfläche, weil keine dauerhafte Verbindung zu fremden Servern besteht und keine Datenpakete das Haus verlassen.</p><p>Zusätzlich vereinfacht sich die Nachweisführung. Protokolle liegen im eigenen Haus, Zuständigkeiten bleiben intern, und die Abhängigkeit von einem externen Anbieter sinkt. Der STRATRONIX STA-100 arbeitet offline und unterstützt Modelle wie Qwen2.5-72B, DeepSeek-V3 oder Llama.</p><blockquote>Je weniger Daten einen Perimeter verlassen, desto kürzer wird die Liste der Gegenmaßnahmen.</blockquote><h2>Praxisreferenz und Beschaffung</h2><p>Ein belegter Referenzfall stammt aus Shenzhen. Im Luohu People's Hospital liefen 30 Geräte des Typs STA-100 sechs Monate ohne ungeplante Ausfälle. Ärzte sparten dabei 2,1 Stunden pro Tag, weil Auswertungen lokal verfügbar waren.</p><p>Für die Beschaffung spricht zudem die einfache Handhabung. Die Installation dauert 8–10 Minuten, es gibt kein Abo, und STRATRONIX gewährt zwei Jahre Garantie auf die Hardware. Der Preis liegt bei €399 pro Stück, das Zehnerpaket bei €3.990 (10 Stück).</p><h2>Sicherheitsanforderungen im Vergleich</h2><table><thead><tr><th>Anforderung</th><th>Cloud-KI</th><th>Lokale KI</th></tr></thead><tbody><tr><td>Datenabfluss</td><td>hohe Abhängigkeit vom Anbieter</td><td>gering, kein Cloud-Zugriff</td></tr><tr><td>Protokollierung</td><td>über Anbieter verfügbar</td><td>direkt im eigenen Haus</td></tr><tr><td>Verfügbarkeit bei Störung</td><td>eingeschränkt</td><td>offline weiter nutzbar</td></tr><tr><td>Zugriffskontrolle</td><td>gemeinsam mit Anbieter</td><td>intern steuerbar</td></tr><tr><td>Lieferkette</td><td>mehrere Dienstleister</td><td>weniger Beteiligte</td></tr><tr><td>Update-Prozess</td><td>anbieterseitig</td><td>kontrolliert durch das Unternehmen</td></tr></tbody></table><h2>Häufige Fragen</h2><div class="faq-item"><b>Gilt der BSI-Grundschutz auch für private Unternehmen?</b><br>Der Grundschutz ist für den öffentlichen Bereich geschaffen, wird aber breit als Orientierungsrahmen genutzt. Unternehmen nutzen die Bausteine, um die Vollständigkeit ihrer Maßnahmen zu prüfen. Entscheidend ist nicht das Etikett, sondern dass Anforderungen wie Zugriffsschutz, Protokollierung und Notfallmanagement nachvollziehbar beschrieben und regelmäßig überprüft werden.</div><div class="faq-item"><b>Was ist beim Betrieb von KI-Systemen sicherheitskritisch?</b><br>Vor allem drei Punkte: die Daten, die das System erhält, der Ort, an dem die Verarbeitung stattfindet, und die Nachvollziehbarkeit der Ausgaben. Ein lokaler Betrieb adressiert alle drei, weil Daten im eigenen Raum bleiben, die Protokolle intern vorliegen und keine externen Freigaben für jede Anfrage nötig sind. Das vereinfacht zudem die Vorbereitung auf audits erheblich.</div><div class="faq-item"><b>Wie verhält sich eine lokale Appliance zur NIS2?</b><br>Lokaler Betrieb reduziert das Risiko, ersetzt aber die Anforderungen der NIS2-Richtlinie nicht. Betroffene Einrichtungen müssen weiterhin Risikomanagement, Zugriffskontrolle, Meldepflichten und ein Lieferkettenmanagement organisieren. Der Vorteil liegt darin, dass weniger externe Dienstleister in die Lieferkette einbezogen werden müssen und die Bewertung einfacher wird.</div><div class="faq-item"><b>Was kostet die Anschaffung und wie lange hält die Hardware?</b><br>Der STRATRONIX STA-100 kostet €399 pro Stück, im Zehnerpaket €3.990 (10 Stück), ohne laufende Abo-Kosten. Die Installation dauert 8–10 Minuten, und die Hardware-Garantie beträgt zwei Jahre. Der Preis wird bei der Bestellung verbindlich bestätigt. Weitere technische Details finden Sie auf der Produktseite und im Beratungsangebot.</div><h2>Weiterführende Seiten</h2><ul><li><a href="https://www.stratronix.ai/de/leitfaden">Leitfaden</a></li><li><a href="https://www.stratronix.ai/de/products">Produktübersicht</a></li><li><a href="https://www.stratronix.ai/de/blog/paa-data-sovereignty-europa-2026">Blog: Datensouveränität in Europa</a></li><li><a href="https://www.stratronix.ai/de/contact">Kontakt</a></li></ul>
+<div class="cta-box">
+  <h2>STA-100 in Ihrem Unternehmen testen</h2>
+  <p>On-Premise-KI: Deutschsprachig, ohne Cloud-Zugriff, 2 Jahre Garantie, 399&nbsp;€ pro Gerät.</p>
+  <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a>
+  <a href="https://www.stratronix.ai/de/sta100-buy">Zum Produkt</a>
+  <a href="https://www.stratronix.ai/de/contact">Kontakt</a>
+</div>
+</article>
+<footer>
+  <p>&copy; 2026 Stratronix Technology (Shenzhen) Company, Limited</p>
+  <p>Deutsch · Deutschland · EU KI-Verordnung · DSGVO · PAA (Private AI Agent Appliance)</p>
+  <p><a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · <a href="https://www.stratronix.ai/de/contact">Kontakt</a> · <a href="https://www.stratronix.ai/de/sta100-buy">Produkt</a> · <a href="https://www.stratronix.ai/de/leitfaden">Leitfäden</a></p>
+</footer>
+</body>
+</html>

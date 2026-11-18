@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI untuk Mall & Retail Indonesia — Chatbot + Customer Service | STRATRONIX STA-100</title>
+<meta name="description" content="STRATRONIX STA-100 solusi AI on-premise untuk mall dan retail di Indonesia. Chatbot multibahasa, rekomendasi produk, analisis sentimen. Tanpa cloud.">
+<link rel="canonical" href="https://stratronix-guides.vercel.app/id/bpo-mall">
+<link rel="alternate" hreflang="id" href="https://stratronix-guides.vercel.app/id/bpo-mall">
+<link rel="alternate" hreflang="x-default" href="https://stratronix-guides.vercel.app/en">
+<style>
+:root{--bg:#000;--card:#0a0a0f;--brand:#E6417F;--brand-l:#FF6B9D;--tx:#fff;--dim:#888899;--bd:rgba(230,65,127,.18)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Inter",-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+.nav{position:sticky;top:0;z-index:99;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;background:rgba(0,0,0,.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd)}
+.nav .brand{font-weight:800;letter-spacing:.5px;color:var(--tx);text-decoration:none;font-size:17px}
+.nav .brand em{color:var(--brand);font-style:normal}
+.nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.nav a{color:var(--dim);text-decoration:none;font-size:14px}
+.nav a:hover{color:var(--brand-l)}
+main{max-width:920px;margin:0 auto;padding:40px 24px 80px}
+h1{font-size:clamp(26px,4vw,40px);line-height:1.25;margin:0 0 18px;font-weight:800;letter-spacing:-.5px}
+h2{font-size:22px;margin:40px 0 12px;color:var(--brand-l);font-weight:700}
+h3{font-size:17px;margin:26px 0 8px;font-weight:700}
+p,li{color:#d6d6e0;font-size:16px}
+strong{color:#fff}
+a{color:var(--brand-l)}
+article>ul,article>ol{padding-left:22px}
+article>ul li,article>ol li{margin:6px 0}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px;background:var(--card);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.07);color:#dcdce6}
+th{background:rgba(230,65,127,.12);color:#fff;font-weight:700}
+tr:last-child td{border-bottom:none}
+.cta{margin:32px 0;padding:22px 24px;background:linear-gradient(135deg,rgba(230,65,127,.16),rgba(0,0,0,0));border:1px solid var(--bd);border-radius:16px}
+.cta a{display:inline-block;margin:6px 10px 0 0;padding:11px 20px;border-radius:999px;background:var(--brand);color:#fff;text-decoration:none;font-weight:700;font-size:15px}
+.cta a.ghost{background:transparent;border:1px solid var(--brand);color:var(--brand-l)}
+footer{border-top:1px solid var(--bd);padding:30px 24px 50px;color:var(--dim);font-size:14px;text-align:center}
+footer a{color:var(--dim)}
+@media(max-width:640px){.nav{flex-direction:column;align-items:flex-start}.nav ul{gap:12px}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://stratronix-guides.vercel.app/id/#organization",
+  "name": "Stratronix Technology (Shenzhen) Company, Limited",
+  "alternateName": "STRATRONIX",
+  "url": "https://stratronix-guides.vercel.app/id/",
+  "logo": "https://www.stratronix.ai/images/logo.png",
+  "email": "sales@stratronix.ai",
+  "telephone": "+86 13632968417",
+  "description": "STRATRONIX membuat STA-100 Workie, perangkat AI on-premise (PAA) dengan Bahasa Indonesia, jalan lokal tanpa cloud, garansi 2 tahun.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 1203D, Building C6, Hengfeng Industrial, No. 739 Zhoushi Road, Hangcheng Street, Bao'an District",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "postalCode": "518101",
+    "addressCountry": "CN"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Indonesia"
+  },
+  "knowsLanguage": [
+    "id",
+    "en",
+    "zh"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "STRATRONIX STA-100 Workie",
+  "sku": "STA-100",
+  "brand": {
+    "@type": "Brand",
+    "name": "STRATRONIX"
+  },
+  "description": "Perangkat AI on-premise (Personal AI Agent Appliance) dengan inferensi LLM lokal, mendukung Bahasa Indonesia, dapat digunakan tanpa internet, garansi 2 tahun.",
+  "category": "AI Appliance / On-premise LLM",
+  "url": "https://stratronix-guides.vercel.app/id/bpo-mall",
+  "image": "https://www.stratronix.ai/images/sta100-1.png",
+  "offers": {
+    "@type": "Offer",
+    "price": "399",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://stratronix-guides.vercel.app/id/bpo-mall",
+    "seller": {
+      "@type": "Organization",
+      "name": "STRATRONIX",
+      "email": "sales@stratronix.ai"
+    },
+    "warranty": "Garansi perangkat keras 2 tahun"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "🎯 Tantangan Retail Indonesia",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multi-language: Touris China, Arab, lokal — semua butuh bahasa berbeda Peak season: Harbolnas, Ramadan, Christmas — beban customer service x10 Data privacy: Data pelanggan tidak boleh sembarangan ke cloud Koneksi internet: Tidak stabil di beberapa area retail"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "🛒 AI Customer Service Chatbot",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bahasa Indonesia, Inggris, Mandarin, Arab Respon dalam 1 detik, 24/7 FAQ otomatis, tracking order, complaint handling Reduce beban CS manusia 60-80%"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "📊 Product Recommendation",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Personalisasi berdasarkan histori browsing Edge inference — real-time, latency rendah Cross-sell dan up-sell rekomendasi"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "⭐ Sentiment Analysis Review",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Analisis review produk dari berbagai platform Deteksi produk yang bermasalah lebih cepat Insight untuk improvement"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "💰 Pricing Optimization",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Analisis competitor pricing Dynamic pricing recommendations Demand forecasting"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Use Case: Department Store 10 Lokasi",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Aspek Tanpa AI Dengan STA-100 Biaya AI/bulan Rp 150 juta (langganan cloud AI) Rp 0 (sekali beli) Respon time 5-10 menit 1 detik Availability 8 jam kerja 24/7 Bahasa didukung 1-2 bahasa 10+ bahasa"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Spesifikasi",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LLM: Qwen2.5-72B, DeepSeek-V3, Llama 3.3 User agents: 100+ simultan Bahasa: Indonesia, Inggris, Mandarin, Arab, dll. Offline-capable"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hubungi Kami",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "📧 sales@stratronix.ai 🌐 www.stratronix.ai 📞 +86 13632968417"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Siap mencoba STA-100 di tim Anda?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Demo 30 menit dalam Bahasa Indonesia, tanpa komitmen. Kami kirim perbandingan biaya untuk tim Anda. Email sales@stratronix.ai Hubungi kami STRATRONIX · Stratronix Technology (Shenzhen) Company, Limited Perangkat AI on-premise (PAA) — Bahasa Indonesia, jalan lokal tanpa cloud, garansi 2 tahun. sales@"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body><nav class="nav">
+  <a class="brand" href="/id/"><em>STRATRONIX</em> · Indonesia</a>
+  <ul>
+    <li><a href="/id/ai-agent-appliance">Produk</a></li>
+    <li><a href="/id/sta100-callcenter">BPO &amp; Call Center</a></li>
+    <li><a href="/id/sta100-msp">MSP &amp; Reseller</a></li>
+    <li><a href="/id/sta100-ecommerce">E-commerce</a></li>
+    <li><a href="/id/harga-sta100">Harga</a></li>
+    <li><a href="/id/contact">Kontak</a></li>
+    <li><a href="/">English</a></li>
+  </ul>
+</nav>
+<main>
+<article>
+<h1>AI untuk Mall & Retail Indonesia — Chatbot + Customer Service</h1>
+
+<p><strong>STRATRONIX STA-100</strong> memberikan kemampuan AI untuk mall, department store, dan retail chain di Indonesia. On-premise, data tidak ke cloud, Bahasa Indonesia lengkap.</p>
+
+<h2>🎯 Tantangan Retail Indonesia</h2>
+<ul>
+<li><strong>Multi-language:</strong> Touris China, Arab, lokal — semua butuh bahasa berbeda</li>
+<li><strong>Peak season:</strong> Harbolnas, Ramadan, Christmas — beban customer service x10</li>
+<li><strong>Data privacy:</strong> Data pelanggan tidak boleh sembarangan ke cloud</li>
+<li><strong>Koneksi internet:</strong> Tidak stabil di beberapa area retail</li>
+<li><strong>Biaya customer service:</strong> Gaji CS naik 10-15% per tahun</li>
+</ul>
+
+<h2>✅ Solusi STA-100 untuk Retail</h2>
+
+<h3>🛒 AI Customer Service Chatbot</h3>
+<ul>
+<li>Bahasa Indonesia, Inggris, Mandarin, Arab</li>
+<li>Respon dalam 1 detik, 24/7</li>
+<li>FAQ otomatis, tracking order, complaint handling</li>
+<li>Reduce beban CS manusia 60-80%</li>
+</ul>
+
+<h3>📊 Product Recommendation</h3>
+<ul>
+<li>Personalisasi berdasarkan histori browsing</li>
+<li>Edge inference — real-time, latency rendah</li>
+<li>Cross-sell dan up-sell rekomendasi</li>
+</ul>
+
+<h3>⭐ Sentiment Analysis Review</h3>
+<ul>
+<li>Analisis review produk dari berbagai platform</li>
+<li>Deteksi produk yang bermasalah lebih cepat</li>
+<li>Insight untuk improvement</li>
+</ul>
+
+<h3>💰 Pricing Optimization</h3>
+<ul>
+<li>Analisis competitor pricing</li>
+<li>Dynamic pricing recommendations</li>
+<li>Demand forecasting</li>
+</ul>
+
+<h2>Use Case: Department Store 10 Lokasi</h2>
+
+<table>
+<thead><tr><th>Aspek</th><th>Tanpa AI</th><th>Dengan STA-100</th></tr></thead>
+<tbody>
+<tr><td>Biaya AI/bulan</td><td>Rp 150 juta (langganan cloud AI)</td><td>Rp 0 (sekali beli)</td></tr>
+<tr><td>Respon time</td><td>5-10 menit</td><td>1 detik</td></tr>
+<tr><td>Availability</td><td>8 jam kerja</td><td>24/7</td></tr>
+<tr><td>Bahasa didukung</td><td>1-2 bahasa</td><td>10+ bahasa</td></tr>
+</tbody>
+</table>
+
+<h2>Spesifikasi</h2>
+<ul>
+<li>LLM: Qwen2.5-72B, DeepSeek-V3, Llama 3.3</li>
+<li>User agents: 100+ simultan</li>
+<li>Bahasa: Indonesia, Inggris, Mandarin, Arab, dll.</li>
+<li>Offline-capable</li>
+<li>Garansi 2 tahun</li>
+</ul>
+
+<h2>Harga</h2>
+<table>
+<thead><tr><th>Model</th><th>IDR</th></tr></thead>
+<tbody>
+<tr><td>STA-100 Standard</td><td>Rp 6,4 juta (≈$399)</td></tr>
+<tr><td>STA-100 Pro</td><td>Rp 6,4 juta (≈$399)</td></tr>
+<tr><td>Enterprise (10+ unit)</td><td>Hubungi kami</td></tr>
+</tbody>
+</table>
+
+<h2>Hubungi Kami</h2>
+<ul>
+<li>📧 <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a></li>
+<li>🌐 <a href="https://www.stratronix.ai">www.stratronix.ai</a></li>
+<li>📞 +86 13632968417</li>
+</ul>
+<div class="cta">
+  <h2 style="margin-top:0">Siap mencoba STA-100 di tim Anda?</h2>
+  <p>Demo 30 menit dalam Bahasa Indonesia, tanpa komitmen. Kami kirim perbandingan biaya untuk tim Anda.</p>
+  <a href="mailto:sales@stratronix.ai">Email sales@stratronix.ai</a>
+  <a class="ghost" href="/id/contact">Hubungi kami</a>
+</div>
+</main>
+<footer>
+  <p><strong style="color:#fff">STRATRONIX</strong> · Stratronix Technology (Shenzhen) Company, Limited</p>
+  <p>Perangkat AI on-premise (PAA) — Bahasa Indonesia, jalan lokal tanpa cloud, garansi 2 tahun.</p>
+  <p>
+    <a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> ·
+    <a href="https://www.stratronix.ai/id/contact">Kontak</a> ·
+    <a href="https://www.stratronix.ai/id/harga-sta100">Harga</a> ·
+    <a href="https://www.stratronix.ai">www.stratronix.ai</a>
+  </p>
+  <p>© 2026 STRATRONIX. All rights reserved.</p>
+</footer>
+</body>
+</html>

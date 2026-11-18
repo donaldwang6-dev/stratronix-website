@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM yang Dikembangkan di Shenzhen untuk Penggunaan Lokal | STRATRONIX</title>
+<meta name="description" content="Model bahasa besar yang bisa dijalankan di perangkat sendiri, termasuk MiniMax dan model lain yang tersedia untuk inferensi lokal di Indonesia.">
+<meta name="keywords" content="LLM Shenzhen, model bahasa besar lokal, MiniMax, inferensi lokal, STRATRONIX STA-100">
+<meta name="author" content="STRATRONIX">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="geo.region" content="ID">
+<link rel="canonical" href="https://stratronix-guides.vercel.app/id/panduan/shenzhen-llm">
+<link rel="alternate" hreflang="id" href="https://stratronix-guides.vercel.app/id/panduan/shenzhen-llm">
+<link rel="alternate" hreflang="x-default" href="https://stratronix-guides.vercel.app/en">
+<meta property="og:title" content="LLM yang Dikembangkan di Shenzhen untuk Penggunaan Lokal | STRATRONIX">
+<meta property="og:description" content="Model bahasa besar yang bisa dijalankan di perangkat sendiri, termasuk MiniMax dan model lain yang tersedia untuk inferensi lokal di Indonesia.">
+<meta property="og:locale" content="id_ID">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://stratronix-guides.vercel.app/id/panduan/shenzhen-llm">
+<meta property="og:image" content="https://www.stratronix.ai/logo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "STRATRONIX",
+  "legalName": "Stratronix Technology (Shenzhen) Company, Limited",
+  "url": "https://www.stratronix.ai",
+  "logo": "https://www.stratronix.ai/logo.png",
+  "email": "sales@stratronix.ai",
+  "telephone": "+86 13632968417",
+  "foundingDate": "2026-04-24",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Shenzhen, China"
+  },
+  "areaServed": [
+    "Indonesia",
+    "Worldwide"
+  ],
+  "knowsLanguage": [
+    "id",
+    "en",
+    "zh"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Room 1203D, Building C6, Hengfeng Industrial, No. 739 Zhoushi Road, Hangcheng Street, Bao'an District",
+    "addressLocality": "Shenzhen",
+    "addressRegion": "Guangdong",
+    "postalCode": "518101",
+    "addressCountry": "CN"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Model bahasa besar dari Shenzhen yang bisa Anda pakai sendiri",
+  "description": "Model bahasa besar yang bisa dijalankan di perangkat sendiri, termasuk MiniMax dan model lain yang tersedia untuk inferensi lokal di Indonesia.",
+  "inLanguage": "id",
+  "url": "https://stratronix-guides.vercel.app/id/panduan/shenzhen-llm",
+  "mainEntityOfPage": "https://www.stratronix.ai/id/shenzhen-llm",
+  "author": {
+    "@type": "Organization",
+    "name": "STRATRONIX",
+    "url": "https://www.stratronix.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "STRATRONIX",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.stratronix.ai/logo.png"
+    }
+  },
+  "image": "https://www.stratronix.ai/logo.png",
+  "about": {
+    "@type": "Product",
+    "name": "STRATRONIX STA-100 Workie",
+    "offers": {
+      "@type": "Offer",
+      "price": "399",
+      "priceCurrency": "USD"
+    }
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Apakah model yang dijalankan lokal akan cepat usang?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Model tidak berubah sendiri, tetapi Anda yang memutuskan kapan model baru diunduh. Dalam praktiknya, sebagian besar tim menggunakan satu model yang sudah mapan untuk pekerjaan rutin dan mencadangkan model yang lebih baru untuk kasus yang lebih menantang. Ini memberi Anda kontrol yang tidak dimiliki saat memakai layanan cloud."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apa bedanya model Bahasa Indonesia dengan model umum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Model Bahasa Indonesia seperti Sahabat-AI dan SEA-Lion dilatih dengan data berbahasa Indonesia sehingga istilah administratif, gaya bahasa formal, dan konteks lokal lebih tepat. Model umum seperti Qwen2.5-72B atau MiniMax biasanya lebih kuat untuk tugas penalaran dan penulisan dalam bahasa Inggris, dan tetap bisa menjawab dalam Bahasa Indonesia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Bisakah beberapa orang memakai model yang sama di satu perangkat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bisa, tetapi hasilnya bergantung pada perangkat dan ukuran model. Untuk tim kecil dengan beberapa alur kerja ringan, satu unit biasanya cukup. Untuk tim 100 pengguna, pendekatan yang lazim adalah menambah unit dan membaginya per kasus kerja, misalnya unit untuk tim operasional dan unit untuk tim internal yang menangani dokumen sensitif."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Apakah model yang ada di perangkat bisa diganti?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bisa. Model yang berbeda dapat dimuat sesuai kebutuhan, dan Anda dapat menyimpan lebih dari satu model sekaligus bila memorinya cukup. Ini memberi fleksibilitas untuk menguji model baru tanpa membeli perangkat baru, dan untuk mengembalikan model lama ketika model baru ternyata kurang cocok untuk kasus kerja tertentu."
+      }
+    }
+  ]
+}
+</script>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.8; max-width: 860px; margin: 0 auto; padding: 30px 22px 80px 22px; color: #1a1a2e; background: #fcfcfc; }
+h1 { color: #E6417F; font-size: 1.9rem; border-bottom: 4px solid #E6417F; padding-bottom: 14px; margin-bottom: 22px; }
+h2 { color: #E6417F; font-size: 1.3rem; margin-top: 32px; border-left: 5px solid #E6417F; padding-left: 14px; }
+h3 { font-size: 1.05rem; margin-top: 20px; }
+a { color: #E6417F; text-decoration: none; font-weight: 500; }
+a:hover { text-decoration: underline; }
+blockquote { border-left: 4px solid #E6417F; padding: 14px 20px; background: #fff5fa; margin: 22px 0; color: #4a2a3a; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { padding: 10px 14px; border: 1px solid #e2e2e8; text-align: left; vertical-align: top; }
+th { background: #E6417F; color: white; font-weight: 600; }
+.meta { color: #666; font-size: 0.9em; padding: 14px 18px; background: #fff; border: 1px solid #e2e2e8; border-radius: 6px; margin-bottom: 22px; }
+.cta-box { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 28px; border-radius: 10px; margin: 30px 0; text-align: center; }
+.cta-box h2 { color: #fff; border: none; padding: 0; margin: 0 0 10px 0; }
+.cta-box a { color: white; background: rgba(255,255,255,0.2); padding: 10px 24px; border-radius: 6px; display: inline-block; margin: 6px; }
+.faq-item { border: 1px solid #e2e2e8; background: #fff; border-radius: 8px; padding: 14px 18px; margin: 12px 0; }
+.faq-item b { color: #E6417F; }
+footer { text-align: center; color: #888; font-size: 0.88em; margin-top: 60px; padding-top: 24px; border-top: 1px solid #eee; }
+</style>
+
+<script>
+(function(){
+    var bp = document.createElement("script");
+    var curProtocol = window.location.protocol.split(":")[0];
+    if (curProtocol === "https") { bp.src = "https://zz.bdstatic.com/linksubmit/push.js"; }
+    else { bp.src = "http://push.zhanzhang.baidu.com/push.js"; }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+</head>
+<body>
+<div class="meta"><strong>STRATRONIX</strong> · <strong>Indonesia</strong> · <strong>Bahasa Indonesia</strong> · Halaman ini menjelaskan topik "LLM yang Dikembangkan di Shenzhen untuk Penggunaan Lokal | STRATRONIX" untuk pembaca di Indonesia.</div>
+<article>
+<h1>Model bahasa besar dari Shenzhen yang bisa Anda pakai sendiri</h1>
+<p>Salah satu perubahan terbesar dalam AI beberapa tahun terakhir adalah tersedianya model yang bisa diunduh dan dijalankan di perangkat milik sendiri. Shenzhen adalah salah satu tempat berkembangnya model ini dengan cepat.</p><p>STRATRONIX STA-100 adalah perangkat on-premise yang dibuat untuk kebutuhan ini: menjalankan model seperti MiniMax, Qwen2.5-72B, DeepSeek-V3, ChatGLM4, ERNIE, atau Llama di dalam perangkat, plus model Bahasa Indonesia seperti Sahabat-AI dan SEA-Lion.</p><h2>Apa arti asal model bagi pengguna</h2><p>Ketika model dikembangkan di suatu negara, tim lokal punya peluang untuk menyesuaikannya: menambahkan data bahasa setempat, menyesuaikan gaya jawaban, dan memastikan istilah teknis diterjemahkan dengan benar. Model yang dilatih dengan banyak sumber Mandarin dan Asia Timur akhirnya menghasilkan jawaban yang lebih natural bagi pembaca di kawasan ini.</p><p>Bagi pembaca di Indonesia, ini berarti dua hal. Model umum yang tersedia dalam daftar perangkat, dan model Bahasa Indonesia khusus yang bisa dipilih langsung. Kemampuan menjalankan model sendiri juga membuat pembaruan model tidak bergantung pada jadwal penyedia cloud.</p><h2>Model apa saja yang didukung</h2><p>Perangkat ini mendukung model AI umum seperti Qwen2.5-72B, DeepSeek-V3, ChatGLM4, ERNIE, Llama, dan MiniMax. Model-model ini mencakup berbagai ukuran, dari yang ringan untuk tugas klasifikasi sampai yang besar untuk penalaran dan penulisan panjang.</p><p>Selain itu tersedia model Bahasa Indonesia seperti Sahabat-AI dan SEA-Lion. Model khusus ini umumnya lebih ringan, sehingga cocok untuk perangkat dengan sumber daya terbatas, dan menghasilkan jawaban yang lebih tepat untuk konteks Indonesia, termasuk istilah birokrasi dan gaya bahasa resmi.</p><h2>Mengapa menjalankan model sendiri lebih masuk akal sekarang</h2><p>Beberapa tahun lalu, menjalankan LLM sendiri berarti membeli perangkat mahal dan mengelola infrastruktur yang rumit. Sekarang perangkat on-premise berbentuk kotak desktop sudah cukup untuk menjalankan model yang dulu hanya bisa diakses di pusat data besar.</p><p>Konsekuensi ekonominya jelas. Dengan cloud AI, 100 pengguna aktif berbiaya sekitar Rp 150 juta per bulan, atau Rp 5,4 miliar dalam tiga tahun. Sepuluh unit STA-100 berbiaya $3.990, atau sekitar Rp 64 juta, dan setelah itu tidak ada tagihan. Sekitar Rp 5,3 miliar menjadi selisih yang bisa dipakai untuk hal lain.</p><h2>Cara memilih model yang sesuai</h2><p>Mulailah dari tugas yang paling sering tim kerjakan, bukan dari model terbesar. Untuk merangkum dokumen, model berukuran menengah sudah lebih dari cukup. Untuk penalaran angka atau kontrak yang rumit, model besar lebih akurat tetapi lebih berat dan lebih lambat.</p><p>Praktik yang baik adalah mencoba dua model untuk satu kasus kerja nyata, membandingkan hasilnya, lalu menetapkan satu sebagai default. Perbedaan antara model biasanya terlihat jelas pada kasus Bahasa Indonesia, di mana model yang dilatih dengan data lokal unggul pada istilah dan formalitas.</p><h2>Perbandingan model yang berjalan di cloud dan model yang berjalan lokal</h2><table><thead><tr><th>Aspek</th><th>Model di cloud</th><th>Model di STRATRONIX STA-100</th></tr></thead><tbody><tr><td>Akses</td><td>Lewat API dan langganan</td><td>Diunduh dan dijalankan sendiri</td></tr><tr><td>Data prompt</td><td>Dikirim ke penyedia</td><td>Tetap di perangkat</td></tr><tr><td>Model umum</td><td>Tergantung penyedia</td><td>Qwen2.5-72B, DeepSeek-V3, ChatGLM4, ERNIE, Llama, MiniMax</td></tr><tr><td>Model Bahasa Indonesia</td><td>Umumnya tidak tersedia</td><td>Sahabat-AI dan SEA-Lion</td></tr><tr><td>Pembaruan model</td><td>Dikerjakan penyedia</td><td>Anda yang menentukan waktu</td></tr><tr><td>Biaya 3 tahun untuk 100 pengguna</td><td>± Rp 5,4 miliar</td><td>± Rp 64 juta</td></tr><tr><td>Berjalan tanpa internet</td><td>Tidak</td><td>Ya</td></tr></tbody></table><h2>Pertanyaan yang sering diajukan</h2><div class="faq-item"><b>Apakah model yang dijalankan lokal akan cepat usang?</b><br>Model tidak berubah sendiri, tetapi Anda yang memutuskan kapan model baru diunduh. Dalam praktiknya, sebagian besar tim menggunakan satu model yang sudah mapan untuk pekerjaan rutin dan mencadangkan model yang lebih baru untuk kasus yang lebih menantang. Ini memberi Anda kontrol yang tidak dimiliki saat memakai layanan cloud.</div><div class="faq-item"><b>Apa bedanya model Bahasa Indonesia dengan model umum?</b><br>Model Bahasa Indonesia seperti Sahabat-AI dan SEA-Lion dilatih dengan data berbahasa Indonesia sehingga istilah administratif, gaya bahasa formal, dan konteks lokal lebih tepat. Model umum seperti Qwen2.5-72B atau MiniMax biasanya lebih kuat untuk tugas penalaran dan penulisan dalam bahasa Inggris, dan tetap bisa menjawab dalam Bahasa Indonesia.</div><div class="faq-item"><b>Bisakah beberapa orang memakai model yang sama di satu perangkat?</b><br>Bisa, tetapi hasilnya bergantung pada perangkat dan ukuran model. Untuk tim kecil dengan beberapa alur kerja ringan, satu unit biasanya cukup. Untuk tim 100 pengguna, pendekatan yang lazim adalah menambah unit dan membaginya per kasus kerja, misalnya unit untuk tim operasional dan unit untuk tim internal yang menangani dokumen sensitif.</div><div class="faq-item"><b>Apakah model yang ada di perangkat bisa diganti?</b><br>Bisa. Model yang berbeda dapat dimuat sesuai kebutuhan, dan Anda dapat menyimpan lebih dari satu model sekaligus bila memorinya cukup. Ini memberi fleksibilitas untuk menguji model baru tanpa membeli perangkat baru, dan untuk mengembalikan model lama ketika model baru ternyata kurang cocok untuk kasus kerja tertentu.</div><h2>Baca juga</h2><ul><li><a href="https://www.stratronix.ai/id/blog-onpremise-vs-cloud">AI on-premise versus cloud</a></li><li><a href="https://www.stratronix.ai/id/ai-agent-appliance">Perangkat AI PAA</a></li><li><a href="https://www.stratronix.ai/id/harga-sta100">Harga lengkap STA-100</a></li></ul>
+<div class="cta-box">
+  <h2>Coba STA-100 di tim Anda</h2>
+  <p>Perangkat AI on-premise: Bahasa Indonesia, jalan lokal tanpa cloud, garansi 2 tahun, harga resmi $399 per unit.</p>
+  <a href="mailto:sales@stratronix.ai">Email sales@stratronix.ai</a>
+  <a href="https://www.stratronix.ai/id/harga-sta100">Lihat harga</a>
+  <a href="https://www.stratronix.ai/id/contact">Hubungi kami</a>
+</div>
+</article>
+<footer>
+  <p>© 2026 STRATRONIX Technology (Shenzhen) Company, Limited · Stratronix Technology (Shenzhen) Company, Limited</p>
+  <p>Bahasa Indonesia · Indonesia · PAA · Private AI Agent Device</p>
+  <p><a href="mailto:sales@stratronix.ai">sales@stratronix.ai</a> · <a href="https://www.stratronix.ai/id/contact">Kontak</a> · <a href="https://www.stratronix.ai/id/harga-sta100">Harga</a> · <a href="https://www.stratronix.ai">www.stratronix.ai</a></p>
+</footer>
+</body>
+</html>
