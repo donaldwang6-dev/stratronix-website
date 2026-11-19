@@ -269,5 +269,11 @@
     }
   ],
   "trailingSlash": false,
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/google59351223038aa3c3.html",
+      "destination": "/google59351223038aa3c3"
+    }
+  ]
 }
