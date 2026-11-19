@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw — إطار مفتوح المصدر لوكلاء الذكاء الاصطناعي</title>
+<meta name="description" content="OpenClaw هو إطار عمل مفتوح المصدر (Apache 2.0) لبناء وكلاء الذكاء الاصطناعي وتشغيلهم. يأتي مدمجًا مع جهاز STA-100، ويدعم عدة نماذج لغوية وبروتوكول MCP.">
+<meta name="keywords" content="OpenClaw, إطار عمل وكيل ذكاء اصطناعي, وكيل ذكاء اصطناعي مفتوح المصدر, MCP, RAG, نماذج لغوية متعددة, Apache 2.0, STRATRONIX">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<link rel="canonical" href="https://www.stratronix.ai/ar/openclaw">
+<link rel="alternate" hreflang="en" href="https://www.stratronix.ai/openclaw">
+<link rel="alternate" hreflang="ar" href="https://www.stratronix.ai/ar/openclaw">
+<link rel="alternate" hreflang="x-default" href="https://www.stratronix.ai/">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.stratronix.ai/ar/openclaw">
+<meta property="og:title" content="OpenClaw — إطار عمل مفتوح المصدر لوكلاء الذكاء الاصطناعي">
+<meta property="og:description" content="إطار عمل Apache 2.0 لبناء وكلاء ذكاء اصطناعي، يدعم عدة نماذج لغوية وبروتوكول MCP وتقنية RAG، ومدمج في جهاز STA-100.">
+<meta property="og:image" content="https://www.stratronix.ai/images/og-image.jpg">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="OpenClaw — إطار عمل مفتوح المصدر لوكلاء الذكاء الاصطناعي">
+<meta name="twitter:description" content="مفتوح المصدر برخصة Apache 2.0 · عدة نماذج لغوية · دعم MCP · جاهز لتقنية RAG">
+<meta name="twitter:image" content="https://www.stratronix.ai/images/og-image.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"الرئيسية","item":"https://www.stratronix.ai/ar/"},{"@type":"ListItem","position":2,"name":"OpenClaw","item":"https://www.stratronix.ai/ar/openclaw"}]}</script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; line-height: 1.85; color: #1a1a1a; background: #fafafa; }
+header { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 50px 20px; }
+header h1 { font-size: 1.9rem; max-width: 900px; margin: 0 auto 12px; line-height: 1.4; }
+header .subtitle { max-width: 900px; margin: 0 auto; opacity: 0.95; font-size: 1rem; }
+.container { max-width: 900px; margin: 0 auto; padding: 30px 20px; }
+.meta { color: #666; font-size: 0.9rem; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #eee; }
+h2 { font-size: 1.5rem; color: #E6417F; margin: 32px 0 12px; border-left: 4px solid #E6417F; padding-left: 12px; }
+h3 { font-size: 1.2rem; color: #1a1a1a; margin: 24px 0 10px; }
+p, li { font-size: 1.05rem; color: #333; margin: 10px 0; }
+ul, ol { padding-left: 28px; }
+.kw { background: linear-gradient(180deg, transparent 60%, #fff5f9 60%); font-weight: 600; }
+.callout { background: #fff5f9; border-left: 4px solid #E6417F; padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; background: white; border-radius: 8px; overflow: hidden; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #E6417F; color: white; font-weight: 600; }
+.cta { background: linear-gradient(135deg, #E6417F 0%, #c9296c 100%); color: white; padding: 40px; text-align: center; border-radius: 12px; margin: 40px 0; }
+.cta a { color: white; background: rgba(255,255,255,0.2); padding: 14px 36px; border-radius: 8px; text-decoration: none; font-weight: 600; display: inline-block; margin: 8px; }
+.cta a.primary { background: white; color: #E6417F; }
+footer { background: #1a1a1a; color: #999; padding: 30px 20px; text-align: center; margin-top: 60px; }
+footer a { color: #E6417F; }
+code { background: #f0f0f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+pre { background: #1a1a1a; color: #e0e0e0; padding: 20px; border-radius: 8px; overflow-x: auto; font-size: 0.9rem; line-height: 1.6; margin: 20px 0; }
+pre code { background: none; padding: 0; color: inherit; }
+    
+        /* ===== LANGUAGE SELECTOR — always right-aligned ===== */
+        .lang-selector { margin-left: auto; }
+        .lang-btn { display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 500; color: var(--text-dim); padding: 6px 12px; border-radius: 8px; cursor: pointer; transition: all 0.2s; border: 1px solid transparent; background: transparent; font-family: var(--font-body); white-space: nowrap; }
+        .lang-btn:hover, .lang-btn.active { color: var(--text); border-color: var(--border-solid); background: var(--bg-card); }
+        .lang-btn .arrow { font-size: 10px; transition: transform 0.2s; }
+        .lang-selector.open .lang-btn .arrow { transform: rotate(180deg); }
+        .lang-dropdown { display: none; position: absolute; top: calc(100% + 8px); right: 0; background: var(--bg-card); border: 1px solid var(--border-solid); border-radius: 12px; padding: 8px 0; min-width: 180px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); z-index: 2000; }
+        .lang-selector.open .lang-dropdown { display: block; }
+        .lang-dropdown a { display: flex; align-items: center; gap: 10px; padding: 10px 16px; font-size: 14px; font-weight: 500; color: var(--text-dim); transition: all 0.15s; white-space: nowrap; }
+        .lang-dropdown a:hover { color: var(--text); background: var(--bg-card-hover); }
+        .lang-dropdown a .flag { font-size: 16px; }
+        .lang-dropdown a .lang-code { font-size: 11px; color: var(--text-muted); margin-left: auto; }
+    </style>
+<style id="rtl-fix">
+        html, body { direction: rtl; }
+        body { font-family: 'Cairo', 'Noto Kufi Arabic', 'Tajawal', -apple-system, 'Segoe UI', sans-serif; }
+        h1, h2, h3, h4, .section-title, .model, .workie, .error-code { letter-spacing: normal !important; }
+        .lang-dropdown { left: auto; right: 0; }
+        .lang-dropdown a .lang-code { margin-left: 0; margin-right: auto; }
+        nav .logo-img { margin-right: 0; margin-left: 8px; }
+        .lang-selector { margin-left: 0; margin-right: auto; }
+        table th, table td { text-align: right; }
+        h2 { border-left: none; border-right: 4px solid #E6417F; padding-left: 0; padding-right: 12px; }
+        .callout { border-left: none; border-right: 4px solid #E6417F; border-radius: 8px 0 0 8px; }
+        ul, ol { padding-left: 0; padding-right: 28px; }
+        .hero-left, .hero-stat, .workflow-box .wb-tasks, .footer-brand p, .footer-brand { text-align: right; }
+        .section-header, .cta-card, .cta, .price-box { text-align: center; }
+        pre, code { direction: ltr; text-align: left; unicode-bidi: embed; }
+        .social-links li a svg { margin-right: 0 !important; margin-left: 8px !important; }
+        footer .footer-bottom a { margin-left: 0; margin-right: 24px; }
+        .error-code, .meta span { direction: rtl; }
+        .price-box .price, [dir="ltr"] { direction: ltr; }
+    </style>
+</head>
+<body>
+<header>
+<h1>OpenClaw — إطار عمل مفتوح المصدر لوكلاء الذكاء الاصطناعي</h1>
+<p class="subtitle">إطار عمل مفتوح المصدر (Apache 2.0) · عدة نماذج لغوية · دعم أصلي لبروتوكول MCP · جاهز لتقنية RAG · مدمج مع STA-100</p>
+</header>
+
+<div class="container">
+<p class="meta">
+<span>📅 2026-07-18</span>
+<span>🏷️ OpenClaw · إطار عمل الذكاء الاصطناعي</span>
+<span>📍 من تطوير STRATRONIX، شنتشن، الصين</span>
+</p>
+
+<h2>ما هو OpenClaw؟</h2>
+
+<p><strong>OpenClaw</strong> هو إطار عمل <span class="kw">لوكلاء الذكاء الاصطناعي</span> مفتوح المصدر (Apache 2.0) يتيح للشركات والمطورين بناء وكلاء ذكاء اصطناعي وتشغيلهم ونشرهم. وهو الأساس البرمجي داخل كل <span class="kw">جهاز وكيل ذكاء اصطناعي</span> من STRATRONIX، طراز STA-100 وPAA.</p>
+
+<div class="callout">
+<strong>OpenClaw ليس OpenAI</strong>: OpenClaw ليس منتجًا سحابيًا، بل برنامج مفتوح المصدر يعمل على بنيتك التحتية الخاصة. لا تُرسَل أي بيانات إلى خوادم STRATRONIX أو أي طرف ثالث.
+</div>
+
+<h2>أبرز ميزات OpenClaw</h2>
+
+<ul>
+<li>🤖 <strong>بنية وكيل متعددة الوسائط</strong>: وكلاء للصور والنصوص والصوت والبيانات</li>
+<li>🔗 <strong>دعم أصلي لبروتوكول MCP</strong>: موصلات جاهزة لكل الأدوات التي تستخدمها الشركات (Slack وNotion وSalesforce وغيرها)</li>
+<li>🧠 <strong>تكامل مع RAG</strong>: توليد معزز بالاسترجاع عبر قاعدة بيانات Qdrant المتجهية</li>
+<li>🌐 <strong>ننماذج لغوية متعددة</strong>: OpenAI وAnthropic Claude وGoogle Gemini وQwen وDeepSeek وOllama المحلي</li>
+<li>📊 <strong>خطوط معالجة البيانات</strong>: استخراج وتحويل وتنظيف وإثراء تلقائي للبيانات</li>
+<li>🔒 <strong>أمان متكامل</strong>: تنقية البيانات الشخصية وسجلات تدقيق وضوابط وصول</li>
+<li>📈 <strong>قابلية المراقبة</strong>: مقاييس وتتبع وتسجيل مدمج</li>
+<li>🧩 <strong>SDK للإضافات</strong>: حزمة تطوير بلغة Python لبناء وكلاء وتكاملات مخصصة</li>
+</ul>
+
+<h2>بنية OpenClaw</h2>
+
+<pre>
+┌─────────────────────────────────────────────────────┐
+│                   OpenClaw Agent                     │
+├─────────────────────────────────────────────────────┤
+│  ┌──────────┐  ┌──────────┐  ┌───────────────────┐ │
+│  │ Planner  │  │  Memory  │  │    Tool Registry  │ │
+│  │ (Reason) │  │(Context) │  │ (MCP Connectors)  │ │
+│  └────┬─────┘  └────┬─────┘  └─────────┬─────────┘ │
+│       │             │                  │           │
+│  ┌────▼─────────────▼──────────────────▼─────────┐ │
+│  │              Orchestration Layer               │ │
+│  │  (Task routing · Error recovery · Fallback)   │ │
+│  └────────────────────┬──────────────────────────┘ │
+│                       │                            │
+│  ┌────────────────────▼──────────────────────────┐ │
+│  │           LLM Gateway                          │ │
+│  │  OpenAI · Anthropic · Qwen · DeepSeek · Ollama│ │
+│  └────────────────────────────────────────────────┘ │
+│                                                     │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────┐ │
+│  │ Qdrant (RAG) │  │ File System  │  │  APIs    │ │
+│  └──────────────┘  └──────────────┘  └──────────┘ │
+└─────────────────────────────────────────────────────┘</pre>
+
+<h2>لماذا مفتوح المصدر؟</h2>
+
+<h3>الامتثال المؤسسي</h3>
+<p>تحتاج الشركات في أوروبا (GDPR وقانون الذكاء الاصطناعي) والصين (المستوى 2.0 من معيار 等保) والولايات المتحدة (HIPAA) إلى <span class="kw">وكيل ذكاء اصطناعي</span> قابل للتدقيق. الكود المفتوح يعني أن فريق الأمن يستطيع التحقق بنفسه مما يفعله الوكيل ببياناتهم.</p>
+
+<h3>التخصيص</h3>
+<p>يمكن لمطوري الشركات تفرّع OpenClaw وإضافة تكاملات خاصة بقطاعهم أو سير عمل داخلي خاص بهم.</p>
+
+<h3>بلا احتكار للمورّد</h3>
+<p>يعمل OpenClaw في أي مكان: على أجهزة الحافة مثل STA-100، أو خوادم داخلية، أو سحابة عامة. لا ارتباط إجباري بخدمات STRATRONIX.</p>
+
+<h2>كيف تبدأ مع OpenClaw</h2>
+
+<ol>
+<li><strong>اقرأ التوثيق</strong>: <a href="https://docs.openclaw.ai">docs.openclaw.ai</a></li>
+<li><strong>استنسخ المستودع</strong>: <code>git clone https://github.com/stratronix/openclaw</code></li>
+<li><strong>ثبّت الحزمة</strong>: <code>pip install openclaw-sdk</code></li>
+<li><strong>أنشئ وكيلك الأول</strong>: باستخدام SDK بلغة Python والقوالب الجاهزة</li>
+<li><strong>شغّله</strong>: <code>openclaw run my-agent</code></li>
+</ol>
+
+<h2>تكامل MCP</h2>
+
+<p>يدعم OpenClaw أصليًا <strong>بروتوكول سياق النموذج (MCP)</strong>، وهو معيار مفتوح من Anthropic للربط بين <span class="kw">وكلاء الذكاء الاصطناعي</span> والأدوات. تكاملات جاهزة للاستخدام:</p>
+
+<table>
+<tr><th>الفئة</th><th>التكاملات</th></tr>
+<tr><td>💬 المراسلة</td><td>WeChat Work وFeishu وSlack وTeams وWhatsApp Business</td></tr>
+<tr><td>📄 المستندات</td><td>Notion وGoogle Docs وConfluence وSharePoint</td></tr>
+<tr><td>📊 إدارة العملاء</td><td>Salesforce وHubSpot وPipedrive</td></tr>
+<tr><td>📧 البريد الإلكتروني</td><td>Gmail وOutlook وSMTP</td></tr>
+<tr><td>🗄️ قواعد البيانات</td><td>PostgreSQL وMySQL وMongoDB وQdrant</td></tr>
+<tr><td>🌐 الويب</td><td>البحث على الويب واستخراج المحتوى وواجهات REST</td></tr>
+</table>
+
+<h2>OpenClaw مقابل LangChain وCrewAI</h2>
+
+<table>
+<tr><th>الميزة</th><th>OpenClaw</th><th>LangChain</th><th>CrewAI</th></tr>
+<tr><td>النوع</td><td>وكيل ذكاء اصطناعي متكامل</td><td>إطار تجريد للنماذج اللغوية</td><td>تنسيق بين الوكلاء</td></tr>
+<tr><td>الرخصة</td><td>Apache 2.0</td><td>MIT</td><td>MIT</td></tr>
+<tr><td>دعم MCP أصلي</td><td>✅ نعم</td><td>❌ لا</td><td>❌ لا</td></tr>
+<tr><td>RAG مدمج</td><td>✅ Qdrant</td><td>✅ نعم</td><td>❌ لا</td></tr>
+<tr><td>تنقية البيانات الشخصية</td><td>✅ مدمجة</td><td>❌ لا</td><td>❌ لا</td></tr>
+<tr><td>وضع عدم الاتصال</td><td>✅ نعم</td><td>❌ لا</td><td>❌ لا</td></tr>
+<tr><td>جهاز جاهز للاستخدام</td><td>✅ STA-100</td><td>❌ لا</td><td>❌ لا</td></tr>
+</table>
+
+<h2>احصل على OpenClaw</h2>
+
+<ul>
+<li>📦 <strong>STA-100</strong>: يأتي OpenClaw مثبتًا مسبقًا، فقط أوصل الجهاز بالكهرباء وابدأ</li>
+<li>💻 <strong>GitHub</strong>: <a href="https://github.com/stratronix/openclaw">github.com/stratronix/openclaw</a></li>
+<li>📚 <strong>التوثيق</strong>: <a href="https://docs.openclaw.ai">docs.openclaw.ai</a></li>
+<li>🐦 <strong>PyPI</strong>: <code>pip install openclaw-sdk</code></li>
+</ul>
+
+<div class="cta">
+<h2 style="color: white; border: none; padding: 0;">ابدأ مع OpenClaw</h2>
+<p style="color: rgba(255,255,255,0.95); font-size: 1.05rem; margin: 16px 0;">مفتوح المصدر Apache 2.0 · عدة نماذج لغوية · دعم MCP · جاهز لـ RAG · متوافق مع GDPR وقانون الذكاء الاصطناعي</p>
+<a href="https://github.com/stratronix/openclaw" class="primary">→ GitHub</a>
+<a href="https://docs.openclaw.ai">→ التوثيق</a>
+</div>
+
+</div>
+
+<footer>
+<p><a href="https://www.stratronix.ai">الموقع الرسمي لـ STRATRONIX</a> · <a href="/ar/products.html">المنتجات</a> · <a href="/ar/contact.html">اتصل بنا</a></p>
+<p>OpenClaw · إطار عمل مفتوح المصدر لوكلاء الذكاء الاصطناعي · 2026-07-18</p>
+</footer>
+
+<script>function toggleLang(e){e.stopPropagation();document.getElementById("langSelector").classList.toggle("open");}document.addEventListener("click",function(e){var sel=document.getElementById("langSelector");if(!sel.contains(e.target))sel.classList.remove("open");});</script>
+</body>
+</html>

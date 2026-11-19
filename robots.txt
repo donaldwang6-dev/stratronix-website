@@ -83,3 +83,6 @@ Allow: /
 
 User-agent: SemrushBot
 Allow: /
+
+# Arabic
+Sitemap: https://www.stratronix.ai/ar-sitemap.xml
